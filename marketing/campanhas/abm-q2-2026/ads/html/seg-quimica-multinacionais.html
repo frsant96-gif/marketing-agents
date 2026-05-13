@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; background: #0A0E19; }
+
+.ad {
+  width: 1200px;
+  height: 628px;
+  position: relative;
+  overflow: hidden;
+  background: #0A0E19;
+}
+
+/* Subtle dot grid background */
+.ad::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Left blue accent */
+.accent {
+  position: absolute;
+  left: 0; top: 0;
+  width: 5px; height: 100%;
+  background: #006AFF;
+  z-index: 20;
+}
+
+/* Text area */
+.content {
+  position: absolute;
+  left: 80px; top: 0; bottom: 76px;
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.tag-line { width: 28px; height: 2px; background: #006AFF; }
+.tag-text {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 11px; font-weight: 600;
+  color: #006AFF;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.headline {
+  font-family: 'Prompt', 'Arial Black', sans-serif;
+  font-size: 50px; font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 22px;
+}
+
+.headline em {
+  font-style: normal;
+  color: #006AFF;
+}
+
+.subtext {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px; font-weight: 400;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 420px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #006AFF;
+  color: #FFFFFF;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 14px; font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 6px;
+  width: fit-content;
+  letter-spacing: 0.01em;
+}
+
+/* Visual area */
+.visual {
+  position: absolute;
+  right: 0; top: 0;
+  width: 680px; height: 556px;
+  z-index: 5;
+}
+
+.visual-fade {
+  position: absolute;
+  left: 0; top: 0;
+  width: 240px; height: 100%;
+  background: linear-gradient(to right, #0A0E19 0%, #0A0E19 30%, transparent 100%);
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Bottom bar */
+.bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 72px;
+  background: rgba(255,255,255,0.028);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px 0 80px;
+  z-index: 20;
+}
+
+.logo {
+  font-family: 'Prompt', sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.04em;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.badge-icon {
+  width: 34px; height: 34px;
+  background: #006AFF;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Prompt', sans-serif;
+  font-size: 12px; font-weight: 800;
+  color: white;
+}
+.badge-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px; font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="accent"></div>
+
+  <!-- Text -->
+  <div class="content">
+    <div class="tag">
+      <div class="tag-line"></div>
+      <span class="tag-text">Química &amp; Multinacionais</span>
+    </div>
+    <h1 class="headline">SAP que entrega<br>pra filial <em>e</em><br>pro corporativo.</h1>
+    <p class="subtext">Analytics e FP&amp;A sobre SAP — do padrão<br>corporativo à agilidade da operação local.</p>
+    <div class="cta">Conheça nosso portfólio &nbsp;→</div>
+  </div>
+
+  <!-- Visual: Connected network (multi-BU data) -->
+  <div class="visual">
+    <div class="visual-fade"></div>
+    <svg width="680" height="556" viewBox="0 0 680 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Subtle grid -->
+      <line x1="0" y1="100" x2="680" y2="100" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="680" y2="200" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="680" y2="300" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="680" y2="400" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="600" y1="0" x2="600" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+      <!-- Connection lines to center hub -->
+      <line x1="340" y1="278" x2="180" y2="138" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="340" y1="278" x2="500" y2="130" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="340" y1="278" x2="560" y2="290" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="340" y1="278" x2="460" y2="430" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="340" y1="278" x2="190" y2="400" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="340" y1="278" x2="220" y2="220" stroke="#006AFF" stroke-width="1" stroke-opacity="0.2"/>
+
+      <!-- Secondary perimeter connections -->
+      <line x1="180" y1="138" x2="500" y2="130" stroke="#006AFF" stroke-width="1" stroke-opacity="0.12"/>
+      <line x1="500" y1="130" x2="560" y2="290" stroke="#006AFF" stroke-width="1" stroke-opacity="0.12"/>
+      <line x1="560" y1="290" x2="460" y2="430" stroke="#006AFF" stroke-width="1" stroke-opacity="0.12"/>
+      <line x1="460" y1="430" x2="190" y2="400" stroke="#006AFF" stroke-width="1" stroke-opacity="0.12"/>
+
+      <!-- Central hub glow -->
+      <circle cx="340" cy="278" r="60" fill="#006AFF" fill-opacity="0.04"/>
+      <circle cx="340" cy="278" r="42" fill="#006AFF" fill-opacity="0.08"/>
+      <circle cx="340" cy="278" r="28" fill="#006AFF"/>
+
+      <!-- Hub inner detail -->
+      <circle cx="340" cy="272" r="6" fill="white" fill-opacity="0.9"/>
+      <circle cx="330" cy="285" r="4.5" fill="white" fill-opacity="0.65"/>
+      <circle cx="350" cy="285" r="4.5" fill="white" fill-opacity="0.65"/>
+      <line x1="340" y1="278" x2="330" y2="281" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/>
+      <line x1="340" y1="278" x2="350" y2="281" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/>
+
+      <!-- Node 1: top-left - large -->
+      <circle cx="180" cy="138" r="24" fill="#006AFF" fill-opacity="0.08" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="180" cy="138" r="11" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Node 2: top-right -->
+      <circle cx="500" cy="130" r="18" fill="#006AFF" fill-opacity="0.08" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="500" cy="130" r="8" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Node 3: right -->
+      <circle cx="560" cy="290" r="22" fill="#006AFF" fill-opacity="0.08" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="560" cy="290" r="10" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Node 4: bottom-right -->
+      <circle cx="460" cy="430" r="16" fill="#006AFF" fill-opacity="0.08" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="460" cy="430" r="7" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Node 5: bottom-left -->
+      <circle cx="190" cy="400" r="14" fill="#006AFF" fill-opacity="0.08" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <circle cx="190" cy="400" r="6" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Node 6: mid-left small -->
+      <circle cx="220" cy="220" r="10" fill="#006AFF" fill-opacity="0.06" stroke="#006AFF" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="220" cy="220" r="4" fill="#006AFF" fill-opacity="0.7"/>
+
+      <!-- Green accent dots -->
+      <circle cx="400" cy="80" r="3.5" fill="#94FF96" fill-opacity="0.5"/>
+      <circle cx="600" cy="190" r="2.5" fill="#94FF96" fill-opacity="0.4"/>
+      <circle cx="580" cy="440" r="3" fill="#94FF96" fill-opacity="0.35"/>
+    </svg>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="bar">
+    <div class="logo">solveplan</div>
+    <div class="badge">
+      <div class="badge-icon">SAP</div>
+      <div class="badge-label">Parceiro Gold<br>América Latina</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

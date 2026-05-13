@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1200px; background: #000; }
+
+    .post {
+      width: 1200px;
+      height: 628px;
+      background: #0A0E19;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,106,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,106,255,0.035) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .glow-left {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,106,255,0.10) 0%, transparent 65%);
+      top: -160px;
+      left: -100px;
+      pointer-events: none;
+    }
+
+    .glow-right {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,106,255,0.07) 0%, transparent 65%);
+      bottom: -120px;
+      right: 80px;
+      pointer-events: none;
+    }
+
+    /* Divider vertical */
+    .divider {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 580px;
+      width: 3px;
+      background: #006AFF;
+      box-shadow: 0 0 16px rgba(0,106,255,0.6), 0 0 36px rgba(0,106,255,0.2);
+      z-index: 15;
+    }
+
+    /* Painel esquerdo */
+    .left {
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 580px;
+      padding: 44px 48px 44px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .logo-img { height: 28px; width: auto; }
+    .logo-txt {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .event-pre {
+      font-size: 10px;
+      font-weight: 600;
+      color: #006AFF;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .t {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      line-height: 0.96;
+      letter-spacing: -1px;
+      color: #FFFFFF;
+    }
+
+    .t-blue {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      line-height: 0.96;
+      letter-spacing: -1px;
+      color: #006AFF;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .detail {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.68);
+    }
+
+    .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #006AFF;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(0,106,255,0.09);
+      border: 1.5px solid rgba(0,106,255,0.35);
+      border-radius: 5px;
+      padding: 7px 14px;
+      color: rgba(255,255,255,0.78);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #006AFF;
+    }
+
+    /* Painel direito — fotos dos 4 sócios */
+    .right {
+      position: absolute;
+      top: 0; left: 583px; right: 0; bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      z-index: 10;
+      padding: 0 44px;
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 60px;
+      background: linear-gradient(90deg, #0A0E19, transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Grid 2x2 de fotos */
+    .photos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+      width: 100%;
+      height: 100%;
+      padding: 32px 0 32px 32px;
+    }
+
+    .photo-card {
+      background: rgba(0,106,255,0.06);
+      border: 1.5px solid rgba(0,106,255,0.20);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .photo-card-img-area {
+      flex: 1;
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.15);
+      font-size: 11px;
+      text-align: center;
+      gap: 4px;
+      flex-direction: column;
+    }
+
+    .photo-card-name {
+      padding: 6px 10px;
+      background: rgba(0,106,255,0.12);
+      border-top: 1px solid rgba(0,106,255,0.20);
+    }
+
+    .card-name {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      color: #FFFFFF;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-role {
+      font-size: 9px;
+      font-weight: 500;
+      color: #94FF96;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+<div class="post">
+  <div class="bg-grid"></div>
+  <div class="glow-left"></div>
+  <div class="glow-right"></div>
+  <div class="divider"></div>
+
+  <!-- ESQUERDA: info do evento -->
+  <div class="left">
+    <div>
+      <img src="../../marca/logo-escuro.png.png" class="logo-img" alt="Solveplan"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-txt" style="display:none">solveplan</span>
+    </div>
+
+    <div>
+      <div class="event-pre">Estaremos em</div>
+      <div class="t">SAP Sapphire &</div>
+      <div class="t">ASUG Conference</div>
+      <div class="t-blue">Orlando 2026</div>
+
+      <div class="details">
+        <div class="detail">
+          <div class="dot"></div>
+          May 11–13, 2026
+        </div>
+        <div class="detail">
+          <div class="dot"></div>
+          Orange County Convention Center · Orlando, FL
+        </div>
+      </div>
+    </div>
+
+    <div class="badge">
+      <div class="badge-dot"></div>
+      SAP Gold Partner
+    </div>
+  </div>
+
+  <!-- DIREITA: 4 sócios em grid -->
+  <div class="right">
+    <div class="photos-grid">
+
+      <!-- Alexandre Kuntgen -->
+      <div class="photo-card">
+        <div class="photo-card-img-area">
+          📸<br><span style="font-size:9px">Foto</span>
+          <!-- <img src="foto-alexandre.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center" alt=""> -->
+        </div>
+        <div class="photo-card-name">
+          <div class="card-name">Alexandre Kuntgen</div>
+          <div class="card-role">Partner</div>
+        </div>
+      </div>
+
+      <!-- Andrey Menegassi -->
+      <div class="photo-card">
+        <div class="photo-card-img-area">
+          📸<br><span style="font-size:9px">Foto</span>
+          <!-- <img src="foto-andrey.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center" alt=""> -->
+        </div>
+        <div class="photo-card-name">
+          <div class="card-name">Andrey Menegassi</div>
+          <div class="card-role">Diretor de Vendas</div>
+        </div>
+      </div>
+
+      <!-- Roberto Molina -->
+      <div class="photo-card">
+        <div class="photo-card-img-area">
+          📸<br><span style="font-size:9px">Foto</span>
+          <!-- <img src="foto-roberto.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center" alt=""> -->
+        </div>
+        <div class="photo-card-name">
+          <div class="card-name">Roberto Molina</div>
+          <div class="card-role">Partner</div>
+        </div>
+      </div>
+
+      <!-- Andre Fracchetta -->
+      <div class="photo-card">
+        <div class="photo-card-img-area">
+          📸<br><span style="font-size:9px">Foto</span>
+          <!-- <img src="foto-andre.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center" alt=""> -->
+        </div>
+        <div class="photo-card-name">
+          <div class="card-name">Andre Fracchetta</div>
+          <div class="card-role">Diretor de Operações</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; background: #0A0E19; }
+
+.ad { width: 1200px; height: 628px; position: relative; overflow: hidden; background: #0A0E19; }
+.ad::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 36px 36px; pointer-events: none; z-index: 1; }
+.accent { position: absolute; left: 0; top: 0; width: 5px; height: 100%; background: #006AFF; z-index: 20; }
+
+.content { position: absolute; left: 80px; top: 0; bottom: 76px; width: 530px; display: flex; flex-direction: column; justify-content: center; z-index: 10; }
+.tag { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.tag-line { width: 28px; height: 2px; background: #006AFF; }
+.tag-text { font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 600; color: #006AFF; text-transform: uppercase; letter-spacing: 0.14em; }
+.headline { font-family: 'Prompt', 'Arial Black', sans-serif; font-size: 50px; font-weight: 800; color: #FFFFFF; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 22px; }
+.headline em { font-style: normal; color: #006AFF; }
+.subtext { font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.65; margin-bottom: 36px; max-width: 420px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; background: #006AFF; color: #FFFFFF; font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 600; padding: 14px 26px; border-radius: 6px; width: fit-content; }
+
+.visual { position: absolute; right: 0; top: 0; width: 680px; height: 556px; z-index: 5; }
+.visual-fade { position: absolute; left: 0; top: 0; width: 240px; height: 100%; background: linear-gradient(to right, #0A0E19 0%, #0A0E19 30%, transparent 100%); z-index: 6; }
+
+.bar { position: absolute; bottom: 0; left: 0; right: 0; height: 72px; background: rgba(255,255,255,0.028); border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; padding: 0 64px 0 80px; z-index: 20; }
+.logo { font-family: 'Prompt', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.04em; }
+.badge { display: flex; align-items: center; gap: 10px; }
+.badge-icon { width: 34px; height: 34px; background: #006AFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Prompt', sans-serif; font-size: 12px; font-weight: 800; color: white; }
+.badge-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="accent"></div>
+  <div class="content">
+    <div class="tag"><div class="tag-line"></div><span class="tag-text">Energia &amp; Utilities</span></div>
+    <h1 class="headline">FP&amp;A e analytics<br>para utilities<br><em>além do ERP.</em></h1>
+    <p class="subtext">Capex, ativos e compliance integrados ao SAP —<br>do dado ao relatório regulatório.</p>
+    <div class="cta">Conheça nosso portfólio &nbsp;→</div>
+  </div>
+
+  <!-- Visual: Area chart / energy demand curves -->
+  <div class="visual">
+    <div class="visual-fade"></div>
+    <svg width="680" height="556" viewBox="0 0 680 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="100" x2="680" y2="100" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="680" y2="200" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="680" y2="300" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="680" y2="400" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="500" x2="680" y2="500" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="600" y1="0" x2="600" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+      <!-- Area fill - background wave (actual demand) -->
+      <path d="M 80 420 C 140 380 180 340 240 310 C 300 280 340 300 400 260 C 440 235 490 200 540 190 C 580 182 620 200 660 185 L 660 480 L 80 480 Z" fill="#006AFF" fill-opacity="0.07"/>
+
+      <!-- Area fill - forecast/budget wave -->
+      <path d="M 80 460 C 140 430 200 400 260 370 C 320 340 360 360 420 320 C 460 295 510 265 560 250 C 600 238 630 250 660 240 L 660 480 L 80 480 Z" fill="#006AFF" fill-opacity="0.04"/>
+
+      <!-- Main line (actual) -->
+      <path d="M 80 420 C 140 380 180 340 240 310 C 300 280 340 300 400 260 C 440 235 490 200 540 190 C 580 182 620 200 660 185" fill="none" stroke="#006AFF" stroke-width="2.5" stroke-opacity="0.9"/>
+
+      <!-- Forecast line (dashed) -->
+      <path d="M 540 190 C 570 178 610 170 660 160" fill="none" stroke="#006AFF" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="8 5"/>
+
+      <!-- Second line (budget / plan) -->
+      <path d="M 80 460 C 140 430 200 400 260 370 C 320 340 360 360 420 320 C 460 295 510 265 560 250 C 600 238 630 250 660 240" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+      <!-- Data points on main line -->
+      <circle cx="240" cy="310" r="5" fill="#006AFF"/>
+      <circle cx="240" cy="310" r="9" fill="#006AFF" fill-opacity="0.2"/>
+      <circle cx="400" cy="260" r="5" fill="#006AFF"/>
+      <circle cx="400" cy="260" r="9" fill="#006AFF" fill-opacity="0.2"/>
+      <circle cx="540" cy="190" r="6" fill="#006AFF"/>
+      <circle cx="540" cy="190" r="11" fill="#006AFF" fill-opacity="0.2"/>
+
+      <!-- Vertical reference lines at data points -->
+      <line x1="240" y1="310" x2="240" y2="480" stroke="#006AFF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+      <line x1="400" y1="260" x2="400" y2="480" stroke="#006AFF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+      <line x1="540" y1="190" x2="540" y2="480" stroke="#006AFF" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4 4"/>
+
+      <!-- Axis bottom -->
+      <line x1="80" y1="480" x2="660" y2="480" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <!-- X axis ticks -->
+      <line x1="240" y1="480" x2="240" y2="488" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <line x1="400" y1="480" x2="400" y2="488" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <line x1="540" y1="480" x2="540" y2="488" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+      <!-- KPI cards top area -->
+      <rect x="160" y="100" width="130" height="70" rx="6" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.3"/>
+      <rect x="178" y="116" width="94" height="8" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="178" y="131" width="60" height="7" rx="2" fill="rgba(255,255,255,0.2)"/>
+      <circle cx="238" cy="154" r="5" fill="#94FF96" fill-opacity="0.7"/>
+
+      <rect x="320" y="80" width="130" height="70" rx="6" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.3"/>
+      <rect x="338" y="96" width="94" height="8" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="338" y="111" width="70" height="7" rx="2" fill="rgba(255,255,255,0.2)"/>
+      <circle cx="398" cy="134" r="5" fill="#94FF96" fill-opacity="0.7"/>
+
+      <!-- Green accent -->
+      <circle cx="620" cy="300" r="3" fill="#94FF96" fill-opacity="0.5"/>
+      <circle cx="140" cy="160" r="2.5" fill="#94FF96" fill-opacity="0.35"/>
+    </svg>
+  </div>
+
+  <div class="bar">
+    <div class="logo">solveplan</div>
+    <div class="badge">
+      <div class="badge-icon">SAP</div>
+      <div class="badge-label">Parceiro Gold<br>América Latina</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

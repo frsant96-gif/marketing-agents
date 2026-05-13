@@ -1,14 +1,87 @@
-# Claude Code OS — Kit Ratos de IA
+# CLAUDE.md
 
-Este repositório é o kit de boas-vindas do curso Claude Code OS.
+# Solveplan — Claude Code OS
 
-Se você acabou de clonar esse repositório:
-1. Rode `/setup` pra configurar o sistema pro seu negócio (uns 5 minutos)
-2. Depois rode `/mapear` pra criar skills personalizadas pro que você faz no dia a dia
+## O que é esse workspace
+Workspace de marketing e vendas da Solveplan — consultoria SAP especializada em dados, analytics, planejamento financeiro e consolidação. Usado por Fran (Francielle Beline) para criar conteúdo, propostas, materiais comerciais e planejar eventos e campanhas com foco em geração de pipeline para SAP Business Data Cloud (BDC).
+
+**Estrutura de pastas:**
+```
+_contexto/          — contexto do negócio (lido no início de cada sessão)
+marca/              — guia de identidade visual e logo
+dados/              — drop zone pra arquivos pra análise (CSV, XLSX, PDF, TXT)
+marketing/          — conteúdo, carrosséis, posts, artigos
+comercial/          — propostas e materiais de vendas
+eventos/            — planos de eventos e ações de marketing
+templates/skills/   — templates base pra criar novas skills
+templates/ferramentas/catalogo.md — APIs, CLIs e MCPs disponíveis
+.claude/skills/     — skills personalizadas criadas pra esse negócio
+```
+
+## Sobre o negócio
+A Solveplan ajuda empresas de médio e grande porte a transformar dados em ativos estratégicos, com soluções SAP para analytics, planejamento financeiro e consolidação. Parceira SAP Gold na América Latina, com +200 soluções entregues e +90 clientes atendidos. Foco atual: vender SAP Business Data Cloud (BDC).
+
+## O que mais fazemos aqui
+- Criação de conteúdo para LinkedIn e redes sociais (posts, carrosséis)
+- Propostas comerciais e materiais de vendas
+- Planejamento de eventos e ações de marketing (skill `/planejar-evento`)
+- Emails profissionais para prospects e clientes
+- Análise de dados de campanhas e resultados
+
+## Clientes e contexto
+Consultoria B2B. Atende CIOs, CFOs, controllers, heads de dados/BI, COO, CHRO em empresas de médio e grande porte.
+
+## Tom de voz
+Direto, orientado a negócio, técnico quando necessário mas sem jargão vazio. Posicionamento de autoridade sem hype. Sempre conectar com a dor real do cliente e gerar ação. Evitar: "transformação digital" genérico, promessas exageradas, conteúdo superficial.
+
+## Ferramentas conectadas
+SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradores próprios
 
 ---
 
-<!-- Este arquivo será atualizado pelo /setup com o contexto do seu negócio. -->
+## Skills personalizadas
+
+| Skill | Descrição |
+|-------|-----------|
+| `/planejar-evento` | Planeja evento do zero com framework de 26 passos — gera plano completo em `eventos/` |
+| `/post-social` | Cria copy por formato (post único, imagem, vídeo, carrossel) — salva em `marketing/posts/` |
+| `/artigo-blog` | Briefing → artigo completo com SEO/AEO/GEO + metadados + post LinkedIn — salva em `marketing/blog/` |
+| `/release-pr` | Briefing → release para imprensa + pitch para jornalistas — salva em `marketing/releases/` |
+| `/planejar-campanha` | Briefing → plano de campanha completo (institucional/evento/produto) — salva em `marketing/campanhas/` |
+| `/pagina-solucao` | Briefing → copy estruturada por seção + SEO/AEO/GEO — salva em `marketing/paginas/` |
+| `/assinatura-email` | Dados pessoais → HTML de assinatura com identidade visual Solveplan |
+| `/plano-marketing` | Perguntas estratégicas + funil → plano anual com calendário, budget e KPIs — salva em `marketing/planos/` |
+| `/ebook` | Briefing → conteúdo completo + guia de layout pro Canva — salva em `marketing/ebooks/` |
+| `/material-campanha` | Briefing → copy + briefing visual pra banners, LP, email, apresentação no Canva — salva em `marketing/materiais/` |
+| `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
+| `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
+
+---
+
+## Skills disponíveis
+
+| Skill | Descrição |
+|-------|-----------|
+| `/setup` | Configura o sistema: entrevista o usuário e preenche `_contexto/` e `marca/` |
+| `/iniciar` | Carrega o contexto do negócio no início de cada sessão |
+| `/mapear` | Mapeia processos repetitivos e cria skills personalizadas |
+| `/atualizar` | Varre o projeto e atualiza os arquivos de contexto desatualizados |
+| `/syncar` | Commit + push pro GitHub (configura o remote na primeira vez) |
+| `/novo-projeto` | Cria pasta de projeto com CLAUDE.md dedicado |
+| `/carrossel` | Cria carrosséis pra Instagram/TikTok em HTML + PNG |
+| `/proposta-comercial` | Gera proposta profissional em HTML com identidade visual |
+| `/slide` | Cria slide/card visual em HTML + PNG |
+| `/roteiro-post` | Transforma ideia em roteiro de post ou vídeo |
+| `/email-profissional` | Rascunha email profissional a partir de contexto livre |
+| `/analisar-dados` | Analisa arquivo em `dados/` e gera resumo com insights |
+| `/publicar-site` | Publica HTML com link compartilhável via Cloudflare Pages |
+
+Skills visuais (`/carrossel`, `/slide`, `/proposta-comercial`) requerem Playwright pra renderizar PNG:
+```bash
+npx playwright install chromium
+```
+
+---
 
 ## Contexto do negócio
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; background: #0A0E19; }
+
+.ad { width: 1200px; height: 628px; position: relative; overflow: hidden; background: #0A0E19; }
+.ad::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 36px 36px; pointer-events: none; z-index: 1; }
+.accent { position: absolute; left: 0; top: 0; width: 5px; height: 100%; background: #006AFF; z-index: 20; }
+
+.content { position: absolute; left: 80px; top: 0; bottom: 76px; width: 530px; display: flex; flex-direction: column; justify-content: center; z-index: 10; }
+.tag { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.tag-line { width: 28px; height: 2px; background: #006AFF; }
+.tag-text { font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 600; color: #006AFF; text-transform: uppercase; letter-spacing: 0.14em; }
+.headline { font-family: 'Prompt', 'Arial Black', sans-serif; font-size: 50px; font-weight: 800; color: #FFFFFF; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 22px; }
+.headline em { font-style: normal; color: #006AFF; }
+.subtext { font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.65; margin-bottom: 36px; max-width: 420px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; background: #006AFF; color: #FFFFFF; font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 600; padding: 14px 26px; border-radius: 6px; width: fit-content; }
+
+.visual { position: absolute; right: 0; top: 0; width: 680px; height: 556px; z-index: 5; }
+.visual-fade { position: absolute; left: 0; top: 0; width: 240px; height: 100%; background: linear-gradient(to right, #0A0E19 0%, #0A0E19 30%, transparent 100%); z-index: 6; }
+
+.bar { position: absolute; bottom: 0; left: 0; right: 0; height: 72px; background: rgba(255,255,255,0.028); border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; padding: 0 64px 0 80px; z-index: 20; }
+.logo { font-family: 'Prompt', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.04em; }
+.badge { display: flex; align-items: center; gap: 10px; }
+.badge-icon { width: 34px; height: 34px; background: #006AFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Prompt', sans-serif; font-size: 12px; font-weight: 800; color: white; }
+.badge-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="accent"></div>
+  <div class="content">
+    <div class="tag"><div class="tag-line"></div><span class="tag-text">Agro, Alimentos &amp; Industrial</span></div>
+    <h1 class="headline">Do dado operacional<br>ao <em>controle</em><br>de margem.</h1>
+    <p class="subtext">Analytics de custo e FP&amp;A sobre SAP —<br>da safra ao resultado sem planilha.</p>
+    <div class="cta">Conheça nosso portfólio &nbsp;→</div>
+  </div>
+
+  <!-- Visual: Bar chart with trend line (production/margin metrics) -->
+  <div class="visual">
+    <div class="visual-fade"></div>
+    <svg width="680" height="556" viewBox="0 0 680 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="100" x2="680" y2="100" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="680" y2="200" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="680" y2="300" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="680" y2="400" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="480" x2="680" y2="480" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="120" y1="0" x2="120" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="240" y1="0" x2="240" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="360" y1="0" x2="360" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="480" y1="0" x2="480" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="600" y1="0" x2="600" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+      <!-- Chart axis -->
+      <line x1="120" y1="120" x2="120" y2="480" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+      <line x1="120" y1="480" x2="650" y2="480" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+      <!-- Horizontal reference lines -->
+      <line x1="120" y1="200" x2="650" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 4"/>
+      <line x1="120" y1="300" x2="650" y2="300" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 4"/>
+      <line x1="120" y1="400" x2="650" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 4"/>
+
+      <!-- Bars: 6 time periods (safra cycles) - varying heights showing growth -->
+      <!-- Bar 1 -->
+      <rect x="145" y="390" width="56" height="90" rx="3" fill="#006AFF" fill-opacity="0.3"/>
+      <rect x="145" y="390" width="56" height="4" rx="2" fill="#006AFF" fill-opacity="0.7"/>
+
+      <!-- Bar 2 -->
+      <rect x="225" y="350" width="56" height="130" rx="3" fill="#006AFF" fill-opacity="0.35"/>
+      <rect x="225" y="350" width="56" height="4" rx="2" fill="#006AFF" fill-opacity="0.7"/>
+
+      <!-- Bar 3 -->
+      <rect x="305" y="310" width="56" height="170" rx="3" fill="#006AFF" fill-opacity="0.4"/>
+      <rect x="305" y="310" width="56" height="4" rx="2" fill="#006AFF" fill-opacity="0.8"/>
+
+      <!-- Bar 4 -->
+      <rect x="385" y="270" width="56" height="210" rx="3" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="385" y="270" width="56" height="4" rx="2" fill="#006AFF" fill-opacity="0.9"/>
+
+      <!-- Bar 5 -->
+      <rect x="465" y="220" width="56" height="260" rx="3" fill="#006AFF" fill-opacity="0.6"/>
+      <rect x="465" y="220" width="56" height="4" rx="2" fill="#006AFF"/>
+
+      <!-- Bar 6 (current/highest) -->
+      <rect x="545" y="170" width="56" height="310" rx="3" fill="#006AFF" fill-opacity="0.75"/>
+      <rect x="545" y="170" width="56" height="4" rx="2" fill="#006AFF"/>
+
+      <!-- Trend line connecting bar tops -->
+      <polyline points="173,390 253,350 333,310 413,270 493,220 573,170" fill="none" stroke="#94FF96" stroke-width="2.5" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Data points on trend line -->
+      <circle cx="173" cy="390" r="4" fill="#94FF96" fill-opacity="0.6"/>
+      <circle cx="253" cy="350" r="4" fill="#94FF96" fill-opacity="0.7"/>
+      <circle cx="333" cy="310" r="4" fill="#94FF96" fill-opacity="0.75"/>
+      <circle cx="413" cy="270" r="4" fill="#94FF96" fill-opacity="0.8"/>
+      <circle cx="493" cy="220" r="5" fill="#94FF96" fill-opacity="0.85"/>
+      <circle cx="573" cy="170" r="6" fill="#94FF96"/>
+      <circle cx="573" cy="170" r="12" fill="#94FF96" fill-opacity="0.2"/>
+
+      <!-- Arrow at top of trend -->
+      <polygon points="573,148 568,164 578,164" fill="#94FF96" fill-opacity="0.9"/>
+
+      <!-- KPI badge top left of chart -->
+      <rect x="140" y="130" width="160" height="60" rx="6" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.3"/>
+      <rect x="158" y="145" width="124" height="8" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="158" y="160" width="80" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
+      <rect x="158" y="173" width="100" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
+
+      <!-- Accent dots -->
+      <circle cx="620" cy="130" r="3" fill="#94FF96" fill-opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div class="bar">
+    <div class="logo">solveplan</div>
+    <div class="badge">
+      <div class="badge-icon">SAP</div>
+      <div class="badge-label">Parceiro Gold<br>América Latina</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; background: #0A0E19; }
+
+.ad {
+  width: 1200px; height: 628px;
+  position: relative; overflow: hidden;
+  background: #0A0E19;
+}
+.ad::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  pointer-events: none; z-index: 1;
+}
+.accent { position: absolute; left: 0; top: 0; width: 5px; height: 100%; background: #006AFF; z-index: 20; }
+
+.content {
+  position: absolute; left: 80px; top: 0; bottom: 76px; width: 530px;
+  display: flex; flex-direction: column; justify-content: center; z-index: 10;
+}
+.tag { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.tag-line { width: 28px; height: 2px; background: #006AFF; }
+.tag-text { font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 600; color: #006AFF; text-transform: uppercase; letter-spacing: 0.14em; }
+
+.headline { font-family: 'Prompt', 'Arial Black', sans-serif; font-size: 50px; font-weight: 800; color: #FFFFFF; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 22px; }
+.headline em { font-style: normal; color: #006AFF; }
+
+.subtext { font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.65; margin-bottom: 36px; max-width: 420px; }
+
+.cta { display: inline-flex; align-items: center; gap: 10px; background: #006AFF; color: #FFFFFF; font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 600; padding: 14px 26px; border-radius: 6px; width: fit-content; }
+
+.visual { position: absolute; right: 0; top: 0; width: 680px; height: 556px; z-index: 5; }
+.visual-fade { position: absolute; left: 0; top: 0; width: 240px; height: 100%; background: linear-gradient(to right, #0A0E19 0%, #0A0E19 30%, transparent 100%); z-index: 6; }
+
+.bar { position: absolute; bottom: 0; left: 0; right: 0; height: 72px; background: rgba(255,255,255,0.028); border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; padding: 0 64px 0 80px; z-index: 20; }
+.logo { font-family: 'Prompt', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.04em; }
+.badge { display: flex; align-items: center; gap: 10px; }
+.badge-icon { width: 34px; height: 34px; background: #006AFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Prompt', sans-serif; font-size: 12px; font-weight: 800; color: white; }
+.badge-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="accent"></div>
+  <div class="content">
+    <div class="tag"><div class="tag-line"></div><span class="tag-text">Holdings &amp; Conglomerados</span></div>
+    <h1 class="headline">Todo o grupo.<br><em>Uma visão.</em><br>Uma verdade.</h1>
+    <p class="subtext">Consolidação financeira para estruturas com<br>múltiplas empresas e marcas no SAP.</p>
+    <div class="cta">Conheça nosso portfólio &nbsp;→</div>
+  </div>
+
+  <!-- Visual: Convergence / consolidation funnel -->
+  <div class="visual">
+    <div class="visual-fade"></div>
+    <svg width="680" height="556" viewBox="0 0 680 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="100" x2="680" y2="100" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="200" x2="680" y2="200" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="300" x2="680" y2="300" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="400" x2="680" y2="400" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="100" y1="0" x2="100" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="200" y1="0" x2="200" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="300" y1="0" x2="300" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="400" y1="0" x2="400" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="500" y1="0" x2="500" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="600" y1="0" x2="600" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+      <!-- Layered rectangles converging (top entities) -->
+      <!-- Entity A top-left -->
+      <rect x="140" y="80" width="120" height="56" rx="4" fill="#006AFF" fill-opacity="0.12" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <rect x="152" y="95" width="96" height="8" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="152" y="110" width="60" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+
+      <!-- Entity B top-center -->
+      <rect x="280" y="60" width="120" height="56" rx="4" fill="#006AFF" fill-opacity="0.16" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.6"/>
+      <rect x="292" y="75" width="96" height="8" rx="2" fill="#006AFF" fill-opacity="0.6"/>
+      <rect x="292" y="90" width="70" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+
+      <!-- Entity C top-right -->
+      <rect x="430" y="80" width="120" height="56" rx="4" fill="#006AFF" fill-opacity="0.12" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <rect x="442" y="95" width="96" height="8" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="442" y="110" width="50" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+
+      <!-- Entity D bottom-left -->
+      <rect x="160" y="390" width="100" height="52" rx="4" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.4"/>
+      <rect x="172" y="405" width="76" height="7" rx="2" fill="#006AFF" fill-opacity="0.4"/>
+      <rect x="172" y="419" width="48" height="5" rx="2" fill="rgba(255,255,255,0.12)"/>
+
+      <!-- Entity E bottom-right -->
+      <rect x="430" y="390" width="100" height="52" rx="4" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.4"/>
+      <rect x="442" y="405" width="76" height="7" rx="2" fill="#006AFF" fill-opacity="0.4"/>
+      <rect x="442" y="419" width="56" height="5" rx="2" fill="rgba(255,255,255,0.12)"/>
+
+      <!-- Converging lines to central node -->
+      <line x1="200" y1="136" x2="340" y2="235" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.3"/>
+      <line x1="340" y1="116" x2="340" y2="235" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.35"/>
+      <line x1="490" y1="136" x2="340" y2="235" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.3"/>
+      <line x1="210" y1="390" x2="340" y2="318" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.25"/>
+      <line x1="480" y1="390" x2="340" y2="318" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.25"/>
+
+      <!-- Central consolidated view -->
+      <rect x="248" y="235" width="184" height="84" rx="8" fill="#006AFF" fill-opacity="0.15" stroke="#006AFF" stroke-width="2" stroke-opacity="0.8"/>
+      <!-- Inner lines simulating a dashboard -->
+      <rect x="264" y="250" width="152" height="9" rx="2" fill="#006AFF" fill-opacity="0.7"/>
+      <rect x="264" y="266" width="100" height="7" rx="2" fill="rgba(255,255,255,0.25)"/>
+      <rect x="264" y="279" width="130" height="7" rx="2" fill="rgba(255,255,255,0.18)"/>
+      <rect x="264" y="292" width="80" height="7" rx="2" fill="rgba(255,255,255,0.12)"/>
+      <!-- Small green indicator -->
+      <circle cx="396" cy="254" r="5" fill="#94FF96" fill-opacity="0.8"/>
+      <rect x="264" y="318" width="152" height="1" rx="0" fill="rgba(255,255,255,0.08)"/>
+
+      <!-- Green accent dots -->
+      <circle cx="560" cy="120" r="3" fill="#94FF96" fill-opacity="0.45"/>
+      <circle cx="590" cy="370" r="2.5" fill="#94FF96" fill-opacity="0.35"/>
+    </svg>
+  </div>
+
+  <div class="bar">
+    <div class="logo">solveplan</div>
+    <div class="badge">
+      <div class="badge-icon">SAP</div>
+      <div class="badge-label">Parceiro Gold<br>América Latina</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

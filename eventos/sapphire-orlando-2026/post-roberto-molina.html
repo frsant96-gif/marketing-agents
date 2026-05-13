@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1080px; background: #000; }
+
+    .post {
+      width: 1080px;
+      height: 1350px;
+      background: #0A0E19;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,106,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,106,255,0.035) 1px, transparent 1px);
+      background-size: 72px 72px;
+    }
+
+    .glow {
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0,106,255,0.10) 0%, transparent 65%);
+      top: -160px;
+      left: -80px;
+      pointer-events: none;
+    }
+
+    /* Divider vertical azul */
+    .divider {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 516px;
+      width: 3px;
+      background: #006AFF;
+      box-shadow: 0 0 16px rgba(0,106,255,0.6), 0 0 40px rgba(0,106,255,0.2);
+      z-index: 15;
+    }
+
+    /* Painel esquerdo */
+    .left {
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 516px;
+      padding: 52px 48px 52px 52px;
+      display: flex;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    /* Painel direito — foto */
+    .right {
+      position: absolute;
+      top: 0; left: 519px; right: 0; bottom: 0;
+      overflow: hidden;
+      z-index: 5;
+    }
+
+    .right::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 90px;
+      background: linear-gradient(90deg, #0A0E19, transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .right::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background: linear-gradient(180deg, #0A0E19, transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .photo-box {
+      width: 100%;
+      height: 100%;
+      background: rgba(0,106,255,0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.18);
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .logo-img { height: 34px; width: auto; }
+    .logo-txt {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .gap { flex-shrink: 0; }
+
+    .event-pre {
+      font-size: 11px;
+      font-weight: 600;
+      color: #006AFF;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .t {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 800;
+      font-size: 68px;
+      line-height: 0.96;
+      letter-spacing: -1.5px;
+      color: #FFFFFF;
+    }
+
+    .t-blue {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 800;
+      font-size: 68px;
+      line-height: 0.96;
+      letter-spacing: -1.5px;
+      color: #006AFF;
+      margin-bottom: 36px;
+    }
+
+    .details { display: flex; flex-direction: column; gap: 12px; }
+
+    .detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.5;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #006AFF;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .spacer { flex: 1; }
+
+    .sep {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin-bottom: 26px;
+    }
+
+    .name {
+      font-family: 'Prompt', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      color: #FFFFFF;
+      line-height: 1.05;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .role {
+      font-size: 15px;
+      font-weight: 500;
+      color: #94FF96;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0,106,255,0.09);
+      border: 1.5px solid rgba(0,106,255,0.35);
+      border-radius: 6px;
+      padding: 8px 16px;
+      color: rgba(255,255,255,0.80);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #006AFF;
+    }
+  </style>
+</head>
+<body>
+<div class="post">
+  <div class="bg-grid"></div>
+  <div class="glow"></div>
+  <div class="divider"></div>
+
+  <!-- FOTO DIREITA -->
+  <div class="right">
+    <div class="photo-box">
+      📸<br>Foto de<br>
+      <strong style="color:rgba(255,255,255,0.35);font-size:14px">Roberto Molina</strong>
+      <br>substituir aqui
+    </div>
+    <!-- Para usar a foto real:
+    <img src="foto-alexandre.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center" alt="">
+    -->
+  </div>
+
+  <!-- CONTEÚDO ESQUERDA -->
+  <div class="left">
+    <img src="../../marca/logo-escuro.png.png" class="logo-img" alt="Solveplan"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="logo-txt" style="display:none">solveplan</span>
+
+    <div class="gap" style="height:72px"></div>
+
+    <div class="event-pre">Estaremos em</div>
+    <div class="t">SAP Sapphire</div>
+    <div class="t">& ASUG</div>
+    <div class="t">Conference</div>
+    <div class="t-blue">Orlando 2026</div>
+
+    <div class="details">
+      <div class="detail">
+        <div class="dot"></div>
+        May 11–13, 2026
+      </div>
+      <div class="detail">
+        <div class="dot"></div>
+        Orange County Convention Center<br>Orlando, FL
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="sep"></div>
+
+    <div class="name">Roberto Molina</div>
+    <div class="role">Partner · Solveplan</div>
+
+    <div class="badge">
+      <div class="badge-dot"></div>
+      SAP Gold Partner
+    </div>
+  </div>
+</div>
+</body>
+</html>

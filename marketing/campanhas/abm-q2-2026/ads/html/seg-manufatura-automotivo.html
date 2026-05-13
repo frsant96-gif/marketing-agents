@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 628px; overflow: hidden; background: #0A0E19; }
+
+.ad { width: 1200px; height: 628px; position: relative; overflow: hidden; background: #0A0E19; }
+.ad::after { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 36px 36px; pointer-events: none; z-index: 1; }
+.accent { position: absolute; left: 0; top: 0; width: 5px; height: 100%; background: #006AFF; z-index: 20; }
+
+.content { position: absolute; left: 80px; top: 0; bottom: 76px; width: 530px; display: flex; flex-direction: column; justify-content: center; z-index: 10; }
+.tag { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+.tag-line { width: 28px; height: 2px; background: #006AFF; }
+.tag-text { font-family: 'Montserrat', Arial, sans-serif; font-size: 11px; font-weight: 600; color: #006AFF; text-transform: uppercase; letter-spacing: 0.14em; }
+.headline { font-family: 'Prompt', 'Arial Black', sans-serif; font-size: 50px; font-weight: 800; color: #FFFFFF; line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 22px; }
+.headline em { font-style: normal; color: #006AFF; }
+.subtext { font-family: 'Montserrat', Arial, sans-serif; font-size: 16px; font-weight: 400; color: rgba(255,255,255,0.55); line-height: 1.65; margin-bottom: 36px; max-width: 420px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; background: #006AFF; color: #FFFFFF; font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; font-weight: 600; padding: 14px 26px; border-radius: 6px; width: fit-content; }
+
+.visual { position: absolute; right: 0; top: 0; width: 680px; height: 556px; z-index: 5; }
+.visual-fade { position: absolute; left: 0; top: 0; width: 240px; height: 100%; background: linear-gradient(to right, #0A0E19 0%, #0A0E19 30%, transparent 100%); z-index: 6; }
+
+.bar { position: absolute; bottom: 0; left: 0; right: 0; height: 72px; background: rgba(255,255,255,0.028); border-top: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: space-between; padding: 0 64px 0 80px; z-index: 20; }
+.logo { font-family: 'Prompt', sans-serif; font-size: 22px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.04em; }
+.badge { display: flex; align-items: center; gap: 10px; }
+.badge-icon { width: 34px; height: 34px; background: #006AFF; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Prompt', sans-serif; font-size: 12px; font-weight: 800; color: white; }
+.badge-label { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.07em; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="accent"></div>
+  <div class="content">
+    <div class="tag"><div class="tag-line"></div><span class="tag-text">Manufatura &amp; Automotivo</span></div>
+    <h1 class="headline">Do chão de fábrica<br>à <em>decisão</em><br>em tempo real.</h1>
+    <p class="subtext">Analytics de produção e supply chain<br>integrados ao SAP — sem retrabalho.</p>
+    <div class="cta">Conheça nosso portfólio &nbsp;→</div>
+  </div>
+
+  <!-- Visual: Production pipeline / flow stages -->
+  <div class="visual">
+    <div class="visual-fade"></div>
+    <svg width="680" height="556" viewBox="0 0 680 556" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="120" x2="680" y2="120" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="240" x2="680" y2="240" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="360" x2="680" y2="360" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="0" y1="480" x2="680" y2="480" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="140" y1="0" x2="140" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="280" y1="0" x2="280" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="420" y1="0" x2="420" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <line x1="560" y1="0" x2="560" y2="556" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+
+      <!-- Pipeline stages: 4 boxes connected by arrows, vertical layout -->
+      <!-- Stage 1: Dados de Produção -->
+      <rect x="180" y="90" width="320" height="80" rx="6" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.5"/>
+      <rect x="200" y="108" width="160" height="8" rx="2" fill="#006AFF" fill-opacity="0.6"/>
+      <rect x="200" y="123" width="100" height="6" rx="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="200" y="137" width="130" height="6" rx="2" fill="rgba(255,255,255,0.12)"/>
+      <!-- Right metric -->
+      <rect x="392" y="108" width="88" height="54" rx="4" fill="#006AFF" fill-opacity="0.15"/>
+      <text x="436" y="142" font-family="'Prompt', Arial, sans-serif" font-size="22" font-weight="800" fill="#006AFF" fill-opacity="0.9" text-anchor="middle">SAP</text>
+
+      <!-- Arrow down 1 -->
+      <line x1="340" y1="170" x2="340" y2="198" stroke="#006AFF" stroke-width="2" stroke-opacity="0.5"/>
+      <polygon points="334,194 340,206 346,194" fill="#006AFF" fill-opacity="0.5"/>
+
+      <!-- Stage 2: Analytics Layer -->
+      <rect x="180" y="206" width="320" height="80" rx="6" fill="#006AFF" fill-opacity="0.14" stroke="#006AFF" stroke-width="1.5" stroke-opacity="0.6"/>
+      <rect x="200" y="224" width="180" height="8" rx="2" fill="#006AFF" fill-opacity="0.7"/>
+      <!-- Mini bar chart inside -->
+      <rect x="200" y="239" width="16" height="32" rx="2" fill="#006AFF" fill-opacity="0.4"/>
+      <rect x="222" y="249" width="16" height="22" rx="2" fill="#006AFF" fill-opacity="0.5"/>
+      <rect x="244" y="232" width="16" height="39" rx="2" fill="#006AFF" fill-opacity="0.7"/>
+      <rect x="266" y="243" width="16" height="28" rx="2" fill="#006AFF" fill-opacity="0.45"/>
+      <rect x="288" y="235" width="16" height="36" rx="2" fill="#006AFF" fill-opacity="0.6"/>
+      <!-- Trend line over bars -->
+      <polyline points="208,253 230,258 252,236 274,247 296,239" fill="none" stroke="#94FF96" stroke-width="2" stroke-opacity="0.8"/>
+      <circle cx="296" cy="239" r="4" fill="#94FF96" fill-opacity="0.9"/>
+
+      <!-- Arrow down 2 -->
+      <line x1="340" y1="286" x2="340" y2="314" stroke="#006AFF" stroke-width="2" stroke-opacity="0.5"/>
+      <polygon points="334,310 340,322 346,310" fill="#006AFF" fill-opacity="0.5"/>
+
+      <!-- Stage 3: Decisão -->
+      <rect x="180" y="322" width="320" height="80" rx="6" fill="#006AFF" fill-opacity="0.18" stroke="#006AFF" stroke-width="2" stroke-opacity="0.8"/>
+      <rect x="200" y="340" width="200" height="9" rx="2" fill="#006AFF" fill-opacity="0.8"/>
+      <rect x="200" y="356" width="130" height="7" rx="2" fill="rgba(255,255,255,0.3)"/>
+      <rect x="200" y="370" width="160" height="7" rx="2" fill="rgba(255,255,255,0.2)"/>
+      <!-- Green checkmark-style indicator -->
+      <circle cx="455" cy="362" r="16" fill="#94FF96" fill-opacity="0.15" stroke="#94FF96" stroke-width="1.5" stroke-opacity="0.6"/>
+      <polyline points="447,362 453,368 463,354" fill="none" stroke="#94FF96" stroke-width="2.5" stroke-opacity="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Floating data label on the right -->
+      <rect x="540" y="210" width="110" height="52" rx="6" fill="#006AFF" fill-opacity="0.1" stroke="#006AFF" stroke-width="1" stroke-opacity="0.3"/>
+      <rect x="554" y="224" width="82" height="7" rx="2" fill="#006AFF" fill-opacity="0.4"/>
+      <rect x="554" y="237" width="56" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+      <rect x="554" y="249" width="68" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
+
+      <!-- Accent dots -->
+      <circle cx="600" cy="120" r="3" fill="#94FF96" fill-opacity="0.4"/>
+      <circle cx="580" cy="440" r="2.5" fill="#94FF96" fill-opacity="0.35"/>
+    </svg>
+  </div>
+
+  <div class="bar">
+    <div class="logo">solveplan</div>
+    <div class="badge">
+      <div class="badge-icon">SAP</div>
+      <div class="badge-label">Parceiro Gold<br>América Latina</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
