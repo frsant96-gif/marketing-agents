@@ -249,29 +249,131 @@ Antes de salvar, estruturar a narrativa do relatório pra leitura executiva:
 - [ ] O relatório começa pela conclusão, não pela metodologia?
 - [ ] Um executivo sem contexto entenderia o relatório lendo só o Executive Summary?
 
-**Sugestão de dashboard no Power BI (quando aplicável):**
+**Power BI — guia completo de dashboard de marketing:**
 
-Se o usuário usa Power BI pra visualizar os dados, sugerir a estrutura de dashboard:
+### Estrutura de páginas recomendada
 
 ```
-Página 1 — Visão Geral (sempre visível)
-- Card: Total de leads | MQLs | SQLs | Pipeline gerado
+Página 1 — Visão Geral (home)
+- Cards KPI: Total de leads | MQLs | SQLs | Pipeline gerado (R$)
 - Gráfico de linha: evolução mensal das métricas principais
-- Semáforo: status de cada canal (verde/amarelo/vermelho vs. meta)
+- Semáforo por canal: verde (acima da meta) / amarelo (±10%) / vermelho (abaixo)
+- Filtros globais: período, canal, segmento de empresa, persona
 
 Página 2 — Por Canal
 - Tabela: métricas por canal com comparativo vs. período anterior
-- Gráfico de barras: CPL por canal
-- Scatter: ROAS x Volume (identifica o melhor custo-benefício)
+- Gráfico de barras: CPL por canal (ordenado do menor pro maior)
+- Scatter: ROAS x Volume — identifica o melhor custo-benefício
+- Cartão de alerta: canal com maior variação negativa no período
 
-Página 3 — Jornada e Atribuição
-- Funil: Leads → MQLs → SQLs → Oportunidades
-- Sankey ou tabela de jornadas: sequência de touchpoints mais comum
+Página 3 — Funil e Conversão
+- Funil: Leads → MQLs → SQLs → Oportunidades → Fechados
+- Taxa de conversão em cada etapa (com meta e variação)
+- Tempo médio em cada etapa do funil
 
-Filtros globais: período, canal, segmento de empresa, persona
+Página 4 — Conteúdo e SEO
+- Tabela: top 10 páginas por tráfego orgânico (GSC)
+- Gráfico de linha: impressões e cliques ao longo do tempo
+- Ranking de keywords: posição atual vs. período anterior
 
-Atualização: conectar aos dados do CRM/planilha de origem — não copiar/colar
+Página 5 — ABM (se ativo)
+- Tabela de contas: cobertura, engajamento e estágio no funil por conta-alvo
+- Mapa de calor: quais contas engajaram com quais canais
 ```
+
+### Modelo de dados (estrutura de tabelas)
+
+Organizar as tabelas seguindo o padrão **estrela** (star schema) — mais eficiente no Power BI:
+
+```
+Tabela FATO (uma linha por evento/lead):
+- fLeads: id_lead, data, canal, campanha, cargo, segmento, status (lead/MQL/SQL), custo
+
+Tabelas DIMENSÃO (uma linha por item de referência):
+- dCanal: id_canal, nome, tipo (pago/orgânico/evento/ABM)
+- dCampanha: id_campanha, nome, tipo, período, budget
+- dSegmento: id_segmento, vertical, porte
+- dCalendário: data, mês, trimestre, ano (OBRIGATÓRIA — sem ela filtros de período não funcionam)
+- dPersona: id_persona, cargo, perfil
+
+Relacionamentos: fLeads se conecta a cada dDimensão pela chave ID
+Cardinalidade: sempre muitos (fLeads) para um (dDimensão)
+```
+
+*Dica: criar a tabela dCalendário via DAX — `CALENDARAUTO()` gera automaticamente o intervalo das datas existentes.*
+
+### Medidas DAX para marketing (copiar e adaptar)
+
+```dax
+// Total de Leads
+Total Leads = COUNTROWS(fLeads)
+
+// Taxa de conversão Lead → MQL
+Conv Lead MQL =
+DIVIDE(
+    COUNTROWS(FILTER(fLeads, fLeads[status] = "MQL")),
+    COUNTROWS(fLeads),
+    0
+)
+
+// CPL (Custo por Lead)
+CPL =
+DIVIDE(
+    SUM(fLeads[custo]),
+    COUNTROWS(fLeads),
+    0
+)
+
+// Variação vs. período anterior (usar com filtro de data ativo)
+Leads Período Anterior =
+CALCULATE(
+    [Total Leads],
+    PREVIOUSMONTH(dCalendário[data])
+)
+
+Variação Leads % =
+DIVIDE(
+    [Total Leads] - [Leads Período Anterior],
+    [Leads Período Anterior],
+    0
+)
+
+// Pipeline gerado (se tiver valor de oportunidade)
+Pipeline Marketing =
+CALCULATE(
+    SUM(fLeads[valor_oportunidade]),
+    fLeads[origem] = "Marketing"
+)
+```
+
+### Conectar fontes de dados
+
+| Fonte | Como conectar no Power BI |
+|-------|--------------------------|
+| Planilha Excel / Google Sheets | Get Data → Excel / Web (URL da planilha publicada) |
+| LinkedIn Ads | Exportar CSV do Campaign Manager → Get Data → CSV |
+| Google Ads | Exportar CSV ou conectar via Google Ads connector (Power BI Desktop) |
+| Google Analytics 4 | Connector nativo: Get Data → buscar "Google Analytics" |
+| Google Search Console | Exportar CSV do GSC ou usar connector da comunidade |
+| CRM (HubSpot/RD) | Exportar relatório em CSV ou usar connector nativo |
+
+**Regra de ouro:** sempre conectar ao arquivo fonte (Excel, CSV, banco) — nunca copiar e colar dados diretamente no Power BI. Assim o relatório atualiza automaticamente.
+
+### Atualização automática
+
+- Power BI Desktop: atualização manual (abrir e clicar "Atualizar")
+- Power BI Service (versão online): configurar atualização agendada (diária ou semanal)
+- Para atualização automática via Service: publicar o arquivo .pbix e configurar gateway se a fonte for local
+
+### Problemas comuns e soluções
+
+| Problema | Causa | Solução |
+|----------|-------|---------|
+| Filtro de data não funciona | Tabela dCalendário ausente ou não conectada | Criar dCalendário e ligar a todas as tabelas fato |
+| Medida DAX retorna erro | Divisão por zero | Usar `DIVIDE(numerador, denominador, 0)` |
+| Relacionamento com aviso | Cardinalidade errada ou duplicatas na dimensão | Verificar se a tabela dimensão tem chave única |
+| Dashboard lento | Muitas colunas desnecessárias nas tabelas | Remover colunas não usadas no Power Query antes de carregar |
+| Dados desatualizados no Service | Gateway não configurado pra fonte local | Configurar On-premises data gateway |
 
 ## Passo 7 — Salvar
 
