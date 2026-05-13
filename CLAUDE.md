@@ -63,6 +63,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/wordpress` | Suporte WordPress sem dev — performance, SEO técnico, segurança, backup, troubleshooting e manutenção mensal via painel Admin |
 | `/persona` | Cria, atualiza e consulta personas com Jobs to be Done, jornada do comprador e objeções — salvas em `_contexto/personas/` e usadas em campanhas, conteúdo e ABM |
 | `/revisar-comunicacao` | Revisa emails, mensagens e apresentações (clareza, tom, efetividade) e simula conversas difíceis pra praticar antes de executar |
+| `/auditoria-seo` | Audita qualquer página do site e entrega scorecard SEO/AEO/GEO (0-100) com diagnóstico por item e plano de ação com os ajustes exatos para chegar a 100% |
 
 ---
 
