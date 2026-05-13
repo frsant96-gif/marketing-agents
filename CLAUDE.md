@@ -56,6 +56,8 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
 | `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
 | `/relatorio` | Analisa dados de marketing e gera relatório estruturado (executive summary, insights, recomendações, visualizações) — cobre campanhas, eventos, conteúdo, SEO, pipeline e ABM |
+| `/atribuicao` | Analisa qual canal realmente gerou pipeline — modelos multi-touch (U-shaped, linear, first/last touch), UTM, CAC, ROAS e recomendações de realocação de budget |
+| `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
 
 ---
 
