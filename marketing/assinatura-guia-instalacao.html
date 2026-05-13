@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Como instalar sua assinatura de email — Solveplan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f5f6fa;
+      color: #0A0837;
+      padding: 48px 24px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .header {
+      margin-bottom: 40px;
+    }
+    .header img {
+      width: 140px;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .header h1 {
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A0837;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      border-left: 4px solid #006AFF;
+    }
+    .section-title {
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #006AFF;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      background: #006AFF;
+      color: #fff;
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-number {
+      background: #0A0837;
+      color: #fff;
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #333;
+    }
+    .step-text strong {
+      color: #0A0837;
+      font-weight: 600;
+    }
+    .highlight {
+      background: #f0f5ff;
+      border: 1px solid #ccdeff;
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #0A0837;
+      font-family: 'Courier New', monospace;
+      margin: 8px 0;
+      word-break: break-all;
+    }
+    .tip {
+      background: #f0fff4;
+      border: 1px solid #94FF96;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #1a5c2a;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .tip strong { color: #1a5c2a; }
+    .warning {
+      background: #fff8f0;
+      border: 1px solid #ffc87a;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #7a4500;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .fields-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      font-size: 13px;
+    }
+    .fields-table th {
+      background: #0A0837;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .fields-table th:first-child { border-radius: 6px 0 0 0; }
+    .fields-table th:last-child { border-radius: 0 6px 0 0; }
+    .fields-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #eee;
+      color: #333;
+      vertical-align: top;
+    }
+    .fields-table tr:last-child td { border-bottom: none; }
+    .fields-table tr:nth-child(even) td { background: #f9f9fb; }
+    .fields-table code {
+      background: #eef2ff;
+      color: #006AFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+    }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Cabeçalho -->
+  <div class="header">
+    <img src="https://47910417.fs1.hubspotusercontent-na1.net/hubfs/47910417/Logo%20500x500_.png" alt="solveplan" />
+    <h1>Como instalar sua assinatura de email</h1>
+    <p>Siga os 3 passos abaixo para configurar sua assinatura no Outlook (Microsoft 365).<br>
+    Tempo estimado: <strong>5 minutos</strong>. Não é necessário nenhum conhecimento técnico.</p>
+  </div>
+
+  <!-- PASSO 1 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">1</span>
+      Edite seus dados no arquivo
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Localize o arquivo <strong>assinatura-template-solveplan.html</strong> enviado pelo time de marketing.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Clique com o botão direito no arquivo → <strong>Abrir com</strong> → <strong>Bloco de Notas</strong>
+        (ou qualquer editor de texto).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Use <strong>Ctrl + H</strong> para abrir "Localizar e Substituir" e troque os 4 campos abaixo pelos seus dados:
+      </div>
+    </div>
+
+    <table class="fields-table">
+      <thead>
+        <tr>
+          <th>Texto a localizar</th>
+          <th>Substituir pelo seu dado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Nome Sobrenome</code></td>
+          <td>Seu nome completo<br><em style="color:#999; font-size:11px;">Ex: Francielle Beline</em></td>
+        </tr>
+        <tr>
+          <td><code>Cargo</code></td>
+          <td>Seu cargo<br><em style="color:#999; font-size:11px;">Ex: Marketing Manager</em></td>
+        </tr>
+        <tr>
+          <td><code>email@solveplan.com</code></td>
+          <td>Seu email corporativo<br><em style="color:#999; font-size:11px;">Ex: francielle.beline@solveplan.com</em></td>
+        </tr>
+        <tr>
+          <td><code>+55 (11) 99999-9999</code></td>
+          <td>Seu telefone com DDD<br><em style="color:#999; font-size:11px;">Ex: +55 (11) 98765-4321</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="step" style="margin-top: 16px;">
+      <span class="step-number">4</span>
+      <div class="step-text">
+        Salve o arquivo: <strong>Ctrl + S</strong>.
+      </div>
+    </div>
+
+    <div class="tip">
+      <strong>Dica:</strong> Não altere mais nada além dos 4 campos acima. Logo, ícones, redes sociais e aviso LGPD já estão configurados.
+    </div>
+  </div>
+
+  <!-- PASSO 2 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">2</span>
+      Copie a assinatura pelo Chrome ou Edge
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Abra o arquivo <strong>.html</strong> no <strong>Chrome</strong> ou <strong>Edge</strong>
+        (clique duplo ou arraste para o navegador).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Verifique se seus dados aparecem corretamente.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Selecione tudo: <strong>Ctrl + A</strong>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-text">
+        Copie: <strong>Ctrl + C</strong>
+      </div>
+    </div>
+
+    <div class="warning">
+      <strong>Importante:</strong> Abra sempre pelo Chrome ou Edge — não pelo Outlook, Word ou outros programas. Só esses navegadores preservam a formatação corretamente.
+    </div>
+  </div>
+
+  <!-- PASSO 3 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">3</span>
+      Cole no Outlook (Microsoft 365)
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Abra o <strong>Outlook</strong> e vá em:<br>
+        <strong>Arquivo → Opções → Email → Assinaturas</strong>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Clique em <strong>Nova</strong> e dê um nome para a assinatura, ex: <em>"Assinatura Solveplan"</em>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Clique na área de edição da assinatura (caixa de texto grande) e cole: <strong>Ctrl + V</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-text">
+        Em <strong>"Novas mensagens"</strong> e <strong>"Respostas/Encaminhamentos"</strong>, selecione <em>"Assinatura Solveplan"</em> nos menus suspensos.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">5</span>
+      <div class="step-text">
+        Clique em <strong>OK</strong> para salvar.
+      </div>
+    </div>
+
+    <div class="tip">
+      <strong>Pronto!</strong> Abra um novo email para conferir se a assinatura aparece automaticamente.
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="footer">
+    Dúvidas? Entre em contato com o time de marketing da Solveplan.
+  </div>
+
+</div>
+</body>
+</html>
