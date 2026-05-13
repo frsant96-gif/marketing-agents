@@ -1,6 +1,6 @@
 ---
 name: video-editor
-description: Cria roteiro, briefing de edição e guia de publicação para vídeos da Solveplan. Três formatos: talking head (LinkedIn), Reels/TikTok de conteúdo e clip de webinar/evento. Ferramentas: CapCut e Canva Video.
+description: Cria roteiro, briefing de edição e guia de publicação para vídeos da Solveplan. Três formatos: talking head (LinkedIn), Reels/TikTok de conteúdo e clip de webinar/evento. Ferramentas: CapCut, Canva Video e Camtasia.
 ---
 
 # /video-editor
@@ -158,7 +158,7 @@ Adaptações necessárias:
 - Destacar a frase-chave em cor diferente
 ```
 
-**Briefing de edição no CapCut:**
+**Briefing de edição no CapCut ou Camtasia:**
 
 ```
 Importar: arquivo de vídeo do evento

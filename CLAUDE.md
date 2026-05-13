@@ -58,6 +58,8 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/relatorio` | Analisa dados de marketing e gera relatório estruturado (executive summary, insights, recomendações, visualizações) — cobre campanhas, eventos, conteúdo, SEO, pipeline e ABM |
 | `/atribuicao` | Analisa qual canal realmente gerou pipeline — modelos multi-touch (U-shaped, linear, first/last touch), UTM, CAC, ROAS e recomendações de realocação de budget |
 | `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
+| `/video-editor` | Roteiro, briefing de edição e guia de publicação pra vídeos — talking head, Reels/conteúdo e clips de webinar — ferramentas: CapCut, Canva Video, Camtasia |
+| `/clip-social` | Transforma gravações longas em clips otimizados por plataforma — identifica momentos, define cortes, gera legendas e calendário de publicação |
 
 ---
 
