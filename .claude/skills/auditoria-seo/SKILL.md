@@ -284,11 +284,51 @@ Onde mudar: [campo no Yoast/Rank Math / editor de página / Functions.php / etc.
 
 ---
 
-## Passo 5 — Salvar (opcional)
+## Passo 5 — Gerar arquivo Excel (CSV)
 
-Se o usuário quiser salvar o resultado:
+Ao finalizar a análise, sempre gerar automaticamente um arquivo CSV da auditoria — sem precisar pedir.
 
-Criar pasta `marketing/auditorias-seo/` e salvar como `[slug-da-pagina]-[data].md`.
+Criar pasta `marketing/auditorias-seo/` e salvar dois arquivos:
+
+**Arquivo 1 — Scorecard resumido:** `[slug-da-pagina]-[data]-score.csv`
+
+```csv
+Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,X,10,OK / Parcial / Faltando,[instrução ou vazio se ok]
+SEO On-Page,Meta Description,X,10,OK / Parcial / Faltando,[instrução]
+SEO On-Page,Estrutura de Headings,X,10,OK / Parcial / Faltando,[instrução]
+SEO On-Page,URL + Imagens + Links,X,10,OK / Parcial / Faltando,[instrução]
+Performance Técnica,PageSpeed Mobile,X,8,OK / Parcial / Faltando,[instrução]
+Performance Técnica,PageSpeed Desktop,X,5,OK / Parcial / Faltando,[instrução]
+Performance Técnica,LCP,X,4,OK / Parcial / Faltando,[instrução]
+Performance Técnica,CLS,X,3,OK / Parcial / Faltando,[instrução]
+AEO,Bloco Featured Snippet,X,10,OK / Parcial / Faltando,[instrução]
+AEO,FAQ,X,8,OK / Parcial / Faltando,[instrução]
+AEO,Perguntas nos Headings,X,7,OK / Parcial / Faltando,[instrução]
+GEO,Schema Markup,X,6,OK / Parcial / Faltando,[instrução]
+GEO,E-E-A-T,X,5,OK / Parcial / Faltando,[instrução]
+GEO,Entidades e Citações,X,4,OK / Parcial / Faltando,[instrução]
+TOTAL,,X,100,,
+```
+
+**Arquivo 2 — Plano de ação:** `[slug-da-pagina]-[data]-plano-acao.csv`
+
+```csv
+Prioridade,Item,Pontos a Ganhar,Dificuldade,O que fazer,Onde mudar no WordPress
+1,[item],+X,Fácil / Médio / Difícil,[instrução exata],[campo Yoast / editor de página / etc.]
+2,[item],+X,Fácil / Médio / Difícil,[instrução exata],[onde mudar]
+...
+```
+
+*O CSV abre diretamente no Excel com dois cliques. Para visualizar corretamente no Excel Brasil: ao abrir, selecionar "Delimitado" → separador "Vírgula".*
+
+---
+
+## Passo 6 — Salvar relatório completo (opcional)
+
+Se o usuário quiser salvar o relatório narrativo além do CSV:
+
+Criar na mesma pasta `marketing/auditorias-seo/` e salvar como `[slug-da-pagina]-[data].md`.
 
 ---
 
@@ -296,7 +336,7 @@ Criar pasta `marketing/auditorias-seo/` e salvar como `[slug-da-pagina]-[data].m
 
 Se o usuário quiser comparar múltiplas páginas:
 
-1. Auditar cada uma separadamente
+1. Auditar cada uma separadamente e gerar os CSVs individuais de cada
 2. Gerar tabela comparativa no final:
 
 ```
@@ -306,7 +346,8 @@ Se o usuário quiser comparar múltiplas páginas:
 | /blog/artigo-x | 28/40 | 12/20 | 20/25 | 8/15 | 68/100 |
 ```
 
-3. Indicar qual página tem maior potencial de melhoria rápida
+3. Gerar também um CSV consolidado `comparativo-[data].csv` com uma linha por página
+4. Indicar qual página tem maior potencial de melhoria rápida
 
 ---
 
