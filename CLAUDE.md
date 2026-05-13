@@ -60,6 +60,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
 | `/video-editor` | Roteiro, briefing de edição e guia de publicação pra vídeos — talking head, Reels/conteúdo e clips de webinar — ferramentas: CapCut, Canva Video, Camtasia |
 | `/clip-social` | Transforma gravações longas em clips otimizados por plataforma — identifica momentos, define cortes, gera legendas e calendário de publicação |
+| `/wordpress` | Suporte WordPress sem dev — performance, SEO técnico, segurança, backup, troubleshooting e manutenção mensal via painel Admin |
 
 ---
 
