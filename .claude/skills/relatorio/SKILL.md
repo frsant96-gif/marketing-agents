@@ -482,6 +482,81 @@ Quando travar numa fórmula DAX, descrever aqui: qual o objetivo da medida, qual
 | Dashboard lento | Muitas colunas desnecessárias nas tabelas | Remover colunas não usadas no Power Query antes de carregar |
 | Dados desatualizados no Service | Gateway não configurado pra fonte local | Configurar On-premises data gateway |
 
+### Performance — diagnóstico e otimização
+
+**Quando o dashboard está lento, seguir essa ordem:**
+
+**1. Identificar o gargalo com Performance Analyzer (Power BI Desktop)**
+- Aba View → Performance Analyzer → Start recording
+- Clicar em cada visual para ver o tempo de resposta
+- Qualquer visual acima de 2-3 segundos precisa de atenção
+- Os tempos são divididos em: DAX query / Visual display / Other
+
+**2. Verificar a query DAX com DAX Studio**
+- Ferramenta gratuita: daxstudio.org
+- Conectar ao Power BI Desktop aberto
+- Colar a medida lenta e rodar — mostra o plano de execução
+- Focar nos "Storage Engine requests" — muitos pedidos = modelo não otimizado
+
+**3. Otimizações no modelo de dados (fazer antes das medidas DAX)**
+
+```
+Remover colunas não usadas no Power Query — cada coluna extra consome memória
+Reduzir cardinalidade de colunas de texto — ex: se "segmento" tem 5 valores, não 500
+Usar tipos de dados corretos — inteiro é mais rápido que texto, data é mais rápida que texto
+Desativar "Auto date/time" — Power BI cria tabelas de data ocultas para cada coluna de data
+  → Arquivo → Opções → Carregamento de dados → desmarcar "Auto date/time"
+  → Usar a dCalendário criada manualmente (já descrita acima)
+```
+
+**4. Otimizações DAX para performance**
+
+```dax
+// ❌ FILTER em tabela grande — lento
+CALCULATE([Total Leads], FILTER(fLeads, fLeads[status] = "MQL"))
+
+// ✅ Usar valor direto na função CALCULATE — muito mais rápido
+CALCULATE([Total Leads], fLeads[status] = "MQL")
+```
+
+```dax
+// ❌ Funções iteradoras em tabelas grandes sem necessidade (SUMX, AVERAGEX, FILTER)
+// Use SUM/COUNT quando possível — são mais eficientes
+
+// ✅ SUM é mais rápido que SUMX quando a coluna já existe
+Total Custo = SUM(fLeads[custo])  // em vez de SUMX(fLeads, fLeads[custo])
+```
+
+**5. Otimizações de relatório (visuais)**
+
+```
+Reduzir número de visuais por página — cada visual faz uma query DAX separada
+Usar slicers com cautela — slicer de lista longa (ex: 100 empresas) é pesado; preferir dropdown
+Desativar cross-filtering em visuais que não precisam — Edit Interactions
+Evitar visuais de tabela com muitas linhas — paginar ou usar Top N com filtro
+Imagens em alta resolução travam o carregamento — comprimir antes de inserir
+```
+
+**6. DirectQuery vs. Import — quando usar cada um**
+
+| Situação | Modo recomendado |
+|----------|-----------------|
+| Dados mudam o dia todo e precisam ser em tempo real | DirectQuery |
+| Dados são atualizados 1x por dia (campanhas, leads) | Import — muito mais rápido |
+| Fonte de dados é grande demais pra importar (>1GB) | DirectQuery com agregações |
+| Você está começando e quer simplicidade | Import |
+
+*Para marketing da Solveplan: usar Import mode. Os dados de campanhas, leads e SEO não precisam de tempo real — atualizar 1x por dia é suficiente e o dashboard fica muito mais rápido.*
+
+**7. KPIs de performance aceitáveis**
+
+```
+Visual simples (cartão KPI, barra): < 1 segundo
+Visual complexo (scatter, mapa): < 3 segundos
+Página completa ao abrir: < 5 segundos
+Se passar de 5 segundos: investigar com Performance Analyzer
+```
+
 ## Passo 7 — Salvar
 
 Criar pasta `marketing/relatorios/[tipo]-[periodo]/` e salvar:
