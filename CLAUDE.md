@@ -55,6 +55,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/material-campanha` | Briefing → copy + briefing visual pra banners, LP, email, apresentação no Canva — salva em `marketing/materiais/` |
 | `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
 | `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
+| `/relatorio` | Analisa dados de marketing e gera relatório estruturado (executive summary, insights, recomendações, visualizações) — cobre campanhas, eventos, conteúdo, SEO, pipeline e ABM |
 
 ---
 

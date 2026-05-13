@@ -24,7 +24,23 @@ Fazer as perguntas abaixo, uma por vez:
 
 Se o usuário já informou algum dado antes de rodar a skill, não perguntar de novo.
 
-## Passo 2 — Definir estratégia de keywords
+## Passo 2 — Análise de concorrentes
+
+Se o usuário informou uma página concorrente no briefing (pergunta 8), analisar antes de escrever:
+
+```
+Concorrente analisado:    [URL]
+Keywords que ele usa:     [listar KWs identificadas no título, H1, H2s]
+Estrutura da página:      [seções que ele tem]
+Lacunas (o que ele não cobre): [tópicos, ângulos, provas que faltam]
+Ângulo diferenciador:     [o que a Solveplan pode fazer melhor ou diferente]
+```
+
+Se o usuário não informou concorrente, gerar análise de benchmark com base no tema:
+
+> "Para [keyword principal], páginas que costumam ranquear bem cobrem: [tópicos típicos]. Vou garantir que essa página supere o benchmark nos pontos onde a Solveplan tem diferencial real."
+
+## Passo 3 — Definir estratégia de keywords
 
 Antes de escrever qualquer seção, montar o mapa de keywords da página:
 
@@ -39,7 +55,7 @@ Palavras a evitar:           [jargões genéricos que não ranqueiam — ex: "tr
 
 Apresentar o mapa pro usuário confirmar antes de continuar.
 
-## Passo 3 — Confirmar estrutura
+## Passo 4 — Confirmar estrutura
 
 > "Vou estruturar a página assim:
 >
@@ -57,7 +73,7 @@ Apresentar o mapa pro usuário confirmar antes de continuar.
 
 Ajustar se o usuário pedir.
 
-## Passo 4 — Escrever a página
+## Passo 5 — Escrever a página
 
 Escrever cada seção separada com marcação clara.
 
@@ -213,7 +229,7 @@ Gerar 5-7 perguntas, priorizando:
 
 ---
 
-## Passo 5 — Metadados SEO
+## Passo 6 — Metadados SEO
 
 ```
 Meta title:        [até 60 caracteres | keyword principal + marca | ex: "SAP Business Data Cloud | Solveplan"]
@@ -274,7 +290,7 @@ Indicar 2-3 páginas do site da Solveplan que fazem sentido linkar nessa página
 
 ---
 
-## Passo 6 — Checklist GEO (Generative Engine Optimization)
+## Passo 7 — Checklist GEO (Generative Engine Optimization)
 
 Verificar antes de salvar:
 
@@ -288,17 +304,78 @@ Verificar antes de salvar:
 
 ---
 
-## Passo 7 — Salvar
+## Passo 8 — Checklist técnico WordPress
+
+Antes de salvar, gerar checklist de verificação técnica pra quando a página for publicada:
+
+**Performance (Core Web Vitals):**
+- [ ] Imagens em formato WebP ou AVIF
+- [ ] Imagens com dimensões definidas (width + height no HTML) pra evitar layout shift (CLS)
+- [ ] Imagem hero com `loading="eager"`, demais imagens com `loading="lazy"`
+- [ ] Plugin de cache ativo (ex: WP Rocket, W3 Total Cache)
+- [ ] Nenhum script de terceiro bloqueando o render (verificar via PageSpeed Insights)
+
+**Mobile-first:**
+- [ ] Página testada em viewport mobile (375px)
+- [ ] Botões de CTA com tamanho mínimo de 44px altura pra toque
+- [ ] Textos legíveis sem zoom (mínimo 16px)
+- [ ] Nenhum elemento com overflow horizontal
+
+**SEO técnico WordPress:**
+- [ ] Yoast SEO ou Rank Math configurado com meta title e meta description da skill
+- [ ] URL slug definido conforme indicado nos metadados
+- [ ] Imagem OG adicionada (1200x630px)
+- [ ] Schema markup inserido via plugin ou bloco de código no rodapé
+- [ ] Canonical URL configurada pra evitar duplicidade
+- [ ] Página incluída no sitemap XML
+- [ ] Sem erros de crawl (verificar no Google Search Console após publicação)
+
+**Acessibilidade:**
+- [ ] Alt text em todas as imagens
+- [ ] Hierarquia de headings correta (um H1, H2s para seções, H3s para subseções)
+- [ ] Links com texto descritivo (sem "clique aqui")
+
+## Passo 9 — Salvar
 
 Criar pasta `marketing/paginas/[slug-da-solucao]/` e salvar:
 - `copy.md` — copy completa da página (todas as seções)
 - `meta.md` — metadados SEO, schemas JSON, OG e sugestões de links internos
 
-## Passo 8 — Confirmar
+## Passo 10 — Confirmar e monitorar
 
-Informar onde foi salvo e perguntar:
+Informar onde foi salvo e entregar o plano de monitoramento pós-publicação:
 
 > "Quer ajustar alguma seção, adicionar um case específico ou criar o material visual da página?"
+
+**Plano de monitoramento (gerar junto com os arquivos):**
+
+```
+Monitoramento pós-publicação — [nome da página]
+
+Semana 1-2 (após publicar):
+- Verificar indexação: site:solveplan.com.br/[slug]
+- Confirmar que Google Search Console não mostra erros de crawl
+- Testar PageSpeed Insights (meta: >80 mobile, >90 desktop)
+- Verificar rich results com Google Rich Results Test (schema)
+
+Mês 1:
+- GSC: página aparece em "Cobertura"? Está indexada?
+- GSC: quais queries estão trazendo impressões?
+- Ajustar meta description se CTR < 2%
+
+Mês 2-3:
+- GSC: rankings subindo para a keyword principal?
+- Analytics: tempo na página > 2 min = bom sinal de relevância
+- Analytics: taxa de conversão do CTA (meta: >2%)
+- Atualizar com novo case ou dado se disponível
+
+Revisão trimestral:
+- A keyword principal está no top 10? Se não, revisar seções de dor e solução
+- Adicionar links internos de artigos novos do blog para essa página
+- Atualizar FAQ com novas perguntas identificadas via GSC
+```
+
+Salvar o plano de monitoramento em `marketing/paginas/[slug]/monitoramento.md`.
 
 ---
 
