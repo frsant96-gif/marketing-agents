@@ -62,6 +62,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/clip-social` | Transforma gravações longas em clips otimizados por plataforma — identifica momentos, define cortes, gera legendas e calendário de publicação |
 | `/wordpress` | Suporte WordPress sem dev — performance, SEO técnico, segurança, backup, troubleshooting e manutenção mensal via painel Admin |
 | `/persona` | Cria, atualiza e consulta personas com Jobs to be Done, jornada do comprador e objeções — salvas em `_contexto/personas/` e usadas em campanhas, conteúdo e ABM |
+| `/revisar-comunicacao` | Revisa emails, mensagens e apresentações (clareza, tom, efetividade) e simula conversas difíceis pra praticar antes de executar |
 
 ---
 
