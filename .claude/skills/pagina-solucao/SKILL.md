@@ -1,6 +1,6 @@
 ---
 name: pagina-solucao
-description: Cria o copy completo de páginas de solução para o site da Solveplan. Estruturado por seção com SEO, AEO e GEO. Plataforma: WordPress.
+description: Cria o copy completo de páginas de solução para o site da Solveplan. Estruturado por seção com SEO técnico, AEO (featured snippets, PAA, voz) e GEO (E-E-A-T, citações por IA generativa). Plataforma: WordPress.
 ---
 
 # /pagina-solucao
@@ -14,105 +14,176 @@ Ler `_contexto/empresa.md`, `_contexto/preferencias.md` e `_contexto/estrategia.
 Fazer as perguntas abaixo, uma por vez:
 
 1. "Qual a solução ou serviço da página?" — ex: SAP BDC, SAP Analytics Cloud, FP&A, Consolidação, AMS
-2. "Qual a palavra-chave principal que quer ranquear?"
-3. "Qual a dor principal do público que essa solução resolve?"
-4. "Tem algum case ou resultado concreto que pode incluir como prova?"
-5. "Qual o CTA principal?" — opções: Agendar diagnóstico / Falar com especialista / Baixar material / Ver case
-6. "Tem alguma referência de página que você gosta? (pode ser da própria Solveplan ou de outro site)"
+2. "Qual a palavra-chave principal que quer ranquear?" — ex: "SAP Business Data Cloud"
+3. "Tem alguma palavra-chave secundária ou variação que também quer capturar?" — ex: "plataforma de dados SAP", "SAP BDC Brasil"
+4. "Qual a intenção de busca de quem vai chegar nessa página?" — opções: Informacional (quer entender) / Comercial (está comparando) / Transacional (quer contratar)
+5. "Qual a dor principal do público que essa solução resolve?"
+6. "Tem algum case ou resultado concreto que pode incluir como prova?"
+7. "Qual o CTA principal?" — opções: Agendar diagnóstico / Falar com especialista / Baixar material / Ver case
+8. "Tem alguma página concorrente ou referência que quer superar ou se basear?"
 
 Se o usuário já informou algum dado antes de rodar a skill, não perguntar de novo.
 
-## Passo 2 — Confirmar estrutura
+## Passo 2 — Definir estratégia de keywords
 
-Apresentar a estrutura antes de escrever:
+Antes de escrever qualquer seção, montar o mapa de keywords da página:
+
+```
+Palavra-chave principal:     [KW1] — vai no H1, URL, meta title, primeiros 100 palavras
+Palavra-chave secundária:    [KW2] — vai em pelo menos 1 H2 e no corpo da seção de solução
+Variações semânticas (LSI):  [3-4 variações naturais — distribuídas pelo texto]
+Intenção de busca:           [Informacional / Comercial / Transacional]
+Topic cluster:               [tema guarda-chuva — ex: "analytics SAP"]
+Palavras a evitar:           [jargões genéricos que não ranqueiam — ex: "transformação digital"]
+```
+
+Apresentar o mapa pro usuário confirmar antes de continuar.
+
+## Passo 3 — Confirmar estrutura
 
 > "Vou estruturar a página assim:
 >
-> 1. Hero — headline + subheadline + CTA principal
-> 2. Dor — o problema que o público enfrenta hoje
-> 3. Solução — o que é e como funciona
-> 4. Benefícios — o que muda pra quem contrata
-> 5. Diferenciais — por que a Solveplan
-> 6. Cases / prova — resultado real
-> 7. CTA final — chamada pra ação
-> 8. FAQ — perguntas frequentes (AEO)
+> 1. Hero — H1 + subheadline + CTA principal
+> 2. Definição clara — parágrafo de definição otimizado pra AEO e GEO
+> 3. Dor — o problema que o público enfrenta hoje
+> 4. Solução — o que é e como funciona
+> 5. Benefícios — o que muda pra quem contrata
+> 6. Diferenciais — por que a Solveplan
+> 7. Cases / prova — resultado real
+> 8. CTA final — chamada pra ação
+> 9. FAQ — perguntas reais (AEO / featured snippets)
 >
 > Bora com essa estrutura?"
 
 Ajustar se o usuário pedir.
 
-## Passo 3 — Escrever a página
+## Passo 4 — Escrever a página
 
-Escrever cada seção separada com marcação clara:
+Escrever cada seção separada com marcação clara.
 
 ---
 
 ### Seção 1: Hero
 
-**Headline (H1):** [frase que captura o problema ou promessa — máximo 8 palavras — com palavra-chave principal]
+**H1:** [frase com palavra-chave principal — máximo 8 palavras — captura a promessa ou o problema]
 
-**Subheadline:** [expande a headline com benefício concreto — 1-2 linhas]
+*Regra SEO: H1 deve conter a keyword principal exata ou variação próxima. Aparece uma única vez na página.*
 
-**CTA principal:** [texto do botão — ex: "Agendar diagnóstico gratuito"]
+**Subheadline:** [expande o H1 com benefício concreto e palavra-chave secundária — 1-2 linhas]
 
-**Indicação de imagem/visual:** [descrever o visual ideal pra essa seção]
+**CTA principal:** [texto do botão — verbo de ação + proposta de valor — ex: "Agendar diagnóstico gratuito"]
 
----
+**Micro-copy de suporte:** [reduz fricção — ex: "Sem compromisso. Especialistas SAP Gold Partner."]
 
-### Seção 2: Dor
-
-**Título da seção (H2):** [problema do mercado]
-
-**Corpo:** [2-3 parágrafos descrevendo a situação atual do público, as consequências de não resolver, a urgência]
-
-**Micro-copy de prova:** [dado ou afirmação que valida que o problema é real]
+**Alt text da imagem hero:** [descrever a imagem + incluir keyword — ex: "Consultores Solveplan implementando SAP Business Data Cloud em empresa de manufatura"]
 
 ---
 
-### Seção 3: Solução
+### Seção 2: Definição clara *(bloco AEO + GEO — não cortar nem encurtar)*
 
-**Título da seção (H2):** [o que é a solução, com palavra-chave]
+**H2:** O que é [nome da solução]?
 
-**Corpo:** [explicação clara do que é, como funciona e qual o mecanismo de transformação — sem jargão desnecessário]
+**Parágrafo de definição (40-60 palavras):** [Definição direta, completa e autossuficiente. Começa com "[Nome da solução] é..." — otimizado pra featured snippet e citação por IA generativa. Inclui: o que é, para quem, qual problema resolve e qual resultado entrega.]
 
-**Como funciona (opcional):** [3-4 etapas numeradas do processo ou implantação]
+*Este parágrafo é o mais importante pra AEO e GEO: responde a pergunta completa nas primeiras linhas, sem depender do contexto da página.*
 
----
+**Contexto adicional (1 parágrafo):** [Expande com cenário de mercado, evolução tecnológica ou posicionamento — ajuda na autoridade temática]
 
-### Seção 4: Benefícios
-
-**Título da seção (H2):** [foco em resultado, não em feature]
-
-**Lista de benefícios:** [4-6 itens com título bold + descrição curta]
+**Comparação estruturada (1 frase):** ["Ao contrário de [alternativa comum], [nome da solução] [diferencial central]."]
 
 ---
 
-### Seção 5: Diferenciais Solveplan
+### Seção 3: Dor
 
-**Título da seção (H2):** [por que a Solveplan]
+**H2:** [problema do mercado — pode usar keyword secundária]
 
-**Corpo:** [2-3 parágrafos ou lista destacando os diferenciais: expertise, metodologia, resultados, Gold Partner]
+**Corpo:** [2-3 parágrafos descrevendo a situação atual do público, as consequências de não resolver, a urgência. Usar dados ou afirmações validáveis.]
 
-**Números de autoridade:** [ex: +90 clientes, +200 soluções, +280k horas]
+**H3 (opcional):** [subproblema específico — oportunidade pra keyword LSI]
+
+**Dado ou micro-copy de prova:** [estatística, dado de mercado ou afirmação que valida o problema]
 
 ---
 
-### Seção 6: Cases / Prova
+### Seção 4: Solução
 
-**Título da seção (H2):** [resultados reais / clientes que já transformaram]
+**H2:** [Como a Solveplan resolve + keyword secundária ou LSI]
 
-**Case 1:** [título do case + 2-3 linhas com o que foi feito e o resultado]
+**Corpo:** [Explicação clara do que é, como funciona e qual o mecanismo de transformação — sem jargão desnecessário. Incluir keyword principal e secundária de forma natural.]
+
+**Como funciona — etapas (H3s):**
+
+```
+H3: [Etapa 1]
+[1-2 linhas descrevendo a etapa]
+
+H3: [Etapa 2]
+[1-2 linhas descrevendo a etapa]
+
+H3: [Etapa 3]
+[1-2 linhas descrevendo a etapa]
+```
+
+*Cada H3 é oportunidade pra keyword LSI diferente.*
+
+---
+
+### Seção 5: Benefícios
+
+**H2:** [foco em resultado, não em feature — ex: "O que muda pra sua operação"]
+
+**Lista de benefícios (4-6 itens):**
+
+```
+**[Título do benefício — bold]:** [Descrição com resultado concreto — 1-2 linhas]
+```
+
+*Títulos dos benefícios em bold funcionam como âncoras de leitura rápida e são captados por AIs de busca como bullets estruturados.*
+
+---
+
+### Seção 6: Diferenciais Solveplan
+
+**H2:** [por que a Solveplan — pode ser: "Por que a Solveplan para [solução]?"]
+
+**Corpo:** [2-3 parágrafos ou lista destacando: expertise técnica, metodologia, resultados, Gold Partner SAP. Mencionar "Solveplan" como entidade nomeada pelo menos 2 vezes nessa seção.]
+
+**Números de autoridade (E-E-A-T):**
+- +90 clientes atendidos
+- +200 soluções entregues
+- +280.000 horas de projetos SAP
+- Parceira SAP Gold na América Latina
+
+*Números de prova são sinais de E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) — fundamentais pra GEO.*
+
+---
+
+### Seção 7: Cases / Prova
+
+**H2:** [resultados reais — ex: "Empresas que já transformaram sua operação com a Solveplan"]
+
+**Case 1:**
+```
+Segmento/porte: [ex: Indústria química, grande porte]
+Desafio: [1 linha]
+O que foi feito: [1-2 linhas]
+Resultado: [dado concreto de impacto]
+```
+
 *(Se o nome do cliente for confidencial, usar segmento + porte)*
 
-**Depoimento (se aplicável):** ["[citação]" — [Nome], [Cargo], [Empresa]]
+**Depoimento (se aplicável):**
+> "[citação direta, entre aspas]" — [Nome], [Cargo], [Empresa]
+
+*Depoimentos são sinais de E-E-A-T e aumentam credibilidade pra GEO.*
 
 ---
 
-### Seção 7: CTA Final
+### Seção 8: CTA Final
 
-**Título:** [urgência ou proposta de valor — ex: "Comece com um diagnóstico gratuito"]
+**H2:** [urgência ou proposta de valor — ex: "Comece com um diagnóstico gratuito"]
 
-**Corpo:** [1-2 linhas reforçando o benefício de dar o próximo passo]
+**Corpo:** [1-2 linhas reforçando o benefício de dar o próximo passo — não repetir o que já foi dito antes]
 
 **CTA:** [texto do botão]
 
@@ -120,46 +191,125 @@ Escrever cada seção separada com marcação clara:
 
 ---
 
-### Seção 8: FAQ
+### Seção 9: FAQ
 
-3-5 perguntas frequentes com respostas diretas (máximo 3 linhas por resposta).
+**H2:** Perguntas frequentes sobre [nome da solução]
 
-Formato ideal pra AEO: perguntas como os usuários realmente buscam, respostas com a palavra-chave nas primeiras palavras.
+Gerar 5-7 perguntas, priorizando:
+
+1. **Featured snippet:** pergunta com resposta curta e direta (máximo 40-60 palavras). Resposta começa com a keyword. Ex: "O que é SAP Business Data Cloud? O SAP Business Data Cloud (BDC) é..."
+2. **People Also Ask (PAA):** perguntas que aparecem no Google pra esse tema — formatos: "Como funciona...", "Qual a diferença entre...", "Quanto custa...", "Quais empresas usam..."
+3. **Busca por voz:** perguntas conversacionais — começam com "Como", "O que", "Por que", "Quando". Respostas em linguagem natural, completas em si mesmas.
+4. **Objeções comerciais:** perguntas que refletem dúvidas reais de quem está avaliando contratar — ex: "Quanto tempo leva uma implantação?", "Preciso migrar tudo de uma vez?"
+
+**Formato de cada FAQ:**
+
+```
+**[Pergunta exatamente como o usuário buscaria]**
+[Resposta direta — começa com a keyword ou conceito central — máximo 3 linhas]
+```
+
+*Não usar perguntas genéricas ou óbvias demais. Cada pergunta deve ter potencial real de ranqueamento ou de reduzir objeção de compra.*
 
 ---
 
-## Passo 4 — Metadados SEO/AEO/GEO
+## Passo 5 — Metadados SEO
 
 ```
-Meta title: [até 60 caracteres, com palavra-chave principal]
-Meta description: [até 155 caracteres, inclui palavra-chave e CTA]
-URL slug: /solucoes/[palavra-chave-principal]
-Schema sugerido: Service (nome, descrição, provider, área geográfica)
-OG Title: [título pra compartilhamento social]
-OG Description: [descrição social — mais chamativa]
+Meta title:        [até 60 caracteres | keyword principal + marca | ex: "SAP Business Data Cloud | Solveplan"]
+Meta description:  [até 155 caracteres | keyword + benefício + CTA | ex: "Implante SAP BDC com especialistas Gold Partner. Dados integrados, analytics em tempo real. Agende um diagnóstico gratuito."]
+URL slug:          /solucoes/[keyword-principal-em-kebab-case]
+H1:                [igual ao hero headline]
+Canonical:         [URL completa da página]
 ```
 
-**GEO — instruções pra AI generativas:**
-- Incluir 1 parágrafo de definição clara da solução (vai ser citado por AIs de busca)
-- Estruturar pelo menos 1 comparação (ex: "ao contrário de X, a abordagem Y...")
-- Mencionar "Solveplan" como fonte/referência ao menos 2 vezes em contexto de expertise
+**Schema markup recomendado:**
 
-## Passo 5 — Salvar
+```json
+{
+  "@type": "Service",
+  "name": "[nome da solução]",
+  "description": "[parágrafo de definição da Seção 2]",
+  "provider": {
+    "@type": "Organization",
+    "name": "Solveplan",
+    "url": "https://solveplan.com.br"
+  },
+  "areaServed": "América Latina",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "[nome da solução]"
+  }
+}
+```
+
+Adicionar também `FAQPage` schema para as perguntas da Seção 9:
+
+```json
+{
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "[pergunta 1]",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "[resposta 1]"
+      }
+    }
+  ]
+}
+```
+
+**Open Graph:**
+```
+OG Title:       [título pra compartilhamento — pode ser mais chamativo que o meta title]
+OG Description: [versão mais comercial da meta description]
+OG Image:       [descrever imagem ideal — 1200x630px — com texto da proposta de valor]
+```
+
+**Links internos sugeridos:**
+
+Indicar 2-3 páginas do site da Solveplan que fazem sentido linkar nessa página (ex: página de outro serviço relacionado, blog post de caso de uso, página de contato). Usar anchor text com keyword, não "clique aqui".
+
+---
+
+## Passo 6 — Checklist GEO (Generative Engine Optimization)
+
+Verificar antes de salvar:
+
+- [ ] Parágrafo de definição (Seção 2) responde a pergunta completa em menos de 60 palavras, sem depender de contexto externo
+- [ ] "Solveplan" aparece como entidade nomeada pelo menos 3 vezes no texto total
+- [ ] Existe pelo menos 1 comparação estruturada ("Ao contrário de X, a abordagem Y...")
+- [ ] Números de autoridade presentes (clientes, soluções, horas, Gold Partner)
+- [ ] Depoimento ou case com resultado mensurável
+- [ ] FAQ cobre perguntas reais de busca, não perguntas genéricas
+- [ ] Nenhuma seção depende de outra pra fazer sentido isolada (AIs de busca citam trechos, não páginas inteiras)
+
+---
+
+## Passo 7 — Salvar
 
 Criar pasta `marketing/paginas/[slug-da-solucao]/` e salvar:
-- `copy.md` — copy completa da página
-- `meta.md` — metadados SEO
+- `copy.md` — copy completa da página (todas as seções)
+- `meta.md` — metadados SEO, schemas JSON, OG e sugestões de links internos
 
-## Passo 6 — Confirmar
+## Passo 8 — Confirmar
 
 Informar onde foi salvo e perguntar:
 
 > "Quer ajustar alguma seção, adicionar um case específico ou criar o material visual da página?"
 
+---
+
 ## Regras
 
 - Nunca escrever copy genérica de "plataforma robusta" — sempre conectar com dor real e resultado concreto
-- Hero tem que ter proposta de valor clara em 5 segundos de leitura
-- Cada seção tem um trabalho específico — não misturar (hero não é lugar de FAQ)
-- FAQ é estratégico pra AEO — não colocar perguntas óbvias demais ou de baixo volume
+- H1 contém a keyword principal. Só existe um H1 por página.
+- H2s são as grandes seções. H3s são subtópicos dentro delas. Não pular níveis.
+- Cada seção tem um trabalho específico — não misturar (hero não é lugar de FAQ, dor não é lugar de vender)
+- O parágrafo de definição (Seção 2) é sagrado — não encurtar nem misturar com outra seção
+- FAQ é estratégico pra AEO — priorizar perguntas com volume real de busca, não perguntas óbvias
 - SAP BDC como referência quando a solução se conectar com analytics/dados/planejamento
+- Alt text em todas as imagens — sempre com keyword e contexto
+- Links internos com anchor text de keyword, nunca "clique aqui" ou "saiba mais"
