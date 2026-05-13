@@ -76,21 +76,27 @@ Total: **10 campanhas no LinkedIn** + **3 sets Google Display**
 
 ---
 
-## UTMs
+## UTMs — URLs completas
 
-```
-LinkedIn por segmento:
-utm_source=linkedin&utm_medium=paid&utm_campaign=abm-[segmento]&utm_content=[variante-a/b]
+**Landing page:** https://solveplan.com/sobre-nos/
 
-Segmentos: quimica, holdings, manufatura, energia, agro-industrial
+**LinkedIn — 10 URLs por variante:**
 
-Exemplos:
-utm_campaign=abm-quimica&utm_content=variante-a
-utm_campaign=abm-energia&utm_content=variante-b
+| Anúncio | URL completa |
+|---|---|
+| Química A | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=quimica-a` |
+| Química B | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=quimica-b` |
+| Holdings A | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=holdings-a` |
+| Holdings B | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=holdings-b` |
+| Manufatura A | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=manufatura-a` |
+| Manufatura B | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=manufatura-b` |
+| Energia A | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=energia-a` |
+| Energia B | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=energia-b` |
+| Agro A | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=agro-a` |
+| Agro B | `https://solveplan.com/sobre-nos/?utm_source=linkedin&utm_medium=paid&utm_campaign=abm-q2-2026&utm_content=agro-b` |
 
-Google Display:
-utm_source=google&utm_medium=display&utm_campaign=abm-remarketing&utm_content=[set1/set2/set3]
-```
+**Google Display:**
+`https://solveplan.com/sobre-nos/?utm_source=google&utm_medium=display&utm_campaign=abm-remarketing&utm_content=[set1/set2/set3]`
 
 ---
 
