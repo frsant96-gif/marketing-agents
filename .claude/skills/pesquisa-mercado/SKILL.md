@@ -231,7 +231,91 @@ Como obter: [fonte sugerida / pesquisa primária necessária]
 
 ---
 
-## Passo 6 — Salvar
+## Passo 6 — SWOT competitivo
+
+Após os achados, montar a matriz SWOT com foco na Solveplan vs. o(s) concorrente(s) analisado(s):
+
+```
+SWOT — Solveplan vs. [Concorrente / Mercado]
+
+FORÇAS (o que a Solveplan tem que o concorrente não tem ou faz pior)
+• [Força 1 — dado ou evidência]
+• [Força 2 — dado ou evidência]
+• [Força 3 — dado ou evidência]
+
+FRAQUEZAS (onde o concorrente é mais forte ou onde a Solveplan tem lacuna)
+• [Fraqueza 1 — dado ou evidência]
+• [Fraqueza 2 — dado ou evidência]
+
+OPORTUNIDADES (o que o mercado abre que a Solveplan pode capturar)
+• [Oportunidade 1 — contexto de mercado]
+• [Oportunidade 2 — contexto de mercado]
+
+AMEAÇAS (o que pode prejudicar a posição da Solveplan)
+• [Ameaça 1 — tendência ou movimento de concorrente]
+• [Ameaça 2 — tendência ou movimento de concorrente]
+```
+
+**Implicação estratégica (1 parágrafo):** o que esse SWOT indica pra posicionamento, mensagem de marketing ou abordagem de vendas da Solveplan nos próximos 90 dias.
+
+## Passo 7 — Rastreamento de movimentos executivos
+
+Se for análise de concorrente, verificar sinais estratégicos via LinkedIn e fontes públicas:
+
+```
+Movimentos recentes identificados:
+
+Contratações:
+• [cargo contratado] em [data aproximada] — sinal: [o que isso indica sobre foco estratégico]
+Exemplo: "Contratou VP de Vendas SAP LATAM → expansão comercial na região"
+
+Saídas:
+• [cargo que saiu] — sinal: [possível instabilidade ou mudança de direção]
+
+Parcerias anunciadas:
+• [parceiro + tipo de parceria] — sinal: [o que isso expande ou ameaça]
+
+Eventos e palestras:
+• [executivo X falou em evento Y sobre tema Z] — sinal: [foco de posicionamento atual]
+
+Conteúdo publicado recentemente:
+• [temas recorrentes nos últimos 90 dias] — sinal: [o que estão priorizando em marketing]
+```
+
+*Fonte: LinkedIn da empresa + LinkedIn dos executivos-chave + notícias recentes.*
+
+## Passo 8 — Sistema de monitoramento contínuo
+
+Ao final de cada pesquisa de concorrente ou segmento, gerar um plano de monitoramento pra manter a inteligência atualizada:
+
+```
+MONITORAMENTO CONTÍNUO — [Concorrente / Segmento]
+Gerado em: [data]
+
+Google Alerts (configurar em alerts.google.com):
+• "[nome do concorrente]"
+• "[nome do concorrente] SAP"
+• "[nome do concorrente] LATAM"
+• "[produto principal do concorrente]"
+Frequência: semanal
+
+LinkedIn (seguir e revisar mensalmente):
+• Página da empresa: [URL]
+• Executivos-chave: [nomes + URLs dos perfis]
+• Verificar: novas contratações, posts da empresa, artigos publicados
+
+G2 / Gartner Peer Insights (revisar trimestralmente):
+• URL da página do produto: [URL]
+• Verificar: novas avaliações, pontuação geral, reclamações recorrentes
+
+Eventos do setor (calendar anual):
+• [evento 1] — [data aproximada] — verificar presença do concorrente
+• [evento 2] — [data aproximada]
+
+Próxima revisão desta pesquisa: [data — 90 dias]
+```
+
+## Passo 9 — Salvar
 
 Criar pasta `marketing/pesquisa/[tema-em-slug]/` e salvar:
 - `pesquisa.md` — relatório completo com fontes

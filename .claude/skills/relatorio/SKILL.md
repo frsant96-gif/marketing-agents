@@ -221,7 +221,59 @@ Métricas obrigatórias por tier de conta:
 - Reuniões geradas em contas-alvo
 - Progressão no funil (contas que avançaram de estágio)
 
-## Passo 6 — Salvar
+## Passo 6 — Data storytelling
+
+Antes de salvar, estruturar a narrativa do relatório pra leitura executiva:
+
+**Hierarquia de leitura (o executivo lê nessa ordem):**
+
+```
+1. Executive Summary (30 segundos) — os 3-5 bullets mais importantes
+   → O leitor decide aqui se vai ler o resto
+
+2. Recomendações (2 minutos) — o que fazer a partir dos dados
+   → Ação concreta, responsável, prazo
+
+3. Métricas principais (5 minutos) — a tabela com os números
+   → Só o que importa pra decisão — sem métricas de vaidade
+
+4. Análise detalhada (opcional) — quem quiser se aprofundar
+   → Contexto, comparações, anomalias
+```
+
+**Checklist de storytelling antes de entregar:**
+
+- [ ] O Executive Summary responde "o que aconteceu e o que fazer"?
+- [ ] Cada recomendação tem dado que a suporta?
+- [ ] Não há dado sem interpretação ("CTR foi 0,4%" → "CTR de 0,4% — abaixo da média B2B de 0,8%, indica criativo fraco ou público muito amplo")?
+- [ ] O relatório começa pela conclusão, não pela metodologia?
+- [ ] Um executivo sem contexto entenderia o relatório lendo só o Executive Summary?
+
+**Sugestão de dashboard no Power BI (quando aplicável):**
+
+Se o usuário usa Power BI pra visualizar os dados, sugerir a estrutura de dashboard:
+
+```
+Página 1 — Visão Geral (sempre visível)
+- Card: Total de leads | MQLs | SQLs | Pipeline gerado
+- Gráfico de linha: evolução mensal das métricas principais
+- Semáforo: status de cada canal (verde/amarelo/vermelho vs. meta)
+
+Página 2 — Por Canal
+- Tabela: métricas por canal com comparativo vs. período anterior
+- Gráfico de barras: CPL por canal
+- Scatter: ROAS x Volume (identifica o melhor custo-benefício)
+
+Página 3 — Jornada e Atribuição
+- Funil: Leads → MQLs → SQLs → Oportunidades
+- Sankey ou tabela de jornadas: sequência de touchpoints mais comum
+
+Filtros globais: período, canal, segmento de empresa, persona
+
+Atualização: conectar aos dados do CRM/planilha de origem — não copiar/colar
+```
+
+## Passo 7 — Salvar
 
 Criar pasta `marketing/relatorios/[tipo]-[periodo]/` e salvar:
 - `relatorio.md` — relatório completo

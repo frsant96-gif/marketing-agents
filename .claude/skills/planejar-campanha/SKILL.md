@@ -39,7 +39,35 @@ Com base no tipo de campanha e resultado esperado, sugerir metas realistas:
 
 Confirmar com o usuário antes de prosseguir.
 
-## Passo 3 — Gerar o plano
+## Passo 3 — Validação crítica das suposições
+
+Antes de gerar o plano, desafiar as suposições centrais da campanha com 3-5 perguntas diretas:
+
+> "Antes de montar o plano, deixa eu testar algumas suposições pra garantir que a campanha está bem fundamentada."
+
+Perguntar, uma por vez, só as mais relevantes ao contexto:
+
+**Sobre o público:**
+- "Por que esse público específico vai se importar com esse tema agora? O que está acontecendo no mercado deles que cria urgência?"
+- "Esse público já conhece a Solveplan ou vai ser o primeiro contato? A campanha está calibrada pra esse nível de awareness?"
+
+**Sobre o canal:**
+- "Por que esses canais e não outros? Tem dado anterior que mostra que esse público converte nesses canais?"
+- "Se o canal principal não performar, qual é o plano B?"
+
+**Sobre a mensagem:**
+- "Qual é a suposição central da mensagem? O público realmente tem essa dor ou estamos supondo?"
+- "O que diferencia essa campanha de tudo que a Solveplan já fez antes? Por que alguém vai parar pra prestar atenção?"
+
+**Sobre o resultado esperado:**
+- "Com base em campanhas anteriores, essa meta de leads/reuniões é realista pro budget disponível?"
+- "Se a campanha atingir a meta de leads mas não de reuniões, o que vai estar errado?"
+
+Registrar as respostas e ajustar o briefing se necessário antes de gerar o plano.
+
+*Se o usuário não quiser passar pela validação, pular e ir direto pro Passo 4.*
+
+## Passo 4 — Gerar o plano
 
 Ler o template em `.claude/skills/planejar-campanha/template.md` e substituir as variáveis `{{...}}` com as informações coletadas.
 
