@@ -1,23 +1,24 @@
 ---
 name: post-social
-description: Cria copy para posts de redes sociais da Solveplan. Faz briefing estratégico e gera o conteúdo no formato certo — post único, imagem, vídeo ou carrossel.
+description: Cria copy para posts de redes sociais da Solveplan. Briefing estratégico, geração por formato e plataforma (LinkedIn, Instagram, X/Twitter), e checklist de auto-verificação antes de entregar.
 ---
 
 # /post-social
 
 ## Antes de começar
 
-Ler `_contexto/empresa.md`, `_contexto/preferencias.md` e `_contexto/estrategia.md` pra calibrar tom, contexto e prioridade atual.
+Ler `_contexto/empresa.md`, `_contexto/preferencias.md` e `_contexto/estrategia.md`.
 
 ## Passo 1 — Briefing
 
 Fazer as perguntas abaixo, uma por vez:
 
 1. "Qual o tema ou assunto do post?"
-2. "Qual o objetivo?" — opções: Gerar awareness / Educar o público / Gerar leads / Provocar dor / Promover case / Anunciar solução / Engajamento
+2. "Qual o objetivo?" — opções: Gerar awareness / Educar / Gerar leads / Provocar dor / Promover case / Anunciar solução / Engajamento / Autoridade executiva
 3. "Qual o formato?" — opções: Post único (texto), Imagem estática, Carrossel (slides), Vídeo gravado, Motion / Reels com texto animado
-4. "Tem algum dado, case, ou referência que quer incluir?"
-5. "Pra qual persona é o foco principal?" — opções: CIO, CFO, Controller, Head de dados/BI, COO, Geral
+4. "Pra qual plataforma?" — opções: LinkedIn / Instagram / X (Twitter) / Todas (gerar versão pra cada uma)
+5. "Tem algum dado, case, ou referência que quer incluir?"
+6. "Pra qual persona é o foco principal?" — opções: CIO, CFO, Controller, Head de dados/BI, COO, Geral
 
 Se o usuário já informou algum desses dados antes de rodar a skill, não perguntar de novo.
 
@@ -25,37 +26,13 @@ Se o usuário já informou algum desses dados antes de rodar a skill, não pergu
 
 ### Formato: Carrossel
 
-Delegar pra skill `/carrossel` com o briefing completo. Informar:
+Delegar pra skill `/carrossel` com o briefing completo:
 
 > "Vou criar esse como carrossel. Rodando `/carrossel` com as informações que você passou."
 
-### Formato: Post único (texto)
+### Formato: Post único (texto) / Imagem / Motion
 
-Gerar o copy seguindo estrutura AIDA:
-- **Atenção:** primeira linha que para o scroll — afirmação forte, dado surpreendente, ou pergunta que provoca
-- **Interesse:** contextualização do problema ou oportunidade (2-3 linhas)
-- **Desejo:** como a solução resolve / o que muda pra quem resolve
-- **Ação:** CTA claro — reunião, diagnóstico, link, comentário
-
-**Regras do copy:**
-- Máximo 1200 caracteres (LinkedIn)
-- Primeira linha sem emojis e sem "Você sabia que"
-- Tom direto, orientado a negócio, sem buzzwords
-- SAP BDC como foco quando o tema permitir
-- Hashtags: 3-5 no final, relevantes e específicas
-
-Gerar 2 versões com abordagens diferentes.
-
-### Formato: Imagem estática
-
-Gerar:
-1. **Copy do post** (legenda) — seguindo AIDA, máximo 800 caracteres
-2. **Briefing visual pro Canva:**
-   - Headline da imagem (máximo 8 palavras)
-   - Subheadline ou dado de destaque (opcional)
-   - Paleta sugerida: fundo `#0A0E19` ou `#0A0837`, destaque `#006AFF`, texto `#FFFFFF`
-   - Elemento visual sugerido (ícone, dado, mockup, foto)
-   - Template base sugerido (se o usuário tiver templates no Canva, indicar qual se encaixa)
+Seguir o Passo 3 com a plataforma escolhida.
 
 ### Formato: Vídeo gravado
 
@@ -64,37 +41,145 @@ Gerar roteiro completo:
 - **Problema (3-15s):** contextualização da dor
 - **Solução (15-45s):** como a Solveplan resolve, com ponto de prova
 - **CTA (45-60s):** chamada pra ação clara
-- **Indicações técnicas:** onde pausar, onde mostrar tela/slide, tom sugerido (direto, consultivo)
+- **Indicações técnicas:** onde pausar, onde mostrar tela/slide, tom sugerido
 
-### Formato: Motion / Reels com texto animado
+---
 
-Gerar sequência de frames:
-- Frame 1: Headline — frase de gancho (máximo 6 palavras)
-- Frame 2-4: Pontos principais (máximo 2 linhas por frame)
-- Frame final: CTA com identidade visual Solveplan
+## Passo 3 — Gerar por plataforma
 
-Para cada frame:
-- Texto exato
-- Cor de fundo sugerida (da paleta)
-- Elemento visual sugerido
+### LinkedIn
 
-## Passo 3 — Salvar
+**Tom:** profissional, direto, orientado a negócio, posicionamento de autoridade sem hype.
 
-Criar pasta `marketing/posts/[tema-em-slug]/` e salvar o output como `copy.md`.
+**Estrutura AIDA:**
+- **Atenção (linha 1):** para o scroll — afirmação forte, dado surpreendente ou pergunta que provoca. Sem emojis, sem "Você sabia que".
+- **Interesse (linhas 2-4):** contextualização do problema ou oportunidade
+- **Desejo (linhas 5-8):** como a solução resolve / o que muda pra quem age
+- **Ação (última linha):** CTA claro — reunião, diagnóstico, link, comentário
 
-Nomear a pasta com o tema em minúsculas, sem acentos, com hífens.
-Exemplo: "Lançamento SAP BDC" → `marketing/posts/lancamento-sap-bdc/copy.md`
+**Regras LinkedIn:**
+- Máximo 1.300 caracteres (posts mais curtos têm mais alcance)
+- Quebras de linha após cada 1-2 frases — LinkedIn não renderiza parágrafos densos
+- 3-5 hashtags no final — específicas (#SAPAnalytics #DataCloud #FPandA), não genéricas (#inovação)
+- Gerar 2 versões com abordagens diferentes
 
-## Passo 4 — Confirmar
+**Formatos especiais:**
+- *Post de lista:* "X razões pelas quais..." ou "X sinais de que..." — bom pra salvar/compartilhar
+- *Post de opinião:* começa com "Discordo de..." ou "A maioria faz X. Mas..." — bom pra engajamento
+- *Post de case:* situação → desafio → solução → resultado — bom pra autoridade
 
-Informar onde foi salvo e perguntar:
+---
 
-> "Quer ajustar o tom, trocar de formato, ou gerar uma versão diferente?"
+### Instagram
+
+**Tom:** mais visual e direto. Primeiras palavras têm que reter antes do "ver mais".
+
+**Estrutura:**
+- **Linha 1 (antes do corte):** frase de impacto — máximo 125 caracteres visíveis
+- **Desenvolvimento:** 3-5 pontos curtos, cada um em linha própria
+- **CTA:** link na bio / comentário / salvar o post
+
+**Regras Instagram:**
+- Máximo 2.200 caracteres (mas 300-500 funcionam melhor no feed)
+- Emojis são aceitos aqui — usados com moderação (1-2 por parágrafo)
+- 5-10 hashtags no final ou no primeiro comentário — misturar específicas e de nicho
+- O visual carrega mais peso que o texto — indicar no briefing visual o que a imagem deve comunicar
+
+**Briefing visual (se for imagem ou Reels):**
+- Headline da imagem: máximo 6-8 palavras
+- Dado ou frase de destaque: opcional
+- Paleta: fundo `#0A0E19` ou `#0A0837`, destaque `#006AFF`, texto `#FFFFFF`
+- Elemento visual sugerido (ícone, dado, mockup, foto)
+
+---
+
+### X (Twitter)
+
+**Tom:** conversacional, direto, opinativo. Pensa em voz alta com autoridade.
+
+**Formatos:**
+
+*Tweet único:*
+- Máximo 280 caracteres
+- Hook na primeira frase — sem rodeio
+- Terminar com pergunta ou afirmação que provoca resposta
+
+*Thread (para temas mais complexos):*
+- Tweet 1: afirmação forte que resume tudo (hook)
+- Tweets 2-5: desenvolvimento com 1 ideia por tweet
+- Tweet final: conclusão + CTA
+- Máximo 280 caracteres por tweet
+- Indicar numeração: 1/ 2/ 3/...
+
+**Regras X:**
+- Sem hashtags em excesso — máximo 2, só se realmente relevantes
+- Linguagem mais informal que LinkedIn — pode usar contrações e frases curtas
+- Dados e números funcionam muito bem como hook
+
+---
+
+## Passo 4 — Se "Todas as plataformas"
+
+Gerar uma versão adaptada pra cada plataforma a partir do mesmo briefing. Mostrar as 3 versões lado a lado com nota de qual elemento mudou entre elas.
+
+```
+LinkedIn:
+[copy LinkedIn]
+
+Instagram:
+[copy Instagram]
+
+X:
+[copy X]
+
+O que mudou: [explicação rápida das adaptações]
+```
+
+---
+
+## Passo 5 — Checklist de auto-verificação
+
+Antes de entregar, verificar cada item:
+
+**Hook:**
+- [ ] A primeira linha para o scroll sem depender do contexto anterior?
+- [ ] Evita "Você sabia que", "É com grande prazer" ou frases genéricas?
+- [ ] Funciona lida sozinha, sem o restante do post?
+
+**Conteúdo:**
+- [ ] Tem um insight concreto — não só informação genérica?
+- [ ] Conecta com uma dor real do público (CIO, CFO, Head de dados)?
+- [ ] Menciona SAP BDC ou analytics de forma relevante (se o tema permitir)?
+- [ ] Não usa "transformação digital" sem contexto?
+
+**Posicionamento:**
+- [ ] Posiciona a Solveplan como especialista, não como vendedor?
+- [ ] Tem pelo menos 1 dado, caso ou afirmação verificável?
+
+**Plataforma:**
+- [ ] O comprimento respeita o limite da plataforma?
+- [ ] As hashtags são específicas e relevantes (não genéricas)?
+- [ ] O CTA é claro e proporcional ao estágio de relacionamento (awareness ≠ reunião)?
+
+Se algum item falhar, reescrever antes de salvar.
+
+---
+
+## Passo 6 — Salvar
+
+Criar pasta `marketing/posts/[tema-em-slug]/` e salvar como `copy.md`.
+
+Incluir no arquivo: versões geradas + resultado do checklist.
+
+## Passo 7 — Confirmar
+
+> "Quer ajustar o tom, trocar de formato, gerar uma versão diferente ou adaptar pra outra plataforma?"
 
 ## Regras
 
 - Nunca usar "transformação digital" como buzzword sem contexto
 - Nunca prometer resultado sem base técnica
-- Primeira linha sempre tem que parar o scroll — testar internamente antes de entregar
+- Primeira linha tem que parar o scroll — testar internamente antes de entregar
 - Quando o tema conectar com SAP BDC, conectar — é a prioridade atual
 - Tom: autoridade sem hype, direto, focado em negócio
+- LinkedIn é a plataforma prioritária da Solveplan — quando houver dúvida de formato, otimizar pra ela
