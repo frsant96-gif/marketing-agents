@@ -71,13 +71,13 @@ Registrar as respostas e ajustar o briefing se necessário antes de gerar o plan
 
 Ler o template em `.claude/skills/planejar-campanha/template.md` e substituir as variáveis `{{...}}` com as informações coletadas.
 
-## Passo 4 — Salvar
+## Passo 5 — Salvar
 
 Criar pasta `marketing/campanhas/[nome-da-campanha-em-slug]/` e salvar como `plano.md`.
 
 Nomear com o nome da campanha em minúsculas, sem acentos, com hífens.
 
-## Passo 5 — Confirmar e orientar
+## Passo 6 — Confirmar e orientar
 
 Informar onde foi salvo e quais seções ficaram em aberto, e perguntar:
 
