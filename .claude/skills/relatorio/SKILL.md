@@ -346,6 +346,87 @@ CALCULATE(
 )
 ```
 
+### Medidas DAX — time intelligence (comparações de período)
+
+```dax
+// Leads no mês atual
+Leads Mês Atual =
+CALCULATE([Total Leads], DATESMTD(dCalendário[data]))
+
+// Leads no mês anterior
+Leads Mês Anterior =
+CALCULATE([Total Leads], PREVIOUSMONTH(dCalendário[data]))
+
+// Variação % mês a mês
+Var % MoM =
+VAR atual = [Total Leads]
+VAR anterior = [Leads Mês Anterior]
+RETURN DIVIDE(atual - anterior, anterior, 0)
+
+// Leads acumulado no ano (YTD)
+Leads YTD =
+CALCULATE([Total Leads], DATESYTD(dCalendário[data]))
+
+// Leads no mesmo período do ano anterior (para comparação YoY)
+Leads Ano Anterior =
+CALCULATE([Total Leads], SAMEPERIODLASTYEAR(dCalendário[data]))
+
+// Variação % ano a ano
+Var % YoY =
+DIVIDE([Total Leads] - [Leads Ano Anterior], [Leads Ano Anterior], 0)
+
+// Rolling 3 meses (média móvel)
+Leads Rolling 3M =
+CALCULATE(
+    [Total Leads],
+    DATESINPERIOD(dCalendário[data], LASTDATE(dCalendário[data]), -3, MONTH)
+)
+```
+
+*Pré-requisito para todas essas medidas: tabela `dCalendário` criada e conectada à tabela fato.*
+
+### DAX — boas práticas e anti-patterns
+
+**Sempre usar DIVIDE em vez de "/":**
+```dax
+// ❌ Errado — quebra se o denominador for zero
+Taxa Conversão = [MQLs] / [Total Leads]
+
+// ✅ Correto — retorna 0 (ou outro valor padrão) se denominador for zero
+Taxa Conversão = DIVIDE([MQLs], [Total Leads], 0)
+```
+
+**Usar variáveis (VAR) para clareza e performance:**
+```dax
+// ❌ Repetitivo e lento
+Resultado = IF(DIVIDE([A],[B],0) > 0, DIVIDE([A],[B],0) * 100, 0)
+
+// ✅ Calcular uma vez, reusar
+Resultado =
+VAR taxa = DIVIDE([A], [B], 0)
+RETURN IF(taxa > 0, taxa * 100, 0)
+```
+
+**Qualificar colunas com nome da tabela:**
+```dax
+// ❌ Ambíguo se houver coluna com mesmo nome em outra tabela
+SUM(custo)
+
+// ✅ Explícito e sem ambiguidade
+SUM(fLeads[custo])
+```
+
+### Debugging de fórmulas DAX
+
+Quando uma medida retorna erro ou valor inesperado:
+
+1. **Isolar com variáveis:** decompor a fórmula em partes e retornar cada parte separadamente pra achar onde quebra
+2. **Verificar contexto de filtro:** a medida está sendo calculada com o filtro certo? Usar `ALLSELECTED` ou `REMOVEFILTERS` pra testar
+3. **Checar relacionamentos:** se a medida cruza tabelas, verificar se o relacionamento está ativo e na direção certa
+4. **DAX Studio:** ferramenta gratuita que mostra o tempo de execução de cada parte da fórmula — instalar se o dashboard estiver lento
+
+Quando travar numa fórmula DAX, descrever aqui: qual o objetivo da medida, qual o erro que aparece e o código atual — resolvo.
+
 ### Conectar fontes de dados
 
 | Fonte | Como conectar no Power BI |
