@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Como instalar sua assinatura de email no HubSpot — Solveplan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f5f6fa;
+      color: #0A0837;
+      padding: 48px 24px;
+    }
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .header {
+      margin-bottom: 40px;
+    }
+    .header img {
+      width: 140px;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .header h1 {
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #0A0837;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .section {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      border-left: 4px solid #006AFF;
+    }
+    .section-title {
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #006AFF;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      background: #006AFF;
+      color: #fff;
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .step-number {
+      background: #0A0837;
+      color: #fff;
+      font-family: 'Prompt', Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #333;
+    }
+    .step-text strong {
+      color: #0A0837;
+      font-weight: 600;
+    }
+    .path {
+      display: inline-block;
+      background: #f0f5ff;
+      border: 1px solid #ccdeff;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: #0A0837;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 600;
+      margin: 6px 0;
+    }
+    .path span {
+      color: #006AFF;
+      margin: 0 4px;
+    }
+    .code-block {
+      background: #f0f5ff;
+      border: 1px solid #ccdeff;
+      border-radius: 6px;
+      padding: 16px;
+      font-size: 11px;
+      color: #0A0837;
+      font-family: 'Courier New', monospace;
+      margin: 12px 0;
+      word-break: break-all;
+      white-space: pre-wrap;
+      line-height: 1.5;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .tip {
+      background: #f0fff4;
+      border: 1px solid #94FF96;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #1a5c2a;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .tip strong { color: #1a5c2a; }
+    .warning {
+      background: #fff8f0;
+      border: 1px solid #ffc87a;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 12px;
+      color: #7a4500;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .fields-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 4px;
+      font-size: 13px;
+    }
+    .fields-table th {
+      background: #0A0837;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .fields-table th:first-child { border-radius: 6px 0 0 0; }
+    .fields-table th:last-child { border-radius: 0 6px 0 0; }
+    .fields-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #eee;
+      color: #333;
+      vertical-align: top;
+    }
+    .fields-table tr:last-child td { border-bottom: none; }
+    .fields-table tr:nth-child(even) td { background: #f9f9fb; }
+    .fields-table code {
+      background: #eef2ff;
+      color: #006AFF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e8eaf0;
+      margin: 24px 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #999;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Cabeçalho -->
+  <div class="header">
+    <img src="https://47910417.fs1.hubspotusercontent-na1.net/hubfs/47910417/Logo%20500x500_.png" alt="solveplan" />
+    <h1>Como instalar sua assinatura de email no HubSpot</h1>
+    <p>Siga os passos abaixo para configurar sua assinatura nos emails enviados pelo HubSpot CRM.<br>
+    Tempo estimado: <strong>5 minutos</strong>. Você vai precisar do HTML da assinatura com seus dados já preenchidos.</p>
+  </div>
+
+  <!-- PRÉ-REQUISITO -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge" style="background: #888;">!</span>
+      Antes de começar — personalize seus dados
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Abra o arquivo <strong>assinatura-template-solveplan.html</strong> no Bloco de Notas
+        (clique com o botão direito → <strong>Abrir com</strong> → <strong>Bloco de Notas</strong>).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Use <strong>Ctrl + H</strong> para localizar e substituir os 4 campos abaixo:
+      </div>
+    </div>
+
+    <table class="fields-table">
+      <thead>
+        <tr>
+          <th>Texto a localizar</th>
+          <th>Substituir pelo seu dado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>Nome Sobrenome</code></td>
+          <td>Seu nome completo</td>
+        </tr>
+        <tr>
+          <td><code>Cargo</code></td>
+          <td>Seu cargo</td>
+        </tr>
+        <tr>
+          <td><code>email@solveplan.com</code></td>
+          <td>Seu email corporativo (em 2 lugares no arquivo)</td>
+        </tr>
+        <tr>
+          <td><code>+55 (11) 99999-9999</code></td>
+          <td>Seu telefone com DDD</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="step" style="margin-top: 16px;">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Salve o arquivo: <strong>Ctrl + S</strong>.
+      </div>
+    </div>
+
+    <div class="tip">
+      <strong>Dica:</strong> Não altere nada além dos 4 campos acima. Logo, ícones, redes sociais e aviso LGPD já estão configurados.
+    </div>
+  </div>
+
+  <!-- PASSO 1 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">1</span>
+      Copie o código HTML da assinatura
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Abra o arquivo <strong>.html</strong> editado no <strong>Bloco de Notas</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Selecione tudo: <strong>Ctrl + A</strong>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Copie: <strong>Ctrl + C</strong><br>
+        <em style="color: #888; font-size: 12px;">Você vai colar esse código diretamente no editor do HubSpot.</em>
+      </div>
+    </div>
+
+    <div class="warning">
+      <strong>Atenção:</strong> No HubSpot você vai colar o <strong>código HTML bruto</strong> (o texto do arquivo .html, não a assinatura renderizada). Diferente do Outlook, onde você cola a assinatura visual — aqui você vai usar a opção "Código-fonte" do editor.
+    </div>
+  </div>
+
+  <!-- PASSO 2 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">2</span>
+      Acesse as configurações de assinatura no HubSpot
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        No HubSpot, clique no <strong>ícone do seu perfil</strong> (canto superior direito).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Selecione <strong>Perfil e preferências</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        No menu lateral esquerdo, clique em <strong>Email</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-text">
+        Role a página até a seção <strong>Assinatura de email</strong>.
+      </div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <div class="path">
+        Perfil <span>→</span> Perfil e preferências <span>→</span> Email <span>→</span> Assinatura de email
+      </div>
+    </div>
+  </div>
+
+  <!-- PASSO 3 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">3</span>
+      Cole o HTML no editor de assinatura
+    </div>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Na seção de assinatura, localize o editor de texto. Clique no ícone <strong>"&lt; &gt;"</strong>
+        ou no botão <strong>"Código-fonte"</strong> (source code) para alternar para o modo HTML.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        Selecione todo o conteúdo que estiver na caixa: <strong>Ctrl + A</strong> → e então delete.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Cole o código HTML copiado: <strong>Ctrl + V</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">4</span>
+      <div class="step-text">
+        Clique em <strong>OK</strong> ou <strong>Salvar</strong> para fechar o editor de código e voltar à visualização normal.
+        Confira se a assinatura aparece corretamente.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">5</span>
+      <div class="step-text">
+        Clique em <strong>Salvar</strong> na página de configurações para confirmar.
+      </div>
+    </div>
+
+    <div class="tip">
+      <strong>Pronto!</strong> A assinatura vai aparecer automaticamente nos emails enviados pelo HubSpot CRM (pela aba de atividades do contato ou pela caixa de entrada conectada).
+    </div>
+  </div>
+
+  <!-- PASSO 4 — EMAIL CONECTADO -->
+  <div class="section">
+    <div class="section-title">
+      <span class="badge">4</span>
+      Se você usa caixa de entrada conectada (Outlook/Gmail no HubSpot)
+    </div>
+
+    <p style="font-size: 13px; color: #555; margin-bottom: 16px; line-height: 1.6;">
+      Se o seu email está conectado ao HubSpot (você lê e envia emails do Outlook ou Gmail direto pelo HubSpot),
+      a assinatura configurada no passo anterior já será aplicada automaticamente nos emails enviados por lá.
+      Mas você pode confirmar nas configurações da caixa de entrada:
+    </p>
+
+    <div class="step">
+      <span class="step-number">1</span>
+      <div class="step-text">
+        Vá em <strong>Configurações</strong> (ícone de engrenagem, canto superior direito).
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">2</span>
+      <div class="step-text">
+        No menu lateral: <strong>Geral → Email → Caixas de entrada conectadas</strong>.
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-number">3</span>
+      <div class="step-text">
+        Clique na sua caixa conectada e verifique se a assinatura está habilitada.
+      </div>
+    </div>
+
+    <div class="warning">
+      <strong>Atenção:</strong> Se você usa o Outlook fora do HubSpot (cliente desktop), configure a assinatura também no Outlook separadamente — as configurações são independentes. Veja o guia <strong>assinatura-guia-instalacao.html</strong>.
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="footer">
+    Dúvidas? Entre em contato com o time de marketing da Solveplan.
+  </div>
+
+</div>
+</body>
+</html>
