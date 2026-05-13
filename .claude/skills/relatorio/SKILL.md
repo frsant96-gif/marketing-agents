@@ -359,6 +359,32 @@ CALCULATE(
 
 **Regra de ouro:** sempre conectar ao arquivo fonte (Excel, CSV, banco) — nunca copiar e colar dados diretamente no Power BI. Assim o relatório atualiza automaticamente.
 
+### Design visual — qual gráfico usar
+
+| Objetivo | Gráfico recomendado | Evitar |
+|----------|--------------------|----|
+| Comparar canais / campanhas | Barras horizontais | Pizza com muitas fatias |
+| Mostrar evolução no tempo | Linha ou área | Barras empilhadas para tendência |
+| Mostrar composição (% do todo) | Pizza (até 5 itens) ou Treemap | Pizza com mais de 6 fatias |
+| Relação entre 2 métricas | Scatter (dispersão) | Tabela com números isolados |
+| Funil de conversão | Visual de funil nativo do PBI | Gráfico de barras pra funil |
+| KPI vs. meta | Cartão KPI com indicador | Tabela sem destaque visual |
+| Distribuição geográfica | Mapa | Tabela de países/estados |
+
+**Regras de layout:**
+- Máximo 6-8 visuais por página — mais que isso trava o relatório e confunde o leitor
+- Layout Z-pattern: KPIs no topo esquerdo → gráfico principal no centro → tabela de detalhes embaixo
+- Filtros/slicers sempre no topo ou lado esquerdo — nunca no meio dos gráficos
+- Usar cores da paleta Solveplan: `#006AFF` (destaque), `#0A0E19` (fundo escuro se quiser tema dark), `#FFFFFF` (texto)
+
+**Cross-filtering:** no Power BI, clicar em qualquer elemento de um gráfico filtra todos os outros da página automaticamente. Isso é o comportamento padrão — não desativar sem motivo. Testar se os filtros cruzados fazem sentido pra narrativa do dashboard.
+
+**Tooltips personalizados:** ao passar o mouse sobre um ponto do gráfico, mostrar informações adicionais sem poluir o visual principal. Ex: gráfico de linha de leads → tooltip mostra CPL e campanha do período.
+
+**Drillthrough:** permite clicar num canal ou campanha e ir pra uma página de detalhe. Usar quando há dois níveis de análise: visão geral (Página 1) → detalhe de um canal específico (Página 2).
+
+**Mobile:** se a diretoria acessa pelo celular, criar layout mobile separado (View → Mobile Layout). Priorizar: 3 KPI cards + 1 gráfico principal. Nada de tabelas complexas no mobile.
+
 ### Atualização automática
 
 - Power BI Desktop: atualização manual (abrir e clicar "Atualizar")
