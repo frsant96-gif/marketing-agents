@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 SKILL_DIR = Path(__file__).parent.parent.parent
 ENV_FILE = SKILL_DIR / ".env"
 API_BASE = "https://api.linkedin.com/rest"
-LINKEDIN_VERSION = "202405"
+LINKEDIN_VERSION = "202503"
 
 load_dotenv(ENV_FILE)
 

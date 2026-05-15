@@ -10,12 +10,16 @@ from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 
+def extract_id(val) -> str:
+    return str(val).split(":")[-1]
+
+
 def cmd_accounts(args):
-    data = api_get("/adAccounts", {"q": "search", "search.type.values[0]": "BUSINESS"})
+    data = api_get("/adAccounts", {"q": "search"})
     rows = []
     for a in data.get("elements", []):
         rows.append({
-            "ID": a["id"].split(":")[-1],
+            "ID": extract_id(a["id"]),
             "Nome": a.get("name", ""),
             "Moeda": a.get("currency", ""),
             "Status": a.get("status", ""),
@@ -33,7 +37,7 @@ def cmd_campaign_groups(args):
     rows = []
     for g in data.get("elements", []):
         rows.append({
-            "ID": g["id"].split(":")[-1],
+            "ID": extract_id(g["id"]),
             "Nome": g.get("name", ""),
             "Status": g.get("status", ""),
             "Objetivo": g.get("objective", ""),
@@ -54,7 +58,7 @@ def cmd_campaigns(args):
     for c in data.get("elements", []):
         budget = c.get("dailyBudget", {})
         rows.append({
-            "ID": c["id"].split(":")[-1],
+            "ID": extract_id(c["id"]),
             "Nome": c.get("name", ""),
             "Status": c.get("status", ""),
             "Tipo": c.get("type", ""),
@@ -74,7 +78,7 @@ def cmd_creatives(args):
     rows = []
     for c in data.get("elements", []):
         rows.append({
-            "ID": c["id"].split(":")[-1],
+            "ID": extract_id(c["id"]),
             "Status": c.get("status", ""),
             "Tipo": c.get("type", ""),
         })
@@ -82,7 +86,6 @@ def cmd_creatives(args):
 
 
 def cmd_targeting(args):
-    """Lista facetas de segmentacao disponiveis (cargos, setores, etc.)."""
     params = {"facetUrn": args.facet}
     data = api_get("/adTargetingFacets", params)
     elements = data.get("elements", [])

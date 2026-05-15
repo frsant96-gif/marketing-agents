@@ -176,13 +176,13 @@ def cmd_test():
     from lib import api_get, print_table
     load_dotenv(ENV_FILE, override=True)
 
-    data = api_get("/adAccounts", {"q": "search", "search.type.values[0]": "BUSINESS"})
+    data = api_get("/adAccounts", {"q": "search"})
     accounts = data.get("elements", [])
     if not accounts:
         print("Nenhuma conta encontrada.")
         return
 
-    rows = [{"ID": a["id"].split(":")[-1], "Nome": a.get("name", ""), "Status": a.get("status", "")} for a in accounts]
+    rows = [{"ID": str(a["id"]).split(":")[-1], "Nome": a.get("name", ""), "Status": a.get("status", "")} for a in accounts]
     print(f"\n{len(rows)} conta(s) encontrada(s):\n")
     print_table(rows, ["ID", "Nome", "Status"])
 
