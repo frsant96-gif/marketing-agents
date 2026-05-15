@@ -13,3 +13,7 @@ clientes:
   - nome: Ratos de IA
     property_id: "528559546"
     site: "ratosdeia.com.br"
+
+  - nome: Solveplan
+    property_id: "467249212"
+    site: "solveplan.com.br"
