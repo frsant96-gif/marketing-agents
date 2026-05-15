@@ -33,7 +33,7 @@ erro aceitável não é mais uma opção.
 A SAP não está construindo um assistente de IA.
 Está reconstruindo o ERP com IA no núcleo.
 
-**Visual:** citação em destaque #006AFF, fundo escuro.
+**Visual:** foto do auditório do SAPPHIRE 2026 (foto 1 — plateia lotada, telão com palestrante) + citação sobreposta em destaque #006AFF.
 
 ---
 
@@ -133,7 +133,9 @@ Se quiser entender o que o SAP BDC entrega no seu ambiente atual — sem hype, c
 
 **→ Comente ou mande mensagem direta.**
 
-**Visual:** logo Solveplan, fundo #0A0837, destaque #006AFF, credenciais em linha secundária.
+**Visual:** foto dos sócios no estande do Joule (foto 2 — André, Andrey, Alexandre e Roberto em frente ao backdrop roxo com logo Joule e "can I help you?") + logo Solveplan sobreposto + credenciais SAP Gold em rodapé.
+
+*Nota: essa foto é o fechamento perfeito — os sócios literalmente na frente do produto central do SAPPHIRE. Usa como imagem de fundo com overlay escuro leve pra manter legibilidade do texto.*
 
 ---
 
