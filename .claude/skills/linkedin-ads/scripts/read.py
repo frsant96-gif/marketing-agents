@@ -5,7 +5,7 @@ import argparse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from lib import api_get, account_urn, campaign_urn, campaign_group_urn, print_table
+from lib import api_get, account_urn, campaign_urn, print_table
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / ".env")
 
@@ -15,7 +15,7 @@ def extract_id(val) -> str:
 
 
 def cmd_accounts(args):
-    data = api_get("/adAccounts", {"q": "search"})
+    data = api_get("/adAccounts", {"q": "search"}, versioned=True)
     rows = []
     for a in data.get("elements", []):
         rows.append({
@@ -28,25 +28,30 @@ def cmd_accounts(args):
 
 
 def cmd_campaign_groups(args):
-    data = api_get(f"/adAccounts/{args.account_id}/adCampaignGroups", {"count": 50})
+    data = api_get("/adCampaignGroupsV2", {"q": "search"})
     rows = []
     for g in data.get("elements", []):
+        acct = extract_id(g.get("account", ""))
+        if args.account_id and acct != args.account_id:
+            continue
         rows.append({
             "ID": extract_id(g["id"]),
             "Nome": g.get("name", ""),
             "Status": g.get("status", ""),
-            "Objetivo": g.get("objective", ""),
         })
-    print_table(rows, ["ID", "Nome", "Status", "Objetivo"])
+    print_table(rows, ["ID", "Nome", "Status"])
 
 
 def cmd_campaigns(args):
-    params = {"count": 50}
-    if args.group_id:
-        params["search.campaignGroup.values[0]"] = campaign_group_urn(args.group_id)
-    data = api_get(f"/adAccounts/{args.account_id}/adCampaigns", params)
+    params = {"q": "search", "count": 50}
+    if args.status:
+        params["search.status.values[0]"] = args.status
+    data = api_get("/adCampaignsV2", params)
     rows = []
     for c in data.get("elements", []):
+        acct = extract_id(c.get("account", ""))
+        if args.account_id and acct != args.account_id:
+            continue
         budget = c.get("dailyBudget", {})
         rows.append({
             "ID": extract_id(c["id"]),
@@ -60,7 +65,8 @@ def cmd_campaigns(args):
 
 
 def cmd_creatives(args):
-    data = api_get(f"/adAccounts/{args.account_id}/adCampaigns/{args.campaign_id}/adCreatives", {"count": 50})
+    params = {"q": "search", "search.campaign.values[0]": campaign_urn(args.campaign_id)}
+    data = api_get("/adCreativesV2", params)
     rows = []
     for c in data.get("elements", []):
         rows.append({
@@ -71,22 +77,11 @@ def cmd_creatives(args):
     print_table(rows, ["ID", "Status", "Tipo"])
 
 
-def cmd_targeting(args):
-    params = {"facetUrn": args.facet}
-    data = api_get("/adTargetingFacets", params)
-    elements = data.get("elements", [])
-    for e in elements[:50]:
-        print(f"{e.get('urn', '')}  —  {e.get('name', {}).get('value', '')}")
-    if len(elements) > 50:
-        print(f"... ({len(elements)} total, mostrando 50)")
-
-
 COMMANDS = {
     "accounts": (cmd_accounts, []),
-    "campaign-groups": (cmd_campaign_groups, [("--account-id", True)]),
-    "campaigns": (cmd_campaigns, [("--account-id", True), ("--group-id", False)]),
-    "creatives": (cmd_creatives, [("--account-id", True), ("--campaign-id", True)]),
-    "targeting": (cmd_targeting, [("--facet", True)]),
+    "campaign-groups": (cmd_campaign_groups, [("--account-id", False)]),
+    "campaigns": (cmd_campaigns, [("--account-id", False), ("--status", False)]),
+    "creatives": (cmd_creatives, [("--campaign-id", True)]),
 }
 
 if __name__ == "__main__":

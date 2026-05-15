@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 
 SKILL_DIR = Path(__file__).parent.parent.parent
 ENV_FILE = SKILL_DIR / ".env"
-API_BASE = "https://api.linkedin.com/rest"
-LINKEDIN_VERSION = "202503"
+API_BASE_V2 = "https://api.linkedin.com/v2"
+API_BASE_REST = "https://api.linkedin.com/rest"
 
 load_dotenv(ENV_FILE)
 
@@ -24,19 +24,22 @@ def get_env(key: str) -> str:
     return val
 
 
-def get_headers() -> dict:
+def get_headers(versioned: bool = False) -> dict:
     token = get_env("LINKEDIN_ACCESS_TOKEN")
-    return {
+    headers = {
         "Authorization": f"Bearer {token}",
-        "LinkedIn-Version": LINKEDIN_VERSION,
         "X-Restli-Protocol-Version": "2.0.0",
         "Content-Type": "application/json",
     }
+    if versioned:
+        headers["LinkedIn-Version"] = "202503"
+    return headers
 
 
-def api_get(path: str, params: dict = None) -> dict:
-    url = f"{API_BASE}{path}"
-    resp = requests.get(url, headers=get_headers(), params=params)
+def api_get(path: str, params: dict = None, versioned: bool = False) -> dict:
+    base = API_BASE_REST if versioned else API_BASE_V2
+    url = f"{base}{path}"
+    resp = requests.get(url, headers=get_headers(versioned), params=params)
     if resp.status_code == 401:
         print("[ERRO] Token expirado ou invalido. Rode setup.py refresh para renovar.")
         sys.exit(1)
@@ -46,27 +49,30 @@ def api_get(path: str, params: dict = None) -> dict:
     return resp.json()
 
 
-def api_post(path: str, body: dict) -> dict:
-    url = f"{API_BASE}{path}"
-    resp = requests.post(url, headers=get_headers(), json=body)
+def api_post(path: str, body: dict, versioned: bool = False) -> dict:
+    base = API_BASE_REST if versioned else API_BASE_V2
+    url = f"{base}{path}"
+    resp = requests.post(url, headers=get_headers(versioned), json=body)
     if not resp.ok:
         print(f"[ERRO] {resp.status_code} — {resp.text}")
         sys.exit(1)
     return resp.json() if resp.text else {}
 
 
-def api_patch(path: str, body: dict) -> dict:
-    url = f"{API_BASE}{path}"
-    resp = requests.patch(url, headers=get_headers(), json=body)
+def api_patch(path: str, body: dict, versioned: bool = False) -> dict:
+    base = API_BASE_REST if versioned else API_BASE_V2
+    url = f"{base}{path}"
+    resp = requests.patch(url, headers=get_headers(versioned), json=body)
     if not resp.ok:
         print(f"[ERRO] {resp.status_code} — {resp.text}")
         sys.exit(1)
     return resp.json() if resp.text else {}
 
 
-def api_delete(path: str) -> None:
-    url = f"{API_BASE}{path}"
-    resp = requests.delete(url, headers=get_headers())
+def api_delete(path: str, versioned: bool = False) -> None:
+    base = API_BASE_REST if versioned else API_BASE_V2
+    url = f"{base}{path}"
+    resp = requests.delete(url, headers=get_headers(versioned))
     if not resp.ok:
         print(f"[ERRO] {resp.status_code} — {resp.text}")
         sys.exit(1)
