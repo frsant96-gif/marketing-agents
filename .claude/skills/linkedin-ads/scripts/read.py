@@ -28,12 +28,7 @@ def cmd_accounts(args):
 
 
 def cmd_campaign_groups(args):
-    params = {
-        "q": "search",
-        "search.account.values[0]": account_urn(args.account_id),
-        "count": 50,
-    }
-    data = api_get("/adCampaignGroups", params)
+    data = api_get(f"/adAccounts/{args.account_id}/adCampaignGroups", {"count": 50})
     rows = []
     for g in data.get("elements", []):
         rows.append({
@@ -46,14 +41,10 @@ def cmd_campaign_groups(args):
 
 
 def cmd_campaigns(args):
-    params = {
-        "q": "search",
-        "search.account.values[0]": account_urn(args.account_id),
-        "count": 50,
-    }
+    params = {"count": 50}
     if args.group_id:
         params["search.campaignGroup.values[0]"] = campaign_group_urn(args.group_id)
-    data = api_get("/adCampaigns", params)
+    data = api_get(f"/adAccounts/{args.account_id}/adCampaigns", params)
     rows = []
     for c in data.get("elements", []):
         budget = c.get("dailyBudget", {})
@@ -69,12 +60,7 @@ def cmd_campaigns(args):
 
 
 def cmd_creatives(args):
-    params = {
-        "q": "search",
-        "search.campaign.values[0]": campaign_urn(args.campaign_id),
-        "count": 50,
-    }
-    data = api_get("/adCreatives", params)
+    data = api_get(f"/adAccounts/{args.account_id}/adCampaigns/{args.campaign_id}/adCreatives", {"count": 50})
     rows = []
     for c in data.get("elements", []):
         rows.append({
@@ -99,7 +85,7 @@ COMMANDS = {
     "accounts": (cmd_accounts, []),
     "campaign-groups": (cmd_campaign_groups, [("--account-id", True)]),
     "campaigns": (cmd_campaigns, [("--account-id", True), ("--group-id", False)]),
-    "creatives": (cmd_creatives, [("--campaign-id", True)]),
+    "creatives": (cmd_creatives, [("--account-id", True), ("--campaign-id", True)]),
     "targeting": (cmd_targeting, [("--facet", True)]),
 }
 
