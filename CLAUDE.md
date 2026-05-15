@@ -41,29 +41,63 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 
 ## Skills personalizadas
 
+### Conteúdo e Publicação
+
 | Skill | Descrição |
 |-------|-----------|
-| `/planejar-evento` | Planeja evento do zero com framework de 26 passos — gera plano completo em `eventos/` |
 | `/post-social` | Cria copy por formato (post único, imagem, vídeo, carrossel) — salva em `marketing/posts/` |
 | `/artigo-blog` | Briefing → artigo completo com SEO/AEO/GEO + metadados + post LinkedIn — salva em `marketing/blog/` |
-| `/release-pr` | Briefing → release para imprensa + pitch para jornalistas — salva em `marketing/releases/` |
-| `/planejar-campanha` | Briefing → plano de campanha completo (institucional/evento/produto) — salva em `marketing/campanhas/` |
-| `/pagina-solucao` | Briefing → copy estruturada por seção + SEO/AEO/GEO — salva em `marketing/paginas/` |
-| `/assinatura-email` | Dados pessoais → HTML de assinatura com identidade visual Solveplan |
-| `/plano-marketing` | Perguntas estratégicas + funil → plano anual com calendário, budget e KPIs — salva em `marketing/planos/` |
 | `/ebook` | Briefing → conteúdo completo + guia de layout pro Canva — salva em `marketing/ebooks/` |
-| `/material-campanha` | Briefing → copy + briefing visual pra banners, LP, email, apresentação no Canva — salva em `marketing/materiais/` |
-| `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
-| `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
-| `/relatorio` | Analisa dados de marketing e gera relatório estruturado (executive summary, insights, recomendações, visualizações) — cobre campanhas, eventos, conteúdo, SEO, pipeline e ABM |
-| `/atribuicao` | Analisa qual canal realmente gerou pipeline — modelos multi-touch (U-shaped, linear, first/last touch), UTM, CAC, ROAS e recomendações de realocação de budget |
-| `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
 | `/video-editor` | Roteiro, briefing de edição e guia de publicação pra vídeos — talking head, Reels/conteúdo e clips de webinar — ferramentas: CapCut, Canva Video, Camtasia |
 | `/clip-social` | Transforma gravações longas em clips otimizados por plataforma — identifica momentos, define cortes, gera legendas e calendário de publicação |
-| `/wordpress` | Suporte WordPress sem dev — performance, SEO técnico, segurança, backup, troubleshooting e manutenção mensal via painel Admin |
-| `/persona` | Cria, atualiza e consulta personas com Jobs to be Done, jornada do comprador e objeções — salvas em `_contexto/personas/` e usadas em campanhas, conteúdo e ABM |
-| `/revisar-comunicacao` | Revisa emails, mensagens e apresentações (clareza, tom, efetividade) e simula conversas difíceis pra praticar antes de executar |
+| `/release-pr` | Briefing → release para imprensa + pitch para jornalistas — salva em `marketing/releases/` |
+
+### Campanhas e Ads
+
+| Skill | Descrição |
+|-------|-----------|
+| `/planejar-campanha` | Briefing → plano de campanha completo (institucional/evento/produto) — salva em `marketing/campanhas/` |
+| `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
+| `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
+| `/google-ads` | Gerencia campanhas Google Ads via SDK — lê, cria, edita, pausa e analisa campanhas, ad groups, keywords e anúncios |
+| `/material-campanha` | Briefing → copy + briefing visual pra banners, LP, email, apresentação no Canva — salva em `marketing/materiais/` |
+
+### Analytics e Dados
+
+| Skill | Descrição |
+|-------|-----------|
+| `/ga4-ratos` | Consulta Google Analytics 4 via SDK — sessões, usuários, pageviews, fontes de tráfego, conversões e dados em tempo real |
+| `/atribuicao` | Analisa qual canal realmente gerou pipeline — modelos multi-touch (U-shaped, linear, first/last touch), UTM, CAC, ROAS e recomendações de realocação de budget |
+| `/relatorio` | Analisa dados de marketing e gera relatório estruturado (executive summary, insights, recomendações, visualizações) — cobre campanhas, eventos, conteúdo, SEO, pipeline e ABM |
+
+### SEO e Site
+
+| Skill | Descrição |
+|-------|-----------|
 | `/auditoria-seo` | Audita qualquer página do site e entrega scorecard SEO/AEO/GEO (0-100) com diagnóstico por item e plano de ação com os ajustes exatos para chegar a 100% |
+| `/pagina-solucao` | Briefing → copy estruturada por seção + SEO/AEO/GEO — salva em `marketing/paginas/` |
+| `/wordpress` | Suporte WordPress sem dev — performance, SEO técnico, segurança, backup, troubleshooting e manutenção mensal via painel Admin |
+
+### Estratégia
+
+| Skill | Descrição |
+|-------|-----------|
+| `/plano-marketing` | Perguntas estratégicas + funil → plano anual com calendário, budget e KPIs — salva em `marketing/planos/` |
+| `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
+| `/persona` | Cria, atualiza e consulta personas com Jobs to be Done, jornada do comprador e objeções — salvas em `_contexto/personas/` e usadas em campanhas, conteúdo e ABM |
+
+### Branding
+
+| Skill | Descrição |
+|-------|-----------|
+| `/assinatura-email` | Dados pessoais → HTML de assinatura com identidade visual Solveplan |
+
+### Comunicação e Vendas
+
+| Skill | Descrição |
+|-------|-----------|
+| `/revisar-comunicacao` | Revisa emails, mensagens e apresentações (clareza, tom, efetividade) e simula conversas difíceis pra praticar antes de executar |
+| `/planejar-evento` | Planeja evento do zero com framework de 26 passos — gera plano completo em `eventos/` |
 
 ---
 
