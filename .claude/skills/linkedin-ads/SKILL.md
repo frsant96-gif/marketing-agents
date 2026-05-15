@@ -149,7 +149,30 @@ CTA: [Learn More | Download | Sign Up | Register | Contact Us | Apply Now]
 URL de destino: [url]
 ```
 
-### Briefing visual para Canva
+### Criativo no Canva (via MCP)
+
+Quando o usuario pedir para criar o design do anuncio, usar o Canva MCP diretamente:
+
+1. Perguntar se quer usar brand kit Solveplan (sempre recomendar que sim)
+2. Se sim, chamar `list-brand-kits` para listar e o usuario selecionar
+3. Chamar `search-brand-templates` para ver se ha template de ad disponivel
+4. Se houver template adequado → `create-design-from-brand-template`
+5. Se nao houver → `generate-design` com os parametros abaixo:
+
+```
+design_type: "facebook_post" (1200x627 — Single Image Ad)
+             "instagram_post" (1080x1080 — Square Ad)
+query: "[headline do anuncio] — anuncio LinkedIn B2B [tema da campanha],
+        fundo [cor Solveplan], logo no canto, texto destaque, visual executivo"
+brand_kit_id: [ID do brand kit selecionado]
+```
+
+6. Mostrar as opcoes geradas e perguntar qual o usuario prefere
+7. Confirmar com `create-design-from-candidate` para salvar no Canva do usuario
+
+### Briefing visual (fallback sem Canva)
+
+Se o usuario preferir criar manualmente:
 
 ```
 Formato: 1200x627px (landscape) ou 1080x1080px (quadrado)
@@ -195,10 +218,11 @@ Quando o usuario pedir segmentacao, sugerir sem API:
 1. `create.py campaign-group --objective LEAD_GENERATION`
 2. `create.py campaign --type SPONSORED_UPDATES --format SINGLE_IMAGE --objective LEAD_GENERATION`
 3. Gerar copy (2 variantes A/B) — ver secao Copy
-4. Criar post organico no LinkedIn, copiar URN
-5. `create.py creative --post-urn urn:li:ugcPost:XXX`
-6. Validar: `read.py campaigns`, `read.py creatives`
-7. `update.py campaign --status ACTIVE` (ativar grupo e campanha juntos)
+4. **Criar criativo no Canva** — usar fluxo Canva MCP (ver secao acima)
+5. Criar post organico no LinkedIn com a imagem exportada do Canva, copiar URN
+6. `create.py creative --post-urn urn:li:ugcPost:XXX`
+7. Validar: `read.py campaigns`, `read.py creatives`
+8. `update.py campaign --status ACTIVE` (ativar grupo e campanha juntos)
 
 ### Auditoria de performance
 
@@ -223,4 +247,4 @@ python3 .claude/skills/linkedin-ads/scripts/setup.py refresh
 4. **Ativar todos os niveis** — ao ativar campanha, ativar tambem grupo e criativos
 5. **Nunca hardcodar tokens** — sempre usar .env
 6. **Token expirado** — se receber 401, orientar a rodar `setup.py refresh`
-7. **NUNCA usar MCPs** — esta skill usa SOMENTE scripts Python locais
+7. **MCPs permitidos somente para Canva** — design de criativos usa o Canva MCP; todo o resto usa scripts Python locais
