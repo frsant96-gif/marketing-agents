@@ -7,6 +7,9 @@ from datetime import datetime, timedelta
 
 sys.path.insert(0, str(Path(__file__).parent))
 from lib import api_get, account_urn, campaign_urn, fmt_money, fmt_pct, print_table
+
+def analytics_get(params: dict) -> dict:
+    return api_get("/adAnalytics", params, versioned=True)
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).parent.parent / ".env")
 
@@ -48,7 +51,7 @@ def cmd_account(args):
         "fields": METRICS,
         **date_range_params(since, until),
     }
-    data = api_get("/adAnalytics", params)
+    data = analytics_get(params)
     elements = data.get("elements", [])
     if not elements:
         print("Sem dados para o periodo.")
@@ -82,7 +85,7 @@ def cmd_campaign(args):
         "fields": METRICS,
         **date_range_params(since, until),
     }
-    data = api_get("/adAnalytics", params)
+    data = analytics_get(params)
     rows = []
     for e in data.get("elements", []):
         cost = float(e.get("costInLocalCurrency", {}).get("value", 0))
@@ -115,7 +118,7 @@ def cmd_creative(args):
         "fields": METRICS,
         **date_range_params(since, until),
     }
-    data = api_get("/adAnalytics", params)
+    data = analytics_get(params)
     rows = []
     for e in data.get("elements", []):
         cost = float(e.get("costInLocalCurrency", {}).get("value", 0))
@@ -145,7 +148,7 @@ def cmd_daily(args):
         "fields": "clicks,impressions,costInLocalCurrency,leads",
         **date_range_params(since, until),
     }
-    data = api_get("/adAnalytics", params)
+    data = analytics_get(params)
     rows = []
     for e in data.get("elements", []):
         dr = e.get("dateRange", {}).get("start", {})
