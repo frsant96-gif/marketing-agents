@@ -11,7 +11,7 @@ const fonts = `<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@
 
 const css = `
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{width:1080px;height:1350px;overflow:hidden;font-family:'Montserrat',sans-serif;color:#fff;display:flex;flex-direction:column;position:relative;}
+  body{width:1080px;height:1080px;overflow:hidden;font-family:'Montserrat',sans-serif;color:#fff;display:flex;flex-direction:column;position:relative;}
   .logo{height:44px;width:auto;display:block;}
   .num{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:2px;}
   .hdr{display:flex;justify-content:space-between;align-items:center;padding:48px 60px 0;position:relative;z-index:2;}
@@ -311,7 +311,7 @@ async function run() {
 
   const browser = await chromium.launch({ args: ['--allow-file-access-from-files', '--disable-web-security'] });
   const page = await browser.newPage();
-  await page.setViewportSize({ width: 1080, height: 1350 });
+  await page.setViewportSize({ width: 1080, height: 1080 });
 
   for (let i = 0; i < slides.length; i++) {
     const tmp = path.join(tmpDir, `slide-${i}.html`);

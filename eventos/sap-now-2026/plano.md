@@ -265,7 +265,7 @@
 | Submissão do conteúdo para SAP | Fran | 26/06 | A fazer |
 | Alinhamento com Klabin (speaker) | Fran | 10/06 | A fazer |
 | Campanha pré-evento (LinkedIn + email) | Fran | Mai/Jun | A fazer |
-| SDR — abordagem de empresas-alvo | A definir (ref. 2025: Lucas) | Jun-Ago | A fazer |
+| SDR — abordagem de empresas-alvo (2 SDRs) | A definir (nomes) | Jun-Ago | A fazer |
 | Produção do estande | Agência (a contratar) | Jul | A fazer |
 | Quiz/Totem — desenvolvimento e locação | Entretec ou similar | Jul/Ago | A fazer |
 | Vídeo looping + depoimentos | Fornecedor (a contratar) | Ago | A fazer |
@@ -509,8 +509,8 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 | Reuniões agendadas | 26 | 28 | |
 | Oportunidades abertas | — | 8 | |
 | Pipeline gerado | — | R$ 3.200.000 | |
-| Empresas abordadas (SDR) | 72 | 80+ | |
-| Agendas via SDR | 5 | 8 | |
+| Empresas abordadas (SDR) | 72 (1 SDR) | 120+ (2 SDRs) | |
+| Agendas via SDR | 5 | 12 | |
 | Custo total | — | R$ 276.510,21 | |
 | Custo por lead | — | R$ 2.127 | |
 | ROI (pipeline/investimento) | — | 11,6x | |
@@ -552,7 +552,7 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 | Vídeo looping | Cases + dashboards + aceleradores | Atualizar com BDC + case Klabin |
 | Vídeos no evento | 4 depoimentos + teasers — aprovado | Replicar |
 | Speaker da sessão | Zilor (SAC Planning) — aprovado e bem recebido | Klabin (BDC) — nome mais forte |
-| SDR pré-evento | 72 empresas → 5 agendas (7% conversão) | Meta: 80 empresas → 8 agendas (10%) |
+| SDR pré-evento | 1 SDR, 72 empresas → 5 agendas (7% conversão) | 2 SDRs — meta: 120 empresas → 12 agendas (10%) |
 | Staff | 9 pessoas, escala manhã/tarde | A definir |
 | Credenciais | 8 patrocinador + 1 staff (Fran) | A confirmar |
 | Posição estande | Não-privilegiada (ref. p.4 do planner) | Ainda pior em 2026 — estratégia ativa essencial |
@@ -565,7 +565,7 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 
 **Principais alavancas (em ordem de impacto):**
 1. **Sessão Klabin** — Customer Story com cliente de peso. Sessão encerra com direcionamento explícito ao estande. Submeter até 26/06.
-2. **SDR pré-evento** — 80+ empresas-alvo abordadas antes do evento. Meta: 8 agendas confirmadas.
+2. **SDR pré-evento (2 SDRs)** — 120+ empresas-alvo abordadas antes do evento. Meta: 12 agendas confirmadas.
 3. **Quiz/Totem** — Ativação comprovada em 2025. Atualizar pares para BDC 2026. Fila = prova social = mais fila.
 4. **Anúncios hotéis + geolocalização** — Comprovado em 2025. Rodando durante os 3 dias (8, 9 e 10/set).
 5. **Convites VIP** — 15 C-levels de clientes estratégicos. Quem vem convidado já está aquecido.
