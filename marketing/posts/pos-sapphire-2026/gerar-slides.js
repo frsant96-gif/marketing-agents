@@ -4,19 +4,19 @@ const fs = require('fs');
 
 const BASE = 'c:/Users/franc/solveplan.com/Roberto Molina - Marketing/1. MKT Estrategy/3. Agentes de IA/ccos-ratos';
 const OUTPUT = `${BASE}/marketing/posts/pos-sapphire-2026/slides`;
-const LOGO_PATH = path.join(BASE.replace(/\//g, path.sep), 'marca', 'logo-escuro.png.png');
-const LOGO = `data:image/png;base64,${fs.readFileSync(LOGO_PATH).toString('base64')}`;
+const LOGO_SRC = path.join(BASE.replace(/\//g, path.sep), 'marca', 'logo-escuro1.png.png');
+const LOGO = 'logo.png'; // copiado ao lado do HTML temporário
 
 const fonts = `<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">`;
 
 const css = `
   *{margin:0;padding:0;box-sizing:border-box;}
   body{width:1080px;height:1350px;overflow:hidden;font-family:'Montserrat',sans-serif;color:#fff;display:flex;flex-direction:column;position:relative;}
-  .logo{height:32px;}
+  .logo{height:44px;width:auto;display:block;}
   .num{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:2px;}
   .hdr{display:flex;justify-content:space-between;align-items:center;padding:48px 60px 0;position:relative;z-index:2;}
   .body{flex:1;padding:32px 60px 52px;display:flex;flex-direction:column;gap:28px;position:relative;z-index:2;}
-  .tag{display:inline-block;background:#006AFF;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;padding:7px 18px;border-radius:4px;text-transform:uppercase;}
+  .tag{display:inline-block;align-self:flex-start;background:#006AFF;color:#fff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;padding:7px 18px;border-radius:4px;text-transform:uppercase;}
   .bar{width:52px;height:4px;background:#006AFF;border-radius:2px;margin:24px 0 20px;}
   .div{width:100%;height:1px;background:rgba(255,255,255,0.1);margin:20px 0;}
   .accent{color:#006AFF;}
@@ -37,7 +37,8 @@ const glowCTR = `<div class="glow" style="top:50%;left:50%;transform:translate(-
 const stripL  = `<div style="position:absolute;top:0;left:0;width:6px;height:100%;background:linear-gradient(180deg,#006AFF 0%,transparent 100%);z-index:3;"></div>`;
 const stripLfull = `<div style="position:absolute;top:0;left:0;width:6px;height:100%;background:#006AFF;z-index:3;"></div>`;
 
-const hdr = (n) => `<div class="hdr"><img class="logo" src="${LOGO}"/><span class="num">0${n} / 08</span></div>`;
+const logoHtml = `<span style="font-family:'Prompt',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;">solve<span style="color:#006AFF;">plan</span></span>`;
+const hdr = (n) => `<div class="hdr">${logoHtml}<span class="num">0${n} / 08</span></div>`;
 
 // ─── SLIDES ───────────────────────────────────────────────────────
 const slides = [
@@ -45,22 +46,18 @@ const slides = [
 // 01 — CAPA
 wrap('#0A0837', glowBR + glowTR + stripL, `
 ${hdr(1)}
-<div class="body" style="justify-content:space-between;">
-  <div>
-    <span class="tag">SAP Sapphire 2026 · Orlando</span>
-    <div class="bar"></div>
-    <p style="font-family:'Prompt',sans-serif;font-size:96px;font-weight:800;line-height:1.0;margin-bottom:32px;">
-      O SAPPHIRE<br/><span class="accent">2026</span><br/>não foi<br/>sobre IA.
-    </p>
-    <p style="font-family:'Prompt',sans-serif;font-size:34px;font-weight:600;line-height:1.35;color:rgba(255,255,255,0.6);">
-      Foi sobre o fim do ERP<br/>como você conhece.
-    </p>
-  </div>
-  <div>
+<div class="body" style="justify-content:flex-start;padding-top:60px;">
+  <span class="tag">SAP Sapphire 2026 · Orlando</span>
+  <div class="bar"></div>
+  <p style="font-family:'Prompt',sans-serif;font-size:104px;font-weight:800;line-height:0.97;margin-bottom:40px;">
+    O SAPPHIRE<br/><span class="accent">2026</span><br/>não foi<br/>sobre IA.
+  </p>
+  <p style="font-family:'Prompt',sans-serif;font-size:38px;font-weight:600;line-height:1.35;color:rgba(255,255,255,0.6);margin-bottom:0;">
+    Foi sobre o fim do ERP<br/>como você conhece.
+  </p>
+  <div style="margin-top:auto;">
     <div class="div"></div>
-    <p style="font-size:17px;font-weight:500;color:rgba(255,255,255,0.4);letter-spacing:0.3px;">
-      O que vimos em Orlando e o que isso muda pra você →
-    </p>
+    <p style="font-size:17px;font-weight:500;color:rgba(255,255,255,0.4);">O que vimos em Orlando e o que isso muda pra você →</p>
   </div>
 </div>
 `),
@@ -167,55 +164,49 @@ ${hdr(4)}
 // 05 — SAP + ANTHROPIC
 wrap('#0A0E19', glowBR, `
 ${hdr(5)}
-<div class="body">
-  <div>
-    <span class="tag">Parceria Estratégica</span>
-    <div class="bar"></div>
-    <div style="display:inline-flex;align-items:center;gap:16px;margin-bottom:24px;">
-      <div style="background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:8px;padding:12px 22px;">
-        <p style="font-family:'Prompt',sans-serif;font-size:28px;font-weight:800;">SAP</p>
-      </div>
-      <p style="font-family:'Prompt',sans-serif;font-size:34px;font-weight:700;color:#006AFF;">×</p>
-      <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:8px;padding:12px 22px;">
-        <p style="font-family:'Prompt',sans-serif;font-size:28px;font-weight:800;">Anthropic</p>
-      </div>
+<div class="body" style="justify-content:flex-start;padding-top:32px;">
+  <span class="tag">Parceria Estratégica</span>
+  <div class="bar"></div>
+  <div style="display:inline-flex;align-items:center;gap:20px;margin-bottom:28px;">
+    <div style="background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:8px;padding:16px 32px;">
+      <p style="font-family:'Prompt',sans-serif;font-size:36px;font-weight:800;">SAP</p>
     </div>
-    <p style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:8px;">
-      Claude AI integrado ao <strong style="color:#fff;">Joule</strong>, ao <strong class="accent">SAP Business Data Cloud</strong> e ao <strong style="color:#fff;">Knowledge Graph</strong>.
-    </p>
+    <p style="font-family:'Prompt',sans-serif;font-size:40px;font-weight:700;color:#006AFF;">×</p>
+    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:8px;padding:16px 32px;">
+      <p style="font-family:'Prompt',sans-serif;font-size:36px;font-weight:800;">Anthropic</p>
+    </div>
   </div>
-  <div>
-    <div class="div"></div>
-    <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">O que habilita no FP&A</p>
-    ${[
-      ['Análise de variações', 'Real x Budget explicadas em linguagem natural'],
-      ['Projeção de caixa', 'Com sugestões de ação corretiva automáticas'],
-      ['Fechamento contábil', 'Suporte automatizado, sem retrabalho manual'],
-      ['Análise sob demanda', 'Financeira e operacional em segundos'],
-    ].map(([t,d])=>`
-    <div style="display:flex;gap:16px;margin-bottom:18px;align-items:flex-start;">
-      <div style="min-width:8px;height:8px;background:#006AFF;border-radius:50%;margin-top:8px;flex-shrink:0;"></div>
-      <div>
-        <p style="font-size:17px;font-weight:700;color:#fff;">${t}</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.45);margin-top:2px;">${d}</p>
-      </div>
-    </div>`).join('')}
-  </div>
+  <p style="font-size:20px;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:36px;">
+    Claude AI integrado ao <strong style="color:#fff;">Joule</strong>, ao <strong class="accent">SAP Business Data Cloud</strong> e ao <strong style="color:#fff;">Knowledge Graph</strong>.
+  </p>
+  <div class="div" style="margin-top:0;margin-bottom:28px;"></div>
+  <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">O que habilita no FP&A</p>
+  ${[
+    ['Análise de variações', 'Real x Budget explicadas em linguagem natural'],
+    ['Projeção de caixa', 'Com sugestões de ação corretiva automáticas'],
+    ['Fechamento contábil', 'Suporte automatizado, sem retrabalho manual'],
+    ['Análise sob demanda', 'Financeira e operacional em segundos'],
+  ].map(([t,d])=>`
+  <div style="display:flex;gap:18px;margin-bottom:24px;align-items:flex-start;">
+    <div style="min-width:10px;height:10px;background:#006AFF;border-radius:50%;margin-top:7px;flex-shrink:0;"></div>
+    <div>
+      <p style="font-size:20px;font-weight:700;color:#fff;">${t}</p>
+      <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-top:4px;">${d}</p>
+    </div>
+  </div>`).join('')}
 </div>
 `),
 
 // 06 — CASE VALE
 wrap('#0A0837', glowBR, `
 ${hdr(6)}
-<div class="body">
-  <div>
-    <span class="tag">Caso Real · SAPPHIRE 2026</span>
-    <div class="bar"></div>
-    <p style="font-family:'Prompt',sans-serif;font-size:52px;font-weight:800;line-height:1.05;margin-bottom:10px;">
-      <span class="accent">Vale</span> apresentou<br/>ao vivo em Orlando.
-    </p>
-    <p style="font-size:16px;font-weight:500;color:rgba(255,255,255,0.45);">174 mil funcionários · 20 países · 24 mil centros de custo</p>
-  </div>
+<div class="body" style="justify-content:flex-start;padding-top:32px;">
+  <span class="tag">Caso Real · SAPPHIRE 2026</span>
+  <div class="bar"></div>
+  <p style="font-family:'Prompt',sans-serif;font-size:58px;font-weight:800;line-height:1.05;margin-bottom:12px;">
+    <span class="accent">Vale</span> apresentou<br/>ao vivo em Orlando.
+  </p>
+  <p style="font-size:18px;font-weight:500;color:rgba(255,255,255,0.45);margin-bottom:32px;">174 mil funcionários · 20 países · 24 mil centros de custo</p>
   <div>
     <div style="display:flex;gap:14px;margin-bottom:14px;">
       <div style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:24px;">
@@ -244,31 +235,27 @@ ${hdr(6)}
 // 07 — O QUE MUDA PRA VOCÊ
 wrap('#0A0E19', glowTR + stripL, `
 ${hdr(7)}
-<div class="body">
-  <div>
-    <span class="tag">O que isso muda pra você</span>
-    <div class="bar"></div>
-    <p style="font-family:'Prompt',sans-serif;font-size:40px;font-weight:800;line-height:1.2;margin-bottom:28px;">
-      Se a sua empresa ainda faz isso,<br/><span class="accent">o mercado já passou à frente.</span>
+<div class="body" style="justify-content:flex-start;padding-top:32px;">
+  <span class="tag">O que isso muda pra você</span>
+  <div class="bar"></div>
+  <p style="font-family:'Prompt',sans-serif;font-size:42px;font-weight:800;line-height:1.2;margin-bottom:32px;">
+    Se a sua empresa ainda faz isso,<br/><span class="accent">o mercado já passou à frente.</span>
+  </p>
+  ${[
+    'Fecha o mês em planilhas Excel',
+    'Consolida dados manualmente entre sistemas',
+    'Leva semanas pra gerar um cenário financeiro',
+    'Depende de relatórios estáticos para decisões críticas',
+    'Tem dados dispersos sem governança centralizada',
+  ].map(item=>`
+  <div style="display:flex;align-items:center;gap:18px;padding:20px 24px;background:rgba(255,255,255,0.04);border-left:3px solid rgba(255,255,255,0.12);border-radius:0 8px 8px 0;margin-bottom:12px;">
+    <p style="font-size:17px;font-weight:500;color:rgba(255,255,255,0.65);">${item}</p>
+  </div>`).join('')}
+  <div style="margin-top:24px;padding:28px 32px;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;">
+    <p style="font-family:'Prompt',sans-serif;font-size:22px;font-weight:700;line-height:1.5;">
+      O SAP BDC foi construído exatamente para isso.<br/>
+      <span class="accent">E a janela de vantagem é agora.</span>
     </p>
-  </div>
-  <div>
-    ${[
-      'Fecha o mês em planilhas Excel',
-      'Consolida dados manualmente entre sistemas',
-      'Leva semanas pra gerar um cenário financeiro',
-      'Depende de relatórios estáticos para decisões críticas',
-      'Tem dados dispersos sem governança centralizada',
-    ].map(item=>`
-    <div style="display:flex;align-items:center;gap:18px;padding:18px 22px;background:rgba(255,255,255,0.04);border-left:3px solid rgba(255,255,255,0.12);border-radius:0 8px 8px 0;margin-bottom:10px;">
-      <p style="font-size:16px;font-weight:500;color:rgba(255,255,255,0.65);">${item}</p>
-    </div>`).join('')}
-    <div style="margin-top:20px;padding:24px 28px;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;">
-      <p style="font-family:'Prompt',sans-serif;font-size:21px;font-weight:700;line-height:1.5;">
-        O SAP BDC foi construído exatamente para isso.<br/>
-        <span class="accent">E a janela de vantagem é agora.</span>
-      </p>
-    </div>
   </div>
 </div>
 `),
@@ -276,37 +263,35 @@ ${hdr(7)}
 // 08 — CTA
 wrap('linear-gradient(160deg,#0A0837 0%,#001233 100%)', glowCTR + stripLfull, `
 ${hdr(8)}
-<div class="body" style="justify-content:space-between;text-align:center;">
-  <div>
-    <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;margin-bottom:36px;">Parceiro SAP Gold · América Latina</p>
-    <p style="font-family:'Prompt',sans-serif;font-size:62px;font-weight:800;line-height:1.1;margin-bottom:28px;">
-      Vimos o SAPPHIRE.<br/>Agora queremos<br/><span class="accent">ver o seu cenário.</span>
-    </p>
-    <p style="font-size:20px;font-weight:500;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:48px;">
-      Se quiser entender o que o SAP BDC entrega<br/>
-      no seu ambiente atual — sem hype,<br/>
-      com diagnóstico real — é só chamar.
-    </p>
-    <div style="display:inline-block;background:#006AFF;border-radius:8px;padding:22px 60px;">
-      <p style="font-family:'Prompt',sans-serif;font-size:24px;font-weight:700;">Comente ou mande mensagem direta</p>
-    </div>
+<div class="body" style="justify-content:flex-start;text-align:center;padding-top:60px;">
+  <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;margin-bottom:44px;">Parceiro SAP Gold · América Latina</p>
+  <p style="font-family:'Prompt',sans-serif;font-size:70px;font-weight:800;line-height:1.05;margin-bottom:32px;">
+    Vimos o SAPPHIRE.<br/>Agora queremos<br/><span class="accent">ver o seu cenário.</span>
+  </p>
+  <p style="font-size:22px;font-weight:500;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:52px;">
+    Se quiser entender o que o SAP BDC entrega<br/>
+    no seu ambiente atual — sem hype,<br/>
+    com diagnóstico real — é só chamar.
+  </p>
+  <div style="display:inline-block;background:#006AFF;border-radius:8px;padding:24px 64px;margin-bottom:auto;">
+    <p style="font-family:'Prompt',sans-serif;font-size:26px;font-weight:700;">Comente ou mande mensagem direta</p>
   </div>
-  <div>
+  <div style="margin-top:auto;width:100%;">
     <div class="div"></div>
     <div style="display:flex;justify-content:center;gap:52px;margin-top:8px;">
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">+200</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.4);">soluções entregues</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">+200</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.4);">soluções entregues</p>
       </div>
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">+90</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.4);">clientes atendidos</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">+90</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.4);">clientes atendidos</p>
       </div>
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">SAP</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.4);">Gold Partner</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">SAP</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.4);">Gold Partner</p>
       </div>
     </div>
   </div>
@@ -319,16 +304,26 @@ async function run() {
   if (!fs.existsSync(OUTPUT)) fs.mkdirSync(OUTPUT, { recursive: true });
 
   const tmpDir = path.join(require('os').tmpdir(), 'solveplan-slides');
-  if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir);
+  if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
 
-  const browser = await chromium.launch({ args: ['--allow-file-access-from-files'] });
+  // logo copiado ao lado dos HTMLs para referência relativa
+  fs.copyFileSync(LOGO_SRC, path.join(tmpDir, 'logo.png'));
+
+  const browser = await chromium.launch({ args: ['--allow-file-access-from-files', '--disable-web-security'] });
   const page = await browser.newPage();
   await page.setViewportSize({ width: 1080, height: 1350 });
 
   for (let i = 0; i < slides.length; i++) {
     const tmp = path.join(tmpDir, `slide-${i}.html`);
     fs.writeFileSync(tmp, slides[i], 'utf8');
-    await page.goto(`file:///${tmp.replace(/\\/g, '/')}`, { waitUntil: 'networkidle' });
+    await page.goto(`file:///${tmp.replace(/\\/g, '/')}`, { waitUntil: 'load' });
+    // aguarda todas as imagens carregarem
+    await page.evaluate(() => Promise.all(
+      [...document.images].map(img =>
+        img.complete ? Promise.resolve() : new Promise(r => { img.onload = r; img.onerror = r; })
+      )
+    ));
+    await page.waitForTimeout(300);
     const file = path.join(OUTPUT, `slide-0${i + 1}.png`);
     await page.screenshot({ path: file });
     fs.unlinkSync(tmp);
@@ -336,7 +331,7 @@ async function run() {
   }
 
   await browser.close();
-  fs.rmdirSync(tmpDir, { recursive: true });
+  fs.rmSync(tmpDir, { recursive: true, force: true });
   console.log(`\nPronto! ${slides.length} slides em:\n${OUTPUT}`);
 }
 
