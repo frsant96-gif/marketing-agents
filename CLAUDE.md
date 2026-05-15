@@ -60,6 +60,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 | `/anuncio` | Briefing → copy (2 variantes A/B) + briefing visual + configuração de campanha para LinkedIn Ads e Google Ads |
 | `/abm` | Planejamento completo de campanha ABM — segmentação por tier, mensagens por vertical, Matched Audiences no LinkedIn, orquestração com vendas e framework de mensuração por conta |
 | `/google-ads` | Gerencia campanhas Google Ads via SDK — lê, cria, edita, pausa e analisa campanhas, ad groups, keywords e anúncios |
+| `/linkedin-ads` | Gerencia campanhas LinkedIn Ads via Marketing API — lê, cria, edita, analisa performance e gera copy + segmentação |
 | `/material-campanha` | Briefing → copy + briefing visual pra banners, LP, email, apresentação no Canva — salva em `marketing/materiais/` |
 
 ### Analytics e Dados

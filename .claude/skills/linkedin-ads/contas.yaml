@@ -1,0 +1,13 @@
+# LinkedIn Ads — Cadastro de Contas
+# O Claude le este arquivo para resolver nomes de clientes para account IDs.
+#
+# Formato:
+# clientes:
+#   - nome: "Nome do Cliente"
+#     account_id: "123456789"  # ID numerico da conta de anuncios
+#     notas: "Opcional — qualquer observacao"
+
+clientes: []
+  # - nome: "Solveplan"
+  #   account_id: "123456789"
+  #   notas: "Conta principal"
