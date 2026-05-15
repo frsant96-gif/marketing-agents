@@ -123,27 +123,27 @@ ${hdr(3)}
 // 04 — 50+ ASSISTENTES
 wrap('#0A0837', glowTR, `
 ${hdr(4)}
-<div class="body" style="justify-content:space-between;">
-  <div>
+<div class="body" style="justify-content:flex-start;gap:0;">
+  <div style="margin-bottom:18px;">
     <span class="tag">SAP Autonomous Suite</span>
     <div class="bar"></div>
-    <p style="font-family:'Prompt',sans-serif;font-size:30px;font-weight:700;color:rgba(255,255,255,0.7);line-height:1.35;margin-bottom:4px;">
+    <p style="font-family:'Prompt',sans-serif;font-size:27px;font-weight:700;color:rgba(255,255,255,0.7);line-height:1.35;margin-bottom:0;">
       "A evolução mais significativa do portfólio SAP <span class="accent">em toda a história da empresa.</span>"
     </p>
   </div>
-  <div>
-    <div style="display:flex;gap:16px;margin-bottom:16px;">
-      <div style="flex:1;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;padding:28px 20px;text-align:center;">
-        <p style="font-family:'Prompt',sans-serif;font-size:86px;font-weight:800;color:#006AFF;line-height:1;">50+</p>
-        <p style="font-size:15px;font-weight:600;color:#fff;margin-top:6px;">assistentes<br/>por domínio</p>
+  <div style="flex:1;display:flex;flex-direction:column;gap:14px;">
+    <div style="display:flex;gap:14px;flex:1;">
+      <div style="flex:1;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;padding:20px;text-align:center;display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-family:'Prompt',sans-serif;font-size:96px;font-weight:800;color:#006AFF;line-height:1;">50+</p>
+        <p style="font-size:15px;font-weight:600;color:#fff;margin-top:8px;">assistentes<br/>por domínio</p>
       </div>
-      <div style="flex:1;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;padding:28px 20px;text-align:center;">
-        <p style="font-family:'Prompt',sans-serif;font-size:86px;font-weight:800;color:#006AFF;line-height:1;">200+</p>
-        <p style="font-size:15px;font-weight:600;color:#fff;margin-top:6px;">agentes<br/>especializados</p>
+      <div style="flex:1;background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:10px;padding:20px;text-align:center;display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-family:'Prompt',sans-serif;font-size:96px;font-weight:800;color:#006AFF;line-height:1;">200+</p>
+        <p style="font-size:15px;font-weight:600;color:#fff;margin-top:8px;">agentes<br/>especializados</p>
       </div>
     </div>
-    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:10px;padding:24px 28px;margin-bottom:14px;">
-      <p style="font-size:12px;font-weight:700;color:#94FF96;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">Resultado concreto</p>
+    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:10px;padding:22px 28px;">
+      <p style="font-size:12px;font-weight:700;color:#94FF96;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">Resultado concreto</p>
       <p style="font-family:'Prompt',sans-serif;font-size:22px;font-weight:700;">Fechamento financeiro</p>
       <p style="font-size:18px;color:rgba(255,255,255,0.6);margin-top:6px;">
         <span style="text-decoration:line-through;color:rgba(255,255,255,0.3);">Semanas</span>
@@ -151,8 +151,8 @@ ${hdr(4)}
         <strong class="green">Dias</strong>
       </p>
     </div>
-    <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:20px 28px;">
-      <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">€100M investidos em parceiros para implantação</p>
+    <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:18px 28px;">
+      <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">€100M investidos em parceiros para implantação</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         ${['Finance','Supply Chain','Procurement','RH','CX','...'].map(d=>`<span style="background:rgba(0,106,255,0.2);border:1px solid rgba(0,106,255,0.35);border-radius:6px;padding:6px 14px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);">${d}</span>`).join('')}
       </div>
@@ -263,35 +263,37 @@ ${hdr(7)}
 // 08 — CTA
 wrap('linear-gradient(160deg,#0A0837 0%,#001233 100%)', glowCTR + stripLfull, `
 ${hdr(8)}
-<div class="body" style="justify-content:flex-start;text-align:center;padding-top:60px;">
-  <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;margin-bottom:44px;">Parceiro SAP Gold · América Latina</p>
-  <p style="font-family:'Prompt',sans-serif;font-size:70px;font-weight:800;line-height:1.05;margin-bottom:32px;">
-    Vimos o SAPPHIRE.<br/>Agora queremos<br/><span class="accent">ver o seu cenário.</span>
-  </p>
-  <p style="font-size:22px;font-weight:500;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:52px;">
-    Se quiser entender o que o SAP BDC entrega<br/>
-    no seu ambiente atual — sem hype,<br/>
-    com diagnóstico real — é só chamar.
-  </p>
-  <div style="display:inline-block;background:#006AFF;border-radius:8px;padding:24px 64px;margin-bottom:auto;">
-    <p style="font-family:'Prompt',sans-serif;font-size:26px;font-weight:700;">Comente ou mande mensagem direta</p>
+<div class="body" style="justify-content:space-between;text-align:center;padding-top:40px;">
+  <div>
+    <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;">Parceiro SAP Gold · América Latina</p>
+    <p style="font-family:'Prompt',sans-serif;font-size:64px;font-weight:800;line-height:1.05;margin-bottom:24px;">
+      Vimos o SAPPHIRE.<br/>Agora queremos<br/><span class="accent">ver o seu cenário.</span>
+    </p>
+    <p style="font-size:19px;font-weight:500;color:rgba(255,255,255,0.5);line-height:1.65;">
+      Se quiser entender o que o SAP BDC entrega<br/>
+      no seu ambiente atual — sem hype,<br/>
+      com diagnóstico real — é só chamar.
+    </p>
   </div>
-  <div style="margin-top:auto;width:100%;">
+  <div style="display:inline-block;background:#006AFF;border-radius:8px;padding:22px 56px;">
+    <p style="font-family:'Prompt',sans-serif;font-size:24px;font-weight:700;">Comente ou mande mensagem direta</p>
+  </div>
+  <div style="width:100%;">
     <div class="div"></div>
     <div style="display:flex;justify-content:center;gap:52px;margin-top:8px;">
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">+200</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.4);">soluções entregues</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">+200</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.4);">soluções entregues</p>
       </div>
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">+90</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.4);">clientes atendidos</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">+90</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.4);">clientes atendidos</p>
       </div>
       <div style="width:1px;background:rgba(255,255,255,0.1);"></div>
       <div>
-        <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;color:#006AFF;">SAP</p>
-        <p style="font-size:15px;color:rgba(255,255,255,0.4);">Gold Partner</p>
+        <p style="font-family:'Prompt',sans-serif;font-size:44px;font-weight:800;color:#006AFF;">SAP</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.4);">Gold Partner</p>
       </div>
     </div>
   </div>
