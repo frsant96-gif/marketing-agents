@@ -2,733 +2,843 @@ from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
-from pptx.util import Inches, Pt
-import copy
+from pptx.oxml.ns import qn
+from lxml import etree
+import os
 
-# Cores Solveplan
-AZUL_ESCURO = RGBColor(0x0A, 0x0E, 0x19)
-AZUL_MARINHO = RGBColor(0x0A, 0x08, 0x37)
-AZUL_VIVO = RGBColor(0x00, 0x6A, 0xFF)
-VERDE_NEON = RGBColor(0x94, 0xFF, 0x96)
-BRANCO = RGBColor(0xFF, 0xFF, 0xFF)
-CINZA_CLARO = RGBColor(0xCC, 0xCC, 0xCC)
-AMARELO = RGBColor(0xFF, 0xD7, 0x00)
+# ── Cores do template Solveplan ──────────────────────────────
+BG_LIGHT   = RGBColor(0xF0, 0xF0, 0xF2)   # fundo claro (cinza off-white)
+BG_DARK    = RGBColor(0x0A, 0x08, 0x37)   # fundo escuro (azul marinho)
+AZUL_VIVO  = RGBColor(0x00, 0x6A, 0xFF)   # azul destaque / títulos
+NAVY       = RGBColor(0x0A, 0x08, 0x37)   # azul marinho (texto sobre fundo claro)
+BRANCO     = RGBColor(0xFF, 0xFF, 0xFF)
+CINZA_TXT  = RGBColor(0x44, 0x44, 0x55)   # texto secundário
+VERDE_HDR  = RGBColor(0x7F, 0xFF, 0x96)   # cabeçalho tabela verde (como template)
+AZUL_HDR   = RGBColor(0x00, 0x6A, 0xFF)   # cabeçalho tabela azul
+AZUL_ROW1  = RGBColor(0xD6, 0xE8, 0xFF)   # linha par — azul claro
+AZUL_ROW2  = RGBColor(0xEB, 0xF3, 0xFF)   # linha ímpar — azul mais claro
+AMARELO    = RGBColor(0xFF, 0xC0, 0x00)   # atenção / alerta
 
 W = Inches(13.33)
 H = Inches(7.5)
 
+LOGO_DARK  = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\marca\logo-escuro.png.png"
+LOGO_LIGHT = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\marca\logo-claro.png.png"
+
 prs = Presentation()
-prs.slide_width = W
+prs.slide_width  = W
 prs.slide_height = H
+blank = prs.slide_layouts[6]
 
-blank_layout = prs.slide_layouts[6]
-
-
-def add_slide():
-    return prs.slides.add_slide(blank_layout)
+slide_num = [0]
 
 
-def bg(slide, color=AZUL_ESCURO):
-    fill = slide.background.fill
+# ── Helpers ──────────────────────────────────────────────────
+
+def new_slide(dark=False):
+    s = prs.slides.add_slide(blank)
+    fill = s.background.fill
     fill.solid()
-    fill.fore_color.rgb = color
+    fill.fore_color.rgb = BG_DARK if dark else BG_LIGHT
+    slide_num[0] += 1
+    return s
 
 
-def txbox(slide, text, x, y, w, h, size=18, bold=False, color=BRANCO,
-          align=PP_ALIGN.LEFT, wrap=True):
+def txb(slide, text, x, y, w, h, size=14, bold=False,
+        color=NAVY, align=PP_ALIGN.LEFT, italic=False):
     tb = slide.shapes.add_textbox(x, y, w, h)
     tf = tb.text_frame
-    tf.word_wrap = wrap
-    p = tf.paragraphs[0]
+    tf.word_wrap = True
+    p  = tf.paragraphs[0]
     p.alignment = align
     run = p.add_run()
     run.text = text
-    run.font.size = Pt(size)
-    run.font.bold = bold
+    run.font.size   = Pt(size)
+    run.font.bold   = bold
+    run.font.italic = italic
     run.font.color.rgb = color
-    run.font.name = "Montserrat"
+    run.font.name  = "Calibri"
     return tb
 
 
-def rect(slide, x, y, w, h, color=AZUL_VIVO):
+def box(slide, x, y, w, h, fill_color, line_color=None):
     shape = slide.shapes.add_shape(1, x, y, w, h)
     shape.fill.solid()
-    shape.fill.fore_color.rgb = color
-    shape.line.fill.background()
+    shape.fill.fore_color.rgb = fill_color
+    if line_color:
+        shape.line.color.rgb = line_color
+        shape.line.width = Pt(0.5)
+    else:
+        shape.line.fill.background()
     return shape
 
 
-def line(slide, x, y, w, color=AZUL_VIVO, thickness=Pt(1.5)):
-    ln = slide.shapes.add_shape(1, x, y, w, Inches(0.02))
-    ln.fill.solid()
-    ln.fill.fore_color.rgb = color
-    ln.line.fill.background()
-    return ln
+def title_block(slide, title, dark=False):
+    """Título + linha decorativa abaixo — padrão do template."""
+    tc = AZUL_VIVO if dark else AZUL_VIVO
+    txb(slide, title, Inches(0.55), Inches(0.25), Inches(12.5), Inches(0.7),
+        size=22, bold=True, color=tc)
+    # linha decorativa
+    ln = box(slide, Inches(0.55), Inches(0.95), Inches(1.1), Inches(0.045),
+             NAVY if not dark else BRANCO)
 
 
-def section_header(slide, title):
-    rect(slide, Inches(0.5), Inches(0.3), Inches(12.33), Inches(0.7), AZUL_VIVO)
-    txbox(slide, title, Inches(0.7), Inches(0.35), Inches(12), Inches(0.6),
-          size=22, bold=True, color=BRANCO, align=PP_ALIGN.LEFT)
+def footer(slide, dark=False, page_label=None):
+    """Rodapé: logo + linha + texto + número."""
+    logo_file = LOGO_LIGHT if dark else LOGO_DARK
+    if os.path.exists(logo_file):
+        try:
+            slide.shapes.add_picture(logo_file,
+                Inches(0.35), Inches(6.98), Inches(0.85), Inches(0.38))
+        except Exception:
+            pass
+
+    # linha
+    ln = box(slide, Inches(1.35), Inches(7.15), Inches(11.6), Inches(0.022),
+             AZUL_VIVO if dark else NAVY)
+
+    # texto central
+    lbl_color = AZUL_VIVO if dark else AZUL_VIVO
+    txb(slide, "Planejamento SAP NOW AI Tour 2026 — Solveplan",
+        Inches(1.4), Inches(7.18), Inches(9.5), Inches(0.28),
+        size=9, color=lbl_color)
+
+    # número
+    num = str(slide_num[0]) if page_label is None else page_label
+    txb(slide, num, Inches(12.6), Inches(7.18), Inches(0.6), Inches(0.28),
+        size=9, color=lbl_color, align=PP_ALIGN.RIGHT)
 
 
-def bullet_block(slide, items, x, y, w, size=16, color=BRANCO, spacing=0.42):
-    for i, item in enumerate(items):
-        txbox(slide, f"▸  {item}", x, y + Inches(i * spacing), w, Inches(0.45),
-              size=size, color=color)
-
-
-def kv_table(slide, rows, x, y, col_w1=Inches(3.5), col_w2=Inches(8)):
-    for i, (k, v) in enumerate(rows):
-        yy = y + Inches(i * 0.52)
-        bg_c = AZUL_MARINHO if i % 2 == 0 else RGBColor(0x10, 0x14, 0x22)
-        rect(slide, x, yy, col_w1 + col_w2, Inches(0.48), bg_c)
-        txbox(slide, k, x + Inches(0.1), yy + Inches(0.04), col_w1, Inches(0.44),
-              size=14, bold=True, color=AZUL_VIVO)
-        txbox(slide, v, x + col_w1 + Inches(0.1), yy + Inches(0.04), col_w2, Inches(0.44),
-              size=14, color=BRANCO)
-
-
-def data_table(slide, headers, rows, x, y, col_widths, row_h=0.45):
-    # header
+def table_block(slide, headers, rows, x, y, col_widths,
+                row_h=Inches(0.38), hdr_color=AZUL_HDR):
+    """Tabela no estilo do template (cabeçalho colorido + linhas alternadas)."""
     xx = x
     for i, h in enumerate(headers):
-        rect(slide, xx, y, col_widths[i], Inches(0.48), AZUL_VIVO)
-        txbox(slide, h, xx + Inches(0.05), y + Inches(0.04), col_widths[i], Inches(0.44),
-              size=13, bold=True, color=BRANCO, align=PP_ALIGN.CENTER)
+        box(slide, xx, y, col_widths[i], Inches(0.44), hdr_color)
+        txb(slide, h, xx + Inches(0.06), y + Inches(0.05),
+            col_widths[i] - Inches(0.06), Inches(0.38),
+            size=11, bold=True, color=BRANCO, align=PP_ALIGN.CENTER)
         xx += col_widths[i]
-    # rows
+
     for ri, row in enumerate(rows):
-        yy = y + Inches(0.48 + ri * row_h)
-        bg_c = AZUL_MARINHO if ri % 2 == 0 else RGBColor(0x10, 0x14, 0x22)
+        yy = y + Inches(0.44) + ri * row_h
+        bg = AZUL_ROW1 if ri % 2 == 0 else AZUL_ROW2
         xx = x
         for ci, cell in enumerate(row):
-            rect(slide, xx, yy, col_widths[ci], Inches(row_h), bg_c)
-            txbox(slide, cell, xx + Inches(0.05), yy + Inches(0.04),
-                  col_widths[ci], Inches(row_h),
-                  size=12, color=BRANCO, align=PP_ALIGN.CENTER)
+            box(slide, xx, yy, col_widths[ci], row_h, bg)
+            c_bold = cell.startswith("⚠️") or cell.startswith("TOTAL") or cell.startswith("**")
+            txb(slide, cell.strip("*"),
+                xx + Inches(0.06), yy + Inches(0.03),
+                col_widths[ci] - Inches(0.06), row_h - Inches(0.04),
+                size=10, bold=c_bold,
+                color=NAVY if bg != BG_DARK else BRANCO,
+                align=PP_ALIGN.CENTER)
             xx += col_widths[ci]
 
 
-# ─────────────────────────────────────────────
+def kv_block(slide, rows, x, y, w1=Inches(3.2), w2=Inches(9.5)):
+    for i, (k, v) in enumerate(rows):
+        yy = y + Inches(i * 0.46)
+        bg = AZUL_ROW1 if i % 2 == 0 else AZUL_ROW2
+        box(slide, x, yy, w1 + w2, Inches(0.42), bg)
+        txb(slide, k, x + Inches(0.08), yy + Inches(0.04), w1, Inches(0.38),
+            size=11, bold=True, color=NAVY)
+        txb(slide, v, x + w1 + Inches(0.08), yy + Inches(0.04), w2, Inches(0.38),
+            size=11, color=NAVY)
+
+
+def bullets(slide, items, x, y, w, size=13, color=NAVY, spacing=0.42):
+    for i, item in enumerate(items):
+        txb(slide, f"•  {item}", x, y + Inches(i * spacing), w, Inches(0.42),
+            size=size, color=color)
+
+
+def highlight_box(slide, text, x, y, w, h, bg=BG_DARK, tc=BRANCO, size=13):
+    box(slide, x, y, w, h, bg)
+    txb(slide, text, x + Inches(0.15), y + Inches(0.08),
+        w - Inches(0.2), h - Inches(0.1), size=size, color=tc, bold=True)
+
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 1 — CAPA
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s, AZUL_ESCURO)
-rect(s, Inches(0), Inches(0), Inches(0.18), H, AZUL_VIVO)
-rect(s, Inches(0), H - Inches(0.08), W, Inches(0.08), AZUL_VIVO)
+# ════════════════════════════════════════════════════════════
+s = new_slide(dark=True)
 
-txbox(s, "SAP NOW AI Tour Brazil 2026", Inches(0.6), Inches(1.2), Inches(12), Inches(1.2),
-      size=42, bold=True, color=BRANCO, align=PP_ALIGN.LEFT)
-txbox(s, "Planejamento Solveplan", Inches(0.6), Inches(2.4), Inches(10), Inches(0.7),
-      size=26, bold=False, color=AZUL_VIVO, align=PP_ALIGN.LEFT)
+# Logo centralizado (grande)
+logo_file = LOGO_LIGHT
+if os.path.exists(logo_file):
+    try:
+        s.shapes.add_picture(logo_file,
+            Inches(1.5), Inches(2.6), Inches(2.8), Inches(1.25))
+    except Exception:
+        txb(s, "solveplan", Inches(1.5), Inches(2.8), Inches(3), Inches(0.7),
+            size=36, bold=True, color=BRANCO)
 
-line(s, Inches(0.6), Inches(3.2), Inches(6), AZUL_VIVO)
+# Linha vertical separadora (como no template)
+box(s, Inches(4.6), Inches(2.5), Inches(0.025), Inches(1.55), BRANCO)
 
-txbox(s, "9 e 10 de setembro de 2026", Inches(0.6), Inches(3.4), Inches(8), Inches(0.5),
-      size=18, color=CINZA_CLARO)
-txbox(s, "Transamérica Expo Center — São Paulo", Inches(0.6), Inches(3.9), Inches(8), Inches(0.5),
-      size=18, color=CINZA_CLARO)
-txbox(s, "Das 8h às 19h", Inches(0.6), Inches(4.4), Inches(8), Inches(0.5),
-      size=18, color=CINZA_CLARO)
+# Título e info ao lado da linha
+txb(s, "SAP NOW AI Tour\nBrazil 2026",
+    Inches(4.9), Inches(2.55), Inches(7.5), Inches(1.1),
+    size=36, bold=True, color=BRANCO)
 
-rect(s, Inches(0.6), Inches(5.4), Inches(5.5), Inches(0.7), AZUL_VIVO)
-txbox(s, '"Seus dados existem — mas você ainda demora dias para fechar o mês."',
-      Inches(0.7), Inches(5.45), Inches(5.3), Inches(0.65),
-      size=13, bold=True, color=BRANCO, align=PP_ALIGN.LEFT)
+txb(s, "Planejamento Solveplan",
+    Inches(4.9), Inches(3.75), Inches(7), Inches(0.5),
+    size=18, color=AZUL_VIVO)
 
-txbox(s, "CONFIDENCIAL — USO INTERNO", Inches(9), Inches(6.9), Inches(4), Inches(0.4),
-      size=10, color=RGBColor(0x66, 0x66, 0x66), align=PP_ALIGN.RIGHT)
+txb(s, "9 e 10 de setembro de 2026  |  Transamérica Expo Center — São Paulo",
+    Inches(4.9), Inches(4.3), Inches(7.5), Inches(0.45),
+    size=13, color=RGBColor(0xAA, 0xBB, 0xCC))
 
-# ─────────────────────────────────────────────
+footer(s, dark=True, page_label="")
+
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 2 — OBJETIVOS
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Objetivos")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Objetivos")
 
-objetivos = [
+items = [
     "Geração de leads qualificados — meta: 130",
     "Geração de reuniões agendadas — meta: 28",
     "Posicionar Solveplan como referência em SAP Business Data Cloud (BDC)",
     "Fomentar relacionamento com clientes e expandir networking",
     "Gerar pipeline de novos negócios — meta: R$ 3.200.000",
 ]
-bullet_block(s, objetivos, Inches(0.7), Inches(1.3), Inches(11.5), size=18)
+bullets(s, items, Inches(0.8), Inches(1.2), Inches(11.5), size=16)
 
-line(s, Inches(0.7), Inches(5.2), Inches(11.5), VERDE_NEON)
-txbox(s, '💡 Mensagem-chave: "Seus dados existem — mas você ainda demora dias para fechar o mês. Em 2026, isso é risco. A Solveplan resolve."',
-      Inches(0.7), Inches(5.35), Inches(11.5), Inches(0.8),
-      size=15, bold=True, color=VERDE_NEON)
+box(s, Inches(0.55), Inches(5.6), Inches(12.2), Inches(0.72), NAVY)
+txb(s, '💡  Mensagem-chave: "Seus dados existem — mas você ainda demora dias para fechar o mês. Em 2026, isso é risco. A Solveplan resolve."',
+    Inches(0.75), Inches(5.68), Inches(12.0), Inches(0.6),
+    size=13, bold=True, color=BRANCO)
+footer(s)
 
-# ─────────────────────────────────────────────
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 3 — OVERVIEW
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Overview")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Overview")
+kv_block(s, [
+    ("Solução",       "SAP Business Data Cloud (BDC) — foco principal"),
+    ("Objetivo",      "Geração de demanda + conversão de leads (deals no pipe)"),
+    ("Etapa do funil","Meio e fundo"),
+    ("Período",       "Jun, Jul, Ago, Set 2026"),
+    ("Target",        "+R$ 500M faturamento / cross industry"),
+    ("Persona",       "CIO, CFO, Controller, Head de Dados/BI, COO"),
+    ("Conversão",     "Evento SAP NOW AI Tour 2026"),
+], Inches(0.55), Inches(1.15))
+footer(s)
 
-rows = [
-    ("Solução", "SAP Business Data Cloud (BDC) — foco principal"),
-    ("Objetivo", "Geração de demanda + conversão de leads (deals no pipe)"),
-    ("Etapa do funil", "Meio e fundo"),
-    ("Período", "Jun, Jul, Ago, Set 2026"),
-    ("Target", "+R$500M faturamento / cross industry"),
-    ("Persona", "CIO, CFO, Controller, Head de Dados/BI, COO"),
-    ("Conversão", "Evento SAP NOW"),
-]
-kv_table(s, rows, Inches(0.7), Inches(1.2))
 
-# ─────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════
 # SLIDE 4 — DETALHES DO EVENTO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Detalhes do Evento")
-
-rows = [
-    ("Datas", "9 e 10 de setembro de 2026"),
-    ("Horário", "Das 8h às 19h"),
-    ("Local", "Transamérica Expo Center — São Paulo"),
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Detalhes do Evento")
+kv_block(s, [
+    ("Datas",           "9 e 10 de setembro de 2026"),
+    ("Horário",         "Das 8h às 19h"),
+    ("Local",           "Transamérica Expo Center — São Paulo"),
     ("Audiência total", "3.900 pessoas"),
-    ("Clientes/Prospects", "2.700"),
-    ("Decision Makers", "73%"),
-    ("Patrocinadores", "70"),
-    ("Cota Solveplan", "Gold"),
-    ("Tema", "Bring it at SAP NOW AI Tour 2026"),
-]
-kv_table(s, rows, Inches(0.7), Inches(1.2), col_w1=Inches(3), col_w2=Inches(8.8))
+    ("Clientes/Prospects", "2.700  |  Decision Makers: 73%"),
+    ("Patrocinadores",  "70"),
+    ("Cota Solveplan",  "Gold — inclui 1 sessão de conteúdo de 20 min"),
+    ("Tema do evento",  "Bring it at SAP NOW AI Tour 2026"),
+    ("Nossa posição",   "A confirmar via manual CAEX (recebido em 18/05) — posição não privilegiada"),
+], Inches(0.55), Inches(1.15), w1=Inches(3.5), w2=Inches(9.2))
+footer(s)
 
-# ─────────────────────────────────────────────
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 5 — METAS E CRITÉRIO DE SUCESSO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Metas e Critério de Sucesso")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Metas e Critério de Sucesso")
+table_block(s,
+    ["Métrica", "Meta 2026", "Ref. 2025"],
+    [
+        ("Leads totais",           "130",           "186"),
+        ("Leads qualificados",     "44",            "—"),
+        ("Reuniões agendadas",     "28",            "26"),
+        ("Oportunidades abertas",  "8",             "—"),
+        ("Pipeline gerado",        "R$ 3.200.000",  "—"),
+        ("Empresas abordadas SDR", "120+",          "72"),
+        ("Agendas via SDR",        "12",            "5"),
+        ("Custo por lead",         "R$ 2.127",      "—"),
+        ("ROI esperado",           "11,6x",         "—"),
+    ],
+    Inches(1.5), Inches(1.15),
+    [Inches(6.5), Inches(2.8), Inches(2.8)],
+    row_h=Inches(0.44),
+)
+footer(s)
 
-headers = ["Métrica", "Meta 2026", "Ref. 2025"]
-widths = [Inches(5.5), Inches(3), Inches(3)]
-rows = [
-    ("Leads totais", "130", "186"),
-    ("Leads qualificados", "44", "—"),
-    ("Reuniões agendadas", "28", "26"),
-    ("Oportunidades abertas", "8", "—"),
-    ("Pipeline gerado", "R$ 3.200.000", "—"),
-    ("Empresas abordadas SDR", "120+", "72"),
-    ("Agendas via SDR", "12", "5"),
-    ("Custo por lead", "R$ 2.127", "—"),
-    ("ROI esperado", "11,6x", "—"),
-]
-data_table(s, headers, rows, Inches(0.9), Inches(1.3), widths)
 
-# ─────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════
 # SLIDE 6 — STAFF
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Staff")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Staff")
+txb(s, "Time a definir com sócios  |  Ref. 2025: 9 pessoas (8 credenciais patrocinador + 1 staff)",
+    Inches(0.55), Inches(1.1), Inches(12.5), Inches(0.35),
+    size=12, color=CINZA_TXT, italic=True)
 
-txbox(s, "Time confirmado: a definir com sócios  |  Ref. 2025: 9 pessoas (8 credenciais patrocinador + 1 staff)",
-      Inches(0.7), Inches(1.15), Inches(12), Inches(0.4), size=14, color=CINZA_CLARO)
+table_block(s,
+    ["#", "Nome", "Credencial", "Obs."],
+    [
+        ("1–8", "A definir", "Patrocinador", ""),
+        ("9",   "Fran",      "Staff",        "Organização geral"),
+    ],
+    Inches(0.55), Inches(1.5),
+    [Inches(0.7), Inches(4.5), Inches(3.0), Inches(4.6)],
+    row_h=Inches(0.42),
+)
 
-headers = ["#", "Nome", "Credencial", "Obs."]
-widths = [Inches(0.6), Inches(4), Inches(3), Inches(4.5)]
-rows = [
-    ("1–8", "A definir", "Patrocinador", ""),
-    ("9", "Fran", "Staff", "Organização geral"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(1.7), widths)
-
-txbox(s, "Regras de credencial:", Inches(0.7), Inches(3.1), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-regras = [
+txb(s, "Regras de credencial:", Inches(0.55), Inches(2.85), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "Até 4 trocas/dia — proibido das 12h às 14h (exige documento)",
-    "Retirada dia 08/set no CAEX (8h–18h) ou nos dias 09–10/set no credenciamento (8h–17h)",
-    "Credencial pessoal e intransferível — nenhum profissional entra sem credencial visível",
-]
-bullet_block(s, regras, Inches(0.7), Inches(3.55), Inches(11.5), size=14)
+    "Retirada dia 08/set no CAEX (8h–18h) ou 09–10/set no credenciamento (8h–17h)",
+    "Credencial pessoal e intransferível — nenhum profissional entra sem ela visível",
+], Inches(0.75), Inches(3.25), Inches(12), size=13)
 
-txbox(s, "Escala por turno (preencher com nomes):",
-      Inches(0.7), Inches(4.8), Inches(11), Inches(0.4), size=14, bold=True, color=AZUL_VIVO)
-headers2 = ["#", "Montagem 08/set", "Dia 1 — Manhã", "Dia 1 — Tarde", "Dia 2 — Manhã", "Dia 2 — Tarde"]
-widths2 = [Inches(0.6), Inches(2.2), Inches(2.1), Inches(2.1), Inches(2.1), Inches(2.1)]
-rows2 = [("1–8", "A definir", "A definir", "A definir", "A definir", "A definir"),
-         ("9 (Fran)", "—", "Fran", "—", "Fran", "—")]
-data_table(s, headers2, rows2, Inches(0.7), Inches(5.2), widths2, row_h=0.4)
+txb(s, "Escala por turno (preencher com nomes):", Inches(0.55), Inches(4.55), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["#", "Montagem 08/set", "Dia 1 — Manhã", "Dia 1 — Tarde", "Dia 2 — Manhã", "Dia 2 — Tarde"],
+    [
+        ("1–8",     "A definir", "A definir", "A definir", "A definir", "A definir"),
+        ("9 (Fran)","—",         "Fran",      "—",         "Fran",      "—"),
+    ],
+    Inches(0.55), Inches(4.9),
+    [Inches(0.85), Inches(2.1), Inches(2.1), Inches(2.1), Inches(2.1), Inches(2.1)],
+    row_h=Inches(0.38),
+)
+footer(s)
 
-# ─────────────────────────────────────────────
-# SLIDE 7 — ATIVAÇÃO DO ESTANDE — QUIZ BDC
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Ativação do Estande — Quiz BDC")
 
-rect(s, Inches(0.7), Inches(1.2), Inches(5.8), Inches(1.0), AZUL_MARINHO)
-txbox(s, "Totem interativo touchscreen 43\"",
-      Inches(0.8), Inches(1.25), Inches(5.6), Inches(0.45), size=16, bold=True, color=AZUL_VIVO)
-txbox(s, "Visitante descobre qual solução SAP resolve sua dor em ~3 min",
-      Inches(0.8), Inches(1.65), Inches(5.6), Inches(0.45), size=13, color=BRANCO)
+# ════════════════════════════════════════════════════════════
+# SLIDE 7 — ATIVAÇÃO: QUIZ BDC
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Ativação do Estande — Quiz BDC")
 
-rect(s, Inches(7.0), Inches(1.2), Inches(5.8), Inches(1.0), AZUL_MARINHO)
-txbox(s, "Fornecedor: Entretec  |  Ref. 2025 ✓",
-      Inches(7.1), Inches(1.25), Inches(5.5), Inches(0.45), size=16, bold=True, color=VERDE_NEON)
-txbox(s, "Investimento ref.: R$ 9.800 + frete R$ 500 + promotor R$ 450/dia",
-      Inches(7.1), Inches(1.65), Inches(5.5), Inches(0.45), size=13, color=BRANCO)
+# Dois cards superiores
+box(s, Inches(0.55), Inches(1.15), Inches(6.1), Inches(0.95), NAVY)
+txb(s, "Totem touchscreen 43\" — Quiz interativo BDC",
+    Inches(0.7), Inches(1.22), Inches(5.9), Inches(0.42),
+    size=14, bold=True, color=AZUL_VIVO)
+txb(s, "Visitante descobre qual solução SAP resolve sua dor em ~3 min",
+    Inches(0.7), Inches(1.62), Inches(5.9), Inches(0.4),
+    size=11, color=BRANCO)
 
-txbox(s, "Dor × Solução (6 pares BDC 2026):", Inches(0.7), Inches(2.45),
-      Inches(11), Inches(0.4), size=15, bold=True, color=AZUL_VIVO)
+box(s, Inches(7.0), Inches(1.15), Inches(6.0), Inches(0.95), NAVY)
+txb(s, "Fornecedor: Entretec  ✓ aprovado 2025",
+    Inches(7.15), Inches(1.22), Inches(5.8), Inches(0.42),
+    size=14, bold=True, color=RGBColor(0x7F, 0xFF, 0x96))
+txb(s, "Ref.: R$ 9.800 totem + R$ 500 frete + R$ 450/dia promotor (opcional)",
+    Inches(7.15), Inches(1.62), Inches(5.8), Inches(0.4),
+    size=11, color=BRANCO)
 
-headers = ["Dor (vermelho)", "Solução (verde)"]
-widths = [Inches(6), Inches(6.2)]
-rows = [
-    ("Fechamento manual demorado", "SAP BDC + Group Reporting"),
-    ("Dados desconectados entre sistemas", "SAP Datasphere"),
-    ("Falta de visibilidade em tempo real", "SAP Analytics Cloud"),
-    ("Planejamento orçamentário no Excel", "SAP SAC Planning"),
-    ("Integrações travando processos", "SAP BTP"),
-    ("Gestão fiscal engessada", "SAP PaPM"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(2.85), widths, row_h=0.42)
+txb(s, "6 Pares Dor × Solução (foco BDC 2026):",
+    Inches(0.55), Inches(2.3), Inches(12), Inches(0.38),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Dor (vermelho — visitante escolhe)", "Solução (verde — resultado)"],
+    [
+        ("Fechamento manual demorado",          "SAP BDC + Group Reporting"),
+        ("Dados desconectados entre sistemas",  "SAP Datasphere"),
+        ("Falta de visibilidade em tempo real", "SAP Analytics Cloud"),
+        ("Planejamento orçamentário no Excel",  "SAP SAC Planning"),
+        ("Integrações travando processos",       "SAP BTP"),
+        ("Gestão fiscal engessada",              "SAP PaPM"),
+    ],
+    Inches(0.55), Inches(2.7),
+    [Inches(6.5), Inches(6.15)],
+    row_h=Inches(0.42),
+)
+footer(s)
 
-# ─────────────────────────────────────────────
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 8 — JORNADA DO VISITANTE
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Jornada do Visitante — Ativação Quiz")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Jornada do Visitante — Ativação Quiz")
 
 steps = [
-    ("1. Atração", "Totem com animações. Equipe aborda: 'Faz um quiz e descobre qual SAP resolve sua dor. Leva brinde!'"),
-    ("2. Engajamento", "Visitante participa em menos de 3 min. Preenche: Nome, Cargo, Empresa, E-mail, WhatsApp."),
-    ("3. Qualificação", "Quiz revela dor principal + solução SAP. Lead categorizado: Quente / Morno / Frio."),
-    ("4. Brinde + Conversa", "Equipe entrega brinde e inicia conversa: 'Vi que você marcou [dor X]… posso mostrar como a Klabin resolveu isso?'"),
-    ("5. Lead no CRM", "Dados capturados vão para HubSpot com tag SAP-NOW-2026 e classificação automática."),
-    ("6. Follow-up Pós", "SDR contata em até 3 dias: 'Conforme seu quiz, acredito que podemos ajudar com [dor]. Agendamos?'"),
+    ("1. Atração",        "Totem animado chama atenção. Equipe aborda:\n'Faz o quiz e descobre qual SAP resolve sua dor. Leva brinde!'"),
+    ("2. Engajamento",    "Preenche nome, cargo, empresa, e-mail, WhatsApp.\nParticipa em menos de 3 minutos."),
+    ("3. Qualificação",   "Quiz revela dor principal + solução SAP.\nLead categorizado: Quente / Morno / Frio."),
+    ("4. Brinde + Conversa", "Equipe entrega brinde e inicia conversa consultiva:\n'Vi que você marcou [dor X]… posso mostrar como a Klabin resolveu isso?'"),
+    ("5. CRM",            "Dados capturados vão para HubSpot.\nTag: SAP-NOW-2026 + classificação automática."),
+    ("6. Follow-up D+3",  "SDR contata em até 3 dias:\n'Conforme seu quiz, acredito que podemos ajudar com [dor]. Agendamos?'"),
 ]
 
 cols = 3
 for i, (titulo, desc) in enumerate(steps):
     col = i % cols
     row = i // cols
-    x = Inches(0.4 + col * 4.3)
-    y = Inches(1.2 + row * 2.6)
-    rect(s, x, y, Inches(4.1), Inches(2.4), AZUL_MARINHO)
-    rect(s, x, y, Inches(4.1), Inches(0.45), AZUL_VIVO)
-    txbox(s, titulo, x + Inches(0.1), y + Inches(0.05), Inches(3.9), Inches(0.4),
-          size=14, bold=True, color=BRANCO)
-    txbox(s, desc, x + Inches(0.1), y + Inches(0.5), Inches(3.9), Inches(1.8),
-          size=12, color=CINZA_CLARO, wrap=True)
+    x = Inches(0.35 + col * 4.32)
+    y = Inches(1.15 + row * 2.5)
+    box(s, x, y, Inches(4.1), Inches(2.35), BG_LIGHT)
+    # linha superior colorida
+    box(s, x, y, Inches(4.1), Inches(0.04),
+        AZUL_VIVO if i % 2 == 0 else RGBColor(0x7F, 0xFF, 0x96))
+    box(s, x, y, Inches(4.1), Inches(0.44), NAVY)
+    txb(s, titulo, x + Inches(0.1), y + Inches(0.06),
+        Inches(3.9), Inches(0.38), size=13, bold=True, color=BRANCO)
+    txb(s, desc, x + Inches(0.1), y + Inches(0.5),
+        Inches(3.9), Inches(1.75), size=11, color=NAVY)
 
-# ─────────────────────────────────────────────
+footer(s)
+
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 9 — BRINDES
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Brindes")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Brindes")
+txb(s, "Fornecedor referência: Unity Brindes (aprovado em 2025)",
+    Inches(0.55), Inches(1.1), Inches(12), Inches(0.35),
+    size=12, color=CINZA_TXT, italic=True)
+table_block(s,
+    ["Item", "Qtd", "Valor unit.", "Total"],
+    [
+        ("Bloco A5 capa dura (silk screen 1 cor)", "500", "~R$ 15,59", "~R$ 7.795"),
+        ("Caneta esferográfica alumínio (laser)",  "500", "~R$ 5,37",  "~R$ 2.685"),
+        ("**TOTAL",                               "",    "",           "**~R$ 10.480"),
+    ],
+    Inches(0.55), Inches(1.5),
+    [Inches(7.5), Inches(1.5), Inches(2.1), Inches(2.1)],
+    row_h=Inches(0.46),
+)
+txb(s, "Regras SAP para brindes:", Inches(0.55), Inches(3.35), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
+    "Devem ser sustentáveis — caneta + moleskine está aprovado pela SAP",
+    "⚠️  Aprovação SAP: enviar junto com ativações até 31/07/2026",
+    "Entrega prevista: até 14/agosto (fornecedor a confirmar)",
+], Inches(0.75), Inches(3.75), Inches(12), size=14)
+footer(s)
 
-txbox(s, "Fornecedor referência: Unity Brindes (usado em 2025)",
-      Inches(0.7), Inches(1.15), Inches(11), Inches(0.4), size=14, color=CINZA_CLARO)
 
-headers = ["Item", "Qtd", "Valor unit.", "Total"]
-widths = [Inches(6.5), Inches(1.5), Inches(2), Inches(2)]
-rows = [
-    ("Bloco A5 capa dura (silk screen 1 cor)", "500", "~R$ 15,59", "~R$ 7.795"),
-    ("Caneta esferográfica alumínio (laser)", "500", "~R$ 5,37", "~R$ 2.685"),
-    ("TOTAL", "", "", "~R$ 10.480"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(1.7), widths)
-
-txbox(s, "Regras SAP para brindes:", Inches(0.7), Inches(3.5), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-regras = [
-    "Devem ser sustentáveis — caneta + moleskine = aprovado pela SAP",
-    "Aprovação SAP: enviar junto com ativações até 31/07/2026",
-    "Entrega prevista: até 14/agosto",
-]
-bullet_block(s, regras, Inches(0.7), Inches(3.95), Inches(11.5), size=15)
-
-# ─────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════
 # SLIDE 10 — ESTANDE
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Estande")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Estande")
 
-txbox(s, "ATENÇÃO: Posição não-privilegiada — estratégia deve ser 100% de atração ativa",
-      Inches(0.7), Inches(1.15), Inches(12), Inches(0.4), size=14, bold=True, color=AMARELO)
+box(s, Inches(0.55), Inches(1.15), Inches(12.35), Inches(0.5), AMARELO)
+txb(s, "⚠️  ATENÇÃO: Posição não privilegiada — toda estratégia deve ser de atração ativa.",
+    Inches(0.7), Inches(1.2), Inches(12.0), Inches(0.42),
+    size=13, bold=True, color=NAVY)
 
-txbox(s, "Layout:", Inches(0.7), Inches(1.7), Inches(5), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-itens = [
-    "Trainel (T1) — ~3,85m x 2,50m + TV 1,45x0,83m + balcão 0,50x1,00m + Selo SAP Gold Partner",
+txb(s, "Layout do estande:", Inches(0.55), Inches(1.85), Inches(6.5), Inches(0.38),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
+    "Trainel (T1) — ~3,85m × 2,50m + espaço TV (1,45×0,83m) + balcão (0,50×1,00m) + Selo SAP Gold Partner",
     "Painel (P1) — Logo Solveplan vertical + BDC em destaque",
-    "Balcão (B1) — Identidade visual + logo da marca",
-]
-bullet_block(s, itens, Inches(0.7), Inches(2.15), Inches(6.2), size=14)
+    "Balcão (B1) — Identidade visual + logo",
+], Inches(0.75), Inches(2.25), Inches(6.3), size=13)
 
-txbox(s, "Conceito visual 2026:", Inches(7.0), Inches(1.7), Inches(5.5), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-conceito = [
+txb(s, "Conceito visual 2026:", Inches(7.1), Inches(1.85), Inches(5.8), Inches(0.38),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "Foco em SAP Business Data Cloud",
     "Identidade Solveplan atualizada",
     "TV para vídeo looping",
     "Destaque: BDC | Datasphere | SAC | Group Reporting",
-]
-bullet_block(s, conceito, Inches(7.0), Inches(2.15), Inches(5.8), size=14)
+], Inches(7.3), Inches(2.25), Inches(5.6), size=13)
 
-line(s, Inches(0.7), Inches(4.0), Inches(11.5))
+txb(s, "Cronograma de produção:", Inches(0.55), Inches(3.8), Inches(12), Inches(0.38),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Etapa", "Prazo"],
+    [
+        ("Orçamento com agência",        "Até 23/jun"),
+        ("Arte final aprovada",           "Até 11/jul"),
+        ("Pagamento 1ª parcela (50%)",    "10/jul"),
+        ("Envio das artes exclusivas SAP","11/jul"),
+        ("Pagamento 2ª parcela (50%)",    "Na entrega"),
+    ],
+    Inches(0.55), Inches(4.2),
+    [Inches(9.0), Inches(3.6)],
+    row_h=Inches(0.38),
+)
+footer(s)
 
-txbox(s, "Cronograma de produção:", Inches(0.7), Inches(4.2), Inches(7), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-headers = ["Etapa", "Prazo"]
-widths = [Inches(6.5), Inches(4.5)]
-rows = [
-    ("Orçamento com agência", "Até 23/jun"),
-    ("Arte final aprovada", "Até 11/jul"),
-    ("Pagamento 1ª parcela (50%)", "10/jul"),
-    ("Envio das artes exclusivas SAP", "11/jul"),
-    ("Pagamento 2ª parcela (50%)", "Na entrega"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(4.65), widths, row_h=0.4)
 
-# ─────────────────────────────────────────────
-# SLIDE 11 — VESTIMENTA E EQUIPAMENTOS
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Vestimenta e Equipamentos")
+# ════════════════════════════════════════════════════════════
+# SLIDE 11 — VESTIMENTA, CAEX, EQUIPAMENTOS
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Vestimenta, Serviços CAEX e Equipamentos")
 
-txbox(s, "Vestimenta:", Inches(0.7), Inches(1.2), Inches(5), Inches(0.4),
-      size=16, bold=True, color=AZUL_VIVO)
-vest = [
-    "Tech T-Shirt personalizada — 25 un.",
-    "Valor unit. ref.: ~R$ 115  |  Total: ~R$ 2.875",
-    "Entrega prevista: até 28/jul",
-]
-bullet_block(s, vest, Inches(0.7), Inches(1.65), Inches(5.5), size=14)
+txb(s, "Vestimenta:", Inches(0.55), Inches(1.15), Inches(6.5), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Produto", "Qtd", "Valor unit.", "Total"],
+    [("Tech T-Shirt personalizada", "25 un.", "~R$ 115", "~R$ 2.875")],
+    Inches(0.55), Inches(1.5),
+    [Inches(5.8), Inches(1.5), Inches(2.1), Inches(2.1)],
+    row_h=Inches(0.42),
+)
 
-txbox(s, "Serviços CAEX:", Inches(0.7), Inches(3.0), Inches(5), Inches(0.4),
-      size=16, bold=True, color=AZUL_VIVO)
-headers = ["Item", "Qtd", "Total"]
-widths = [Inches(4.5), Inches(1.2), Inches(2)]
-rows = [
-    ("Coletor de dados (por dia)", "2", "~R$ 1.100"),
-    ("KVA energia (totem consume 2–3 KVAs)", "2", "~R$ 780"),
-    ("Internet (pacote)", "—", "A definir"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(3.45), widths, row_h=0.42)
+txb(s, "Serviços adicionais CAEX:", Inches(0.55), Inches(2.4), Inches(6.5), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Item", "Qtd", "Total"],
+    [
+        ("Coletor de dados (por dia)",             "2", "~R$ 1.100"),
+        ("KVA energia (totem consume 2–3 KVAs)",   "2", "~R$ 780"),
+        ("Internet (pacote a definir)",            "—", "A definir"),
+    ],
+    Inches(0.55), Inches(2.75),
+    [Inches(7.5), Inches(1.5), Inches(2.55)],
+    row_h=Inches(0.4),
+)
 
-txbox(s, "Equipamentos:", Inches(7.0), Inches(1.2), Inches(5.5), Inches(0.4),
-      size=16, bold=True, color=AZUL_VIVO)
+txb(s, "Equipamentos:", Inches(7.3), Inches(1.15), Inches(5.8), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
 equip = [
-    "TV + suporte + cabos",
+    "TV + suporte + cabos (verificar CAEX)",
     "1 Tablet para demos",
-    "2 Pens drive vídeo looping (TV)",
-    "1 Pen drive backup demos",
+    "2 Pens drive vídeo looping (TV) + 1 backup",
     "2 Cabos HDMI + adaptador de rede",
     "Régua de energia / extensão",
-    "Carregadores de celular",
+    "Carregadores de celular + pano e álcool",
     "Agenda das sessões impressa",
     "2 displays QR Code (~R$ 22 un.) + 1 reserva",
 ]
-bullet_block(s, equip, Inches(7.0), Inches(1.65), Inches(5.8), size=13, spacing=0.38)
+bullets(s, equip, Inches(7.3), Inches(1.55), Inches(5.8), size=12, spacing=0.38)
+footer(s)
 
-# ─────────────────────────────────────────────
-# SLIDE 12 — CONTEÚDO DO EVENTO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Conteúdo do Evento — Apresentação Principal")
 
-info = [
-    ("Tipo", "Caso de Sucesso — Customer Story"),
-    ("Formato", "20 minutos | Auditório ~50 lugares | Sem Q&A"),
-    ("Palestrante 1", "Executivo Klabin (CFO/CIO/Head de Dados — a confirmar)"),
+# ════════════════════════════════════════════════════════════
+# SLIDE 12 — CONTEÚDO DO EVENTO — KLABIN
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Conteúdo do Evento — Apresentação Principal")
+
+box(s, Inches(0.55), Inches(1.15), Inches(12.35), Inches(0.52), AMARELO)
+txb(s, "⚠️  Prazo de submissão para SAP: 26/06/2026 — NÃO PODE ATRASAR",
+    Inches(0.7), Inches(1.2), Inches(12.0), Inches(0.42),
+    size=13, bold=True, color=NAVY)
+
+kv_block(s, [
+    ("Tipo",          "Caso de Sucesso — Customer Story"),
+    ("Formato",       "20 minutos | Auditório ~50 lugares | Sem Q&A"),
+    ("Palestrante 1", "Executivo Klabin — CFO/CIO/Head de Dados (a confirmar até 10/06)"),
     ("Palestrante 2", "Alexandre Kuntgen (Solveplan)"),
-    ("Prazo submissão", "⚠️  26/06/2026 — NÃO PODE ATRASAR"),
-]
-kv_table(s, info, Inches(0.7), Inches(1.2), col_w1=Inches(2.8), col_w2=Inches(9.5))
+], Inches(0.55), Inches(1.8), w1=Inches(2.8), w2=Inches(9.9))
 
-txbox(s, "Estrutura da sessão (20 min):", Inches(0.7), Inches(3.45), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
+txb(s, "Estrutura da sessão (20 min):", Inches(0.55), Inches(3.75), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Tempo", "Bloco", "Speaker"],
+    [
+        ("0–3 min",   "O desafio: como era antes, a dor real de dados na Klabin",  "Executivo Klabin"),
+        ("3–8 min",   "A decisão: por que SAP BDC, por que Solveplan",            "Alexandre Kuntgen"),
+        ("8–15 min",  "O que mudou: antes × depois com números reais",            "Executivo Klabin"),
+        ("15–18 min", "O futuro: próximos passos com IA (alinha com tema do evento)", "Ambos"),
+        ("18–20 min", "CTA: 'Venha ao nosso estande — estamos no slot [X]'",      "Alexandre Kuntgen"),
+    ],
+    Inches(0.55), Inches(4.12),
+    [Inches(1.5), Inches(8.2), Inches(3.0)],
+    row_h=Inches(0.42),
+)
+footer(s)
 
-headers = ["Tempo", "Bloco", "Speaker"]
-widths = [Inches(1.5), Inches(7.5), Inches(3.5)]
-rows = [
-    ("0–3 min", "O desafio: como era antes, a dor real de dados na Klabin", "Executivo Klabin"),
-    ("3–8 min", "A decisão: por que SAP BDC, por que Solveplan", "Alexandre Kuntgen"),
-    ("8–15 min", "O que mudou: antes × depois com números reais", "Executivo Klabin"),
-    ("15–18 min", "O futuro: próximos passos com IA (alinha com tema do evento)", "Ambos"),
-    ("18–20 min", "CTA: 'Venha ao nosso estande — estamos no slot [X]'", "Alexandre Kuntgen"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(3.9), widths, row_h=0.44)
 
-# ─────────────────────────────────────────────
-# SLIDE 13 — COMUNICAÇÃO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Comunicação — Social Media & E-mail")
+# ════════════════════════════════════════════════════════════
+# SLIDE 13 — COMUNICAÇÃO: SOCIAL MEDIA & E-MAILS
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Comunicação — Social Media & E-mails")
 
-txbox(s, "Calendário de publicações (LinkedIn):", Inches(0.7), Inches(1.15), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
+txb(s, "Calendário de publicações (LinkedIn):",
+    Inches(0.55), Inches(1.1), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Data", "Publicação"],
+    [
+        ("21/jul", "Primeiro post — 'Estaremos no SAP NOW 2026'"),
+        ("30/jul", "Post de expectativa / sessão com Klabin anunciada"),
+        ("11/ago", "Post de contagem regressiva"),
+        ("01/set", "'Em 8 dias estaremos lá'"),
+        ("08/set", "'É amanhã!' — com localização do estande"),
+        ("09/set", "Cobertura ao vivo — Dia 1"),
+        ("10/set", "Cobertura ao vivo — Dia 2"),
+        ("11/set", "Post pós-evento — highlights + agradecimento"),
+    ],
+    Inches(0.55), Inches(1.48),
+    [Inches(1.8), Inches(10.85)],
+    row_h=Inches(0.38),
+)
 
-headers = ["Data", "Publicação"]
-widths = [Inches(1.8), Inches(10.0)]
-rows = [
-    ("21/jul", "Primeiro post — 'Estaremos no SAP NOW 2026'"),
-    ("30/jul", "Post de expectativa / sessão com Klabin anunciada"),
-    ("11/ago", "Post de contagem regressiva"),
-    ("01/set", "'Em 8 dias estaremos lá'"),
-    ("08/set", "'É amanhã!' — com localização do estande"),
-    ("09/set", "Cobertura ao vivo — Dia 1"),
-    ("10/set", "Cobertura ao vivo — Dia 2"),
-    ("11/set", "Post pós-evento — highlights + agradecimento"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(1.6), widths, row_h=0.4)
-
-txbox(s, "E-mails Marketing:", Inches(0.7), Inches(5.05), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-emails = [
+txb(s, "E-mails Marketing:", Inches(0.55), Inches(4.8), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "Save the date → Base geral (Mai/Jun)",
     "Convite + link inscrição → Prospects e clientes (Jun/Jul)",
-    "Lembrete sessão Klabin → Inscritos confirmados (Ago)",
-    "'É amanhã!' → Inscritos confirmados (08/set)",
-    "Agradecimento pós-evento → Todos os leads (D+1)",
-]
-bullet_block(s, emails, Inches(0.7), Inches(5.5), Inches(12), size=13, spacing=0.38)
+    "Lembrete sessão Klabin → Inscritos confirmados (Ago)  |  'É amanhã!' (08/set)  |  Agradecimento D+1",
+], Inches(0.75), Inches(5.2), Inches(12.2), size=13)
+footer(s)
 
-# ─────────────────────────────────────────────
-# SLIDE 14 — ANÚNCIOS
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Comunicação — Anúncios")
 
-# Hotéis
-rect(s, Inches(0.6), Inches(1.2), Inches(5.8), Inches(2.8), AZUL_MARINHO)
-txbox(s, "1. Anúncios em Hotéis SP", Inches(0.7), Inches(1.3), Inches(5.5), Inches(0.5),
-      size=17, bold=True, color=AZUL_VIVO)
-h_info = [
+# ════════════════════════════════════════════════════════════
+# SLIDE 14 — ANÚNCIOS + UTMs
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Comunicação — Anúncios e UTMs")
+
+# Card hotéis
+box(s, Inches(0.55), Inches(1.15), Inches(5.85), Inches(2.6), NAVY)
+txb(s, "1. Anúncios em Hotéis SP", Inches(0.7), Inches(1.22),
+    Inches(5.6), Inches(0.45), size=15, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "Período: 8, 9 e 10 de setembro",
     "~28 faces/telas em hotéis da região",
     "Valor ref.: R$ 2.805 (2025)",
     "Aprovação: antes de 31/ago",
-]
-bullet_block(s, h_info, Inches(0.7), Inches(1.85), Inches(5.5), size=14, spacing=0.4)
+], Inches(0.75), Inches(1.72), Inches(5.5), size=12,
+    color=BRANCO, spacing=0.38)
 
-# Geolocalização
-rect(s, Inches(7.0), Inches(1.2), Inches(5.8), Inches(2.8), AZUL_MARINHO)
-txbox(s, "2. Geolocalização no Evento", Inches(7.1), Inches(1.3), Inches(5.5), Inches(0.5),
-      size=17, bold=True, color=AZUL_VIVO)
-g_info = [
+# Card geolocalização
+box(s, Inches(7.05), Inches(1.15), Inches(5.85), Inches(2.6), NAVY)
+txb(s, "2. Geolocalização no Evento", Inches(7.2), Inches(1.22),
+    Inches(5.6), Inches(0.45), size=15, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "Google Ads + LinkedIn Ads",
     "Raio: 20km do Transamerica Expo Center",
     "Período: 8, 9 e 10 de setembro",
     "'Estamos no SAP NOW — venha ao estande Solveplan'",
     "Valor: a orçar",
-]
-bullet_block(s, g_info, Inches(7.1), Inches(1.85), Inches(5.5), size=14, spacing=0.4)
+], Inches(7.25), Inches(1.72), Inches(5.5), size=12,
+    color=BRANCO, spacing=0.38)
 
-# UTMs
-txbox(s, "UTMs Padrão:", Inches(0.7), Inches(4.2), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-headers = ["Canal", "UTM Source", "UTM Medium", "UTM Campaign"]
-widths = [Inches(3.5), Inches(2.2), Inches(2.2), Inches(3.5)]
-rows = [
-    ("Organic Social", "linkedin", "organic", "sap-now-2026"),
-    ("Paid Social", "linkedin", "cpc", "sap-now-2026"),
-    ("E-mail Marketing", "email", "newsletter", "sap-now-2026"),
-    ("Form inscrição SAP", "sap", "event", "sap-now-2026"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(4.65), widths, row_h=0.38)
+txb(s, "UTMs Padrão:", Inches(0.55), Inches(3.95), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Canal", "UTM Source", "UTM Medium", "UTM Campaign"],
+    [
+        ("Organic Social",   "linkedin", "organic",    "sap-now-2026"),
+        ("Paid Social",      "linkedin", "cpc",        "sap-now-2026"),
+        ("E-mail Marketing", "email",    "newsletter", "sap-now-2026"),
+        ("Form inscrição SAP","sap",     "event",      "sap-now-2026"),
+    ],
+    Inches(0.55), Inches(4.32),
+    [Inches(3.8), Inches(2.5), Inches(2.5), Inches(3.85)],
+    row_h=Inches(0.38),
+)
+footer(s)
 
-# ─────────────────────────────────────────────
-# SLIDE 15 — GERAÇÃO DE DEMANDA PRÉ-EVENTO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Geração de Demanda Pré-evento — SDR")
 
-kv_table(s, [
-    ("Objetivo", "Preencher slots de diagnóstico BDC no estande antes do evento"),
-    ("Meta", "120 empresas abordadas → 12 agendas confirmadas"),
-    ("Início", "Junho 2026"),
-    ("SDRs", "2 SDRs (nomes a definir)"),
-], Inches(0.7), Inches(1.2), col_w1=Inches(2), col_w2=Inches(10.5))
+# ════════════════════════════════════════════════════════════
+# SLIDE 15 — GERAÇÃO DE DEMANDA SDR
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Geração de Demanda Pré-evento — SDR")
 
-txbox(s, "Processo:", Inches(0.7), Inches(3.0), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-processo = [
+kv_block(s, [
+    ("Objetivo",  "Preencher slots de diagnóstico BDC no estande antes do evento"),
+    ("Meta",      "120 empresas abordadas → 12 agendas confirmadas"),
+    ("Início",    "Junho 2026"),
+    ("SDRs",      "2 SDRs (nomes a definir)"),
+], Inches(0.55), Inches(1.15), w1=Inches(2.2), w2=Inches(10.5))
+
+txb(s, "Processo:", Inches(0.55), Inches(3.2), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "1. SDR identifica decisor (CIO/CFO/Head de Dados) nas empresas-alvo",
     "2. Abordagem por e-mail + LinkedIn + telefone",
     "3. Convite para slot de diagnóstico BDC no estande (15–20 min)",
     "4. Confirmar agenda + registrar no CRM com tag SAP-NOW-2026",
-]
-bullet_block(s, processo, Inches(0.7), Inches(3.45), Inches(11.5), size=15)
+], Inches(0.75), Inches(3.6), Inches(12.2), size=13)
 
-rect(s, Inches(0.7), Inches(5.3), Inches(12), Inches(0.9), AZUL_MARINHO)
-txbox(s, '📞  Script SDR: "[Nome], estaremos no SAP NOW AI Tour em setembro com demo exclusiva de SAP BDC. Tenho um slot de 15 min reservado para você no estande da Solveplan — posso garantir o seu?"',
-      Inches(0.8), Inches(5.35), Inches(11.8), Inches(0.85),
-      size=14, bold=True, color=VERDE_NEON)
+box(s, Inches(0.55), Inches(5.35), Inches(12.35), Inches(0.82), NAVY)
+txb(s, '📞  Script SDR:\n"[Nome], estaremos no SAP NOW AI Tour em setembro com demo exclusiva de SAP BDC. Tenho um slot de 15 min reservado para você no estande da Solveplan — posso garantir o seu?"',
+    Inches(0.75), Inches(5.42), Inches(12.1), Inches(0.72),
+    size=13, bold=True, color=RGBColor(0x7F, 0xFF, 0x96))
+footer(s)
 
-# ─────────────────────────────────────────────
+
+# ════════════════════════════════════════════════════════════
 # SLIDE 16 — CRONOGRAMA MACRO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Cronograma Macro")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Cronograma Macro")
+table_block(s,
+    ["Data", "Entrega", "Responsável"],
+    [
+        ("18/05",    "Receber manual patrocinador CAEX",                    "Fran"),
+        ("Mai",      "Lançar campanha 'Diagnóstico BDC Reservado'",         "Fran"),
+        ("10/06",    "⚠️ Alinhar com Klabin — speaker e tema",              "Fran"),
+        ("26/06",    "⚠️ Submeter sessão de conteúdo para SAP (CRÍTICO)",   "Fran"),
+        ("02/jun",   "Liberação do site e abertura de registros",           "SAP"),
+        ("Jun",      "Início abordagem SDR (2 SDRs)",                       "SDRs"),
+        ("31/07",    "⚠️ Aprovação de ativações e brindes para SAP",        "Fran"),
+        ("14/ago",   "Recebimento de brindes",                              "Fornecedor"),
+        ("25/ago",   "App do evento lança / publicar slots diagnóstico",    "SAP / Fran"),
+        ("Set/1",    "Treinamento e kickoff do time",                       "Fran"),
+        ("08/set",   "Montagem do estande + entrega todos os itens",        "Time"),
+        ("09–10/set","⭐ SAP NOW AI Tour Brazil 2026",                       "—"),
+        ("10/set",   "Download mailing + início follow-up",                 "SDRs + Fran"),
+        ("16/set",   "Relatório de resultados",                             "Fran"),
+    ],
+    Inches(0.4), Inches(1.15),
+    [Inches(1.9), Inches(8.9), Inches(2.55)],
+    row_h=Inches(0.37),
+)
+footer(s)
 
-headers = ["Data", "Entrega", "Responsável"]
-widths = [Inches(1.8), Inches(8.0), Inches(2.5)]
-rows = [
-    ("18/05", "Receber manual do patrocinador CAEX", "Fran"),
-    ("Mai", "Lançar campanha 'Diagnóstico BDC Reservado'", "Fran"),
-    ("10/06", "⚡ Alinhar com Klabin — speaker e tema", "Fran"),
-    ("26/06", "⚠️  Submeter sessão de conteúdo para SAP", "Fran"),
-    ("02/jun", "Liberação site e abertura de registros", "SAP"),
-    ("Jun", "Início abordagem SDR (2 SDRs)", "SDRs"),
-    ("31/07", "⚠️  Aprovação de ativações e brindes para SAP", "Fran"),
-    ("14/ago", "Recebimento de brindes", "Fornecedor"),
-    ("25/ago", "App do evento lança / publicar slots diagnóstico", "SAP / Fran"),
-    ("Set/1", "Treinamento e kickoff do time", "Fran"),
-    ("08/set", "Montagem do estande + entrega todos os itens", "Time"),
-    ("09–10/set", "⭐  SAP NOW AI Tour Brazil 2026", "—"),
-    ("10/set", "Download mailing + início follow-up", "SDRs + Fran"),
-    ("16/set", "Relatório de resultados", "Fran"),
-]
-data_table(s, headers, rows, Inches(0.5), Inches(1.2), widths, row_h=0.37)
 
-# ─────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════
 # SLIDE 17 — ORÇAMENTO
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Orçamento Previsto")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Orçamento Previsto")
+table_block(s,
+    ["Item", "Valor previsto"],
+    [
+        ("Produção do estande (arte + layout)",            "~R$ 3.700"),
+        ("Quiz/Totem interativo (Entretec)",               "~R$ 11.200"),
+        ("Brindes (canetas + moleskine — 500 un.)",        "~R$ 10.480"),
+        ("Camisetas equipe (25 un.)",                      "~R$ 2.875"),
+        ("Cartões de visita",                              "~R$ 3.700"),
+        ("Coletores de dados CAEX (2 un.)",                "~R$ 1.100"),
+        ("KVA energia (2 un.)",                            "~R$ 780"),
+        ("Anúncios hotéis SP",                             "~R$ 2.805"),
+        ("Vídeo looping + depoimentos + teasers",          "~R$ 5.280"),
+        ("Anúncios geolocalização (Google + LinkedIn)",    "A orçar"),
+        ("Hotel equipe + Internet CAEX + Campanha LinkedIn","A definir"),
+        ("Adicionais (displays, cabos, etc.)",             "~R$ 500"),
+        ("**TOTAL DISPONÍVEL",                             "**R$ 276.510,21"),
+    ],
+    Inches(1.0), Inches(1.15),
+    [Inches(9.8), Inches(2.8)],
+    row_h=Inches(0.41),
+)
+footer(s)
 
-headers = ["Item", "Valor previsto"]
-widths = [Inches(9.0), Inches(3.5)]
-rows = [
-    ("Produção do estande (arte + layout)", "~R$ 3.700"),
-    ("Quiz/Totem interativo (Entretec)", "~R$ 11.200"),
-    ("Brindes (canetas + moleskine — 500 un.)", "~R$ 10.480"),
-    ("Camisetas equipe (25 un.)", "~R$ 2.875"),
-    ("Cartões de visita", "~R$ 3.700"),
-    ("Coletores de dados CAEX (2 un.)", "~R$ 1.100"),
-    ("KVA energia (2 un.)", "~R$ 780"),
-    ("Anúncios hotéis SP", "~R$ 2.805"),
-    ("Vídeo looping + depoimentos + teasers", "~R$ 5.280"),
-    ("Anúncios geolocalização (Google + LinkedIn)", "A orçar"),
-    ("Hotel equipe + Internet CAEX + Campanha pré-evento", "A definir"),
-    ("Adicionais (displays, cabos, etc.)", "~R$ 500"),
-    ("TOTAL DISPONÍVEL", "R$ 276.510,21"),
-]
-data_table(s, headers, rows, Inches(0.7), Inches(1.2), widths, row_h=0.41)
 
-# ─────────────────────────────────────────────
+# ════════════════════════════════════════════════════════════
 # SLIDE 18 — CONVITE A CLIENTES
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Convite a Clientes C-Level")
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Convite a Clientes C-Level")
 
-rect(s, Inches(0.7), Inches(1.2), Inches(12), Inches(0.6), AZUL_MARINHO)
-txbox(s, "Benefício Gold: convites ilimitados para clientes C-level do patrocinador",
-      Inches(0.8), Inches(1.28), Inches(11.5), Inches(0.45), size=15, bold=True, color=VERDE_NEON)
+box(s, Inches(0.55), Inches(1.15), Inches(12.35), Inches(0.52), NAVY)
+txb(s, "Benefício Gold: convites ilimitados para clientes C-level do patrocinador",
+    Inches(0.7), Inches(1.2), Inches(12.0), Inches(0.42),
+    size=13, bold=True, color=RGBColor(0x7F, 0xFF, 0x96))
 
-txbox(s, "Critérios SAP:", Inches(0.7), Inches(2.0), Inches(5), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-criterios = [
+txb(s, "Critérios SAP:", Inches(0.55), Inches(1.9), Inches(6.5), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "C-level / Diretoria — preferencialmente em São Paulo",
     "Máximo 2 contatos por empresa/conta",
     "Todos passam por aprovação SAP antes da confirmação",
-]
-bullet_block(s, criterios, Inches(0.7), Inches(2.45), Inches(5.8), size=14)
+], Inches(0.75), Inches(2.3), Inches(6.0), size=13)
 
-txbox(s, "Processo:", Inches(7.0), Inches(2.0), Inches(5), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-processo = [
+txb(s, "Processo:", Inches(7.1), Inches(1.9), Inches(5.8), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
     "1. Enviar convite personalizado",
     "2. Participante se inscreve pelo link",
     "3. SAP analisa e confirma",
     "4. Participante recebe e-mail de confirmação",
-]
-bullet_block(s, processo, Inches(7.0), Inches(2.45), Inches(5.8), size=14)
+], Inches(7.3), Inches(2.3), Inches(5.6), size=13)
 
-txbox(s, "Lista estratégica — até 15 clientes (a definir com sócios até 10/ago):",
-      Inches(0.7), Inches(4.1), Inches(12), Inches(0.4), size=14, bold=True, color=AZUL_VIVO)
-headers = ["Empresa", "Contato", "Cargo", "Status"]
-widths = [Inches(4.0), Inches(3.0), Inches(3.0), Inches(2.5)]
-rows = [("A definir", "—", "—", "Pendente")] * 5
-data_table(s, headers, rows, Inches(0.7), Inches(4.55), widths, row_h=0.4)
+txb(s, "Lista estratégica — até 15 clientes (definir com sócios até 10/ago):",
+    Inches(0.55), Inches(3.8), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Empresa", "Contato", "Cargo", "Status"],
+    [("A definir", "—", "—", "Pendente")] * 5,
+    Inches(0.55), Inches(4.18),
+    [Inches(4.0), Inches(3.2), Inches(3.2), Inches(2.3)],
+    row_h=Inches(0.4),
+)
+footer(s)
 
-# ─────────────────────────────────────────────
-# SLIDE 19 — VÍDEO STAND
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s)
-section_header(s, "Vídeo Stand (Looping) + Vídeos do Evento")
 
-txbox(s, "Vídeo looping — TV do estande:", Inches(0.7), Inches(1.2), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-loop_items = [
-    "Cortes de cases (Klabin, clientes BDC)",
-    "Comerciais SAP BDC / ofertas de produtos",
-    "Dashboards de BI ao vivo / demos visuais",
-    "Aceleradores Solveplan",
-    "Formato: MP4, 16:9, 1920x1080 — looping contínuo | 2 pens drive (principal + backup)",
-]
-bullet_block(s, loop_items, Inches(0.7), Inches(1.65), Inches(11.5), size=14)
+# ════════════════════════════════════════════════════════════
+# SLIDE 19 — VÍDEO + FOLLOW-UP
+# ════════════════════════════════════════════════════════════
+s = new_slide()
+title_block(s, "Vídeo Stand + Follow-up Pós-evento")
 
-txbox(s, "Prazo de entrega: até 25/ago  |  Produção: a contratar",
-      Inches(0.7), Inches(3.3), Inches(11), Inches(0.4), size=13, color=CINZA_CLARO)
+txb(s, "Vídeo looping (TV do estande):", Inches(0.55), Inches(1.15), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
+    "Cortes de cases (Klabin, clientes BDC) + comerciais SAP BDC + dashboards ao vivo",
+    "Formato: MP4, 16:9, 1920×1080, looping contínuo  |  2 pens drive (principal + backup)",
+    "Produção: a contratar  |  Prazo de entrega: até 25/ago",
+], Inches(0.75), Inches(1.55), Inches(12.2), size=13)
 
-line(s, Inches(0.7), Inches(3.85), Inches(11.5))
+txb(s, "Vídeos durante o evento:", Inches(0.55), Inches(2.75), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+bullets(s, [
+    "Shorts 9:16 para redes sociais  |  Depoimentos curtos com clientes  |  Gravação de cases",
+    "Pacote depoimentos 4 vídeos ~R$ 3.680  |  Teasers (4 un.) ~R$ 1.600  |  Edição adicional ~R$ 890/un.",
+], Inches(0.75), Inches(3.15), Inches(12.2), size=13)
 
-txbox(s, "Vídeos durante o evento:", Inches(0.7), Inches(4.05), Inches(11), Inches(0.4),
-      size=15, bold=True, color=AZUL_VIVO)
-video_items = [
-    "Shorts para redes sociais (9:16)",
-    "Depoimentos curtos com clientes presentes",
-    "Gravação de cases (confirmar disponibilidade)",
-]
-bullet_block(s, video_items, Inches(0.7), Inches(4.5), Inches(6.5), size=14)
+txb(s, "Follow-up pós-evento (estruturado):", Inches(0.55), Inches(4.05), Inches(12), Inches(0.35),
+    size=13, bold=True, color=AZUL_VIVO)
+table_block(s,
+    ["Dia", "Ação"],
+    [
+        ("D+1", "Consolidar leads + limpar dados + subir no HubSpot com tag SAP-NOW-2026"),
+        ("D+1", "Contato direto (e-mail/WhatsApp) — leads quentes têm prioridade"),
+        ("D+3", "E-mail com material de valor (case BDC relevante para a dor do lead)"),
+        ("D+5", "Ligação — confirmar interesse e propor agendamento"),
+        ("D+7", "Último contato da sequência — agendar ou encaminhar para nutrição"),
+    ],
+    Inches(0.55), Inches(4.43),
+    [Inches(1.3), Inches(11.35)],
+    row_h=Inches(0.38),
+)
+footer(s)
 
-kv_table(s, [
-    ("Pacote 4 vídeos depoimento", "~R$ 3.680"),
-    ("Vídeos teasers (4 un.)", "~R$ 1.600"),
-    ("Edição adicional por vídeo", "~R$ 890/un."),
-], Inches(7.0), Inches(4.5), col_w1=Inches(3.5), col_w2=Inches(2.5))
 
-# ─────────────────────────────────────────────
-# SLIDE 20 — ENCERRAMENTO / PRÓXIMOS PASSOS
-# ─────────────────────────────────────────────
-s = add_slide()
-bg(s, AZUL_ESCURO)
-rect(s, Inches(0), Inches(0), Inches(0.18), H, AZUL_VIVO)
-rect(s, Inches(0), H - Inches(0.08), W, Inches(0.08), AZUL_VIVO)
+# ════════════════════════════════════════════════════════════
+# SLIDE 20 — PRÓXIMOS PASSOS (encerramento escuro)
+# ════════════════════════════════════════════════════════════
+s = new_slide(dark=True)
+title_block(s, "Próximos Passos Críticos", dark=True)
 
-txbox(s, "Próximos Passos Críticos", Inches(0.6), Inches(0.8), Inches(12), Inches(0.8),
-      size=32, bold=True, color=BRANCO)
-line(s, Inches(0.6), Inches(1.65), Inches(6), AZUL_VIVO)
+table_block(s,
+    ["Prazo", "Ação"],
+    [
+        ("Hoje 18/05", "Ler manual CAEX — confirmar posição e regras do estande 2026"),
+        ("Mai",        "Lançar campanha 'Diagnóstico BDC Reservado' (LinkedIn Ads)"),
+        ("10/06",      "⚠️ Alinhar com Klabin — speaker, cargo, tema da sessão"),
+        ("26/06",      "⚠️ Submeter sessão de conteúdo para SAP  ← CRÍTICO"),
+        ("31/07",      "⚠️ Aprovação de ativações + brindes para SAP  ← CRÍTICO"),
+        ("08/set",     "Montagem do estande + entrega de todos os itens"),
+        ("09–10/set",  "⭐ SAP NOW AI Tour Brazil 2026"),
+    ],
+    Inches(0.55), Inches(1.35),
+    [Inches(2.3), Inches(10.4)],
+    row_h=Inches(0.5),
+    hdr_color=AZUL_VIVO,
+)
 
-headers = ["Prazo", "Ação", "Status"]
-widths = [Inches(2.0), Inches(9.0), Inches(1.5)]
-rows = [
-    ("Hoje 18/05", "Ler manual CAEX — confirmar posição e regras do estande 2026", "⏳"),
-    ("Mai", "Lançar campanha 'Diagnóstico BDC Reservado' (LinkedIn Ads)", "⏳"),
-    ("10/06", "Alinhar com Klabin — speaker, cargo, tema da sessão", "⏳"),
-    ("26/06", "⚠️  Submeter sessão de conteúdo para SAP (CRÍTICO)", "⏳"),
-    ("31/07", "⚠️  Aprovação de ativações + brindes para SAP (CRÍTICO)", "⏳"),
-]
-data_table(s, headers, rows, Inches(0.6), Inches(1.9), widths, row_h=0.52)
+txb(s, "SAP NOW AI Tour Brazil 2026  |  9–10 Set  |  Transamérica Expo Center  |  Meta: 130 leads · 28 reuniões · R$ 3,2M pipeline",
+    Inches(0.55), Inches(6.25), Inches(12.35), Inches(0.42),
+    size=11, color=RGBColor(0x88, 0x99, 0xBB), align=PP_ALIGN.CENTER)
 
-txbox(s, "SAP NOW AI Tour Brazil 2026  |  9–10 Set  |  Transamérica Expo Center",
-      Inches(0.6), Inches(6.3), Inches(12), Inches(0.5),
-      size=13, color=RGBColor(0x66, 0x66, 0x66), align=PP_ALIGN.CENTER)
+footer(s, dark=True, page_label="")
 
-# ─────────────────────────────────────────────
-output = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\eventos\sap-now-2026\SAP-NOW-2026-Planejamento-Solveplan.pptx"
+
+# ── Salvar ────────────────────────────────────────────────────
+output = (r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing"
+          r"\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\eventos"
+          r"\sap-now-2026\SAP-NOW-2026-Planejamento-Solveplan.pptx")
 prs.save(output)
-print(f"PPT salvo: {output}")
-print(f"Total de slides: {len(prs.slides)}")
+print(f"Salvo: {output}")
+print(f"Total slides: {len(prs.slides)}")
