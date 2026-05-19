@@ -90,32 +90,34 @@ ${hdr(2)}
 // 03 — NOVA ARQUITETURA
 wrap('#0A0E19', glowTR, `
 ${hdr(3)}
-<div class="body">
-  <div>
+<div class="body" style="justify-content:flex-start;">
+  <div style="margin-bottom:20px;">
     <span class="tag">Nova Arquitetura</span>
     <div class="bar"></div>
-    <p style="font-family:'Prompt',sans-serif;font-size:48px;font-weight:800;line-height:1.1;margin-bottom:10px;">
+    <p style="font-family:'Prompt',sans-serif;font-size:46px;font-weight:800;line-height:1.1;margin-bottom:8px;">
       SAP Business<br/><span class="accent">AI Platform</span>
     </p>
-    <p style="font-size:17px;font-weight:500;color:rgba(255,255,255,0.45);margin-bottom:36px;">Uma plataforma unificada. Tudo conectado.</p>
+    <p style="font-size:16px;font-weight:500;color:rgba(255,255,255,0.45);">Uma plataforma unificada. Tudo conectado.</p>
   </div>
-  <div>
-    <div style="background:rgba(0,106,255,0.12);border:1px solid rgba(0,106,255,0.45);border-radius:10px;padding:28px 32px;margin-bottom:14px;">
-      <p style="font-size:11px;font-weight:700;color:#006AFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Camada 1</p>
-      <p style="font-family:'Prompt',sans-serif;font-size:26px;font-weight:700;">SAP Business Technology Platform</p>
-      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-top:6px;">Base de integração, extensibilidade e desenvolvimento</p>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:0;">
+    <div style="background:rgba(0,106,255,0.12);border:1px solid rgba(0,106,255,0.45);border-radius:10px;padding:24px 28px;">
+      <p style="font-size:11px;font-weight:700;color:#006AFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Camada 1</p>
+      <p style="font-family:'Prompt',sans-serif;font-size:24px;font-weight:700;">SAP Business Technology Platform</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:4px;">Base de integração, extensibilidade e desenvolvimento</p>
     </div>
-    <div style="background:rgba(0,106,255,0.2);border:1px solid rgba(0,106,255,0.65);border-radius:10px;padding:28px 32px;margin-bottom:14px;">
-      <p style="font-size:11px;font-weight:700;color:#006AFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Camada 2 — O diferencial</p>
-      <p style="font-family:'Prompt',sans-serif;font-size:26px;font-weight:700;">SAP Business Data Cloud</p>
-      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-top:6px;">Knowledge Graph: a IA entende o negócio antes de agir</p>
+    <div style="background:rgba(0,106,255,0.2);border:1px solid rgba(0,106,255,0.65);border-radius:10px;padding:24px 28px;">
+      <p style="font-size:11px;font-weight:700;color:#006AFF;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Camada 2 — O diferencial</p>
+      <p style="font-family:'Prompt',sans-serif;font-size:24px;font-weight:700;">SAP Business Data Cloud</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:4px;">Knowledge Graph + Dremio Lakehouse nativo <span style="color:rgba(255,255,255,0.3);font-size:12px;">(aquisição Q3 2026)</span></p>
     </div>
-    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:10px;padding:28px 32px;">
-      <p style="font-size:11px;font-weight:700;color:#94FF96;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Camada 3</p>
-      <p style="font-family:'Prompt',sans-serif;font-size:26px;font-weight:700;">AI Foundation + Joule Studio</p>
-      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-top:6px;">Agentes que criam, orquestram e governam processos autônomos</p>
+    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:10px;padding:24px 28px;">
+      <p style="font-size:11px;font-weight:700;color:#94FF96;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;">Camada 3 — GA agora</p>
+      <p style="font-family:'Prompt',sans-serif;font-size:24px;font-weight:700;">AI Foundation + Joule Studio 2.0</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-top:4px;">Agentes que criam, orquestram e governam processos autônomos</p>
     </div>
-    <p style="font-size:14px;color:rgba(255,255,255,0.3);margin-top:18px;text-align:right;">Disponível GA: Q3 2026</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      ${['NVIDIA','AWS','Google Cloud','Microsoft','Anthropic','+ 6 parceiros'].map(p=>`<span style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:5px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.5);">${p}</span>`).join('')}
+    </div>
   </div>
 </div>
 `),
@@ -152,48 +154,56 @@ ${hdr(4)}
       </p>
     </div>
     <div style="background:rgba(255,255,255,0.04);border-radius:10px;padding:18px 28px;">
-      <p style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;">€100M investidos em parceiros para implantação</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        ${['Finance','Supply Chain','Procurement','RH','CX','...'].map(d=>`<span style="background:rgba(0,106,255,0.2);border:1px solid rgba(0,106,255,0.35);border-radius:6px;padding:6px 14px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);">${d}</span>`).join('')}
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;">
+        <div>
+          <p style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">€100M fundo de parceiros</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            ${['Finance','Supply Chain','Procurement','RH','CX'].map(d=>`<span style="background:rgba(0,106,255,0.2);border:1px solid rgba(0,106,255,0.35);border-radius:6px;padding:5px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);">${d}</span>`).join('')}
+          </div>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <p style="font-family:'Prompt',sans-serif;font-size:32px;font-weight:800;color:#94FF96;line-height:1;">680+</p>
+          <p style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px;">agentes no<br/>SAP AI Agent Hub</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 `),
 
-// 05 — SAP + ANTHROPIC
+// 05 — SAP + ECOSSISTEMA (foco Anthropic / FP&A)
 wrap('#0A0E19', glowBR, `
 ${hdr(5)}
-<div class="body" style="justify-content:flex-start;padding-top:32px;">
-  <span class="tag">Parceria Estratégica</span>
-  <div class="bar"></div>
-  <div style="display:inline-flex;align-items:center;gap:20px;margin-bottom:28px;">
-    <div style="background:rgba(0,106,255,0.15);border:1px solid rgba(0,106,255,0.4);border-radius:8px;padding:16px 32px;">
-      <p style="font-family:'Prompt',sans-serif;font-size:36px;font-weight:800;">SAP</p>
+<div class="body" style="justify-content:flex-start;padding-top:28px;">
+  <div style="margin-bottom:20px;">
+    <span class="tag">11 Parcerias Estratégicas</span>
+    <div class="bar"></div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
+      ${['Anthropic','AWS','Google Cloud','Microsoft','NVIDIA','Mistral','Cohere','Parloa','n8n','Vercel','+ 1'].map((p,i)=>`<span style="background:${i===0?'rgba(148,255,150,0.1)':'rgba(255,255,255,0.04)'};border:1px solid ${i===0?'rgba(148,255,150,0.4)':'rgba(255,255,255,0.1)'};border-radius:6px;padding:5px 12px;font-size:${i===0?'15px':'12px'};font-weight:${i===0?'700':'500'};color:${i===0?'#94FF96':'rgba(255,255,255,0.5)'};">${p}</span>`).join('')}
     </div>
-    <p style="font-family:'Prompt',sans-serif;font-size:40px;font-weight:700;color:#006AFF;">×</p>
-    <div style="background:rgba(148,255,150,0.07);border:1px solid rgba(148,255,150,0.3);border-radius:8px;padding:16px 32px;">
-      <p style="font-family:'Prompt',sans-serif;font-size:36px;font-weight:800;">Anthropic</p>
-    </div>
+    <p style="font-size:15px;font-weight:500;color:rgba(255,255,255,0.4);line-height:1.6;">
+      Anthropic para raciocínio · AWS zero-copy data · Google/Microsoft interop agent-to-agent
+    </p>
   </div>
-  <p style="font-size:20px;font-weight:500;color:rgba(255,255,255,0.55);line-height:1.65;margin-bottom:36px;">
-    Claude AI integrado ao <strong style="color:#fff;">Joule</strong>, ao <strong class="accent">SAP Business Data Cloud</strong> e ao <strong style="color:#fff;">Knowledge Graph</strong>.
-  </p>
-  <div class="div" style="margin-top:0;margin-bottom:28px;"></div>
-  <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">O que habilita no FP&A</p>
-  ${[
-    ['Análise de variações', 'Real x Budget explicadas em linguagem natural'],
-    ['Projeção de caixa', 'Com sugestões de ação corretiva automáticas'],
-    ['Fechamento contábil', 'Suporte automatizado, sem retrabalho manual'],
-    ['Análise sob demanda', 'Financeira e operacional em segundos'],
-  ].map(([t,d])=>`
-  <div style="display:flex;gap:18px;margin-bottom:24px;align-items:flex-start;">
-    <div style="min-width:10px;height:10px;background:#006AFF;border-radius:50%;margin-top:7px;flex-shrink:0;"></div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;">
     <div>
-      <p style="font-size:20px;font-weight:700;color:#fff;">${t}</p>
-      <p style="font-size:16px;color:rgba(255,255,255,0.45);margin-top:4px;">${d}</p>
+      <div class="div" style="margin-bottom:20px;"></div>
+      <p style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">O que a parceria com a Anthropic habilita no FP&A</p>
     </div>
-  </div>`).join('')}
+    ${[
+      ['Análise de variações', 'Real x Budget explicadas em linguagem natural'],
+      ['Projeção de caixa', 'Com sugestões de ação corretiva automáticas'],
+      ['Fechamento contábil', 'Suporte automatizado, sem retrabalho manual'],
+      ['Análise sob demanda', 'Financeira e operacional em segundos'],
+    ].map(([t,d])=>`
+    <div style="display:flex;gap:16px;align-items:flex-start;">
+      <div style="min-width:8px;height:8px;background:#006AFF;border-radius:50%;margin-top:8px;flex-shrink:0;"></div>
+      <div>
+        <p style="font-size:19px;font-weight:700;color:#fff;">${t}</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.45);margin-top:3px;">${d}</p>
+      </div>
+    </div>`).join('')}
+  </div>
 </div>
 `),
 
