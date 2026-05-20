@@ -18,7 +18,7 @@
 SAP BUSINESS AI PLATFORM: A FUNDAÇÃO COMEÇA AQUI
 
 **Subtítulo:**
-Os agentes Joule, o SAP Autonomous Suite e o Knowledge Graph da SAP exigem dados integrados e governados. A Solveplan implementa essa fundação — SAP BDC e Datasphere — para que sua empresa chegue preparada.
+Os agentes Joule, o SAP Autonomous Suite e o Knowledge Graph da SAP exigem dados integrados e governados. A Solveplan implementa essa fundação — SAP BDC e Datasphere — e entrega data products joule-ready: prontos para ativar o Joule no seu contexto de negócio, sem retrabalho de integração.
 
 **CTA:** Agendar diagnóstico
 

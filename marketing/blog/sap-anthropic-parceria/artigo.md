@@ -92,3 +92,13 @@ A parceria SAP-Anthropic coloca o Claude no centro da camada de raciocínio do s
 Fale com a Solveplan para entender se o seu ambiente de dados está pronto para suportar agentes SAP com o nível de precisão que processos críticos exigem.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- SAP News Center — [SAP and Anthropic: Claude on SAP Business AI Platform](https://news.sap.com/2026/05/sap-anthropic-to-bring-claude-sap-business-ai-platform/)
+- ERP Today — [How SAP Is Using Anthropic, NVIDIA and Palantir to Shape Its Autonomous Enterprise Stack](https://erp.today/how-sap-is-using-anthropic-nvidia-and-palantir-to-shape-its-autonomous-enterprise-stack/)
+- The Next Web — [SAP unveils Autonomous Enterprise with 200+ AI agents and Anthropic partnership](https://thenextweb.com/news/sap-autonomous-enterprise-ai-agents-sapphire)
+- SAP News Center — [SAP Unveils the Autonomous Enterprise](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/)
+- Digital Today — [SAP expands alliance with Anthropic to ease AI agent development with Claude](https://www.digitaltoday.co.kr/en/view/55093/sap-expands-alliance-with-anthropic-to-ease-ai-agent-development-with-claude)

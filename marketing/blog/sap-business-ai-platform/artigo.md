@@ -105,3 +105,14 @@ O SAP Business AI Platform muda a natureza do ERP. Mas o que determina se sua em
 Fale com a Solveplan para entender onde você está e o que precisa ser feito antes de implementar IA nos seus processos SAP.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- SAP News Center — [SAP Unveils Business AI Platform to Power the Autonomous Enterprise](https://news.sap.com/2026/05/sap-sapphire-keynote-business-ai-platform-power-autonomous-enterprise/)
+- SAP News Center — [SAP Unveils the Autonomous Enterprise](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/)
+- SAPinsider — [SAP Sapphire 2026: SAP Recasts ERP Around the Autonomous Enterprise and Business AI](https://sapinsider.org/articles/sap-sapphire-2026-autonomous-enterprise-erp-business-ai/)
+- Channel Insider — [SAP Sapphire 2026 Intros Autonomous Enterprise Vision](https://www.channelinsider.com/ai/sap-sapphire-2026-business-ai-joule-agents/)
+- SAP — [SAP Business AI Platform](https://www.sap.com/products/ai-platform.html)
+- SAP News Center — [SAP Business AI: Release Highlights Q1 2026](https://news.sap.com/2026/04/sap-business-ai-release-highlights-q1-2026/)

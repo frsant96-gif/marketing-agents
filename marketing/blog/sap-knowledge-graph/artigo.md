@@ -99,3 +99,13 @@ O SAP Knowledge Graph é a base que diferencia automação empresarial de automa
 Fale com a Solveplan para entender o estado atual do seu ambiente de dados e o que precisa ser feito antes de ativar agentes SAP nos seus processos.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- SAP News Center — [SAP Unveils the Autonomous Enterprise](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/)
+- SAVIC Technologies — [SAP AI Foundation Architecture 2026: Knowledge Graph, SAP-RPT-1 & Agent Hub](https://www.savictech.com/insights/sap-ai-foundation-knowledge-graph-architecture-enterprise-2026/)
+- Constellation Research — [SAP Sapphire 2026: AI agent accuracy, embedded domain knowledge and processes](https://www.constellationr.com/insights/news/sap-sapphire-2026-themes-ai-agent-accuracy-embedded-domain-knowledge-and-processes)
+- Futurum Group — [Precision Over Prose: Why SAP Knowledge Graph is the Secret to Production-Ready AI](https://futurumgroup.com/insights/precision-over-prose-why-sap-knowledge-graph-is-the-secret-to-production-ready-ai/)
+- E3 Magazine — [SAP Knowledge Graph and Vector Engine](https://e3mag.com/en/sap-knowledge-graph-and-vector-engine/)

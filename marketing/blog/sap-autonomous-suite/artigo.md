@@ -112,3 +112,13 @@ O SAP Autonomous Suite muda o que é possível fazer com ERP. Mas o que determin
 Fale com a Solveplan para entender onde você está e o que precisa ser estruturado antes de implementar agentes nos seus processos SAP.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- SAP News Center — [SAP Unveils the Autonomous Enterprise](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/)
+- SAP News Center — [New Era of Autonomous HCM](https://news.sap.com/2026/05/sap-successfactors-innovations-new-era-autonomous-hcm/)
+- SAPinsider — [SAP Sapphire 2026: SAP Recasts ERP Around the Autonomous Enterprise and Business AI](https://sapinsider.org/articles/sap-sapphire-2026-autonomous-enterprise-erp-business-ai/)
+- SAPinsider — [SAP Sapphire 2026: The Autonomous Enterprise Arrives — with Guardrails](https://sapinsider.org/blogs/sap-sapphire-2026-autonomous-enterprise-ai-agents/)
+- SAP News Center Brasil — [SAP apresenta a Autonomous Enterprise](https://news.sap.com/brazil/2026/05/sap-apresenta-a-autonomous-enterprise/)

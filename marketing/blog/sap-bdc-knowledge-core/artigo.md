@@ -111,3 +111,14 @@ O SAP Business Data Cloud é a camada que transforma o Knowledge Graph genérico
 Fale com a Solveplan para avaliar o estado atual do seu ambiente de dados e entender o que precisa ser estruturado para que o BDC cumpra o papel de Knowledge Core na sua organização.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- SAP News Center — [Accelerate the Autonomous Enterprise with SAP Business Data Cloud](https://news.sap.com/2026/05/sap-bdc-accelerate-autonomous-enterprise/)
+- SAP — [SAP Business Data Cloud](https://www.sap.com/products/data-cloud.html)
+- SAVIC Technologies — [SAP Business Data Cloud in 2026 Explained](https://www.savictech.com/insights/sap-business-data-cloud-2026-what-it-means/)
+- E3 Magazine — [SAP Knowledge Graph and Vector Engine](https://e3mag.com/en/sap-knowledge-graph-and-vector-engine/)
+- BARC — [SAP data and analytics 2026: From roadmap to reality](https://barc.com/sap-data-analytics-2026/)
+- Futurum Group — [Precision Over Prose: Why SAP Knowledge Graph is the Secret to Production-Ready AI](https://futurumgroup.com/insights/precision-over-prose-why-sap-knowledge-graph-is-the-secret-to-production-ready-ai/)

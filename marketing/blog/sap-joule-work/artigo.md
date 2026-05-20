@@ -96,3 +96,13 @@ Mas a experiência depende do que está embaixo. Joule Work sobre dados fragment
 Fale com a Solveplan para entender se o seu ambiente de dados está pronto para o Joule Work.
 
 **[Agendar conversa com a Solveplan]**
+
+---
+
+## Fontes
+
+- Complete AI Training — [SAP expands Joule with agentic AI workspace at Sapphire 2026](https://completeaitraining.com/news/sap-expands-joule-with-agentic-ai-workspace-and-extends/)
+- SiliconANGLE — [SAP recasts Joule as the front door to autonomous enterprise AI](https://siliconangle.com/2026/05/12/sap-recasts-joule-front-door-autonomous-enterprise-ai/)
+- SAP News Center — [Announcing New Joule Studio for Enterprise Scale Agentic Development](https://news.sap.com/2026/05/new-joule-studio-enterprise-scale-agentic-development/)
+- SAP Community — [SAP UX Update: The New Joule Work Engagement Layer](https://community.sap.com/t5/technology-blog-posts-by-sap/sap-ux-update-the-new-joule-work-engagement-layer-experiences/ba-p/14396478)
+- SAP News Center — [The Future of the Enterprise Is Autonomous](https://news.sap.com/2026/05/future-enterprise-autonomous/)
