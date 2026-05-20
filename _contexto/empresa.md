@@ -19,7 +19,7 @@
 
 - Forte posicionamento em SAP Business Data Cloud (BDC) — principal produto a ser vendido agora
 - Reconhecimento como parceiro SAP Gold na América Latina
-- +200 soluções entregues, +90 clientes atendidos, +280.000 horas de projetos
+- 150+ empresas com resultados comprovados, 390+ projetos entregues, 60+ especialistas SAP, 13+ anos de atuação
 - Atuação em cenários pós-S/4HANA: o desafio das empresas deixou de ser ERP e passou a ser uso inteligente dos dados
 - Abordagem recorrente: sair de Excel e processos manuais para ambientes integrados, governados e escaláveis
 - Pilares: Pessoas, Processos, Tecnologia e Governança
