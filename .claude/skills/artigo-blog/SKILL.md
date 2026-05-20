@@ -205,6 +205,7 @@ Criar pasta `marketing/blog/[slug]/` e salvar:
 
 ## Regras
 
+- Cada artigo deve ser autoridade no seu tema — não um resumo de evento, ação ou lançamento. Se o contexto for um evento (ex: SAP SAPPHIRE, conferência, webinar), usá-lo apenas para situar o lançamento do tema. O desenvolvimento do artigo foca exclusivamente no tema em si.
 - Nunca escrever conteúdo superficial ou puramente institucional
 - Sempre conectar o tema ao contexto do negócio do leitor (dor, consequência, solução)
 - SAP BDC como referência quando o tema permitir
