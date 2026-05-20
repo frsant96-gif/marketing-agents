@@ -12,9 +12,9 @@ Diferente de automações por RPA ou scripts de integração, os agentes do SAP 
 
 ---
 
-## Os 5 domínios autônomos anunciados no SAP SAPPHIRE 2026
+## Os 5 domínios do SAP Autonomous Suite
 
-Durante o SAP SAPPHIRE Orlando 2026, a SAP organizou o SAP Autonomous Suite em cinco domínios operacionais, cada um com agentes e assistentes específicos:
+O SAP Autonomous Suite organiza seus agentes em cinco domínios operacionais, cada um com assistentes e agentes especializados para cobrir o processo de ponta a ponta:
 
 **1. Autonomous Finance**
 Automatiza o ciclo financeiro de ponta a ponta — do lançamento contábil ao fechamento mensal. O destaque é o Autonomous Close Assistant, que comprime o processo de fechamento financeiro de semanas para dias por meio da automação de lançamentos de diário, reconciliações e resolução de erros.
@@ -31,13 +31,12 @@ Automatiza processos de recursos humanos — admissão, folha de pagamento, gest
 **5. Autonomous CX**
 Agentes de experiência do cliente operam em ciclos de venda, atendimento e pós-venda — respondendo a solicitações, atualizando registros e gerenciando SLAs sem dependência de filas manuais.
 
-Além dos cinco domínios, a SAP lançou o Industry AI: sete soluções autônomas com lógica de processo, modelos de dados e requisitos regulatórios específicos para setores como manufatura, varejo e serviços financeiros.
 
 ---
 
 ## O caso mais concreto: fechamento financeiro em dias, não semanas
 
-Entre todos os anúncios do SAP SAPPHIRE 2026, o Autonomous Close Assistant é o que tem impacto mais imediato e mensurável para empresas que já usam SAP.
+O Autonomous Close Assistant é o componente do SAP Autonomous Suite com impacto mais imediato e mensurável para empresas que já usam SAP.
 
 O fechamento financeiro mensal é, para a maioria das organizações, um processo que ainda depende de planilhas, e-mails de cobrança entre áreas e horas de validação manual. Atrasos na reconciliação e erros em lançamentos consomem tempo de controllers e analistas financeiros que deveriam estar interpretando dados, não corrigindo entradas.
 

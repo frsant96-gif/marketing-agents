@@ -12,18 +12,13 @@ Diferente de soluções genéricas de IA, o SAP Business AI Platform carrega 50 
 
 ---
 
-## O que foi anunciado no SAP SAPPHIRE Orlando 2026
+## Por que o SAP Business AI Platform representa uma mudança estrutural
 
-Durante o SAP SAPPHIRE Orlando 2026, a SAP apresentou o SAP Business AI Platform como a fundação da visão Autonomous Enterprise — uma arquitetura onde agentes de IA não apenas assistem usuários, mas executam processos de negócio de forma autônoma.
+Durante o SAP SAPPHIRE Orlando 2026, a SAP apresentou o SAP Business AI Platform não como uma nova ferramenta, mas como uma reconfiguração da própria arquitetura do ERP — a fundação da visão Autonomous Enterprise, onde agentes de IA não apenas assistem usuários, mas executam processos de negócio de forma autônoma.
 
-Os quatro pilares anunciados foram:
+O que torna essa mudança estrutural é a camada que sustenta os agentes: ao unificar SAP BTP, SAP Business Data Cloud e SAP AI Foundation em uma única fundação, a SAP eliminou a fragmentação que historicamente limitava iniciativas de IA empresarial — modelos sem contexto de processo, dados sem semântica de negócio, governança distribuída entre múltiplas ferramentas.
 
-1. **Joule** como nova camada de engajamento, integrando dados, workflows e agentes em uma interface disponível em 35 soluções SAP
-2. **SAP Autonomous Suite** — conjunto de aplicações SAP com agentes embarcados para automação de processos fim-a-fim
-3. **Aplicações de IA com expertise setorial** — modelos treinados com contexto específico de indústrias como manufatura, varejo e serviços financeiros
-4. **SAP Business AI Platform** como fundação técnica unificando dados, modelos e governança
-
-A mensagem central do evento foi direta: o ERP está deixando de ser um sistema de registro para se tornar um sistema que raciocina, decide e age dentro dos processos de negócio.
+O resultado é uma plataforma onde um agente não apenas executa uma tarefa — ele executa dentro do contexto real do negócio: com acesso às políticas, hierarquias, histórico e regras que definem como aquele processo funciona na prática.
 
 ---
 
