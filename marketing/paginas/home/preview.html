@@ -570,27 +570,56 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <p class="hero-overline">
-    A CONSULTORIA SAP PARA A ERA DA IA EMPRESARIAL
-    <span class="updated-badge">Atualizado</span>
-  </p>
-  <h1>
-    SAP BUSINESS AI PLATFORM:<br>
-    <span class="highlight">A FUNDAÇÃO</span> COMEÇA AQUI
-    <span class="new-badge">Novo slide</span>
-  </h1>
-  <p>
-    Os agentes Joule, o SAP Autonomous Suite e o Knowledge Graph da SAP exigem dados integrados e governados. A Solveplan implementa essa fundação — SAP BDC e Datasphere — e entrega <strong>data products joule-ready</strong>: prontos para ativar o Joule no seu contexto de negócio, sem retrabalho de integração.
-  </p>
-  <a href="#" class="btn-primary">Agendar diagnóstico</a>
-  <div class="slides-nav">
-    <div class="slide-dot active"></div>
-    <div class="slide-dot"></div>
-    <div class="slide-dot"></div>
+<section class="hero" style="padding-bottom:48px;">
+  <p class="hero-overline">A CONSULTORIA SAP PARA A ERA DA IA EMPRESARIAL <span class="updated-badge">Atualizado</span></p>
+
+  <!-- Slide 1 -->
+  <div class="slide" id="slide-1">
+    <h1>SAP BUSINESS AI PLATFORM:<br><span class="highlight">A FUNDAÇÃO</span> COMEÇA AQUI <span class="new-badge">Novo</span></h1>
+    <p>Os agentes Joule, o SAP Autonomous Suite e o Knowledge Graph da SAP exigem dados integrados e governados. A Solveplan implementa essa fundação — SAP BDC e Datasphere — e entrega <strong>data products joule-ready</strong>: prontos para ativar o Joule no seu contexto de negócio, sem retrabalho de integração.</p>
+    <a href="#" class="btn-primary">Agendar diagnóstico</a>
   </div>
-  <p style="margin-top:16px;font-size:11px;color:rgba(255,255,255,0.35);">Slide 1 de 3 · Slide 2: SAP Business Data Cloud · Slide 3: Planejamento, Analytics e Consolidação</p>
+
+  <!-- Slide 2 -->
+  <div class="slide" id="slide-2" style="display:none;">
+    <h1>JOULE 2.0:<br>O AGENTE QUE <span class="highlight">EXECUTA</span> SEU ERP <span class="new-badge">Novo</span></h1>
+    <p>O Joule deixou de ser um assistente e passou a orquestrar processos fim-a-fim em HR, procurement e supply chain — sem intervenção manual. A Solveplan entrega os data products e a fundação SAP BDC que o Joule precisa para operar com contexto real do seu negócio.</p>
+    <a href="#" class="btn-primary">Entender o Joule 2.0</a>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide" id="slide-3" style="display:none;">
+    <h1>SAP KNOWLEDGE GRAPH:<br><span class="highlight">50 ANOS DE ERP</span> CODIFICADOS EM IA <span class="new-badge">Novo</span></h1>
+    <p>O Knowledge Graph da SAP transforma dados brutos em contexto de negócio — políticas, hierarquias, processos e regras codificadas em relações semânticas que os agentes SAP entendem. É o que diferencia a automação SAP de qualquer IA genérica. A Solveplan estrutura a fundação de dados que alimenta esse grafo.</p>
+    <a href="#" class="btn-primary">Como funciona na prática</a>
+  </div>
+
+  <!-- Navegação -->
+  <div class="slides-nav" style="margin-top:32px;">
+    <div class="slide-dot active" id="dot-1" onclick="goSlide(1)" style="cursor:pointer;"></div>
+    <div class="slide-dot" id="dot-2" onclick="goSlide(2)" style="cursor:pointer;"></div>
+    <div class="slide-dot" id="dot-3" onclick="goSlide(3)" style="cursor:pointer;"></div>
+  </div>
+  <p id="slide-label" style="margin-top:14px;font-size:11px;color:rgba(255,255,255,0.35);">Slide 1 de 3 · SAP Business AI Platform</p>
 </section>
+
+<script>
+const slideLabels = [
+  'Slide 1 de 3 · SAP Business AI Platform',
+  'Slide 2 de 3 · Joule 2.0',
+  'Slide 3 de 3 · SAP Knowledge Graph'
+];
+let current = 1;
+function goSlide(n) {
+  document.getElementById('slide-' + current).style.display = 'none';
+  document.getElementById('dot-' + current).classList.remove('active');
+  current = n;
+  document.getElementById('slide-' + current).style.display = 'block';
+  document.getElementById('dot-' + current).classList.add('active');
+  document.getElementById('slide-label').textContent = slideLabels[n - 1];
+}
+setInterval(() => goSlide(current === 3 ? 1 : current + 1), 5000);
+</script>
 
 <!-- NUMBERS -->
 <section class="numbers">
@@ -741,9 +770,26 @@
 </section>
 
 <!-- CTA BANNER -->
-<section class="cta-banner">
-  <h2>Sua empresa está pronta para o SAP Business AI Platform? <span class="updated-badge" style="background:rgba(255,255,255,0.3);color:white;">Atualizado</span></h2>
-  <p>A fundação começa com dados bem governados. A Solveplan faz o diagnóstico e estrutura o caminho.</p>
+<section class="cta-banner" style="padding: 64px 60px;">
+  <!-- Ícones dos 3 temas -->
+  <div style="display:flex;justify-content:center;gap:48px;margin-bottom:40px;flex-wrap:wrap;">
+    <div style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:8px;">🏗️</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;">SAP Business AI Platform</div>
+    </div>
+    <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+    <div style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:8px;">⚡</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;">Joule 2.0</div>
+    </div>
+    <div style="width:1px;background:rgba(255,255,255,0.2);"></div>
+    <div style="text-align:center;">
+      <div style="font-size:28px;margin-bottom:8px;">🔗</div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;">SAP Knowledge Graph</div>
+    </div>
+  </div>
+  <h2 style="font-size:32px;">Sua empresa está pronta para a próxima geração SAP? <span class="new-badge" style="background:rgba(255,255,255,0.25);color:white;">Atualizado</span></h2>
+  <p>SAP Business AI Platform, Joule 2.0 e Knowledge Graph exigem uma fundação de dados sólida. A Solveplan faz o diagnóstico e estrutura o caminho — sem atalhos.</p>
   <button class="btn-white">Agendar diagnóstico gratuito</button>
 </section>
 
