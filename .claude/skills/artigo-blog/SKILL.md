@@ -215,3 +215,14 @@ Criar pasta `marketing/blog/[slug]/` e salvar:
 - "Solveplan" como entidade nomeada, não só como pronome
 - WordPress como plataforma — escrever em Markdown limpo, facilmente convertido
 - Legibilidade acima de tudo: se precisar de jargão técnico, explicar em seguida
+
+### Linguagem de executivo (padrão para todos os artigos Solveplan)
+
+O público-alvo é CIO, CFO, controller, head de dados/BI — pessoas que decidem e que valorizam objetividade e resultado concreto.
+
+- **Impacto de negócio antes de detalhe técnico:** abrir cada seção com a consequência ou decisão, não com a descrição do componente
+- **Linguagem decisiva:** "determina", "define", "garante" — evitar "pode", "consegue", "é capaz de"
+- **Contexto técnico em serviço da decisão:** mencionar arquitetura e componentes apenas quando ajuda o leitor a decidir melhor, não para demonstrar domínio técnico
+- **Números e dados como argumento:** citar métricas apenas quando reforçam uma conclusão de negócio (ex: "fechamento em 2-3 dias vs 10-15 dias" — não "452.000 tabelas" sem contexto)
+- **FAQ objetivo:** máximo 3 linhas por resposta, sem aprofundamento técnico
+- **Risco como enquadramento:** frases "sem essa fundação" ou "empresas que não estruturaram" framing de risco, não só de oportunidade
