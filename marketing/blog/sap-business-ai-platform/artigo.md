@@ -63,7 +63,7 @@ Ao contrário de uma dependência exclusiva de um único provedor, a parceria co
 
 ---
 
-## O que muda para quem já usa SAP — visão Solveplan
+## Quem já tem SAP BDC está no lugar certo — o que fazer a partir daqui
 
 A pergunta mais frequente depois do SAP SAPPHIRE Orlando 2026 é objetiva: "o que eu preciso fazer agora?"
 

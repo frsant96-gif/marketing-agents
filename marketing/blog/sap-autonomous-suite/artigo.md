@@ -68,7 +68,7 @@ A Anthropic foi confirmada durante o SAP SAPPHIRE 2026 como o modelo de raciocí
 
 ---
 
-## O que muda para quem já usa SAP — visão Solveplan
+## Automatizar sem fundação é ampliar erros — o que a Solveplan recomenda
 
 O SAP Autonomous Suite muda a pergunta que as empresas precisam responder — de "como automatizo uma tarefa?" para "qual processo inteiro posso deixar de operar manualmente?".
 
