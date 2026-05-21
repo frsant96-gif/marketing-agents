@@ -182,6 +182,7 @@ def gerar(artigo_path, meta_path, output_path):
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 for slug in [
+    "futuro-erp-sap-ia",
     "sap-business-ai-platform",
     "sap-autonomous-suite",
     "sap-knowledge-graph",
