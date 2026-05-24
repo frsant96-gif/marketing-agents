@@ -155,6 +155,15 @@ Ao concluir uma tarefa que não tinha skill mas parece repetível (o usuário pr
 
 Não perguntar pra tarefas pontuais ou perguntas simples. Só quando o padrão de repetição for claro.
 
+Ao concluir qualquer skill que gere dados, listas, relatórios ou conteúdo estruturado, sempre perguntar:
+
+> "Quer que eu gere um arquivo Excel (.xlsx) com esses dados?"
+
+Se a resposta for sim (ou ao gerar dados de skills como `geracao-demanda`, `relatorio`, `abm`, `atribuicao`):
+1. Criar o arquivo `.xlsx` com Python usando `openpyxl` ou `pandas`
+2. Salvar em `dados/` ou na pasta da skill correspondente
+3. Abrir automaticamente com `Start-Process` (Windows) para download/visualização imediata
+
 ---
 
 ## Aprender com correções
