@@ -109,8 +109,31 @@ def tem_cobertura_minima(contatos):
 
 # ── Apollo API ────────────────────────────────────────────────────────────────
 
+def extrair_cnpj_apollo(org):
+    """Extrai CNPJ do objeto de organização retornado pelo Apollo."""
+    # Apollo retorna CNPJ em raw_address, short_description ou campos customizados
+    for campo in ["raw_address", "short_description", "seo_description"]:
+        texto = org.get(campo, "") or ""
+        matches = re.findall(r'\d{2}[\.\-]?\d{3}[\.\-]?\d{3}[\/\-]?\d{4}[\-]?\d{2}', texto)
+        for m in matches:
+            digits = re.sub(r'\D', '', m)
+            if len(digits) == 14:
+                return f"{digits[:2]}.{digits[2:5]}.{digits[5:8]}/{digits[8:12]}-{digits[12:]}"
+
+    # Tentar via custom_fields
+    for field in org.get("custom_fields", []):
+        val = str(field.get("value", ""))
+        matches = re.findall(r'\d{2}[\.\-]?\d{3}[\.\-]?\d{3}[\/\-]?\d{4}[\-]?\d{2}', val)
+        for m in matches:
+            digits = re.sub(r'\D', '', m)
+            if len(digits) == 14:
+                return f"{digits[:2]}.{digits[2:5]}.{digits[5:8]}/{digits[8:12]}-{digits[12:]}"
+
+    return "pendente"
+
+
 def buscar_empresa_apollo(nome, website=None):
-    """Busca ID da empresa no Apollo por website ou nome."""
+    """Busca empresa no Apollo — retorna (id, nome, cnpj)."""
     endpoint = f"{APOLLO_BASE}/organizations/search"
     payload = {"q_organization_name": nome, "per_page": 1}
     if website and website not in ("N/D", "", None):
@@ -120,8 +143,10 @@ def buscar_empresa_apollo(nome, website=None):
     resp = _apollo_post(endpoint, payload)
     orgs = resp.get("organizations", [])
     if orgs:
-        return orgs[0].get("id"), orgs[0].get("name")
-    return None, None
+        org = orgs[0]
+        cnpj = extrair_cnpj_apollo(org)
+        return org.get("id"), org.get("name"), cnpj
+    return None, None, "pendente"
 
 
 def buscar_contatos_apollo(org_id, org_name):
@@ -246,15 +271,21 @@ def main(caminho_excel):
         nome = emp["nome"]
         print(f"[{i}/{total}] {nome}...", end=' ', flush=True)
 
-        org_id, org_name = buscar_empresa_apollo(nome, emp["website"])
+        org_id, org_name, cnpj_apollo = buscar_empresa_apollo(nome, emp["website"])
         if not org_id:
             print("empresa não encontrada no Apollo")
             sem_contato.append(nome)
             continue
 
+        # Preferir CNPJ do Apollo; fallback para o que já estava no Excel
+        cnpj_final = cnpj_apollo if cnpj_apollo != "pendente" else emp["cnpj"]
+
         contatos = buscar_contatos_apollo(org_id, org_name or nome)
         for c in contatos:
-            c["CNPJ"] = emp["cnpj"]
+            c["CNPJ"] = cnpj_final
+
+        # Atualizar CNPJ no Excel de entrada também
+        emp["cnpj"] = cnpj_final
 
         print(f"{len(contatos)} contatos encontrados")
         todos_contatos.extend(contatos)
@@ -268,11 +299,20 @@ def main(caminho_excel):
     saida_path = path.parent / f"{path.stem}_contatos_{date.today().strftime('%Y-%m-%d')}.xlsx"
     wb_out = openpyxl.Workbook()
 
-    # Aba 1 — cópia das empresas
+    # Aba 1 — empresas com CNPJ atualizado pelo Apollo
     ws_emp = wb_out.active
     ws_emp.title = "Empresas"
-    for row in ws.iter_rows(values_only=True):
-        ws_emp.append(list(row))
+    emp_headers = [cell.value for cell in ws[1]]
+    ws_emp.append(emp_headers)
+    idx_cnpj_col = emp_headers.index('CNPJ') if 'CNPJ' in emp_headers else None
+    emp_map = {e["nome"]: e["cnpj"] for e in empresas}
+    idx_emp_col = emp_headers.index('EMPRESA') if 'EMPRESA' in emp_headers else 0
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        row_list = list(row)
+        if idx_cnpj_col is not None:
+            nome_row = row_list[idx_emp_col]
+            row_list[idx_cnpj_col] = emp_map.get(nome_row, row_list[idx_cnpj_col])
+        ws_emp.append(row_list)
 
     # Aba 2 — Contatos
     ws_con = wb_out.create_sheet("Contatos")
