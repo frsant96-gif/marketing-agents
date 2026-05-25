@@ -9,7 +9,7 @@
 
 ## Versão 1 — Estrutura clássica (abertura com empresa + solução)
 
-A Lins Agroindustrial transformou seu planejamento operacional com o SAP Analytics Cloud migrando do SAP BPC.
+A Lins Agroindustrial migrou do SAP BPC para o SAP Analytics Cloud — e transformou seu planejamento operacional.
 
 A Lins processa 4,5 milhões de toneladas de cana-de-açúcar por safra, em 70.000 hectares, produzindo açúcar, etanol, soja e biomassa. Com a migração para o SAC, reduziu o tempo de processamento em 90% — de 8 horas para minutos por etapa.
 
