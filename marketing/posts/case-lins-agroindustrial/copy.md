@@ -7,17 +7,17 @@
 
 ---
 
-## Versão 1 — Estrutura clássica (abertura com empresa + solução)
+## Versão aprovada ✓
 
-A Lins Agroindustrial migrou do SAP BPC para o SAP Analytics Cloud — e transformou seu planejamento operacional.
+A @Lins Agroindustrial processava dados de planejamento em planilhas isoladas e gastava cerca de 8 horas para consolidar informações entre as áreas agrícola, industrial e financeira. Um cenário comum no agronegócio — e que tem custo direto na operação.
 
-A Lins processa 4,5 milhões de toneladas de cana-de-açúcar por safra, em 70.000 hectares, produzindo açúcar, etanol, soja e biomassa. Com a migração para o SAC, reduziu o tempo de processamento em 90% — de 8 horas para minutos por etapa.
+Com a migração do SAP BPC para o SAP Analytics Cloud, implementada pela @SolvePlan, esse tempo caiu 90%. Hoje, cada etapa de cálculo é concluída em minutos, as informações estão centralizadas em dashboards confiáveis e o planejamento integrado entre todas as áreas virou realidade.
 
-Antes, o processo dependia de planilhas isoladas por departamento, com retrabalho constante e sem visibilidade integrada entre as áreas agrícola, industrial e financeira. Hoje, a Lins opera com modelos reconstruídos do zero, dashboards centralizados e simulação de cenários em tempo real.
+O resultado não é só velocidade. É a diferença entre reagir ao que já aconteceu e antecipar o que pode acontecer.
 
-Setor de commodities não perdoa lentidão. Agora eles decidem com agilidade.
+Assista ao case completo e veja como foi esse processo https://solveplan.com/case/lins-agroindustrial-sap-analytics-cloud/
 
-Veja o case completo: https://solveplan.com/case/lins-agroindustrial-sap-analytics-cloud/
+[MARCAR: @Ueliton | @Priscila]
 
 #SAPAnalyticsCloud #Agronegócio #PlanejamentoFinanceiro #SAP #FPeA
 
