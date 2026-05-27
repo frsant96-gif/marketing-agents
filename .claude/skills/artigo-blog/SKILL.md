@@ -196,11 +196,130 @@ Meta de conversão:     >1% de clicks no CTA principal
 Revisão programada:    [data — 90 dias após publicação]
 ```
 
-## Passo 8 — Salvar
+## Passo 8 — Publicar no WordPress
+
+Publicar o artigo como **rascunho** via WordPress REST API. Seguir obrigatoriamente as regras de bloco abaixo.
+
+### Regras de bloco Gutenberg
+
+**Parágrafos — um bloco por parágrafo, sem exceção:**
+```
+<!-- wp:paragraph -->
+<p>Texto do parágrafo.</p>
+<!-- /wp:paragraph -->
+```
+
+**Títulos de seção — sempre H5 em negrito:**
+```
+<!-- wp:heading {"level":5} -->
+<h5 class="wp-block-heading"><strong>Título da seção</strong></h5>
+<!-- /wp:heading -->
+```
+
+**Listas / bullet points — cada item em itálico, um bloco por item (sem `wp:list`):**
+```
+<!-- wp:paragraph -->
+<p><em>Texto do item que seria bullet.</em></p>
+<!-- /wp:paragraph -->
+```
+
+**FAQ — accordion nativo (wp:details):**
+```
+<!-- wp:details -->
+<details class="wp-block-details"><summary>Pergunta</summary><!-- wp:paragraph -->
+<p>Resposta.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+```
+
+**CTA — padrão fixo Solveplan:**
+```
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}}} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="https://bdcstrategy.solveplan.ai/" target="_blank" rel="noopener">Avalie a maturidade dos seus dados com a Solveplan</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+```
+
+**Links internos:** inserir na primeira ocorrência de cada anchor no corpo do texto. Links externos nas Fontes: `rel="noopener"` (dofollow). Nunca usar `rel="noreferrer noopener"` no CTA.
+
+### Publicação via API
+
+```python
+import requests
+from requests.auth import HTTPBasicAuth
+
+AUTH = HTTPBasicAuth("administrador", "<app-password>")
+WP = "https://solveplan.com/wp-json/wp/v2"
+
+resp = requests.post(f"{WP}/posts", auth=AUTH, json={
+    "title": "<H1>",
+    "slug": "<slug>",
+    "content": "<conteúdo em blocos Gutenberg>",
+    "status": "draft",
+    "excerpt": "<meta description>",
+    "meta": {
+        "rank_math_focus_keyword": "<keyword principal>",
+        "rank_math_title": "<meta title>",
+        "rank_math_description": "<meta description com keyword>",
+    }
+})
+post_id = resp.json()["id"]
+```
+
+---
+
+## Passo 9 — Verificar e corrigir erros SEO no Rank Math
+
+Após criar o rascunho, verificar os erros básicos de SEO do Rank Math e corrigir via API quando possível.
+
+### Checklist de erros a verificar
+
+**1. Keyword na meta description**
+A meta description deve conter a keyword principal. Incluir obrigatoriamente no campo `rank_math_description`.
+> ⚠️ Se o valor não persistir via API (Rank Math exige nonce de sessão para atualizar campos já salvos), informar o usuário e indicar o fix manual:
+> - WP Admin → post → Rank Math → Edit Snippet → Meta Description
+
+**2. Alt text da imagem com keyword**
+Ao fazer upload da imagem destacada via API, definir o alt text com a keyword:
+```python
+requests.post(f"{WP}/media/{media_id}", auth=AUTH,
+    json={"alt_text": "<keyword> — descrição da imagem"})
+```
+
+**3. Links externos nofollow**
+- CTA sempre com `rel="noopener"` (dofollow)
+- Links na seção Fontes com `rel="noopener"` (dofollow)
+- Nunca usar `rel="noreferrer noopener"` — remove o `noreferrer`
+
+**4. Links internos ausentes**
+Incluir no mínimo 2 links internos no corpo do artigo:
+- `/sap-business-data-cloud/` — anchor: "SAP Business Data Cloud" ou "SAP BDC"
+- `/sap-datasphere/` — anchor: "SAP Datasphere"
+- Posts da mesma série — usar slugs `/blog/[slug]/`
+
+### AEO e GEO — verificação final
+
+Antes de marcar como concluído, confirmar:
+
+| Critério | O que verificar |
+|----------|----------------|
+| AEO — Featured snippet | Primeiro parágrafo da Seção 1 tem definição direta (40-60 palavras) começando com "[tema] é..." |
+| AEO — FAQ | Seção FAQ presente com 4-6 perguntas em `wp:details`, respostas ≤3 linhas |
+| AEO — Lista | Pelo menos 1 seção com itens em itálico (bullets convertidos) |
+| GEO — E-E-A-T | "Solveplan" mencionada como entidade nomeada ≥3 vezes |
+| GEO — Dados | Pelo menos 1 número ou dado concreto com fonte/atribuição |
+| GEO — Comparação | Pelo menos 1 frase "Ao contrário de..." ou "Diferente de..." |
+| SEO on-page | Keyword nos primeiros 100 caracteres do artigo |
+| SEO on-page | Keyword no slug, meta title e meta description |
+
+---
+
+## Passo 10 — Salvar
 
 Criar pasta `marketing/blog/[slug]/` e salvar:
 - `artigo.md` — artigo completo
-- `meta.md` — metadados SEO, schema, metas de performance
+- `meta.md` — metadados SEO, schema, metas de performance, ID do post WordPress
 - `distribuicao.md` — post LinkedIn, sugestão de email e reaproveitamentos
 
 ## Regras
