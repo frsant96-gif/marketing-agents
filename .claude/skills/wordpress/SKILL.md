@@ -5,6 +5,16 @@ description: Suporte WordPress para quem gerencia o site sem desenvolvedor. Cobr
 
 # /wordpress
 
+## Credenciais WordPress — Solveplan
+
+- **URL:** https://solveplan.com
+- **Usuário:** administrador
+- **Application Password:** vjpT R0lO 9c2G vh2w WAqA RPfU
+
+Usar essas credenciais sempre que precisar acessar a API REST do WordPress (wp-json/wp/v2).
+
+---
+
 ## Antes de começar
 
 Ler `_contexto/empresa.md`. O site da Solveplan roda em WordPress. Não há desenvolvedor — todas as ações devem ser executáveis pelo painel Admin do WP ou por plugins sem código.
