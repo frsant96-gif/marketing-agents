@@ -1,0 +1,153 @@
+<style>
+.sw-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: inherit;
+  background: #0b1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sw-compare-table th,
+.sw-compare-table td {
+  padding: 16px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 14px;
+  color: #c8d6e8;
+}
+
+.sw-compare-table th:first-child,
+.sw-compare-table td:first-child {
+  text-align: left;
+  width: 55%;
+  font-weight: 400;
+  color: #c8d6e8;
+}
+
+.sw-compare-table thead th {
+  background: transparent;
+  color: #7a9cbf;
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sw-compare-table thead th:first-child {
+  color: #7a9cbf;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sw-compare-table thead th.col-sw {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sw-compare-table thead th.col-sw::before {
+  content: "✦ ";
+  color: #5de6c8;
+}
+
+.sw-compare-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.sw-compare-table tbody tr:hover td {
+  background: rgba(255,255,255,0.03);
+}
+
+.sw-compare-table td.col-sw {
+  color: #5de6c8;
+  font-size: 20px;
+}
+
+.sw-compare-table td.col-native {
+  color: #e05252;
+  font-size: 20px;
+}
+
+.sw-compare-table td.col-native.parcial {
+  color: #f0a830;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.sw-compare-table td.col-native.roadmap {
+  color: #5de6c8;
+  font-size: 13px;
+  font-weight: 600;
+}
+</style>
+
+<table class="sw-compare-table">
+  <thead>
+    <tr>
+      <th>Capacidade</th>
+      <th class="col-sw">Solve Watch</th>
+      <th>Datasphere Nativo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Visão consolidada em uma tela</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Histórico de até 6 meses</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Alertas proativos de falha</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Detecção de cargas crônicas (falha recorrente)</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Heatmap de concorrência de execuções</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Análise de performance por objeto</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native parcial">Parcial</td>
+    </tr>
+    <tr>
+      <td>Controle e previsão de Capacity Units</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native parcial">Parcial</td>
+    </tr>
+    <tr>
+      <td>Ranking de volumetria com tendência</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Governança e score de maturidade</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Validação de padrões de nomenclatura</td>
+      <td class="col-sw">✓</td>
+      <td class="col-native">✕</td>
+    </tr>
+    <tr>
+      <td>Relatório pronto para auditoria</td>
+      <td class="col-sw roadmap">✓ (roadmap)</td>
+      <td class="col-native">✕</td>
+    </tr>
+  </tbody>
+</table>
