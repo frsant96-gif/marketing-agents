@@ -1,0 +1,192 @@
+<!-- FAQ SCHEMA — AEO/GEO (invisível, lido pelo Google e IAs) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o Solve Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Solve Watch é uma plataforma SaaS de observabilidade e governança para SAP Datasphere, desenvolvida pela Solveplan. Oferece monitoramento 24/7 com atualização a cada 30 minutos, histórico de execuções de até 6 meses, alertas proativos de falha e controle de Capacity Units — funcionalidades que o ambiente nativo do SAP Datasphere não entrega."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como monitorar o SAP Datasphere em tempo real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Solve Watch monitora o SAP Datasphere automaticamente, sem configuração manual. A plataforma consolida saúde, performance, volumetria e custo em uma única tela, com atualização a cada 30 minutos. Qualquer falha gera um alerta proativo antes que o usuário final perceba o problema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como controlar os Capacity Units do SAP Datasphere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Solve Watch exibe o consumo de Capacity Units por objeto, por Space e por área de negócio, com histórico de tendência. A plataforma permite identificar quais objetos consomem mais recursos e antecipar o estouro de cota antes que a fatura chegue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre o monitoramento nativo do SAP Datasphere e o Solve Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O SAP Datasphere possui painéis nativos que mostram o estado atual do ambiente, mas sem histórico de execuções, sem alertas proativos e sem visão consolidada de governança. O Solve Watch complementa o ambiente nativo com histórico de até 6 meses, detecção de cargas crônicas com falha recorrente, heatmap de concorrência de execuções e score de maturidade — funcionalidades indisponíveis nativamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Solve Watch funciona com qualquer versão do SAP Datasphere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Solve Watch foi desenvolvido pela Solveplan com base em 13 anos de experiência em SAP Datasphere na América Latina e é compatível com ambientes em produção de qualquer porte. A implantação não exige configuração complexa nem time dedicado."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ VISUAL — exibido na página -->
+<style>
+.sw-faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.sw-faq-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.sw-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0;
+}
+
+.sw-faq-item:first-of-type {
+  border-top: 1px solid #e2e8f0;
+}
+
+.sw-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 20px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2e4a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.4;
+}
+
+.sw-faq-question:hover {
+  color: #0057B8;
+}
+
+.sw-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0057B8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.sw-faq-item.open .sw-faq-icon {
+  transform: rotate(45deg);
+}
+
+.sw-faq-answer {
+  display: none;
+  padding: 0 8px 20px;
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.sw-faq-item.open .sw-faq-answer {
+  display: block;
+}
+</style>
+
+<div class="sw-faq-section">
+  <h2>Perguntas frequentes sobre o Solve Watch</h2>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O que é o Solve Watch?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O Solve Watch é uma plataforma SaaS de observabilidade e governança para SAP Datasphere, desenvolvida pela Solveplan. Oferece monitoramento 24/7 com atualização a cada 30 minutos, histórico de execuções de até 6 meses, alertas proativos de falha e controle de Capacity Units — funcionalidades que o ambiente nativo do SAP Datasphere não entrega.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Como monitorar o SAP Datasphere em tempo real?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O Solve Watch monitora o SAP Datasphere automaticamente, sem configuração manual. A plataforma consolida saúde, performance, volumetria e custo em uma única tela, com atualização a cada 30 minutos. Qualquer falha gera um alerta proativo antes que o usuário final perceba o problema.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Como controlar os Capacity Units do SAP Datasphere?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O Solve Watch exibe o consumo de Capacity Units por objeto, por Space e por área de negócio, com histórico de tendência. A plataforma permite identificar quais objetos consomem mais recursos e antecipar o estouro de cota antes que a fatura chegue.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Qual a diferença entre o monitoramento nativo do SAP Datasphere e o Solve Watch?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O SAP Datasphere possui painéis nativos que mostram o estado atual do ambiente, mas sem histórico de execuções, sem alertas proativos e sem visão consolidada de governança. O Solve Watch complementa o ambiente nativo com histórico de até 6 meses, detecção de cargas crônicas, heatmap de concorrência e score de maturidade — funcionalidades indisponíveis nativamente.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O Solve Watch funciona com qualquer versão do SAP Datasphere?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Sim. O Solve Watch foi desenvolvido pela Solveplan com base em 13 anos de experiência em SAP Datasphere na América Latina e é compatível com ambientes em produção de qualquer porte. A implantação não exige configuração complexa nem time dedicado.
+    </div>
+  </div>
+</div>
+
+<script>
+function swToggleFaq(btn) {
+  var item = btn.closest('.sw-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.sw-faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
