@@ -75,28 +75,36 @@
 
 .sw-faq-question {
   width: 100%;
-  background: none;
-  border: none;
-  outline: none;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
   -webkit-appearance: none;
   appearance: none;
   text-align: left;
   padding: 20px 8px;
   font-size: 16px;
   font-weight: 600;
-  color: #1a2e4a;
+  color: #1a2e4a !important;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
   line-height: 1.4;
+  text-decoration: none !important;
 }
 
 .sw-faq-question:hover,
-.sw-faq-question:focus {
-  color: #0b1a2e;
-  outline: none;
+.sw-faq-question:focus,
+.sw-faq-question:active,
+.sw-faq-question:visited {
+  color: #0b1a2e !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
 .sw-faq-icon {
