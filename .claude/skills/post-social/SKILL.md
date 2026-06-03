@@ -175,6 +175,55 @@ Incluir no arquivo: versões geradas + resultado do checklist.
 
 > "Quer ajustar o tom, trocar de formato, gerar uma versão diferente ou adaptar pra outra plataforma?"
 
+## Passo 8 — Gerar Excel do post
+
+Após salvar o `copy.md`, sempre gerar um arquivo Excel com os dados do post.
+
+Criar o arquivo `marketing/posts/[tema-em-slug]/post-dados.xlsx` usando Python + openpyxl com as seguintes colunas (exatamente nessa ordem e com esses nomes):
+
+```
+Data | Dia | Linha Editorial | Tema | Origem do Post | Título de Conteúdo |
+Objetivo | Persona | Etapa do Funil | Copy LinkedIn | Copy Facebook |
+Copy Instagram | Formato | Horário | Ref. Texto | Responsável | Status
+```
+
+**Preenchimento de cada coluna com base no briefing:**
+
+| Coluna | Como preencher |
+|--------|---------------|
+| Data | Data de publicação informada, ou deixar em branco se não definida |
+| Dia | Dia da semana da data de publicação |
+| Linha Editorial | Pilar de conteúdo: Educação/Produto, Autoridade/Tendência, Case/Prova Social, Engagement, Artigo/Blog |
+| Tema | Assunto principal do post (resumido em uma linha) |
+| Origem do Post | Case de cliente / Artigo do blog / SAPPHIRE / Evento / Criação própria |
+| Título de Conteúdo | Hook — primeira linha do post (a frase que para o scroll) |
+| Objetivo | Awareness, Educação, Geração de pipeline, Engajamento, Autoridade, Credibilidade |
+| Persona | Persona(s) alvo: CFO, Controller, CIO, Head de Dados, COO, Geral |
+| Etapa do Funil | Topo, Meio ou Fundo |
+| Copy LinkedIn | Texto completo do post LinkedIn gerado |
+| Copy Facebook | Texto adaptado para Facebook |
+| Copy Instagram | Caption para Instagram |
+| Formato | Texto longo, Carrossel, Poll, Vídeo, Imagem estática |
+| Horário | Deixar em branco — a ser definido na publicação |
+| Ref. Texto | Caminho do arquivo: `marketing/posts/[tema-em-slug]/copy.md` |
+| Responsável | "Fran" (padrão) |
+| Status | "🟡 Criado" (padrão ao criar) |
+
+**Formatação visual obrigatória:**
+- Cabeçalho: fundo `#0A1A3C` (azul Solveplan), fonte branca, bold, tamanho 10
+- Linhas alternadas: branco e `#EEF2F8`
+- Status "✅ Pronto": fundo verde claro `#D6F5E8`, fonte verde `#1A7A4A`
+- Status "🟡 Criado": fundo amarelo claro `#FFF9C4`, fonte `#7A5A00`
+- `wrap_text=True` em todas as células, `vertical="top"`
+- Congelar linha 1 (cabeçalho) e coluna A
+- Filtro automático em todas as colunas
+- Largura das colunas de Copy (LinkedIn/Facebook/Instagram): 65-70 caracteres
+
+Após salvar o Excel, abrir automaticamente com `Start-Process` (Windows).
+
+Confirmar com:
+> "Excel salvo em `marketing/posts/[tema-em-slug]/post-dados.xlsx` e aberto automaticamente."
+
 ## Regras
 
 - Nunca usar "transformação digital" como buzzword sem contexto
