@@ -206,6 +206,164 @@ Todo mês, verificar:
 
 ---
 
+### 8. Componentes HTML prontos para Elementor (widget HTML)
+
+#### Accordion / FAQ
+
+Copiar e colar num widget **HTML** no Elementor. Substituir perguntas e respostas conforme necessário.
+Inclui schema markup `FAQPage` para AEO — o Google e IAs (ChatGPT, Perplexity) leem e podem exibir as respostas nos resultados de busca.
+
+```html
+<!-- FAQ SCHEMA — AEO/GEO (invisível, lido pelo Google e IAs) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pergunta 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resposta completa da pergunta 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pergunta 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resposta completa da pergunta 2."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ VISUAL -->
+<style>
+.sw-faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.sw-faq-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.sw-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0;
+}
+.sw-faq-item:first-of-type {
+  border-top: 1px solid #e2e8f0;
+}
+.sw-faq-question {
+  width: 100%;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+  padding: 20px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2e4a !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+.sw-faq-question:hover,
+.sw-faq-question:focus,
+.sw-faq-question:active,
+.sw-faq-question:visited {
+  color: #0b1a2e !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+.sw-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0057B8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+.sw-faq-item.open .sw-faq-icon {
+  transform: rotate(45deg);
+}
+.sw-faq-answer {
+  display: none;
+  padding: 0 8px 20px;
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+.sw-faq-item.open .sw-faq-answer {
+  display: block;
+}
+</style>
+
+<div class="sw-faq-section">
+  <h2>Perguntas frequentes</h2>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Pergunta 1?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Resposta completa da pergunta 1.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Pergunta 2?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Resposta completa da pergunta 2.
+    </div>
+  </div>
+</div>
+
+<script>
+function swToggleFaq(btn) {
+  var item = btn.closest('.sw-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.sw-faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+```
+
+**Para adicionar mais perguntas:** copiar o bloco `<div class="sw-faq-item">...</div>` e colar antes do `</div>` final. Atualizar o JSON-LD também com a nova pergunta.
+
+**Para validar o schema:** após publicar, testar em [Google Rich Results Test](https://search.google.com/test/rich-results).
+
+---
+
 ## Regras
 
 - Sempre fazer backup antes de qualquer atualização ou mudança estrutural
