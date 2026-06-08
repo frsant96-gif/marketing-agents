@@ -30,31 +30,31 @@ def safe_add(styles, style):
 def build_styles():
     styles = getSampleStyleSheet()
 
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'H1', parent=styles['Normal'],
         fontSize=22, fontName='Helvetica-Bold',
         textColor=AZUL, spaceAfter=8, spaceBefore=16,
         leading=26,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'H2', parent=styles['Normal'],
         fontSize=15, fontName='Helvetica-Bold',
         textColor=AZUL_ESCURO, spaceAfter=6, spaceBefore=14,
         leading=18, borderPad=4,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'H3', parent=styles['Normal'],
         fontSize=12, fontName='Helvetica-Bold',
         textColor=AZUL, spaceAfter=4, spaceBefore=10,
         leading=15,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'Body', parent=styles['Normal'],
         fontSize=10, fontName='Helvetica',
         textColor=PRETO, spaceAfter=4, spaceBefore=2,
         leading=14,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'CodeBlock', parent=styles['Normal'],
         fontSize=9, fontName='Courier',
         textColor=colors.HexColor('#333333'),
@@ -63,30 +63,30 @@ def build_styles():
         leading=13, leftIndent=10, rightIndent=10,
         borderPad=6,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'Bullet', parent=styles['Normal'],
         fontSize=10, fontName='Helvetica',
         textColor=PRETO, spaceAfter=3, spaceBefore=1,
         leading=14, leftIndent=16, bulletIndent=6,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'Subtitle', parent=styles['Normal'],
         fontSize=11, fontName='Helvetica',
         textColor=CINZA, spaceAfter=4, spaceBefore=0,
         leading=14,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'TableHeader', parent=styles['Normal'],
         fontSize=9, fontName='Helvetica-Bold',
         textColor=BRANCO, alignment=TA_CENTER,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'TableCell', parent=styles['Normal'],
         fontSize=9, fontName='Helvetica',
         textColor=PRETO, alignment=TA_LEFT,
         leading=12,
     ))
-    styles.add(ParagraphStyle(
+    safe_add(styles, ParagraphStyle(
         'TableCellCenter', parent=styles['Normal'],
         fontSize=9, fontName='Helvetica',
         textColor=PRETO, alignment=TA_CENTER,
