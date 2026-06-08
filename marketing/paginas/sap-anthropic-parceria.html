@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1200px; height:630px; background:#060D1A; font-family:'Segoe UI',Arial,sans-serif; overflow:hidden; position:relative; }
+body::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(0,106,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,106,255,0.04) 1px,transparent 1px); background-size:40px 40px; }
+.top-bar { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#006AFF 0%,#8B5CF6 60%,transparent 100%); }
+.left { position:absolute; top:0; left:0; width:520px; height:630px; padding:48px 52px; display:flex; flex-direction:column; justify-content:center; }
+.badge { display:inline-flex; align-items:center; gap:8px; background:rgba(139,92,246,0.12); border:1px solid rgba(139,92,246,0.35); border-radius:20px; padding:5px 14px; width:fit-content; margin-bottom:26px; }
+.badge span { color:#A78BFA; font-size:12px; font-weight:700; letter-spacing:0.8px; }
+h1 { font-size:42px; font-weight:800; color:#fff; line-height:1.1; margin-bottom:10px; }
+h1 em { color:#006AFF; font-style:normal; }
+.sub { font-size:15px; color:#4A7A9B; line-height:1.65; margin-bottom:26px; max-width:400px; }
+.logos { display:flex; align-items:center; gap:16px; margin-bottom:28px; }
+.logo-box { background:#0D1A3A; border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:10px 18px; display:flex; align-items:center; gap:10px; }
+.logo-box .name { color:#B0CCE4; font-size:16px; font-weight:800; }
+.logo-box .desc { color:#3A5A7A; font-size:10px; }
+.plus { color:#2A4060; font-size:32px; font-weight:200; }
+.quote-box { background:#0B1929; border-left:3px solid #8B5CF6; padding:14px 18px; border-radius:0 8px 8px 0; }
+.quote-text { color:#7A9BB8; font-size:12.5px; line-height:1.65; font-style:italic; margin-bottom:6px; }
+.quote-attr { color:#2A4060; font-size:10px; font-weight:700; letter-spacing:0.3px; }
+.right { position:absolute; top:0; right:0; width:720px; height:630px; padding:28px 34px 28px 76px; display:flex; flex-direction:column; gap:12px; }
+.glow { position:absolute; top:50%; left:40%; transform:translate(-50%,-50%); width:350px; height:350px; border-radius:50%; background:radial-gradient(circle,rgba(139,92,246,0.07) 0%,transparent 70%); pointer-events:none; }
+.card { background:#0B1929; border-radius:12px; border:1px solid rgba(139,92,246,0.18); overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.4); position:relative; z-index:1; }
+.card-h { background:#0D2040; padding:9px 14px; display:flex; align-items:center; gap:8px; border-bottom:1px solid rgba(139,92,246,0.12); }
+.card-title { color:#2A4A70; font-size:10px; font-weight:700; letter-spacing:0.8px; }
+.arch { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; }
+.arch-node { text-align:center; }
+.arch-label { color:#2A4060; font-size:9px; text-transform:uppercase; letter-spacing:0.6px; margin-bottom:5px; }
+.arch-name { color:#B0CCE4; font-size:13px; font-weight:700; }
+.arch-arrow { color:#1A3050; font-size:22px; margin-top:10px; }
+.feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px; padding:12px 14px; }
+.feat { background:#071423; border-radius:8px; padding:11px 13px; border:1px solid rgba(255,255,255,0.04); }
+.feat-icon { font-size:17px; margin-bottom:5px; }
+.feat-title { color:#A0C0DC; font-size:11.5px; font-weight:700; margin-bottom:3px; }
+.feat-sub { color:#1E3A56; font-size:10px; line-height:1.4; }
+.tags { display:flex; gap:6px; flex-wrap:wrap; padding:2px 0; position:relative; z-index:1; }
+.tag { background:rgba(139,92,246,0.1); border:1px solid rgba(139,92,246,0.22); border-radius:12px; padding:4px 12px; color:#9B7BE0; font-size:10px; font-weight:600; }
+.logo-mark { position:absolute; bottom:14px; right:22px; color:#12283E; font-size:11px; font-weight:600; letter-spacing:0.3px; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+
+<div class="left">
+  <div class="badge"><span>SAPPHIRE 2026 · PARCERIA OFICIAL</span></div>
+  <h1>SAP <em>&amp;</em> Anthropic:<br>Claude como motor<br>dos agentes SAP</h1>
+  <p class="sub">O Claude integra o SAP Business AI Platform como camada de raciocínio primária dos agentes Joule — em finanças, RH e compras.</p>
+  <div class="logos">
+    <div class="logo-box"><span class="name">SAP</span><span class="desc">Business AI</span></div>
+    <span class="plus">×</span>
+    <div class="logo-box"><span class="name" style="color:#8B5CF6">Anthropic</span><span class="desc">Claude</span></div>
+  </div>
+  <div class="quote-box">
+    <p class="quote-text">"O Autonomous Enterprise requer IA que compreenda contexto empresarial de verdade. Claude traz o raciocínio que nossos agentes precisam para operar com confiança."</p>
+    <span class="quote-attr">Christian Klein · CEO, SAP · SAPPHIRE 2026</span>
+  </div>
+</div>
+
+<div class="right">
+  <div class="glow"></div>
+  <div class="card">
+    <div class="card-h"><span class="card-title">ARQUITETURA SAP ANTHROPIC</span></div>
+    <div class="arch">
+      <div class="arch-node"><div class="arch-label">Dados</div><div class="arch-name">SAP BDC</div></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node"><div class="arch-label">Contexto</div><div class="arch-name">Knowledge Graph</div></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node"><div class="arch-label">Raciocínio</div><div class="arch-name" style="color:#8B5CF6">Claude</div></div>
+      <span class="arch-arrow">→</span>
+      <div class="arch-node"><div class="arch-label">Execução</div><div class="arch-name">Joule Agent</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-h"><span class="card-title">DOMÍNIOS COBERTOS PELA PARCERIA</span></div>
+    <div class="feature-grid">
+      <div class="feat"><div class="feat-icon">💰</div><div class="feat-title">Finanças — S/4HANA</div><div class="feat-sub">Fechamento contábil, reconciliações, análise de variações</div></div>
+      <div class="feat"><div class="feat-icon">👥</div><div class="feat-title">RH — SuccessFactors</div><div class="feat-sub">Consultas de colaboradores, benefícios, conformidade</div></div>
+      <div class="feat"><div class="feat-icon">🛒</div><div class="feat-title">Compras — Ariba</div><div class="feat-sub">Fornecedores, pedidos, validação de contratos</div></div>
+      <div class="feat"><div class="feat-icon">🔒</div><div class="feat-title">Governança nativa</div><div class="feat-sub">Permissões, alçadas e guardrails por processo</div></div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag">SAP Joule</span>
+    <span class="tag">Claude AI</span>
+    <span class="tag">SAP BDC</span>
+    <span class="tag">Agentes autônomos</span>
+    <span class="tag">Guardrails empresariais</span>
+  </div>
+</div>
+
+<div class="logo-mark">solveplan.com</div>
+</body></html>
