@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1200px; height:630px; overflow:hidden; font-family:'Segoe UI',Arial,sans-serif; }
+
+/* ── BACKGROUND: warm office ambiance ── */
+.bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 700px 500px at 25% 60%, rgba(30,55,100,0.95) 0%, transparent 65%),
+    radial-gradient(ellipse 600px 600px at 80% 20%, rgba(50,25,90,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 400px 300px at 75% 85%, rgba(20,50,100,0.3) 0%, transparent 50%),
+    linear-gradient(160deg, #060B16 0%, #0B1628 45%, #080E1E 100%);
+}
+
+/* Warm window light from top-right */
+.light {
+  position:absolute; right:0; top:0; width:700px; height:400px;
+  background:radial-gradient(ellipse at 85% 0%, rgba(255,200,100,0.07) 0%, transparent 60%);
+  pointer-events:none;
+}
+
+.topbar { position:absolute; top:0; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,#0066FF,#7C3AED 45%,#0066FF 100%); opacity:0.8; }
+
+/* ── SPLIT LAYOUT ── */
+.scene { position:absolute; inset:0; display:flex; }
+
+/* LEFT 50%: person scene */
+.left-scene {
+  width:500px; height:630px; position:relative; flex-shrink:0;
+  display:flex; align-items:flex-end; justify-content:center;
+}
+
+/* Desk surface */
+.desk-surface {
+  position:absolute; bottom:0; left:0; right:0; height:120px;
+  background:linear-gradient(180deg, #0D1E38 0%, #0A1428 100%);
+  border-top:1px solid rgba(60,120,200,0.15);
+}
+.desk-surface::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, rgba(60,120,200,0.3), transparent);
+}
+
+/* Monitor on desk */
+.monitor {
+  position:absolute; bottom:118px; left:50%; transform:translateX(-50%);
+  width:200px;
+}
+.monitor-screen {
+  background:#071422; border-radius:8px; border:2px solid #1A3060;
+  padding:10px; box-shadow:0 0 30px rgba(0,106,255,0.15), 0 8px 30px rgba(0,0,0,0.5);
+  height:130px;
+}
+.mon-header { display:flex; align-items:center; gap:5px; margin-bottom:8px; }
+.mon-dot { width:6px; height:6px; border-radius:50%; }
+.mon-title { color:#1A3050; font-size:8px; font-weight:700; letter-spacing:0.5px; }
+.mon-kpi-row { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px; }
+.mon-kpi { background:#0A1E3A; border-radius:4px; padding:6px 8px; }
+.mon-kpi-l { color:#0F2A48; font-size:7px; text-transform:uppercase; font-weight:700; }
+.mon-kpi-v { font-size:16px; font-weight:800; }
+.mon-bar { display:flex; align-items:flex-end; gap:3px; height:28px; }
+.mon-b { flex:1; border-radius:2px 2px 0 0; background:#0F2A48; }
+.mon-b.hi { background:#0066FF; }
+.monitor-stand { width:10px; height:20px; background:#0A1428; margin:0 auto; }
+.monitor-base { width:70px; height:8px; background:#0D1E38; border-radius:4px; margin:0 auto; }
+
+/* Keyboard on desk */
+.keyboard {
+  position:absolute; bottom:82px; left:50%; transform:translateX(-50%);
+  width:160px; height:16px; background:#0C1C36; border-radius:4px;
+  border:1px solid rgba(60,120,200,0.12);
+}
+.keyboard::before {
+  content:''; position:absolute; inset:3px;
+  background:repeating-linear-gradient(90deg, #0A1830 0px, #0A1830 8px, #091525 8px, #091525 10px);
+  border-radius:2px;
+}
+
+/* Coffee cup */
+.cup {
+  position:absolute; bottom:118px; right:80px;
+  width:28px; height:32px;
+}
+.cup-body { width:28px; height:28px; background:#0C1A30; border-radius:0 0 6px 6px; border:1.5px solid #1A3050; position:relative; }
+.cup-body::after { content:''; position:absolute; top:4px; left:4px; right:4px; height:4px; background:rgba(60,120,200,0.2); border-radius:2px; }
+.cup-handle { position:absolute; right:-8px; top:6px; width:10px; height:14px; border:1.5px solid #1A3050; border-left:none; border-radius:0 6px 6px 0; }
+
+/* PERSON SVG */
+.person {
+  position:absolute; bottom:105px; left:50%; transform:translateX(-55%);
+  z-index:5;
+}
+
+/* Screen glow on person from monitor */
+.screen-glow {
+  position:absolute; bottom:150px; left:50%; transform:translateX(-50%);
+  width:200px; height:200px;
+  background:radial-gradient(ellipse, rgba(0,100,255,0.08) 0%, transparent 70%);
+  pointer-events:none; z-index:3;
+}
+
+/* ── BADGE + HEADLINE ── */
+.headline {
+  position:absolute; top:38px; left:36px; z-index:20; width:340px;
+}
+.badge {
+  display:inline-flex; align-items:center; gap:7px;
+  background:rgba(124,58,237,0.13); border:1px solid rgba(124,58,237,0.3);
+  border-radius:20px; padding:5px 14px; margin-bottom:18px;
+}
+.badge-dot { width:6px; height:6px; border-radius:50%; background:#7C3AED; }
+.badge span { color:#A78BFA; font-size:11px; font-weight:700; letter-spacing:0.7px; }
+h1 { font-size:44px; font-weight:900; color:#fff; line-height:1.08; text-shadow:0 2px 24px rgba(0,0,0,0.7); margin-bottom:8px; }
+h1 em { color:#60A0FF; font-style:normal; }
+.kw-line { font-size:14px; font-weight:600; color:#3A6090; }
+
+/* quote bottom-left */
+.quote {
+  position:absolute; bottom:28px; left:28px; width:340px; z-index:20;
+  background:rgba(6,11,22,0.88); backdrop-filter:blur(6px);
+  border:1px solid rgba(100,150,255,0.12); border-left:3px solid #7C3AED;
+  border-radius:0 10px 10px 0; padding:13px 18px;
+}
+.quote p { color:#4A6A8A; font-size:12.5px; font-style:italic; line-height:1.6; margin-bottom:5px; }
+.quote span { color:#1E3050; font-size:10px; font-weight:700; }
+
+/* ── RIGHT PANEL ── */
+.right-panel {
+  flex:1; padding:22px 28px; display:flex; flex-direction:column; gap:10px; position:relative; z-index:10;
+}
+.card { background:rgba(9,16,32,0.92); backdrop-filter:blur(4px); border-radius:12px; border:1px solid rgba(80,140,255,0.1); overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.4); }
+.ch { background:rgba(10,20,40,0.8); padding:8px 13px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(255,255,255,0.04); }
+.ch-t { color:#1A3050; font-size:9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; flex:1; }
+.live { background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.25); border-radius:10px; padding:2px 8px; color:#22C55E; font-size:9px; font-weight:700; }
+
+.msgs { padding:12px 13px; display:flex; flex-direction:column; gap:9px; }
+.msg { display:flex; gap:9px; }
+.av { width:26px; height:26px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; }
+.av-u { background:linear-gradient(135deg,#1A3060,#0D2040); color:#60A0FF; }
+.av-a { background:linear-gradient(135deg,#3A1870,#5A25A8); color:#C4B5FD; font-size:12px; }
+.bub { background:rgba(6,10,20,0.8); border-radius:4px 10px 10px 10px; padding:8px 11px; flex:1; }
+.fr { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:3px; }
+.fr-u { color:#1A3A60; } .fr-a { color:#3A1860; }
+.mt { color:#4A6A8A; font-size:10.5px; line-height:1.5; }
+.mt strong { color:#7AACC8; }
+.chip { display:inline-flex; align-items:center; gap:4px; background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.25); border-radius:8px; padding:3px 8px; margin-top:5px; color:#22C55E; font-size:9.5px; font-weight:700; }
+
+.kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:11px; }
+.kpi { background:rgba(5,8,18,0.8); border-radius:8px; padding:10px 11px; border:1px solid rgba(255,255,255,0.04); }
+.kpi-l { color:#142640; font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+.kpi-v { font-size:22px; font-weight:800; }
+.kpi-s { color:#142640; font-size:8.5px; margin-top:2px; }
+.g { color:#22C55E; } .r { color:#EF4444; } .b { color:#3B82F6; }
+
+.hm-grid { display:grid; grid-template-columns:repeat(24,1fr); gap:2px; padding:8px 12px; }
+.hmc { border-radius:2px; height:14px; }
+
+.logo { position:absolute; bottom:11px; right:18px; color:#0C1E32; font-size:10px; font-weight:600; z-index:20; }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="light"></div>
+<div class="topbar"></div>
+
+<div class="scene">
+  <!-- ── LEFT: person at desk ── -->
+  <div class="left-scene">
+
+    <!-- Desk -->
+    <div class="desk-surface"></div>
+    <div class="screen-glow"></div>
+
+    <!-- Monitor -->
+    <div class="monitor">
+      <div class="monitor-screen">
+        <div class="mon-header">
+          <div class="mon-dot" style="background:#EF4444"></div>
+          <div class="mon-dot" style="background:#F59E0B"></div>
+          <div class="mon-dot" style="background:#22C55E"></div>
+          <span class="mon-title" style="margin-left:4px">SOLVE WATCH · SAP</span>
+        </div>
+        <div class="mon-kpi-row">
+          <div class="mon-kpi"><div class="mon-kpi-l">Jobs OK</div><div class="mon-kpi-v" style="color:#22C55E;font-size:18px">98%</div></div>
+          <div class="mon-kpi"><div class="mon-kpi-l">Score</div><div class="mon-kpi-v" style="color:#3B82F6;font-size:18px">87</div></div>
+        </div>
+        <div class="mon-bar">
+          <div class="mon-b" style="height:40%"></div>
+          <div class="mon-b" style="height:60%"></div>
+          <div class="mon-b" style="height:35%"></div>
+          <div class="mon-b" style="height:80%"></div>
+          <div class="mon-b" style="height:55%"></div>
+          <div class="mon-b hi" style="height:95%"></div>
+          <div class="mon-b" style="height:70%"></div>
+        </div>
+      </div>
+      <div class="monitor-stand"></div>
+      <div class="monitor-base"></div>
+    </div>
+
+    <!-- Keyboard -->
+    <div class="keyboard"></div>
+
+    <!-- Coffee -->
+    <div class="cup" style="position:absolute;bottom:118px;right:72px;">
+      <div class="cup-body"><div class="cup-handle"></div></div>
+    </div>
+
+    <!-- PERSON — realistic proportions, warm tones, seated -->
+    <div class="person">
+<svg width="260" height="420" viewBox="0 0 260 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ── CHAIR ── -->
+  <rect x="55" y="175" width="150" height="230" rx="12" fill="#0A1628"/>
+  <rect x="65" y="185" width="130" height="210" rx="10" fill="#0C1E38"/>
+  <!-- chair cushion texture -->
+  <rect x="70" y="190" width="120" height="8" rx="2" fill="#0F2444" opacity="0.5"/>
+
+  <!-- ── LEGS ── -->
+  <!-- left leg -->
+  <path d="M82 355 Q78 385 72 400" stroke="#1C3A6A" stroke-width="32" stroke-linecap="round" fill="none"/>
+  <!-- right leg -->
+  <path d="M178 355 Q182 385 188 400" stroke="#1C3A6A" stroke-width="32" stroke-linecap="round" fill="none"/>
+  <!-- shoes -->
+  <ellipse cx="70" cy="403" rx="22" ry="12" fill="#0A1420" transform="rotate(-8 70 403)"/>
+  <ellipse cx="190" cy="403" rx="22" ry="12" fill="#0A1420" transform="rotate(8 190 403)"/>
+  <!-- shoe highlight -->
+  <ellipse cx="64" cy="399" rx="10" ry="4" fill="rgba(255,255,255,0.04)" transform="rotate(-8 64 399)"/>
+  <ellipse cx="184" cy="399" rx="10" ry="4" fill="rgba(255,255,255,0.04)" transform="rotate(8 184 399)"/>
+
+  <!-- ── TORSO / BLAZER ── -->
+  <path d="M72 198 Q60 230 55 280 L55 360 Q130 375 205 360 L205 280 Q200 230 188 198 Z" fill="#102040"/>
+  <!-- blazer shading -->
+  <path d="M72 198 Q60 230 58 290 L62 290 Q64 235 76 202Z" fill="rgba(0,0,0,0.15)"/>
+  <path d="M188 198 Q200 230 202 290 L198 290 Q196 235 184 202Z" fill="rgba(0,0,0,0.15)"/>
+  <!-- shirt -->
+  <path d="M108 198 L130 235 L152 198 L145 198 L130 228 L115 198Z" fill="#F0F4FF" opacity="0.85"/>
+  <!-- shirt shadow -->
+  <path d="M119 198 L130 225 L141 198 L137 198 L130 220 L123 198Z" fill="rgba(0,0,0,0.1)"/>
+  <!-- blazer lapels -->
+  <path d="M72 198 L108 198 L120 220 L88 215Z" fill="#0D1A30"/>
+  <path d="M188 198 L152 198 L140 220 L172 215Z" fill="#0D1A30"/>
+  <!-- tie -->
+  <path d="M124 198 L130 250 L136 198Z" fill="#7C3AED"/>
+  <path d="M126 210 L130 248 L134 210 L130 215Z" fill="#5A1EAA" opacity="0.5"/>
+  <!-- tie knot -->
+  <path d="M124 198 L130 210 L136 198 L130 200Z" fill="#9C5AFF"/>
+  <!-- pocket square -->
+  <path d="M165 220 L172 218 L174 226 L167 228Z" fill="#60A0FF" opacity="0.5"/>
+
+  <!-- ── LEFT ARM (resting on desk) ── -->
+  <path d="M58 220 Q40 250 36 290 Q34 315 50 330" stroke="#102040" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <!-- left forearm -->
+  <path d="M50 330 Q44 345 48 360" stroke="#1C3A6A" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <!-- left hand -->
+  <ellipse cx="50" cy="364" rx="18" ry="12" fill="#1E3A6A" transform="rotate(-15 50 364)"/>
+  <!-- fingers L -->
+  <path d="M38 358 Q30 352 28 346" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M44 354 Q38 347 38 340" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M51 352 Q48 344 50 337" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M58 353 Q58 345 62 339" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+  <!-- ── RIGHT ARM (reaching toward keyboard) ── -->
+  <path d="M202 220 Q220 250 224 285 Q226 310 212 325" stroke="#102040" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <!-- right forearm -->
+  <path d="M212 325 Q218 342 214 358" stroke="#1C3A6A" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <!-- right hand on keyboard -->
+  <ellipse cx="212" cy="362" rx="18" ry="12" fill="#1E3A6A" transform="rotate(12 212 362)"/>
+  <!-- fingers R (typing pose) -->
+  <path d="M222 356 Q230 350 234 344" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M217 352 Q222 345 224 338" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M210 351 Q212 343 214 337" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M203 352 Q202 344 198 339" stroke="#1E3A6A" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+  <!-- ── NECK ── -->
+  <rect x="116" y="155" width="28" height="22" rx="8" fill="#1E3A6A"/>
+  <!-- neck shadow -->
+  <rect x="118" y="160" width="24" height="12" rx="6" fill="rgba(0,0,0,0.12)"/>
+
+  <!-- ── HEAD ── -->
+  <!-- head base shape -->
+  <ellipse cx="130" cy="108" rx="56" ry="62" fill="#1E3A6A"/>
+  <!-- face (warmer, slightly lighter) -->
+  <ellipse cx="130" cy="112" rx="48" ry="54" fill="#2A4E8A"/>
+  <!-- face ambient light from monitor (left-warm glow) -->
+  <ellipse cx="112" cy="105" rx="30" ry="22" fill="rgba(60,140,255,0.08)"/>
+  <!-- cheek left -->
+  <ellipse cx="96" cy="120" rx="12" ry="9" fill="rgba(80,120,200,0.12)"/>
+  <!-- cheek right -->
+  <ellipse cx="164" cy="120" rx="12" ry="9" fill="rgba(80,120,200,0.1)"/>
+
+  <!-- ── HAIR (dark, professional, side-parted) ── -->
+  <path d="M76 85 Q78 52 100 44 Q115 38 130 38 Q148 38 162 46 Q180 56 184 85 Q174 62 160 56 Q146 50 130 50 Q112 52 100 60 Q86 70 76 85Z" fill="#070E1C"/>
+  <!-- hair sides -->
+  <path d="M76 80 Q72 95 74 118 L78 112 Q76 98 82 86Z" fill="#070E1C"/>
+  <path d="M184 80 Q188 95 186 118 L182 112 Q184 98 178 86Z" fill="#070E1C"/>
+  <!-- hair part line -->
+  <path d="M118 42 Q124 40 130 40" stroke="#0A1525" stroke-width="3" opacity="0.5"/>
+
+  <!-- ── EARS ── -->
+  <ellipse cx="76" cy="110" rx="9" ry="13" fill="#1E3A6A"/>
+  <ellipse cx="78" cy="110" rx="5" ry="9" fill="#253F75" opacity="0.6"/>
+  <ellipse cx="184" cy="110" rx="9" ry="13" fill="#1E3A6A"/>
+  <ellipse cx="182" cy="110" rx="5" ry="9" fill="#253F75" opacity="0.6"/>
+
+  <!-- ── EYES ── -->
+  <!-- left eye white area -->
+  <ellipse cx="110" cy="108" rx="12" ry="10" fill="#0E1E38"/>
+  <!-- right eye white area -->
+  <ellipse cx="150" cy="108" rx="12" ry="10" fill="#0E1E38"/>
+  <!-- irises (blue-grey, looking at screen) -->
+  <circle cx="111" cy="108" r="8" fill="#1A3A70"/>
+  <circle cx="151" cy="108" r="8" fill="#1A3A70"/>
+  <!-- pupils -->
+  <circle cx="112" cy="108" r="5" fill="#050D1C"/>
+  <circle cx="152" cy="108" r="5" fill="#050D1C"/>
+  <!-- highlights (screen reflection) -->
+  <circle cx="113" cy="106" r="2" fill="rgba(100,180,255,0.7)"/>
+  <circle cx="153" cy="106" r="2" fill="rgba(100,180,255,0.7)"/>
+  <circle cx="110" cy="110" r="1" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="150" cy="110" r="1" fill="rgba(255,255,255,0.3)"/>
+
+  <!-- ── GLASSES ── -->
+  <!-- frame left -->
+  <rect x="96" y="100" width="26" height="18" rx="5" stroke="#3A6AAA" stroke-width="2" fill="rgba(40,80,160,0.06)"/>
+  <!-- frame right -->
+  <rect x="138" y="100" width="26" height="18" rx="5" stroke="#3A6AAA" stroke-width="2" fill="rgba(40,80,160,0.06)"/>
+  <!-- bridge -->
+  <line x1="122" y1="109" x2="138" y2="109" stroke="#3A6AAA" stroke-width="2"/>
+  <!-- temples -->
+  <line x1="96" y1="109" x2="84" y2="112" stroke="#3A6AAA" stroke-width="2"/>
+  <line x1="164" y1="109" x2="176" y2="112" stroke="#3A6AAA" stroke-width="2"/>
+  <!-- lens glare -->
+  <line x1="100" y1="103" x2="106" y2="105" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="142" y1="103" x2="148" y2="105" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- ── EYEBROWS ── -->
+  <path d="M96 96 Q110 90 122 94" stroke="#070E1C" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M138 94 Q150 90 164 96" stroke="#070E1C" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- ── NOSE ── -->
+  <path d="M126 120 Q122 132 126 136 Q130 138 134 136 Q138 132 134 120" stroke="#1A3460" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="124" cy="135" rx="4" ry="2.5" fill="rgba(0,0,0,0.08)"/>
+  <ellipse cx="136" cy="135" rx="4" ry="2.5" fill="rgba(0,0,0,0.08)"/>
+
+  <!-- ── MOUTH / SMILE (satisfied, professional) ── -->
+  <path d="M114 146 Q130 156 146 146" stroke="#3060A0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- lower lip -->
+  <path d="M118 150 Q130 154 142 150" stroke="#1A3460" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- screen glow on face -->
+  <ellipse cx="108" cy="115" rx="35" ry="28" fill="rgba(0,100,255,0.05)"/>
+
+  <!-- ── NOTIFICATION floating ── -->
+  <rect x="162" y="42" width="90" height="38" rx="8" fill="rgba(6,12,26,0.92)" stroke="rgba(34,197,94,0.35)" stroke-width="1"/>
+  <circle cx="174" cy="55" r="5" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
+  <text x="174" y="58" font-size="7" fill="#22C55E" text-anchor="middle" font-weight="800">✓</text>
+  <text x="183" y="53" font-size="9" fill="#5A8AAA" font-weight="700">Joule concluiu</text>
+  <text x="183" y="65" font-size="8" fill="#2A4A6A">47 lançamentos · 2s</text>
+  <!-- tail -->
+  <path d="M172 80 L166 90 L180 80Z" fill="rgba(6,12,26,0.92)" stroke="rgba(34,197,94,0.35)" stroke-width="1"/>
+
+</svg>
+    </div>
+
+  </div><!-- /left-scene -->
+
+  <!-- ── RIGHT: copy + dashboard cards ── -->
+  <div style="flex:1; position:relative; display:flex; flex-direction:column;">
+
+    <!-- Headline -->
+    <div class="headline">
+      <div class="badge"><div class="badge-dot"></div><span>SAP ANTHROPIC · SAPPHIRE 2026</span></div>
+      <h1>IA que entende<br>seu <em>ERP</em><br>de verdade</h1>
+      <div class="kw-line">SAP Anthropic — Claude nos agentes Joule</div>
+    </div>
+
+    <!-- Cards -->
+    <div class="right-panel" style="margin-top:auto;">
+
+      <!-- Conversation -->
+      <div class="card" style="flex:1">
+        <div class="ch"><span class="ch-t">AGENTE JOULE — RACIOCÍNIO COM CLAUDE</span><span class="live">● ativo</span></div>
+        <div class="msgs">
+          <div class="msg">
+            <div class="av av-u">F</div>
+            <div class="bub">
+              <div class="fr fr-u">Fernanda · Controller</div>
+              <p class="mt">Processe os lançamentos de ajuste do fechamento de abril para a entidade Brasil.</p>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="av av-a">✦</div>
+            <div class="bub">
+              <div class="fr fr-a">Claude via Joule</div>
+              <p class="mt">Consultei o <strong>SAP Knowledge Graph</strong>. <strong>47 lançamentos</strong> dentro da alçada — processados. <strong>3 acima de R$500k</strong> — enviando para o CFO.</p>
+              <div class="chip">✓ Concluído · 2s</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="card">
+        <div class="ch"><span class="ch-t">SAP ANTHROPIC · RESULTADO HOJE</span></div>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-l">Automáticos</div><div class="kpi-v g">47</div><div class="kpi-s">processos OK</div></div>
+          <div class="kpi"><div class="kpi-l">Escalados</div><div class="kpi-v r">3</div><div class="kpi-s">acima alçada</div></div>
+          <div class="kpi"><div class="kpi-l">Tempo médio</div><div class="kpi-v b">2s</div><div class="kpi-s">por processo</div></div>
+        </div>
+      </div>
+
+      <!-- Heatmap -->
+      <div class="card">
+        <div class="ch"><span class="ch-t">ATIVIDADE DOS AGENTES — 7 DIAS × 24H</span></div>
+        <div class="hm-grid" id="hm"></div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /scene -->
+
+<!-- Quote bottom-left -->
+<div class="quote">
+  <p>"O Autonomous Enterprise requer IA que compreenda contexto empresarial de verdade. Claude traz o raciocínio que nossos agentes precisam."</p>
+  <span>Christian Klein · CEO, SAP · SAPPHIRE 2026</span>
+</div>
+
+<div class="logo">solveplan.com</div>
+
+<script>
+const g = document.getElementById('hm');
+const v=[[0,0,0,1,1,2,3,4,4,5,4,4,3,2,2,3,4,5,4,3,2,1,0,0],[0,0,1,1,2,3,4,5,5,5,5,4,4,4,4,5,5,5,4,3,2,1,0,0],[0,0,0,1,2,3,4,4,5,5,5,4,3,3,4,4,5,4,3,2,1,0,0,0],[0,0,0,0,1,1,2,3,3,4,3,2,2,2,3,3,3,2,1,1,0,0,0,0]];
+const c=['#050C18','#0A1C38','#0D2A5A','#0F3C88','#1254BE','#7C3AED'];
+v.flat().forEach(val=>{const d=document.createElement('div');d.className='hmc';d.style.background=c[Math.min(val,5)];g.appendChild(d);});
+</script>
+</body></html>

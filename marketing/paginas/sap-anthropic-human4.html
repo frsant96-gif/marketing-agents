@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { width:1200px; height:630px; overflow:hidden; font-family:'Segoe UI',Arial,sans-serif; }
+
+/* Split background */
+.bg-left  { position:absolute; top:0; left:0; width:520px; height:100%; background:linear-gradient(160deg,#EDF2FA 0%,#D8E6F8 60%,#C8D8F0 100%); }
+.bg-right { position:absolute; top:0; left:480px; right:0; height:100%; background:linear-gradient(160deg,#0A1020 0%,#0D1628 60%,#080E1C 100%); }
+/* Blend overlap */
+.bg-blend { position:absolute; top:0; left:440px; width:120px; height:100%; background:linear-gradient(90deg,#C8D8F0,#0A1020); }
+
+/* Top accent */
+.topbar { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#1A6AE0,#7C3AED 50%,#1A6AE0); z-index:30; }
+
+/* ── PERSON PANEL (left side) ── */
+.person-panel { position:absolute; left:0; top:0; width:500px; height:630px; display:flex; align-items:flex-end; justify-content:center; }
+
+/* Desk */
+.desk { position:absolute; bottom:0; left:20px; right:0; height:130px;
+  background:linear-gradient(180deg,#C8D8F0 0%,#B0C8E8 100%);
+  border-top:3px solid #A0B8DC; }
+.desk::after { content:''; position:absolute; top:-1px; left:0; right:0; height:3px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent); }
+
+/* Monitor -->
+.monitor { position:absolute; bottom:128px; left:50%; transform:translateX(-62%); width:220px; }
+.mon-bezel { background:#2A3A5A; border-radius:10px; padding:3px; box-shadow:0 6px 30px rgba(0,0,50,0.25); }
+.mon-screen { background:#0A1422; border-radius:8px; padding:10px; height:140px; }
+.mon-hdr { display:flex; gap:5px; align-items:center; margin-bottom:8px; }
+.dot { width:7px; height:7px; border-radius:50%; }
+.mon-t { color:#1A3050; font-size:8px; font-weight:700; letter-spacing:0.5px; margin-left:3px; }
+.kpi-row { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:8px; }
+.kpi-c { background:#0D1E38; border-radius:4px; padding:6px 8px; }
+.kpi-l { color:#1A3A60; font-size:7px; text-transform:uppercase; font-weight:700; margin-bottom:2px; }
+.kpi-v { font-size:17px; font-weight:800; }
+.bars { display:flex; align-items:flex-end; gap:4px; height:30px; }
+.bar-m { flex:1; border-radius:2px 2px 0 0; background:#112240; }
+.bar-m.active { background:#1A6AE0; }
+.mon-neck { width:10px; height:20px; background:#2A3A5A; margin:0 auto; }
+.mon-base { width:80px; height:8px; background:#2A3A5A; border-radius:4px; margin:0 auto; }
+
+/* Laptop / keyboard -->
+.keyboard { position:absolute; bottom:90px; left:50%; transform:translateX(-30%); width:180px; height:18px;
+  background:#2A3A5A; border-radius:5px; }
+.keyboard::before { content:''; position:absolute; inset:3px;
+  background:repeating-linear-gradient(90deg,#243050 0,#243050 9px,#2A3A5A 9px,#2A3A5A 11px);
+  border-radius:2px; }
+
+/* ── PERSON SVG ── */
+.person-wrap { position:absolute; bottom:118px; left:50%; transform:translateX(-58%); z-index:5; }
+
+/* Notification -->
+.notif { position:absolute; right:20px; top:40px; z-index:20;
+  background:white; border:1.5px solid #22C55E; border-radius:12px;
+  padding:10px 14px; box-shadow:0 4px 20px rgba(0,100,60,0.15); min-width:160px; }
+.notif-title { color:#16A34A; font-size:11px; font-weight:800; display:flex; align-items:center; gap:6px; margin-bottom:3px; }
+.notif-body { color:#6A9A7A; font-size:10px; }
+.notif::before { content:''; position:absolute; bottom:-7px; left:20px;
+  width:12px; height:12px; background:white; border-right:1.5px solid #22C55E; border-bottom:1.5px solid #22C55E;
+  transform:rotate(45deg); }
+
+/* ── RIGHT PANEL ── */
+.right { position:absolute; right:0; top:0; width:680px; height:100%; padding:26px 30px; display:flex; flex-direction:column; gap:10px; }
+
+/* Copy block */
+.copy { padding:0 0 4px 0; }
+.badge { display:inline-flex; align-items:center; gap:7px; background:rgba(124,58,237,0.18); border:1px solid rgba(124,58,237,0.4); border-radius:20px; padding:5px 14px; margin-bottom:16px; }
+.badge-dot { width:6px; height:6px; border-radius:50%; background:#7C3AED; }
+.badge span { color:#C4B5FD; font-size:11px; font-weight:700; letter-spacing:0.7px; }
+h1 { font-size:38px; font-weight:900; color:#fff; line-height:1.1; margin-bottom:6px; }
+h1 em { color:#60A0FF; font-style:normal; }
+.kw { font-size:13px; font-weight:600; color:#3A5A80; margin-bottom:0; }
+
+.card { background:rgba(10,18,34,0.95); border-radius:12px; border:1px solid rgba(80,140,255,0.1); overflow:hidden; box-shadow:0 4px 20px rgba(0,0,0,0.4); }
+.ch { background:rgba(12,22,44,0.9); padding:8px 13px; display:flex; align-items:center; gap:6px; border-bottom:1px solid rgba(255,255,255,0.04); }
+.ch-t { color:#1A3050; font-size:9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; flex:1; }
+.live { background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.25); border-radius:10px; padding:2px 8px; color:#22C55E; font-size:9px; font-weight:700; }
+
+.msgs { padding:11px 13px; display:flex; flex-direction:column; gap:9px; }
+.msg { display:flex; gap:9px; }
+.av { width:26px; height:26px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; }
+.av-u { background:linear-gradient(135deg,#1A6AE0,#0D4AB0); color:white; }
+.av-a { background:linear-gradient(135deg,#5A20C0,#7C3AED); color:white; font-size:13px; }
+.bub { background:rgba(6,10,20,0.8); border-radius:4px 10px 10px 10px; padding:8px 11px; flex:1; }
+.fr { font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:3px; }
+.fr-u { color:#1A4A80; } .fr-a { color:#4A1A80; }
+.mt { color:#4A6A8A; font-size:10.5px; line-height:1.5; }
+.mt strong { color:#7AACC8; }
+.chip { display:inline-flex; align-items:center; gap:4px; background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.25); border-radius:8px; padding:3px 8px; margin-top:5px; color:#22C55E; font-size:9.5px; font-weight:700; }
+
+.kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; padding:10px; }
+.kpi { background:rgba(5,8,18,0.8); border-radius:8px; padding:10px 11px; border:1px solid rgba(255,255,255,0.04); }
+.kpi-label { color:#142640; font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; }
+.kpi-val { font-size:22px; font-weight:800; }
+.kpi-sub { color:#142640; font-size:8.5px; margin-top:2px; }
+.c-g { color:#22C55E; } .c-r { color:#EF4444; } .c-b { color:#3B82F6; }
+
+.hm { display:grid; grid-template-columns:repeat(24,1fr); gap:2px; padding:7px 12px; }
+.hmc { border-radius:2px; height:13px; }
+
+.logo { position:absolute; bottom:10px; right:16px; color:#0C1E32; font-size:10px; font-weight:600; z-index:20; }
+
+/* Quote — overlay on person panel bottom */
+.quote { position:absolute; bottom:140px; left:20px; width:290px; z-index:20;
+  background:rgba(255,255,255,0.92); backdrop-filter:blur(6px);
+  border-radius:10px; border-left:3px solid #1A6AE0;
+  padding:12px 16px; box-shadow:0 4px 16px rgba(0,60,160,0.15); }
+.quote p { color:#2A3A5A; font-size:12px; font-style:italic; line-height:1.6; margin-bottom:5px; }
+.quote span { color:#6A8AAA; font-size:10px; font-weight:700; }
+</style>
+</head>
+<body>
+
+<div class="bg-left"></div>
+<div class="bg-right"></div>
+<div class="bg-blend"></div>
+<div class="topbar"></div>
+
+<!-- ── PERSON PANEL ── -->
+<div class="person-panel">
+  <div class="desk"></div>
+  <div class="keyboard"></div>
+
+  <!-- Monitor -->
+  <div class="monitor">
+    <div class="mon-bezel">
+      <div class="mon-screen">
+        <div class="mon-hdr">
+          <div class="dot" style="background:#EF4444"></div>
+          <div class="dot" style="background:#F59E0B"></div>
+          <div class="dot" style="background:#22C55E"></div>
+          <span class="mon-t">SOLVE WATCH</span>
+        </div>
+        <div class="kpi-row">
+          <div class="kpi-c"><div class="kpi-l">Jobs OK</div><div class="kpi-v" style="color:#22C55E">98%</div></div>
+          <div class="kpi-c"><div class="kpi-l">Score</div><div class="kpi-v" style="color:#3B82F6">87</div></div>
+        </div>
+        <div class="bars">
+          <div class="bar-m" style="height:40%"></div><div class="bar-m" style="height:58%"></div>
+          <div class="bar-m" style="height:35%"></div><div class="bar-m" style="height:78%"></div>
+          <div class="bar-m" style="height:50%"></div><div class="bar-m active" style="height:95%"></div>
+          <div class="bar-m" style="height:68%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mon-neck"></div>
+    <div class="mon-base"></div>
+  </div>
+
+  <!-- Person -->
+  <div class="person-wrap">
+<svg width="240" height="390" viewBox="0 0 240 390" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Chair back -->
+  <rect x="40" y="160" width="160" height="220" rx="14" fill="#2A3A5A"/>
+  <rect x="50" y="170" width="140" height="200" rx="10" fill="#304470"/>
+
+  <!-- Legs -->
+  <path d="M78 340 Q74 368 68 382" stroke="#233055" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <path d="M162 340 Q166 368 172 382" stroke="#233055" stroke-width="30" stroke-linecap="round" fill="none"/>
+  <!-- Shoes (dark leather) -->
+  <ellipse cx="66" cy="384" rx="24" ry="11" fill="#1A2438" transform="rotate(-8 66 384)"/>
+  <ellipse cx="174" cy="384" rx="24" ry="11" fill="#1A2438" transform="rotate(8 174 384)"/>
+  <path d="M50 382 Q66 376 82 382" stroke="rgba(255,255,255,0.06)" stroke-width="2" fill="none"/>
+
+  <!-- Torso / Blazer (dark navy) -->
+  <path d="M60 188 Q46 218 42 272 L42 342 Q120 358 198 342 L198 272 Q194 218 180 188 Z" fill="#1E2D50"/>
+  <!-- Blazer shading -->
+  <path d="M60 188 Q48 222 46 282 L52 280 Q54 225 68 196Z" fill="rgba(0,0,0,0.15)"/>
+  <path d="M180 188 Q192 222 194 282 L188 280 Q186 225 172 196Z" fill="rgba(0,0,0,0.15)"/>
+  <!-- Shirt (white/light) -->
+  <path d="M98 188 L120 225 L142 188" fill="#EEF2FF" opacity="0.9"/>
+  <!-- Shirt button line -->
+  <line x1="120" y1="225" x2="120" y2="188" stroke="#D0D8F0" stroke-width="1.5" opacity="0.6"/>
+  <!-- Blazer lapels -->
+  <path d="M60 188 L98 188 L108 208 L78 205Z" fill="#162240"/>
+  <path d="M180 188 L142 188 L132 208 L162 205Z" fill="#162240"/>
+  <!-- Pocket square (blue accent) -->
+  <path d="M158 210 L166 207 L168 218 L160 220Z" fill="#60A0FF" opacity="0.7"/>
+  <!-- Tie (purple/brand) -->
+  <path d="M113 188 L120 242 L127 188Z" fill="#7C3AED"/>
+  <path d="M115 200 L120 240 L125 200 L120 207Z" fill="#5A20B0" opacity="0.4"/>
+  <!-- Tie knot -->
+  <path d="M113 188 L120 200 L127 188 L120 192Z" fill="#9C5AFF"/>
+  <!-- Lapel pin -->
+  <circle cx="82" cy="202" r="4" fill="#1A6AE0"/>
+  <circle cx="82" cy="202" r="2" fill="#60A0FF"/>
+
+  <!-- Left arm (resting) -->
+  <path d="M44 210 Q26 240 24 278 Q22 304 38 318" stroke="#1E2D50" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <!-- Left forearm -->
+  <path d="M38 318 Q32 340 36 356" stroke="#233055" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Left hand (warm skin, resting on desk) -->
+  <ellipse cx="37" cy="360" rx="18" ry="11" fill="#C8956A" transform="rotate(-12 37 360)"/>
+  <!-- fingers -->
+  <path d="M24 355 Q16 348 14 342" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M30 351 Q24 343 24 337" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M38 350 Q36 341 38 335" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M46 351 Q47 342 52 337" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+  <!-- Right arm (typing) -->
+  <path d="M196 210 Q214 240 216 276 Q218 300 204 314" stroke="#1E2D50" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M204 314 Q210 334 206 350" stroke="#233055" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- Right hand (warm skin, typing) -->
+  <ellipse cx="204" cy="354" rx="18" ry="11" fill="#C8956A" transform="rotate(10 204 354)"/>
+  <path d="M216 348 Q224 341 226 334" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M210 344 Q216 337 218 330" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M203 343 Q206 335 208 329" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <path d="M196 344 Q196 336 192 330" stroke="#C8956A" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+  <!-- Neck (skin) -->
+  <rect x="106" y="148" width="28" height="24" rx="10" fill="#C8956A"/>
+  <rect x="108" y="154" width="24" height="10" rx="5" fill="#B8855A" opacity="0.4"/>
+
+  <!-- HEAD -->
+  <!-- Head base -->
+  <ellipse cx="120" cy="102" rx="54" ry="58" fill="#C8956A"/>
+  <!-- Face shading + depth -->
+  <ellipse cx="114" cy="98" rx="30" ry="22" fill="rgba(0,0,0,0.04)"/>
+  <!-- Cheeks (subtle warmth) -->
+  <ellipse cx="96" cy="116" rx="12" ry="8" fill="rgba(220,100,80,0.12)"/>
+  <ellipse cx="144" cy="116" rx="12" ry="8" fill="rgba(220,100,80,0.12)"/>
+  <!-- Chin shadow -->
+  <ellipse cx="120" cy="148" rx="28" ry="8" fill="rgba(0,0,0,0.08)"/>
+
+  <!-- HAIR (dark, professional, neat) -->
+  <path d="M68 90 Q70 55 92 46 Q106 40 120 40 Q138 40 152 48 Q170 58 172 90 Q162 65 148 58 Q135 52 120 52 Q104 54 92 62 Q78 72 68 90Z" fill="#1A1A2A"/>
+  <!-- Widow's peak / natural hairline -->
+  <path d="M96 58 Q106 52 116 54 Q108 56 100 64Z" fill="#1A1A2A"/>
+  <!-- Hair sides -->
+  <path d="M68 88 Q64 104 66 124 L70 118 Q68 104 74 92Z" fill="#1A1A2A"/>
+  <path d="M172 88 Q176 104 174 124 L170 118 Q172 104 166 92Z" fill="#1A1A2A"/>
+  <!-- Side part -->
+  <path d="M88 52 Q96 46 104 48" stroke="#111" stroke-width="2" opacity="0.3"/>
+
+  <!-- EARS (skin) -->
+  <ellipse cx="68" cy="104" rx="9" ry="13" fill="#C0855A"/>
+  <ellipse cx="70" cy="104" rx="6" ry="9" fill="#B87850" opacity="0.5"/>
+  <ellipse cx="172" cy="104" rx="9" ry="13" fill="#C0855A"/>
+  <ellipse cx="170" cy="104" rx="6" ry="9" fill="#B87850" opacity="0.5"/>
+  <!-- Earring (left - subtle) -->
+  <circle cx="61" cy="114" r="3" fill="#C8A860" opacity="0.7"/>
+
+  <!-- EYES -->
+  <!-- Eye whites -->
+  <ellipse cx="102" cy="102" rx="13" ry="10" fill="#F8F8F0"/>
+  <ellipse cx="138" cy="102" rx="13" ry="10" fill="#F8F8F0"/>
+  <!-- Shadow above eyes -->
+  <ellipse cx="102" cy="97" rx="12" ry="5" fill="rgba(0,0,0,0.06)"/>
+  <ellipse cx="138" cy="97" rx="12" ry="5" fill="rgba(0,0,0,0.06)"/>
+  <!-- Irises (dark brown) -->
+  <circle cx="103" cy="102" r="8" fill="#3A2010"/>
+  <circle cx="139" cy="102" r="8" fill="#3A2010"/>
+  <!-- Pupils -->
+  <circle cx="104" cy="102" r="5" fill="#0A0508"/>
+  <circle cx="140" cy="102" r="5" fill="#0A0508"/>
+  <!-- Eye highlights (screen light) -->
+  <circle cx="105" cy="100" r="2.2" fill="rgba(200,230,255,0.8)"/>
+  <circle cx="141" cy="100" r="2.2" fill="rgba(200,230,255,0.8)"/>
+  <circle cx="102" cy="104" r="1" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="138" cy="104" r="1" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- Eyelids / lashes -->
+  <path d="M90 97 Q102 93 114 97" stroke="#1A1A2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M126 97 Q138 93 150 97" stroke="#1A1A2A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- GLASSES -->
+  <rect x="88" y="95" width="28" height="18" rx="5" stroke="#4A3A2A" stroke-width="2" fill="rgba(200,180,150,0.08)"/>
+  <rect x="124" y="95" width="28" height="18" rx="5" stroke="#4A3A2A" stroke-width="2" fill="rgba(200,180,150,0.08)"/>
+  <line x1="116" y1="104" x2="124" y2="104" stroke="#4A3A2A" stroke-width="2"/>
+  <line x1="88" y1="104" x2="76" y2="107" stroke="#4A3A2A" stroke-width="2"/>
+  <line x1="152" y1="104" x2="164" y2="107" stroke="#4A3A2A" stroke-width="2"/>
+  <!-- Lens glare -->
+  <line x1="92" y1="98" x2="99" y2="100" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="128" y1="98" x2="135" y2="100" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- NOSE -->
+  <path d="M116 116 Q112 128 116 132 Q120 135 124 132 Q128 128 124 116" stroke="#B07840" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="114" cy="131" rx="5" ry="3" fill="rgba(0,0,0,0.07)"/>
+  <ellipse cx="126" cy="131" rx="5" ry="3" fill="rgba(0,0,0,0.07)"/>
+
+  <!-- MOUTH (warm smile) -->
+  <path d="M106 142 Q120 154 134 142" stroke="#A0603A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M110 148 Q120 152 130 148" stroke="#C87850" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <!-- Smile dimples -->
+  <circle cx="104" cy="142" r="1.5" fill="rgba(0,0,0,0.08)"/>
+  <circle cx="136" cy="142" r="1.5" fill="rgba(0,0,0,0.08)"/>
+
+  <!-- Screen glow on face -->
+  <ellipse cx="106" cy="108" rx="38" ry="28" fill="rgba(60,140,255,0.06)"/>
+
+</svg>
+  </div>
+
+  <!-- Notification -->
+  <div class="notif">
+    <div class="notif-title"><span>✓</span> Joule concluiu</div>
+    <div class="notif-body">47 lançamentos · 2s · SAP S/4HANA</div>
+  </div>
+
+  <!-- Quote -->
+  <div class="quote">
+    <p>"O Autonomous Enterprise requer IA que compreenda contexto empresarial de verdade."</p>
+    <span>Christian Klein · CEO, SAP · SAPPHIRE 2026</span>
+  </div>
+
+</div><!-- /person-panel -->
+
+<!-- ── RIGHT PANEL ── -->
+<div class="right">
+  <div class="copy">
+    <div class="badge"><div class="badge-dot"></div><span>SAP ANTHROPIC · SAPPHIRE 2026</span></div>
+    <h1>IA que entende<br>seu <em>ERP</em><br>de verdade</h1>
+    <div class="kw">SAP Anthropic — Claude nos agentes Joule</div>
+  </div>
+
+  <div class="card" style="flex:1">
+    <div class="ch"><span class="ch-t">AGENTE JOULE — RACIOCÍNIO COM CLAUDE</span><span class="live">● ativo</span></div>
+    <div class="msgs">
+      <div class="msg">
+        <div class="av av-u">F</div>
+        <div class="bub">
+          <div class="fr fr-u">Fernanda · Controller</div>
+          <p class="mt">Processe os lançamentos de ajuste do fechamento de abril para a entidade Brasil.</p>
+        </div>
+      </div>
+      <div class="msg">
+        <div class="av av-a">✦</div>
+        <div class="bub">
+          <div class="fr fr-a">Claude via Joule</div>
+          <p class="mt">Consultei o <strong>SAP Knowledge Graph</strong>. <strong>47 lançamentos</strong> dentro da alçada — processados. <strong>3 acima de R$500k</strong> enviando para o CFO.</p>
+          <div class="chip">✓ Concluído · 2s</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="ch-t">RESULTADO HOJE · SAP ANTHROPIC</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-label">Automáticos</div><div class="kpi-val c-g">47</div><div class="kpi-sub">processos</div></div>
+      <div class="kpi"><div class="kpi-label">Escalados</div><div class="kpi-val c-r">3</div><div class="kpi-sub">acima alçada</div></div>
+      <div class="kpi"><div class="kpi-label">Tempo médio</div><div class="kpi-val c-b">2s</div><div class="kpi-sub">por processo</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><span class="ch-t">ATIVIDADE DOS AGENTES — 7 DIAS × 24H</span></div>
+    <div class="hm" id="hm"></div>
+  </div>
+</div>
+
+<div class="logo">solveplan.com</div>
+
+<script>
+const g=document.getElementById('hm');
+const v=[[0,0,0,1,1,2,3,4,4,5,4,4,3,2,2,3,4,5,4,3,2,1,0,0],[0,0,1,1,2,3,4,5,5,5,5,4,4,4,4,5,5,5,4,3,2,1,0,0],[0,0,0,1,2,3,4,4,5,5,5,4,3,3,4,4,5,4,3,2,1,0,0,0],[0,0,0,0,1,1,2,3,3,4,3,2,2,2,3,3,3,2,1,1,0,0,0,0]];
+const c=['#0A1428','#0E2040','#122E60','#1840A0','#2056D0','#7C3AED'];
+v.flat().forEach(val=>{const d=document.createElement('div');d.className='hmc';d.style.background=c[Math.min(val,5)];g.appendChild(d);});
+</script>
+</body></html>
