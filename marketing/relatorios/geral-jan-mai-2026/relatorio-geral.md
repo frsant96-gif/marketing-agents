@@ -9,7 +9,7 @@
 - **307 leads gerados no H1**, majoritariamente por eventos (97%) — SAP BTP Experience (176 leads, 7 OPPs) e IT Summit Agro (121 leads, 28 hot). O inbound ainda é residual (10 leads), mas mostra sinais de ativação com o Google Ads e o site.
 - **O SAP BTP Experience foi o maior gerador de pipeline**: R$ 73.385,91 investidos, 176 MQLs, 7 oportunidades abertas e ROI declarado de ~20x. É o principal motor de geração de demanda no período.
 - **O site decolou**: 13.294 usuários ativos (+136% vs período anterior), com a página SAP Business Data Cloud dominando com 11.149 sessões — sinal claro de alinhamento entre o posicionamento de produto e o interesse do mercado.
-- **Pipeline HubSpot (Jan-Mai)**: 73 negócios criados, 10 ganhos, 47 ativos. As origens mais produtivas foram Base SolvePlan (26) e Evento SAP (16) — validando a estratégia de eventos + expansão de carteira.
+- **Pipeline HubSpot (Jan-Mai)**: 73 negócios criados, **R$ 6.784.056 ganhos** (10 negócios), **R$ 22.989.571 em pipeline ativo** (47 negócios). COPEL, Klabin e Aegea são os maiores deals ganhos. As origens mais produtivas: Base SolvePlan (26) e Evento SAP (16).
 - **Ação prioritária**: estruturar o follow-up dos 95 hot/warm leads dos eventos (28 do IT Summit + 52+16 do BTP) antes do H2, e aumentar o investimento em inbound para reduzir a dependência 97% eventos.
 
 ---
@@ -57,7 +57,7 @@ O perfil dos leads é predominantemente **TI (85% dos contatos)**, com cargos de
 
 ### Pipeline (HubSpot)
 
-De 73 negócios criados no período, **10 foram ganhos** — uma taxa de fechamento de 13,7% sobre o total criado. Mais importante: há **47 negócios ativos** (Discovery + Proposta + Negociação), representando pipeline em aberto que pode converter no H2.
+De 73 negócios criados no período, **10 foram ganhos** totalizando **R$ 6.784.056** — ticket médio de R$ 678.406. COPEL (R$ 4,4M), Klabin (R$ 687k) e Aegea (R$ 962k) foram os maiores. Mais importante: há **47 negócios ativos com R$ 22.989.571 em pipeline** (Discovery + Proposta + Negociação), representando a principal oportunidade de receita para o H2.
 
 A origem **Base SolvePlan (26 negócios)** como maior canal revela que a expansão de carteira e cross-sell são mais produtivos numericamente que a geração de novos leads por marketing. Evento SAP com 16 negócios confirma o ROI dos eventos.
 

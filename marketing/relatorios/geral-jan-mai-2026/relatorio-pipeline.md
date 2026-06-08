@@ -18,26 +18,30 @@
 - **Fonte**: HubSpot CRM export (08/06/2026)
 - **Total de negócios no sistema (todos os tempos)**: 293
 - **Negócios Jan-Mai 2026**: 73 (25% do total histórico criados em apenas 5 meses)
-- **Limitação**: O export não inclui valor dos negócios (campo "Valor do negócio" não exportado). Análise de pipeline em R$ não é possível com os dados disponíveis — recomendado exportar campo de valor ou conectar HubSpot via API.
+- **Fonte complementar**: Dados de valor de pipeline consultados via HubSpot MCP (API direta) em 08/06/2026.
 
 ---
 
 ## Funil de Negócios (Jan-Mai 2026)
 
-| Etapa | Quantidade | % do total |
-|-------|-----------|------------|
-| Negócios criados | 73 | 100% |
-| Conexão / Alinhamento Inicial | 3 | 4% |
-| Discovery / Escopo | 24 | 33% |
-| Proposta Técnica e Escopo | 5 | 7% |
-| Proposta enviada | 8 | 11% |
-| Aprovação Precificação | 1 | 1% |
-| Negociação | 6 | 8% |
-| **Negócio Ganho** | **10** | **14%** |
-| Negócio perdido | 16 | 22% |
-| **Pipeline ativo total** | **47** | **64%** |
+| Etapa | Qtd | Valor (R$) | % do total |
+|-------|-----|-----------|------------|
+| Negócios criados | 73 | R$ 34.813.628 | 100% |
+| Discovery / Escopo | 24 | R$ 7.080.500 | 33% |
+| Proposta enviada | 8 | R$ 5.026.000 | 11% |
+| Proposta Técnica e Escopo | 5 | R$ 2.950.000 | 7% |
+| Negociação | 6 | R$ 3.513.000 | 8% |
+| Aprovação Precificação | 1 | R$ 2.400.000 | 1% |
+| Conexão / Alinhamento Inicial | 3 | — | 4% |
+| **Negócio Ganho** | **10** | **R$ 6.784.056** | **14%** |
+| Negócio perdido | 16 | R$ 5.040.000 | 22% |
+| **Pipeline ativo (aberto)** | **47** | **R$ 22.989.571** | **64%** |
 
 **Taxa de fechamento sobre negócios resolvidos (ganhos + perdidos)**: 10/(10+16) = **38,5%** — acima da média B2B de 25-30%.
+
+**Ticket médio dos negócios ganhos**: R$ 678.406
+
+**Pipeline ativo em aberto**: R$ 22.989.571 — representa a oportunidade de receita disponível para o H2 2026.
 
 ---
 
@@ -82,17 +86,26 @@
 
 ## Negócios Ganhos — Análise (Jan-Mai 2026)
 
-| Métrica | Valor |
-|---------|-------|
-| Total ganhos | 10 |
-| % do total criado no período | 13,7% |
-| Taxa fechamento vs resolvidos | 38,5% |
+| Empresa | Projeto | Valor (R$) | Mês |
+|---------|---------|-----------|-----|
+| COPEL | Planejamento Integrado | R$ 4.446.347 | Fev |
+| Klabin | Extensão do Hypercare | R$ 540.360 | Mai |
+| Aegea | SIS GPI Planej. Capex | R$ 534.638 | Mai |
+| Aegea | Squad de Recursos Mar-Jun/26 | R$ 427.728 | Mai |
+| ACHE | Licenciamento SAP Datasphere | R$ 270.000 | Abr |
+| Real Vidros | Suporte e Fábrica | R$ 150.000 | Mar |
+| Klabin | Horas de Fábrica | R$ 147.000 | Mai |
+| ALPARGATAS | Suporte SAC | R$ 132.000 | Fev |
+| VALE | Suporte Consolidação | R$ 102.400 | Mai |
+| IPIRANGA AGROINDUSTRIAL | — | R$ 33.584 | Abr |
+| **TOTAL** | | **R$ 6.784.056** | |
 
-Principais origens dos ganhos:
-- Base SolvePlan: maior concentração (expansão de carteira)
-- Evento SAP: BTP Experience contribuiu diretamente
+**Observações**:
+- COPEL representa 66% do valor ganho sozinha — concentração de receita alta em um único cliente
+- Klabin com 2 negócios ganhos (R$ 687.360) e Aegea com 2 (R$ 962.366) — clientes estratégicos em expansão
+- Ticket médio: R$ 678.406 — consistente com projetos SAP de analytics e planejamento
 
-**Comparativo histórico**: No total histórico (293 negócios), 94 foram ganhos — taxa de 32%. O período Jan-Mai 2026 está levemente abaixo (13,7%), mas é esperado pois muitos negócios criados recentemente ainda estão em fases iniciais.
+**Comparativo histórico**: No total histórico (293 negócios), 94 foram ganhos — taxa de 32%. O período Jan-Mai 2026 está em 13,7%, mas é esperado pois muitos negócios criados recentemente ainda estão em fases iniciais.
 
 ---
 
