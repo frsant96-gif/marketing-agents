@@ -28,8 +28,15 @@ def ul(items):
         '<!-- /wp:list -->'
     )
 
-def faq(question, answer):
-    return h5(question) + '\n\n' + p(answer)
+def details(question, answer):
+    return (
+        '<!-- wp:details -->\n'
+        f'<details class="wp-block-details"><summary>{question}</summary>'
+        '<!-- wp:paragraph -->\n'
+        f'<p>{answer}</p>\n'
+        '<!-- /wp:paragraph --></details>\n'
+        '<!-- /wp:details -->'
+    )
 
 def a(text, url):
     return f'<a href="{url}">{text}</a>'
@@ -85,23 +92,17 @@ parts = [
     CTA,
 
     h5('FAQ — SAP Anthropic'),
-
-    faq('O que é a parceria SAP Anthropic?',
+    details('O que é a parceria SAP Anthropic?',
         'A parceria SAP Anthropic integra o Claude, da Anthropic, como modelo de raciocínio primário dos agentes Joule no SAP Business AI Platform. Claude coordena fluxos de trabalho em finanças, RH e compras dentro do contexto fornecido pelo ecossistema SAP — com governança centralizada e acesso ao SAP Knowledge Graph.'),
-
-    faq('Por que a SAP escolheu o Claude na parceria SAP Anthropic?',
+    details('Por que a SAP escolheu o Claude na parceria SAP Anthropic?',
         'Pela capacidade de raciocínio em múltiplos passos — necessária para coordenar fluxos empresariais não lineares com precisão. Claude mantém contexto ao longo de cadeias de decisão longas e distingue quando executar de quando escalar para aprovação humana.'),
-
-    faq('O SAP usa apenas o Claude ou outros modelos também?',
+    details('O SAP usa apenas o Claude ou outros modelos também?',
         'O SAP Business AI Platform é multi-LLM: além do Claude, suporta modelos da OpenAI, Google e NVIDIA. Na parceria SAP Anthropic, o Claude atua como modelo de raciocínio primário nos agentes Joule para finanças, RH e compras, mas a arquitetura permite que cada empresa configure o modelo preferido por caso de uso.'),
-
-    faq('Como a governança funciona com IA agêntica no SAP?',
+    details('Como a governança funciona com IA agêntica no SAP?',
         'Claude opera dentro dos controles já configurados no ambiente SAP — aprovações, limites de alçada, restrições de acesso por papel. O SAP Knowledge Graph é o que torna esse controle possível: os agentes conhecem as regras de processo porque elas estão mapeadas no contexto, não apenas documentadas em texto.'),
-
-    faq('A parceria SAP Anthropic cobre setores específicos?',
+    details('A parceria SAP Anthropic cobre setores específicos?',
         'A parceria cobre finanças (S/4HANA), RH (SuccessFactors) e compras (Ariba) como domínios primários. SAP e Anthropic anunciaram desenvolvimento conjunto de guardrails específicos para processos financeiros e de RH — onde decisões de agente têm consequências regulatórias.'),
-
-    faq('O que a parceria SAP Anthropic significa para quem está implementando SAP BDC?',
+    details('O que a parceria SAP Anthropic significa para quem está implementando SAP BDC?',
         'O Claude opera sobre o contexto fornecido pelo SAP BDC. Quanto melhor estruturado o BDC — dados mestre unificados, hierarquias corretas, políticas mapeadas —, mais preciso é o raciocínio do Claude dentro dos processos da empresa. A qualidade do BDC determina diretamente a qualidade das decisões dos agentes.'),
 
     h5('Fontes'),
@@ -123,8 +124,7 @@ v = requests.get(f"{WP}/posts/{POST_ID}?context=edit", auth=AUTH).json()["conten
 print(f"Chars:           {len(v)}")
 print(f"H5 (com classe): {v.count('wp-block-heading')}")
 print(f"wp:list:         {v.count('wp:list')}")
-print(f"wp:details:      {v.count('wp:details')}")
+print(f"wp:details:      {v.count('wp:details') // 2}")
 print(f"SAP Anthropic:   {v.count('SAP Anthropic')}")
-print(f"Links BDC:       {v.count('sap-business-data-cloud')}")
 print(f"CTA:             {'OK' if 'bdcstrategy' in v else 'AUSENTE'}")
 print(f"Corrompido:      {'SIM' if '<p>\\n<!-- wp:' in v else 'NAO'}")
