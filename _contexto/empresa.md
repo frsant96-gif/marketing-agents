@@ -18,9 +18,19 @@
 ## Contexto adicional
 
 - Forte posicionamento em SAP Business Data Cloud (BDC) — principal produto a ser vendido agora
-- Reconhecimento como parceiro SAP Gold na América Latina
+- Reconhecida como **Melhor Parceiro SAP Business Data Cloud 2026 — América Latina** (SAP Partner Awards 2026)
+- Reconhecida no SAP Partner Excellence Awards 2025 como Melhor Parceiro SAP BDC
+- Parceira SAP Gold na América Latina
 - 150+ empresas com resultados comprovados, 390+ projetos entregues, 60+ especialistas SAP, 13+ anos de atuação
 - Atuação em cenários pós-S/4HANA: o desafio das empresas deixou de ser ERP e passou a ser uso inteligente dos dados
 - Abordagem recorrente: sair de Excel e processos manuais para ambientes integrados, governados e escaláveis
 - Pilares: Pessoas, Processos, Tecnologia e Governança
 - Slogan de referência: "Aproveite o poder de seus dados, inove mais rápido"
+
+## Clientes estratégicos ativos (H1 2026)
+COPEL, Klabin, Aegea, VALE, Alpargatas, ACHE — empresas de grande porte em setores de energia, celulose, saneamento, mineração, calçados e farma.
+
+## Ferramentas conectadas ao workspace
+- HubSpot MCP: conectado via Claude Code — consulta direta ao CRM em tempo real
+- GA4: disponível via export CSV
+- Google Ads: disponível via export

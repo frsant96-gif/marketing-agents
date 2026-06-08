@@ -26,6 +26,58 @@ Opções:
 
 ## Passo 2 — Receber os dados
 
+### HubSpot MCP (disponível — usar sempre para dados de pipeline)
+
+O HubSpot MCP está conectado. Para relatórios de Pipeline, sempre consultar diretamente via MCP antes de pedir exports:
+
+```sql
+-- Negócios por etapa com valor (substituir datas pelo período)
+SELECT dealstage, COUNT(*), SUM(amount)
+FROM DEAL
+WHERE createdate BETWEEN '2026-01-01' AND '2026-05-31'
+GROUP BY dealstage ORDER BY COUNT(*) DESC
+
+-- Negócios ganhos com detalhe
+SELECT dealname, amount, closedate
+FROM DEAL
+WHERE createdate BETWEEN '2026-01-01' AND '2026-05-31'
+AND dealstage = 'contractsent'
+ORDER BY amount DESC
+
+-- Pipeline por origem
+SELECT hs_analytics_source, COUNT(*), SUM(amount)
+FROM DEAL
+WHERE createdate BETWEEN '2026-01-01' AND '2026-05-31'
+GROUP BY hs_analytics_source ORDER BY SUM(amount) DESC
+
+-- Negócios ativos (pipeline aberto)
+SELECT dealname, amount, dealstage, hubspot_owner_id
+FROM DEAL
+WHERE createdate BETWEEN '2026-01-01' AND '2026-05-31'
+AND dealstage NOT IN ('contractsent', 'closedlost', '1003801450', '1329065912')
+ORDER BY amount DESC
+```
+
+**Estágios HubSpot Solveplan (mapeados em 08/06/2026):**
+- `contractsent` = Negócio Ganho
+- `closedlost` / `1003801450` / `1329065912` = Negócio Perdido
+- `1243950468` = Discovery / Escopo
+- `appointmentscheduled` = Proposta enviada
+- `qualifiedtobuy` = Negociação
+- `1245098328` = Proposta Técnica e Escopo
+- `1245098329` = Aprovação Precificação
+- `978106239` = Conexão / Alinhamento Inicial
+- `1198208897` = OnGoing
+- `951905607` = Conta Mapeada
+- `1252470125` / `1361438855` = Conectado
+- `1213830320` / `1329066022` = Enviado para Vendas
+- `952093258` / `1329065907` = Em Cadência
+- `1198074992` = Handover
+- `1198208898` = Pré Renovação
+- `1198208899` = Renovação
+
+### Outras fontes de dados
+
 Perguntar:
 
 > "Os dados estão em algum arquivo na pasta `dados/`? Ou pode colar aqui?"
