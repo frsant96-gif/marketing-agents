@@ -99,7 +99,7 @@ planejamento = [
     ("Criar cadência de reuniões com sócios",                                                     "05/set", "Ok",           "Fran",    ""),
     # ── Em andamento ──
     ("Definir sessão principal 1ª escolha: Klabin",                                              "30/mai", "Em andamento", "Sócios",  "Klabin"),
-    ("Formulário de sessão principal — enviar para a SAP (1ª escolha: TBD)",                     "06/jun", "Em andamento", "",        "Klabin, enviar para a SAP"),
+    ("Formulário de sessão principal — enviar para a SAP (1ª escolha: TBD)",                     "06/jun", "Ok",           "Fran",    "Enviado para aprovação SAP em 10/06/26 — aguardando confirmação"),
     # ── Pendentes ──
     ("Acompanhar formulário enviado para SAP",                                                    "30/jun", "Pendente",     "Fran",    ""),
     ("Prazo final para pagamento de serviços e equipamentos",                                     "30/jul", "Pendente",     "Fran",    ""),
@@ -111,7 +111,7 @@ planejamento = [
     ("Definir ativações e brindes",                                                               "22/jun", "Pendente",     "Fran",    ""),
     ("Prazo final para envio dos pedidos de aprovação de ativações e brindes",                    "31/jul", "Pendente",     "Fran",    "CRÍTICO — prazo fixo SAP"),
     ("Burocracias da participação (taxa de prefeitura)",                                           "",       "Pendente",     "Fran",    ""),
-    ("Data final para envio dos conteúdos para a agenda",                                         "26/jun", "Pendente",     "Fran",    "CRÍTICO — prazo fixo SAP"),
+    ("Data final para envio dos conteúdos para a agenda",                                         "26/jun", "Ok",           "Fran",    "Enviado em 10/06/26 — Klabin (BDC) e Ourofino (BDC + Planning)"),
     ("Data final de Inscrição de Credencial do patrocinador",                                     "28/ago", "Pendente",     "Fran",    ""),
     ("Envio de report com os inscritos da Solveplan",                                             "11/set", "Pendente",     "SAP",     ""),
     ("Retirada de coletor de dados — CAEX",                                                       "08/set", "Pendente",     "Fran",    "RedDoor — R$ 1.601,14"),
