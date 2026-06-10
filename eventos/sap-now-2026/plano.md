@@ -4,6 +4,7 @@
 **Local / Formato:** Transamerica Expo Center — São Paulo | Presencial
 **Responsável principal:** Francielle Beline
 **Criado em:** 2026-05-15
+**Atualizado em:** 2026-06-10
 
 ---
 
@@ -17,8 +18,9 @@
 - **Solução foco:** SAP Business Data Cloud (BDC)
 - **Orçamento disponível:** R$ 276.510,21
 - **Cota de patrocínio:** Gold
-- **Resultado esperado:** 130 leads, 28 reuniões agendadas, 8 oportunidades, R$ 3.200.000 em pipeline
-- **Atenção:** Posição de estande não-privilegiada — estratégia deve ser 100% de atração ativa, não passiva
+- **Resultado esperado:** 100 leads, 40 qualificados, 20 reuniões, 10 oportunidades, R$ 500K pipeline direto em licenciamento BDC
+- **Cota:** Gold — Estande 03, 1 sessão de conteúdo 20 min, 8 credenciais + 1 staff
+- **Audiência do evento:** 3.900 pessoas | 2.700 clientes/prospects | 73% Decision Makers | 70 patrocinadores
 
 ---
 
@@ -38,18 +40,16 @@
 
 ## 3. Critério de sucesso (ANTES de começar)
 
-| Meta | Número esperado |
-|------|----------------|
-| Leads totais | 130 |
-| Leads qualificados | 44 |
-| Reuniões agendadas | 28 |
-| Oportunidades abertas | 8 |
-| Pipeline esperado | R$ 3.200.000 |
-| Custo por lead | R$ 2.127 |
-| Custo por reunião | R$ 9.875 |
+| Métrica | Meta 2026 | Taxa | Ref. 2025 |
+|---------|-----------|------|-----------|
+| Leads totais | 100 | — | 186 |
+| Contas qualificadas | 40 | 40% | — |
+| Reuniões agendadas | 20 | 50% | 24 |
+| Oportunidades abertas | 10 | 30% | 9 |
+| Pipeline gerado direto | R$ 500K | — | — |
 
-> Referência 2025: 186 leads, 26 reuniões pós-evento. 5 agendas via SDR (de 72 empresas abordadas).
-> Meta conservadora por: posição ruim de estande + ano eleitoral (outubro/26). Compensado por estratégia proativa.
+> Meta focada em qualidade, não volume. Foco em licenciamento SAP BDC com contas de médio/grande porte (+R$800M/ano).
+> Referência 2025: 186 leads, 24 reuniões. Meta 2026 menor em volume mas mais qualificada — foco em deals BDC reais.
 
 ---
 
@@ -128,12 +128,13 @@
 - [ ] Enviar convites para clientes (max. 2 C-levels por empresa, preferência por SP)
 
 ### Conteúdo
-- [ ] **Alinhar com Klabin tema e executivo speaker** (até 10/06) ← URGENTE
-- [ ] Produzir apresentação da sessão de conteúdo (Klabin + Solveplan, 20 min)
-- [ ] **Submeter conteúdo para SAP até 26/06** ← CRÍTICO
-- [ ] Confirmação de data e horário da sessão pela SAP
+- [x] **Sessão principal escolhida: KLABIN (SAC e BDC)**
+- [ ] Definir speakers (até 2 palestrantes) e título da palestra — descritivo até 350 caracteres
+- [ ] Produzir apresentação (20 min — Klabin + Solveplan) — tentar incluir Alexandre ou Andrey
+- [ ] **Submeter conteúdo para SAP até 26/06** ← CRÍTICO (prazo em 16 dias)
+- [ ] Confirmação de data e horário da sessão pela SAP (TBD)
 - [ ] Aprovação da apresentação do cliente Klabin pela SAP
-- [ ] Kick off para alinhamento com time (semana 1 de setembro)
+- [ ] Kick off interno após aprovação final do planejamento
 
 ### Ativação do Estande
 - [ ] Definir fornecedor do Quiz/Totem (Entretec ou similar)
