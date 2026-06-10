@@ -218,18 +218,15 @@
 | Abordagem SDR empresas-alvo | Jun–Ago | A fazer |
 | Treinamento do time | Set/1 | A fazer |
 
-### Social Media — Calendário 2026 (adaptado de 2025)
+### Social Media — Calendário 2026 (datas a ajustar)
 
-| Data | Publicação |
-|------|------------|
-| 21/07 | Primeiro post — "Estaremos no SAP NOW" |
-| 30/07 | Post de expectativa / sessão com Klabin anunciada |
-| 11/08 | Post de contagem regressiva |
-| 01/09 | Chamada final — "Em 8 dias estaremos lá" |
-| 08/09 | Post "É amanhã!" — com localização do estande |
-| 09/09 | Post ao vivo — dia 1 |
-| 10/09 | Post ao vivo — dia 2 |
-| 11/09 | Post pós-evento — highlights |
+| Post | Tema | Data sugerida | Status |
+|------|------|---------------|--------|
+| POST 01 | Lançamento do evento | Jul | A definir |
+| POST 02 | Visite nosso estande | Ago | A definir |
+| POST 03 | Começa amanhã | 08/09 | A definir |
+| POST 04 | Dia do evento (ao vivo) | 09–10/09 | A definir |
+| POST 06 | Agradecimento | 10/09 | A definir |
 
 ### Durante o evento
 
@@ -262,21 +259,37 @@
 
 ## 10. Staff e Responsáveis
 
-> Referência 2025: 9 pessoas — 8 credenciais patrocinador + 1 credencial staff (Fran).
-> Troca de credenciais: até 4 trocas/dia (proibido das 12h–14h, exige documento).
+> Cota Gold: 8 credenciais patrocinador + 1 credencial staff (Fran). Até 6 trocas/dia. Horário de troca: 12h–14h.
+> Retirar credenciais: 08/set no CAEX das 08h–14h ou 09/set das 7h–18h.
+
+### Escala do evento
+
+| # | Função | Montagem 08/set | Dia 1 – 09/set Manhã | Dia 1 – 09/set Tarde | Dia 2 – 10/set Manhã | Dia 2 – 10/set Tarde |
+|---|--------|-----------------|----------------------|----------------------|----------------------|----------------------|
+| 1 | Relacionamento executivo | — | Alexandre | — | Alexandre | — |
+| 2 | Relacionamento executivo | — | Andrey | — | Andrey | — |
+| 3 | Especialista | — | Molina | — | Molina | — |
+| 4 | Especialista | — | André Fracchetta | — | André Fracchetta | — |
+| 5 | Captação | — | Renan | — | Renan | — |
+| 6 | Especialista | — | André Ferreira | — | André Ferreira | — |
+| 7 | Captação | — | Lucas | — | Lucas | — |
+| 8 | Customer Success | — | Bianca | Eduardo Savoine | Bianca | — |
+| 9 | Marketing (Staff) | Fran | Fran | — | Fran | — |
+
+### Responsáveis por atividade
 
 | Atividade | Responsável | Prazo | Status |
 |-----------|-------------|-------|--------|
 | Submissão do conteúdo para SAP | Fran | 26/06 | A fazer |
-| Alinhamento com Klabin (speaker) | Fran | 10/06 | A fazer |
-| Campanha pré-evento (LinkedIn + email) | Fran | Mai/Jun | A fazer |
-| SDR — abordagem de empresas-alvo (2 SDRs) | A definir (nomes) | Jun-Ago | A fazer |
-| Produção do estande | Agência (a contratar) | Jul | A fazer |
-| Quiz/Totem — desenvolvimento e locação | Entretec ou similar | Jul/Ago | A fazer |
-| Vídeo looping + depoimentos | Fornecedor (a contratar) | Ago | A fazer |
-| Anúncios hotéis + geolocalização | Fran | Ago | A fazer |
+| Definir speakers Klabin | Fran | 26/06 | A fazer |
+| Campanha pré-evento (LinkedIn + email) | Fran | Jun–Ago | A fazer |
+| SDR — abordagem de empresas-alvo | A definir | Jun–Ago | A fazer |
+| Produção do estande | Agência | Jul | A fazer |
+| Totem holográfico | Fornecedor | Jul/Ago | A fazer |
+| Vídeo looping + cases | Fornecedor | Ago | A fazer |
+| Anúncios geolocalização Google + LinkedIn | Fran | Ago | A fazer |
 | Treinamento do time | Fran | Set/1 | A fazer |
-| Follow-up pós-evento | SDR | D+1 | A fazer |
+| Follow-up pós-evento (48h) | SDR | D+1 | A fazer |
 
 ---
 
@@ -300,13 +313,57 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 ## 12. Materiais necessários
 
 ### Estande e Produção
-- [ ] Arte do estande (Trainel 3,85x2,50m + Painel + Balcão) — agência
-- [ ] Vídeo looping para TV (cortes de cases + ofertas BDC + dashboards + aceleradores)
-- [ ] Quiz/Totem interativo touchscreen 43" (Entretec ou similar) — inclui bancada com ID visual
-- [ ] Displays de balcão com QR Code (2 un. + 1 reserva, ~R$22 cada)
-- [ ] Camisetas para equipe (25 un.)
-- [ ] Brindes: canetas + moleskine (500 un.) — fornecedor Unity Brindes ou similar
+- [ ] Arte do estande 2026 — layout "IA começa nos dados" (cubo holográfico, aprovado)
+  - Trainel 3D: 0,60 x 0,35m (sem sangria) — arquivo CMYK, 120 DPI mín., sangria 15cm
+  - Painel 1D: 3,80 x 2,50m — atenção para montagem espelhada (verificar CAEX)
+  - Balcão BPD: 1,04 x 1,00m — arquivo CMYK, 120 DPI
+- [ ] Vídeo looping para TV — estilo futurístico, sequência:
+  - Logo + Prêmio SAP BDC LAC 2026 → Posicionamento BDC → Case 1 → Planejamento Integrado (dashboard) → Analytics (dashboard) → Case 2 → Consolidação Societária → Databricks + SAP → Data Products + IA → CTA
+- [ ] Totem holográfico transparente com cubo montando e desmontando
+- [ ] Assessment via QR Code como captura passiva (display no estande — analisar atualização vs 2025)
+- [ ] Displays de balcão com QR Code (2 un. + 1 reserva)
+- [ ] Brindes definidos:
+  - **Cubo Mágico Profissional** — 3x3x3, 5,6cm, UV direto, 6 faces personalizadas — 250 un. @ R$41,63 = **R$10.407,50**
+  - **Bloco notas cubo BL31** — 95x95x95mm, azul, sik screen — 250 un. @ R$35,07 = **R$8.767,50**
+  - _Brinde entregue APÓS a conversa, não como atrativo de entrada_
 - [ ] Cartões de visita (equipe presente)
+
+### Vestimenta (aguardando confirmação de novo pedido — RH)
+
+| Tamanho | Recurso | Equipe | Camisetas | Polos |
+|---------|---------|--------|-----------|-------|
+| GG Fem. | Francielle Beline | Marketing | 2 | 1 |
+| M Fem. | Bianca Queiroz | Customer Success | 2 | 1 |
+| M Fem. | Larissa Daltro | Geração de Demanda | 2 | 1 |
+| GG Masc. | Alex Jose de Sousa | Delivery | 2 | 1 |
+| GG Masc. | Alexandre Kuntgen | Comercial | 2 | 1 |
+| M Masc. | André Ferreira | Delivery | 2 | 1 |
+| GG Masc. | André Fracchetta | Operações | 2 | 1 |
+| G Masc. | Andrey Menegassi | Comercial | 3 | 1 |
+| P Masc. | Denis Chiavegatti | Delivery | 2 | 1 |
+| XGG Masc. | Eduardo Savoine | Delivery | 2 | — |
+| G Masc. | Lucas dos Santos | Geração de Demanda | 2 | 1 |
+| G Masc. | Renan Santos | Comercial | 2 | 1 |
+| P Masc. | Roberto Molina | Financeiro | 2 | 1 |
+| **Total** | | | **27** | **12** |
+
+### Lista de convidados VIP (10 C-levels — prazo SAP: até 10/jul)
+
+> Apenas 2 contatos por empresa. C-levels preferencialmente de São Paulo. Processo: enviar convite → inscrito aguarda aprovação SAP → confirmação via e-mail SAP.
+
+| # | Empresa | Status |
+|---|---------|--------|
+| 1 | Klabin | Pendente |
+| 2 | Aço Cearense | Pendente |
+| 3 | Possíveis cases (a definir) | Pendente |
+| 4 | Citrosuco | Pendente |
+| 5 | Eurofarma | Pendente |
+| 6 | Grupo Comporte | Pendente |
+| 7 | M. Dias Branco | Pendente |
+| 8 | Usina da Pedra | Pendente |
+| 9 | Cocal | Pendente |
+| 10 | Zaffari | Pendente |
+| + | MarcoPolo | Aguardando vaga |
 
 ### Tecnologia e Equipamentos
 - [ ] 2 Coletores de dados CAEX (locação no evento)
