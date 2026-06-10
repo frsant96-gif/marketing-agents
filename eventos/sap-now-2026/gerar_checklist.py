@@ -62,9 +62,11 @@ def cabecalho(ws, row):
 
 def status_cor(s):
     s = str(s).upper()
-    if "CRÍTICO" in s or "CRITICO" in s: return fill("F8D7DA")
-    if "FEITO" in s or "CONCLUÍ" in s:   return fill(VERDE)
-    if "PENDENTE" in s:                  return fill("FFEBEE")
+    if "CRÍTICO" in s or "CRITICO" in s:    return fill("F8D7DA")
+    if "OK" in s:                           return fill("C8E6C9")
+    if "EM ANDAMENTO" in s:                 return fill("FFF3CD")
+    if "FEITO" in s or "CONCLUÍ" in s:      return fill(VERDE)
+    if "PENDENTE" in s:                     return fill("FFEBEE")
     return fill(BRANCO)
 
 def linhas(ws, row, dados):
