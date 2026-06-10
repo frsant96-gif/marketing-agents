@@ -386,9 +386,28 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 
 ---
 
-## 13. Ativação do Estande — Quiz BDC 2026
+## 13. Ativação do Estande — 2026
 
-**Conceito:** Totem touchscreen com quiz de qualificação + brinde.
+**Peça central:** Totem holográfico transparente com cubo SAP BDC montando e desmontando.
+
+**Sugestões de ativação em avaliação:**
+- Sugestão 01: Diagnóstico de Maturidade de Dados e IA
+- Sugestão 02: Sorteio "Setup Executivo"
+- **Sugestão 03: A Sala de Interrogatório dos Dados** ← favorita
+- Sugestão 04: Destrua sua planilha
+- Sugestão 05: O Detector de Caos Corporativo
+- **Sugestão 06: Quanto custa o seu Excel?** ← favorita
+
+**Captura passiva:** Assessment via QR Code (display no balcão) — em 2025 retornou ~10 solicitações. Analisar o que atualizar para 2026.
+
+**Jornada do visitante no estande (definida):**
+1. Abordagem ativa com pergunta de abertura padronizada
+2. Demonstração ao vivo de BDC com dado relevante para o perfil do visitante
+3. Assessment / ativação — DEPOIS da demo, não antes
+4. Brinde entregue após a conversa
+
+**Conceito anterior (quiz 2025 — pode ser mantido em paralelo):**
+Totem touchscreen com quiz de qualificação + brinde.
 **Mecânica:** Visitante responde 6 pares "Dor → Solução SAP BDC" em ~3 min.
 
 **Jornada do visitante:**
@@ -564,18 +583,14 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 
 ## 24. Relatório de resultados
 
-| Métrica | 2025 Real | Meta 2026 | Realizado 2026 |
-|---------|-----------|-----------|----------------|
-| Leads totais | 186 | 130 | |
-| Leads qualificados | — | 44 | |
-| Reuniões agendadas | 26 | 28 | |
-| Oportunidades abertas | — | 8 | |
-| Pipeline gerado | — | R$ 3.200.000 | |
-| Empresas abordadas (SDR) | 72 (1 SDR) | 120+ (2 SDRs) | |
-| Agendas via SDR | 5 | 12 | |
-| Custo total | — | R$ 276.510,21 | |
-| Custo por lead | — | R$ 2.127 | |
-| ROI (pipeline/investimento) | — | 11,6x | |
+| Métrica | 2025 Real | Meta 2026 | Taxa | Realizado 2026 |
+|---------|-----------|-----------|------|----------------|
+| Leads totais | 186 | 100 | — | |
+| Contas qualificadas | — | 40 | 40% | |
+| Reuniões agendadas | 24 | 20 | 50% | |
+| Oportunidades abertas | 9 | 10 | 30% | |
+| Pipeline gerado direto | — | R$ 500K | — | |
+| Custo total | — | A definir | — | |
 
 ---
 
@@ -608,16 +623,15 @@ O quiz categoriza automaticamente: Quente (interesse + dor declarada) / Morno (p
 
 | Item | 2025 | Decisão 2026 |
 |------|------|--------------|
-| Ativação | Quiz/Totem (Entretec) — R$9.800 | Manter, adaptar pares para BDC |
-| Brindes | Canetas + Moleskine 500 un. — R$10.480 | Manter (sustentável, aprovado SAP) |
-| Anúncios | Hotéis SP 28 telas R$2.805 + geo Google/LinkedIn | Manter ambos |
-| Vídeo looping | Cases + dashboards + aceleradores | Atualizar com BDC + case Klabin |
-| Vídeos no evento | 4 depoimentos + teasers — aprovado | Replicar |
-| Speaker da sessão | Zilor (SAC Planning) — aprovado e bem recebido | Klabin (BDC) — nome mais forte |
-| SDR pré-evento | 1 SDR, 72 empresas → 5 agendas (7% conversão) | 2 SDRs — meta: 120 empresas → 12 agendas (10%) |
-| Staff | 9 pessoas, escala manhã/tarde | A definir |
-| Credenciais | 8 patrocinador + 1 staff (Fran) | A confirmar |
-| Posição estande | Não-privilegiada (ref. p.4 do planner) | Ainda pior em 2026 — estratégia ativa essencial |
+| Ativação | Quiz/Totem (Entretec) | Totem holográfico cubo + ativação a definir (6 sugestões em avaliação) |
+| Brindes | Canetas + Moleskine | **Cubo Mágico** (R$10.407) + **Bloco Cubo BL31** (R$8.767) — 250 un. cada |
+| Anúncios | Hotéis SP R$2.805 + geo Google/LinkedIn R$4.988 | Manter ambos — geo aprovada para 07-11/set |
+| Vídeo looping | Cases + dashboards | Futurístico: Prêmio BDC LAC → BDC → Cases → Dashboards → IA → CTA |
+| Vídeos no evento | 4 depoimentos — R$5.280 (ref.) | SAP com LCA estará no evento — custo ~R$5.280 (aguardando confirmação) |
+| Speaker da sessão | Zilor (SAC Planning) | **Klabin (SAC + BDC)** — CONFIRMADO como sessão principal |
+| Staff | 9 pessoas | 9 pessoas — escala definida (ver seção 10) |
+| Credenciais | 8 patrocinador + 1 staff | 8 patrocinador + 1 staff (Fran) |
+| Estande | Posição não-privilegiada | Estande 03 — sessão de conteúdo é o principal mecanismo de tráfego |
 
 ---
 
