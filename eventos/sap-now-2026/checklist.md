@@ -13,7 +13,8 @@
 | Cota de patrocínio Gold | RedDoor | R$ 265.000,00 | | | |
 | Cota extra de comunicação | — | R$ — | | | A confirmar se aplica |
 | Coletor de dados (2 un.) | RedDoor | R$ 1.601,14 | | | R$ 577,72/un + fee e impostos |
-| Brindes | A contratar | A preencher | | | Cubo Mágico R$10.407 + Bloco Cubo R$8.767 |
+| Brindes — Cubo Mágico (250 un.) | **A Cuber Brasil** ✓ | **R$ 10.407,50** | | | R$41,63/un — UV direto, 5,6cm, 3x3x3 — prazo 4 dias. Renan Cerpe: renan@cuberbrasil.com / (19) 99606-4010 |
+| Brindes — Embalagem personalizada | A definir | A orçar | | | Cotar embalagem para o cubo |
 | Camisetas e polos | A contratar | A preencher | | | 27 camisetas + 12 polos — aguardando RH |
 | Anúncios DOOH (hotéis SP) | A contratar | R$ 4.988,69 | | | 28 telas, 07-11/set |
 | Vídeos (looping + cases) | A contratar | R$ 5.280,00 | | | SAP com LCA estará no evento |
@@ -47,8 +48,9 @@
 |-----------|-------|--------|-------------|-----|
 | Enviar planilha de convidados VIP (10 C-levels) para SAP | 10/07 | Pendente | Fran | Máximo 2 contatos por empresa; preferência SP |
 | Enviar artes exclusivas conforme cota Gold | 15/07 | Pendente | Fran | Arte fechada pela agência |
-| Fechar pedido de brindes (cubo mágico + bloco cubo) | 31/07 | **CRÍTICO** | Fran | Aprovação SAP obrigatória antes do pedido |
-| Solicitar aprovação de ativações e brindes para a SAP | 31/07 | **CRÍTICO** | Fran | Prazo fixo — sem extensão |
+| Solicitar aprovação de brindes para a SAP | 31/07 | **CRÍTICO** | Fran | Prazo fixo — sem extensão. Enviar briefing do cubo mágico personalizado |
+| Fechar pedido com A Cuber Brasil (cubo mágico 250 un.) | Após aprovação SAP | Pendente | Fran | R$ 10.407,50 — prazo entrega 4 dias. renan@cuberbrasil.com / (19) 99606-4010 |
+| Cotar e fechar embalagem personalizada para o cubo | Jul | Pendente | Fran | Fornecedor a definir — R$ 0 previsto, checar necessidade |
 | Compra de serviços e equipamentos | 31/07 | Pendente | Fran | Todos os itens operacionais |
 | Pedido de camisetas e polos | Jul | Pendente | Fran / RH | 27 camisetas + 12 polos — aguardando confirmação de tamanhos |
 | Contratar agência para arte do estande | Jul | Pendente | Fran | Prazo de produção ~3 semanas |
