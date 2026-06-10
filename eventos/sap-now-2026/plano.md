@@ -183,36 +183,40 @@
 
 ## 9. Cronograma
 
-### Antes do evento
+### Antes do evento — Cronograma SAP (prazos oficiais do manual do patrocinador)
+
+| Data-Limite | Item | Status |
+|-------------|------|--------|
+| ~~Até 29/05~~ | Logo PNG/JPG para o site SAP | Feito |
+| **Até 24/06** | Logo em vetor (.ai ou .eps, CMYK, fontes em curvas) | A fazer |
+| **Até 26/06** | Envio dos conteúdos para a agenda (sessão Klabin) | A fazer ← CRÍTICO |
+| Até 15/07 | Artes exclusivas conforme cota Gold | A fazer |
+| Até 31/07 | Compra de serviços e equipamentos | A fazer |
+| Até 31/07 | Pedidos de aprovação de ativações e brindes | A fazer ← CRÍTICO |
+| Até 31/07 | Solicitação de TV Touch pelo CAEX (se aplicável) | Verificar |
+| **Até 10/07** | Enviar planilha de convidados (10 C-levels) para SAP | A fazer |
+| Até 28/08 | Inscrição de credenciais do patrocinador | A fazer |
+| Até 04/09 | Credenciamento para entrega do estande | A fazer |
+| 08/09 | Entrega oficial do estande ao patrocinador | A fazer |
+| 08/09 | Retirada de credenciais (CAEX 08h–14h) | A fazer |
+| 08/09 | Retirada do coletor de dados CAEX | A fazer |
+| 09–10/09 | **EVENTO** | — |
+| 10/09 | Desmontagem: 20h–22h | — |
+
+### Antes do evento — Atividades internas
 
 | Fase | Prazo | Status |
 |------|-------|--------|
-| Receber manual do patrocinador | 18/05 | Aguardando |
-| **Alinhar com Klabin — speaker e tema** | **10/06** | A fazer |
-| Lançar campanha "Diagnóstico BDC Reservado" | Última semana de mai | A fazer |
-| Logomarca para organizadora e agência | Mai | A fazer |
-| Orçamento do estande com agência | 23/06 (ref. 2025) | A fazer |
-| **Submeter sessão de conteúdo para SAP** | **26/06 ← CRÍTICO** | A fazer |
-| Abertura do CAEX | 18/05 | — |
-| Liberação do site fase 1 | 02/06 | — |
-| Abrir inscrições / convites para clientes | 02/06 | A fazer |
-| Início abordagem SDR (slot/diagnóstico) | Jun | A fazer |
-| Pagamento 1ª parcela agência do estande | 10/07 (ref. 2025) | A fazer |
-| Envio das artes do estande | 11/07 (ref. 2025) | A fazer |
-| Pedido de aprovação de ativações e brindes SAP | **31/07 ← CRÍTICO** | A fazer |
-| Encerramento de vendas | 17/07 | — |
-| Catálogo de sessões e speakers | 28/07 | — |
-| Credenciais — prazo de inscrição | A confirmar (ref. 2025: 30/jul) | A fazer |
-| Envio de report com inscritos Solveplan | A confirmar (ref. 2025: 10/jul) | A fazer |
-| Recebimento de brindes | A confirmar (ref. 2025: 14/ago) | A fazer |
-| Recebimento camisetas | A confirmar (ref. 2025: 30/jul) | A fazer |
-| Meeting Center abre agendamento | 18/08 | — |
-| App do evento lança | 25/08 | — |
-| Publicar slots "Diagnóstico BDC" no app | 25-26/08 | A fazer |
-| Treinamento do time | Semana 1/09 | A fazer |
-| Retirada credencial + coletores CAEX | Dia antes do evento (08/09) | A fazer |
-| Credenciamento de montagem | 08/09 (a confirmar) | A fazer |
-| Entrega de todos os itens no estande (brindes, totem, materiais) | 08/09 — reposição 20h-22h | A fazer |
+| Definir speakers Klabin + título + descritivo da sessão | **26/06** | Urgente |
+| Produzir apresentação 20 min (Klabin + Solveplan) | Jul | A fazer |
+| Arte do estande (trainel + painel + balcão) | Até 15/07 | A fazer |
+| Definir fornecedor do totem holográfico | Jul | A fazer |
+| Pedido de brindes (cubo mágico + bloco cubo) | Até 31/07 | A fazer |
+| Pedido de vestimenta (camisetas e polos) | Aguardando RH | Em aberto |
+| Enviar convites para 10 clientes C-level | Até 10/07 | A fazer |
+| Campanha pré-evento (LinkedIn + email) | Jun–Ago | A fazer |
+| Abordagem SDR empresas-alvo | Jun–Ago | A fazer |
+| Treinamento do time | Set/1 | A fazer |
 
 ### Social Media — Calendário 2026 (adaptado de 2025)
 
