@@ -9,7 +9,7 @@
 
 ## 1. Briefing inicial
 
-- **Nome da ação/evento:** SAP BDC Innovation Day 2026 *(nome a confirmar)*
+- **Nome da ação/evento:** Analytics Day: Inteligência Artificial com os dados que você já tem *(case de cliente a confirmar — pode ser incorporado ao título)*
 - **Data e local:** 26 de agosto de 2026 — SAP Brasil, Av. das Nações Unidas, 14171
 - **Horário:** 08:30 às 12h
 - **Responsável principal:** Francielle Beline
@@ -20,6 +20,7 @@
 - **Resultado esperado:** 120 inscrições, 70 participantes, 6+ SQLs, 5+ oportunidades
 
 > **Referência:** Edição anterior (fev/2025) — 108 inscrições, 63 participantes, 6 SQLs, 5 deals, ROI 9.824% com R$ 5.034,80. Este evento visa superar esses números.
+> **Case:** Cliente a confirmar (candidatos: VALE, Klabin, Aegea, COPEL). Quando definido, avaliar incorporar o nome ao título do evento.
 
 ---
 
