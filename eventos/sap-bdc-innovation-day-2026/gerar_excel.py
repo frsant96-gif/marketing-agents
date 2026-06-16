@@ -112,13 +112,29 @@ def section_header(ws, row, title):
     ws.row_dimensions[row].height = 18
     return row + 1
 
+def status_fill_font(status):
+    if status == STATUS_OK:
+        return "CCFFCC", Font(color="1A5C2A", bold=True, size=10, name="Calibri")
+    elif status == STATUS_ANDAMENTO:
+        return "FFF3CC", Font(color="7B5800", bold=True, size=10, name="Calibri")
+    else:  # Pendente
+        return "FFCCCC", Font(color="8B0000", bold=True, size=10, name="Calibri")
+
+def set_status_cell(ws, row, col, status):
+    bg_hex, fnt = status_fill_font(status)
+    cell = ws.cell(row=row, column=col, value=status)
+    cell.fill = PatternFill("solid", fgColor=bg_hex)
+    cell.font = fnt
+    cell.alignment = Alignment(horizontal="center", vertical="center")
+    cell.border = border_thin()
+
 def item(ws, row, atividade, responsavel="", prazo="", status=STATUS_PENDENTE, obs="", zebra=False):
     bg = CINZA_CLARO if zebra else BRANCO
     set_cell(ws, row, 1, "☐", bg=bg, h_align="center")
     set_cell(ws, row, 2, atividade, bg=bg)
     set_cell(ws, row, 3, responsavel, bg=bg, h_align="center")
     set_cell(ws, row, 4, prazo, bg=bg, h_align="center")
-    set_cell(ws, row, 5, status, bg=bg, h_align="center")
+    set_status_cell(ws, row, 5, status)
     set_cell(ws, row, 6, obs, bg=bg)
     ws.row_dimensions[row].height = 18
     return row + 1
@@ -308,7 +324,7 @@ for fase_nome, atividades in fases:
         set_cell(ws2, row, 2, ativ, bg=bg)
         set_cell(ws2, row, 3, resp, bg=bg, h_align="center")
         set_cell(ws2, row, 4, prazo, bg=bg, h_align="center")
-        set_cell(ws2, row, 5, STATUS_PENDENTE, bg=bg, h_align="center")
+        set_status_cell(ws2, row, 5, STATUS_PENDENTE)
         ws2.row_dimensions[row].height = 16
         row += 1
         zebra = not zebra
@@ -354,7 +370,7 @@ for i, (nome, data, obj, meta) in enumerate(emails):
     set_cell(ws3, row, 3, data, bg=bg, h_align="center")
     set_cell(ws3, row, 4, obj, bg=bg)
     set_cell(ws3, row, 5, meta, bg=bg, h_align="center")
-    set_cell(ws3, row, 6, STATUS_PENDENTE, bg=bg, h_align="center")
+    set_status_cell(ws3, row, 6, STATUS_PENDENTE)
     ws3.row_dimensions[row].height = 18
     row += 1
 
