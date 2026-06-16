@@ -1,6 +1,8 @@
 import openpyxl
 from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
+from openpyxl.formatting.rule import FormulaRule
+from openpyxl.worksheet.datavalidation import DataValidation
 
 AZUL = "002F6C"
 AMARELO = "F5A800"
@@ -10,6 +12,44 @@ CINZA_MEDIO = "DDDDDD"
 AZUL_CLARO = "E8F0FE"
 VERDE = "1A7A4A"
 VERMELHO = "C0392B"
+
+STATUS_PENDENTE   = "Pendente"
+STATUS_ANDAMENTO  = "Em andamento"
+STATUS_OK         = "OK"
+
+FILL_PENDENTE  = PatternFill("solid", fgColor="FFCCCC")   # vermelho claro
+FILL_ANDAMENTO = PatternFill("solid", fgColor="FFF3CC")   # amarelo claro
+FILL_OK        = PatternFill("solid", fgColor="CCFFCC")   # verde claro
+
+FONT_PENDENTE  = Font(color="8B0000", bold=True, size=10, name="Calibri")  # vermelho escuro
+FONT_ANDAMENTO = Font(color="7B5800", bold=True, size=10, name="Calibri")  # amarelo escuro
+FONT_OK        = Font(color="1A5C2A", bold=True, size=10, name="Calibri")  # verde escuro
+
+def apply_status_format(ws, col_letter, start_row, end_row):
+    """Aplica conditional formatting e dropdown de status em uma coluna."""
+    cell_range = f"{col_letter}{start_row}:{col_letter}{end_row}"
+    abs_col = f"${col_letter}"
+
+    ws.conditional_formatting.add(cell_range, FormulaRule(
+        formula=[f'{abs_col}{start_row}="Pendente"'],
+        fill=FILL_PENDENTE, font=FONT_PENDENTE))
+    ws.conditional_formatting.add(cell_range, FormulaRule(
+        formula=[f'{abs_col}{start_row}="Em andamento"'],
+        fill=FILL_ANDAMENTO, font=FONT_ANDAMENTO))
+    ws.conditional_formatting.add(cell_range, FormulaRule(
+        formula=[f'{abs_col}{start_row}="OK"'],
+        fill=FILL_OK, font=FONT_OK))
+
+    dv = DataValidation(
+        type="list",
+        formula1='"Pendente,Em andamento,OK"',
+        showDropDown=False,
+        showErrorMessage=True,
+        errorTitle="Valor inválido",
+        error="Escolha: Pendente, Em andamento ou OK"
+    )
+    ws.add_data_validation(dv)
+    dv.add(cell_range)
 
 def fill(hex_color):
     return PatternFill("solid", fgColor=hex_color)
@@ -72,7 +112,7 @@ def section_header(ws, row, title):
     ws.row_dimensions[row].height = 18
     return row + 1
 
-def item(ws, row, atividade, responsavel="", prazo="", status="A fazer", obs="", zebra=False):
+def item(ws, row, atividade, responsavel="", prazo="", status=STATUS_PENDENTE, obs="", zebra=False):
     bg = CINZA_CLARO if zebra else BRANCO
     set_cell(ws, row, 1, "☐", bg=bg, h_align="center")
     set_cell(ws, row, 2, atividade, bg=bg)
@@ -195,6 +235,9 @@ items_pos = [
 for i, t in enumerate(items_pos):
     row = item(ws1, row, *t, zebra=(i%2==0))
 
+ws1_last_row = row - 1
+apply_status_format(ws1, "E", 5, ws1_last_row)
+
 # ==========================================
 # ABA 2 — CRONOGRAMA
 # ==========================================
@@ -265,10 +308,13 @@ for fase_nome, atividades in fases:
         set_cell(ws2, row, 2, ativ, bg=bg)
         set_cell(ws2, row, 3, resp, bg=bg, h_align="center")
         set_cell(ws2, row, 4, prazo, bg=bg, h_align="center")
-        set_cell(ws2, row, 5, "A fazer", bg=bg, h_align="center")
+        set_cell(ws2, row, 5, STATUS_PENDENTE, bg=bg, h_align="center")
         ws2.row_dimensions[row].height = 16
         row += 1
         zebra = not zebra
+
+ws2_last_row = row - 1
+apply_status_format(ws2, "E", 5, ws2_last_row)
 
 # ==========================================
 # ABA 3 — SEQUÊNCIA DE E-MAILS
@@ -308,9 +354,12 @@ for i, (nome, data, obj, meta) in enumerate(emails):
     set_cell(ws3, row, 3, data, bg=bg, h_align="center")
     set_cell(ws3, row, 4, obj, bg=bg)
     set_cell(ws3, row, 5, meta, bg=bg, h_align="center")
-    set_cell(ws3, row, 6, "A fazer", bg=bg, h_align="center")
+    set_cell(ws3, row, 6, STATUS_PENDENTE, bg=bg, h_align="center")
     ws3.row_dimensions[row].height = 18
     row += 1
+
+ws3_last_row = row - 1
+apply_status_format(ws3, "F", 4, ws3_last_row)
 
 # ==========================================
 # ABA 4 — ORÇAMENTO
