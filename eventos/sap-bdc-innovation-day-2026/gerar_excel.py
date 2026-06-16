@@ -28,17 +28,21 @@ FONT_OK        = Font(color="1A5C2A", bold=True, size=10, name="Calibri")  # ver
 def apply_status_format(ws, col_letter, start_row, end_row):
     """Aplica conditional formatting e dropdown de status em uma coluna."""
     cell_range = f"{col_letter}{start_row}:{col_letter}{end_row}"
-    abs_col = f"${col_letter}"
+    ref = f"${col_letter}{start_row}"
 
+    # Ordem importa: a última regra adicionada tem maior prioridade no Excel
     ws.conditional_formatting.add(cell_range, FormulaRule(
-        formula=[f'{abs_col}{start_row}="Pendente"'],
-        fill=FILL_PENDENTE, font=FONT_PENDENTE))
+        formula=[f'{ref}="OK"'],
+        stopIfTrue=True,
+        fill=FILL_OK, font=FONT_OK))
     ws.conditional_formatting.add(cell_range, FormulaRule(
-        formula=[f'{abs_col}{start_row}="Em andamento"'],
+        formula=[f'{ref}="Em andamento"'],
+        stopIfTrue=True,
         fill=FILL_ANDAMENTO, font=FONT_ANDAMENTO))
     ws.conditional_formatting.add(cell_range, FormulaRule(
-        formula=[f'{abs_col}{start_row}="OK"'],
-        fill=FILL_OK, font=FONT_OK))
+        formula=[f'{ref}="Pendente"'],
+        stopIfTrue=True,
+        fill=FILL_PENDENTE, font=FONT_PENDENTE))
 
     dv = DataValidation(
         type="list",
@@ -112,19 +116,10 @@ def section_header(ws, row, title):
     ws.row_dimensions[row].height = 18
     return row + 1
 
-def status_fill_font(status):
-    if status == STATUS_OK:
-        return "CCFFCC", Font(color="1A5C2A", bold=True, size=10, name="Calibri")
-    elif status == STATUS_ANDAMENTO:
-        return "FFF3CC", Font(color="7B5800", bold=True, size=10, name="Calibri")
-    else:  # Pendente
-        return "FFCCCC", Font(color="8B0000", bold=True, size=10, name="Calibri")
-
 def set_status_cell(ws, row, col, status):
-    bg_hex, fnt = status_fill_font(status)
+    """Escreve o valor sem fill manual — cor gerenciada só pelo conditional formatting."""
     cell = ws.cell(row=row, column=col, value=status)
-    cell.fill = PatternFill("solid", fgColor=bg_hex)
-    cell.font = fnt
+    cell.font = Font(bold=True, size=10, name="Calibri")
     cell.alignment = Alignment(horizontal="center", vertical="center")
     cell.border = border_thin()
 
@@ -325,6 +320,7 @@ for fase_nome, atividades in fases:
         set_cell(ws2, row, 3, resp, bg=bg, h_align="center")
         set_cell(ws2, row, 4, prazo, bg=bg, h_align="center")
         set_status_cell(ws2, row, 5, STATUS_PENDENTE)
+
         ws2.row_dimensions[row].height = 16
         row += 1
         zebra = not zebra
