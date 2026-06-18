@@ -55,7 +55,8 @@ rect(slide, 0, 0, 13.33, 0.12, AMARELO)
 txt(slide, "Campanha de Marketing", 0.8, 1.4, 10, 0.8, 16, color=RGBColor(0xCC,0xCC,0xCC))
 txt(slide, "Fábrica de Analytics", 0.8, 2.1, 11, 1.1, 38, bold=True, color=BRANCO)
 txt(slide, "Geração de Leads — Q3 2026", 0.8, 3.2, 11, 0.7, 22, color=AMARELO)
-txt(slide, "Julho · Agosto · Setembro 2026  |  Suporte e melhorias em SAC / Datasphere por demanda", 0.8, 4.0, 11, 0.5, 14, color=RGBColor(0xCC,0xCC,0xCC))
+txt(slide, '"A implantação do SAP foi só o começo. Quem cuida do que vem depois?"', 0.8, 3.95, 11, 0.6, 13, italic=True, color=RGBColor(0xCC,0xCC,0xCC))
+txt(slide, "Julho · Agosto · Setembro 2026  |  Suporte e melhorias em SAC / Datasphere por demanda", 0.8, 4.6, 11, 0.5, 11, color=RGBColor(0x88,0x88,0x88))
 txt(slide, "solveplan", 0.8, 6.88, 4, 0.45, 14, bold=True, color=AZUL)
 
 # ─────────────────────────────────────────
@@ -96,7 +97,41 @@ txt(slide, "⚠  O que NÃO usar: IA/preditivo, BDC como posicionamento amplo, J
     0.4, 6.3, 12.5, 0.4, 10, italic=True, color=CINZA_TEXTO)
 
 # ─────────────────────────────────────────
-# SLIDE 3 — PÚBLICO-ALVO E ICP
+# SLIDE 3 — DOR RAIZ UNIFICADA
+# ─────────────────────────────────────────
+slide = prs.slides.add_slide(blank_slide())
+header(slide, "O Padrão que Atravessa Todas as Dores")
+
+rect(slide, 0.4, 1.1, 12.5, 1.1, AZUL)
+txt(slide, '"A implantação do SAP foi só o começo. Quem cuida do que vem depois?"',
+    0.7, 1.2, 12.0, 0.8, 18, bold=True, italic=True, color=AMARELO, align=PP_ALIGN.CENTER)
+
+txt(slide, "5 dores diferentes nas 18 reuniões — mesma raiz:",
+    0.5, 2.4, 12.3, 0.4, 12, bold=True, color=AZUL)
+
+raizes = [
+    ("SAC parado",          "Ferramenta implantada, sem suporte para ativar e manter",           "4 reuniões"),
+    ("Sem parceiro técnico","Time de TI sem capacidade para evoluir o ambiente",                  "3+ reuniões"),
+    ("RFC em risco",        "Arquitetura crítica sem suporte para migrar antes do bloqueio SAP",  "3 reuniões"),
+    ("S4 sobrecarregado",   "Relatórios no transacional sem suporte para mover",                  "3 reuniões"),
+    ("SAC só como BI",      "Ambiente funciona, mas sem apoio para evoluir para planning",        "3 reuniões"),
+]
+
+y = 2.9
+for dor, raiz, freq in raizes:
+    rect(slide, 0.4, y, 12.5, 0.6, AZUL_CLARO if raizes.index((dor,raiz,freq)) % 2 == 0 else BRANCO)
+    rect(slide, 0.4, y, 0.08, 0.6, AMARELO)
+    txt(slide, dor,  0.6, y+0.1, 2.5, 0.4, 11, bold=True, color=AZUL)
+    txt(slide, raiz, 3.2, y+0.1, 7.5, 0.4, 11, color=CINZA_TEXTO)
+    txt(slide, freq, 10.8, y+0.1, 2.0, 0.4, 10, italic=True, color=CINZA_TEXTO, align=PP_ALIGN.RIGHT)
+    y += 0.62
+
+rect(slide, 0.4, y+0.05, 12.5, 0.55, AZUL)
+txt(slide, "Dor comum: têm a ferramenta SAP implantada, mas não têm capacidade técnica interna para ativar, sustentar, melhorar e evoluir.",
+    0.6, y+0.1, 12.1, 0.42, 11, bold=True, color=BRANCO)
+
+# ─────────────────────────────────────────
+# SLIDE 4 — PÚBLICO-ALVO E ICP
 # ─────────────────────────────────────────
 slide = prs.slides.add_slide(blank_slide())
 header(slide, "Público-Alvo")
@@ -138,35 +173,45 @@ for gatilho, desc in momentos:
     y += 0.72
 
 # ─────────────────────────────────────────
-# SLIDE 4 — 4 ÂNGULOS DE MENSAGEM
+# SLIDE 5 — 5 ÂNGULOS DE MENSAGEM
 # ─────────────────────────────────────────
 slide = prs.slides.add_slide(blank_slide())
-header(slide, "4 Ângulos de Mensagem — Um por Dor")
+header(slide, "5 Ângulos de Mensagem — Mesma Raiz, Dores Diferentes")
+
+txt(slide, "Mensagem guarda-chuva: \"A implantação do SAP foi só o começo. Quem cuida do que vem depois?\"",
+    0.5, 1.0, 12.3, 0.38, 11, bold=True, italic=True, color=AZUL)
 
 angulos = [
-    ("01", "Sem parceiro técnico",
-     "Quem dá suporte no seu SAC hoje? Muitas empresas têm o ambiente implantado mas sem ninguém para evoluir e sustentar. Banco de horas resolve isso sem contratar.",
+    ("01", "Sem parceiro\ntécnico",
+     "Quem cuida do seu ambiente SAC depois da implantação? Banco de horas com especialistas — você chama quando precisa.",
      VERDE),
-    ("02", "SAC parado, sem suporte",
-     "Não é falta de ferramenta — é falta de suporte para ativar e manter. A Solveplan entra, coloca no ar e sustenta o ambiente sem projeto de meses.",
+    ("02", "SAC parado,\nsem suporte",
+     "Não é falta de ferramenta — é falta de suporte para ativar e manter. Coloca no ar sem projeto de meses.",
      AMARELO),
-    ("03", "RFC Urgente",
-     "A SAP vai bloquear suas extrações via RFC. Com suporte especializado, existe uma rota de transição que não exige reescrever tudo do zero.",
+    ("03", "RFC\nurgente",
+     "A SAP vai bloquear extrações via RFC. Com suporte especializado, existe rota de transição sem reescrever tudo.",
      VERMELHO),
-    ("04", "S4 Sobrecarregado",
-     "Seu S4 não é para relatórios. Com suporte técnico certo, você move isso para a camada analítica correta — sem projeto interno, por demanda.",
+    ("04", "S4\nsobrecarregado",
+     "Seu S4 não é para relatórios. Com suporte técnico certo, você move para a camada analítica sem projeto interno.",
      AZUL),
+    ("05", "SAC só como\nBI — melhorias",
+     "Seu SAC faz muito mais que dashboards. Planning, forecast, simulações — a Solveplan evolui por demanda.",
+     RGBColor(0x6A, 0x0D, 0x83)),
 ]
 
-positions = [(0.4, 1.1), (6.8, 1.1), (0.4, 4.0), (6.8, 4.0)]
+# layout: 3 em cima + 2 em baixo centralizados
+positions_5 = [
+    (0.25, 1.5), (4.55, 1.5), (8.85, 1.5),
+    (2.4,  4.2), (6.7,  4.2),
+]
 for i, (num, titulo, msg, cor) in enumerate(angulos):
-    x, y = positions[i]
-    rect(slide, x, y, 6.0, 3.0, AZUL_CLARO)
-    rect(slide, x, y, 0.7, 3.0, cor)
-    txt(slide, num, x, y+1.1, 0.7, 0.6, 20, bold=True, color=BRANCO if cor != AMARELO else AZUL, align=PP_ALIGN.CENTER)
-    txt(slide, titulo, x+0.85, y+0.12, 5.0, 0.55, 14, bold=True, color=AZUL)
-    divider(slide, x+0.85, y+0.7, 5.0, cor)
-    txt(slide, f'"{msg}"', x+0.85, y+0.85, 5.0, 1.9, 11, italic=True, color=CINZA_TEXTO)
+    x, y = positions_5[i]
+    rect(slide, x, y, 4.05, 2.55, AZUL_CLARO)
+    rect(slide, x, y, 0.5, 2.55, cor)
+    txt(slide, num, x, y+1.0, 0.5, 0.5, 13, bold=True, color=BRANCO if cor != AMARELO else AZUL, align=PP_ALIGN.CENTER)
+    txt(slide, titulo, x+0.6, y+0.08, 3.35, 0.55, 11, bold=True, color=AZUL)
+    divider(slide, x+0.6, y+0.65, 3.35, cor)
+    txt(slide, f'"{msg}"', x+0.6, y+0.75, 3.35, 1.6, 9, italic=True, color=CINZA_TEXTO)
 
 # ─────────────────────────────────────────
 # SLIDE 5 — METAS Q3 2026
@@ -356,7 +401,7 @@ passos = [
     ("2", "Segmentar base por dor (RFC / SAC parado / S4 heavy) no HubSpot",                         "Até 27/06"),
     ("3", "Criar sequência de emails por ângulo de dor — /material-campanha",                         "Até 04/07"),
     ("4", "Configurar LinkedIn Ads + Google Ads com ângulos RFC e SAC parado",                        "Até 04/07"),
-    ("5", "Criar landing page: fale com especialista em suporte SAC/Datasphere — 30 min",             "Até 04/07"),
+    ("5", "Criar landing page com mensagem guarda-chuva: 'a implantação foi só o começo'",            "Até 04/07"),
     ("6", "Publicar artigo: 'RFC bloqueado — o que muda no seu ambiente SAP'",                        "Semana 4/jul"),
     ("7", "Revisar performance mid-campaign e otimizar canais",                                       "25/08"),
     ("8", "Relatório Q3 + planejamento Q4 com os aprendizados",                                       "07/10"),

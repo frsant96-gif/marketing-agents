@@ -49,16 +49,21 @@
 
 ## 3. Mensagem central
 
+**Mensagem guarda-chuva (atravessa todas as dores do VoC):**
+> "A implantação do SAP foi só o começo. Quem cuida do que vem depois?"
+
+Todas as 5 dores identificadas no VoC têm a mesma raiz: o cliente tem a ferramenta SAP implantada mas não tem capacidade técnica interna para ativar, sustentar, melhorar e evoluir. A Fábrica de Analytics responde exatamente isso — suporte + melhorias por demanda, sem projeto, sem aumentar equipe.
+
 **Proposta de valor:**
-Suporte técnico e melhorias contínuas no seu ambiente SAC/Datasphere — sem projeto, por demanda. Você chama quando precisa: para corrigir o que travou, melhorar o que existe ou avançar para o próximo nível.
+Suporte e melhorias contínuas no seu ambiente SAC/Datasphere — por demanda, sem projeto. Corrigimos o que travou, melhoramos o que existe e evoluímos para o que vem a seguir.
 
-**4 ângulos de mensagem (um por dor principal):**
+**5 ângulos de mensagem (um por dor do VoC):**
 
-**Ângulo 1 — Sem parceiro técnico (dor central do serviço):**
-> "Quem dá suporte no seu ambiente SAC hoje? Muitas empresas no RISE têm o ambiente implantado mas sem ninguém para evoluir, corrigir e sustentar. Um banco de horas com especialistas SAP resolve isso sem contratar."
+**Ângulo 1 — Sem parceiro técnico (dor raiz, atravessa tudo):**
+> "Quem cuida do seu ambiente SAC depois da implantação? Muitas empresas no RISE têm a ferramenta ativa mas sem ninguém para evoluir, corrigir e sustentar. Banco de horas com especialistas SAP — você chama quando precisa."
 
 **Ângulo 2 — SAC parado, sem suporte para ativar:**
-> "Sua licença do SAC está sendo usada? Não é falta de ferramenta — é falta de suporte técnico para ativar e manter. A Solveplan entra, coloca no ar e sustenta o ambiente sem projeto de meses."
+> "Sua licença do SAC está sendo usada? Não é falta de ferramenta — é falta de suporte para ativar e manter. A Solveplan coloca no ar e sustenta o ambiente sem projeto de meses."
 
 **Ângulo 3 — RFC urgência:**
 > "A SAP vai bloquear suas extrações via RFC. Para muitas empresas, isso significa parar relatórios, DWs e até sistemas operacionais. Existe uma rota de transição com suporte especializado que não exige reescrever tudo do zero."
@@ -66,13 +71,16 @@ Suporte técnico e melhorias contínuas no seu ambiente SAC/Datasphere — sem p
 **Ângulo 4 — S4 sobrecarregado:**
 > "Seu S4 não é para relatórios. Cada query analítica que roda no transacional afeta performance e aparece na fatura. Com suporte técnico certo, você move isso para a camada correta sem projeto interno."
 
+**Ângulo 5 — SAC só como BI, sem melhorias:**
+> "Seu SAC faz muito mais do que dashboards. Planejamento, forecast, simulações — tudo na mesma ferramenta que você já tem. A Solveplan evolui por demanda, sem projeto."
+
 **Prova / argumento de autoridade:**
 - Melhor Parceiro SAP Business Data Cloud 2026 — América Latina
 - 150+ empresas com resultados comprovados, 390+ projetos entregues
 - Cases: VALE, Petrobras, BTG Pactual, C&A, Usiminas
 
 **CTA principal:**
-"Fale com um especialista sobre o suporte ao seu ambiente SAC/Datasphere — 30 minutos, sem compromisso."
+"A implantação foi só o começo. Fale com a Solveplan sobre o que vem depois — 30 minutos, sem compromisso."
 
 ---
 
