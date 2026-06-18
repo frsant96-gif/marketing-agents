@@ -135,7 +135,183 @@ for i, (titulo, conteudo) in enumerate(cards):
     add_text(slide, conteudo, x+0.15, y+0.6, 2.5, 1.4, 10, color=CINZA_TEXTO)
 
 # =======================
-# SLIDE 4 — METAS DE SUCESSO
+# SLIDE 4 — PERSONAS
+# =======================
+slide = prs.slides.add_slide(slide_layout(prs))
+add_rect(slide, 0, 0, 13.33, 0.12, AMARELO)
+add_rect(slide, 0, 6.8, 13.33, 0.12, AZUL)
+
+add_text(slide, "Público-alvo — Personas", 0.5, 0.3, 10, 0.6, 22, bold=True, color=AZUL)
+add_divider(slide, 0.5, 0.95, 12.3)
+
+personas = [
+    {
+        "titulo": "CIO / Diretor de TI",
+        "papel": "DECISOR",
+        "cor_papel": AZUL,
+        "campos": [
+            ("Porte", "+R$ 800M, cross industry"),
+            ("Desafios", "Dados em silos SAP + non-SAP;\npressão para entregar IA;\ngovernança frágil; ROI difícil"),
+            ("Motivação", "IA funcionando sobre dados reais\nsem construir do zero"),
+            ("Barreiras", "Ambiente complexo;\ninicias em andamento;\ncusto percebido alto"),
+        ]
+    },
+    {
+        "titulo": "Head de Dados / BI",
+        "papel": "INFLUENCIADOR TÉCNICO",
+        "cor_papel": AZUL,
+        "campos": [
+            ("Porte", "+R$ 800M, cross industry"),
+            ("Desafios", "Pipeline manual e frágil;\ndados inconsistentes entre áreas;\ndificuldade de conectar SAP\ncom outras fontes"),
+            ("Motivação", "Plataforma governada que\nreduz retrabalho e acelera\nentregas ao negócio"),
+            ("Barreiras", "Stack atual (Databricks, Power BI);\nalinhamento com TI e CIO"),
+        ]
+    },
+    {
+        "titulo": "CFO / Controller",
+        "papel": "INFLUENCIADOR FINANCEIRO",
+        "cor_papel": AMARELO,
+        "campos": [
+            ("Porte", "+R$ 800M, cross industry"),
+            ("Desafios", "Fechamento lento e manual;\nplanejamento desconectado\ndo operacional; sem visão\nconsolidada em tempo real"),
+            ("Motivação", "Reduzir ciclo de fechamento;\nplanejamento com dados reais"),
+            ("Barreiras", "ROI não é imediato;\nSAP percebido como longo e caro"),
+        ]
+    },
+]
+
+col_positions = [0.4, 4.55, 8.7]
+for i, p in enumerate(personas):
+    x = col_positions[i]
+    w = 3.9
+    # Card header
+    add_rect(slide, x, 1.1, w, 0.6, AZUL)
+    add_text(slide, p["titulo"], x+0.1, 1.15, w-0.2, 0.5, 12, bold=True, color=BRANCO)
+    # Papel badge
+    cor_badge = AMARELO if p["cor_papel"] == AMARELO else RGBColor(0xE8, 0xF0, 0xFE)
+    cor_badge_txt = AZUL
+    add_rect(slide, x, 1.7, w, 0.32, cor_badge)
+    add_text(slide, p["papel"], x, 1.7, w, 0.32, 9, bold=True, color=cor_badge_txt, align=PP_ALIGN.CENTER)
+    # Campos
+    y = 2.1
+    for label, valor in p["campos"]:
+        add_rect(slide, x, y, w, 1.0, AZUL_CLARO)
+        add_text(slide, label, x+0.1, y+0.05, w-0.2, 0.25, 9, bold=True, color=AZUL)
+        add_text(slide, valor, x+0.1, y+0.28, w-0.2, 0.68, 9, color=CINZA_TEXTO)
+        y += 1.05
+
+# =======================
+# SLIDE 5 — OFERTA
+# =======================
+slide = prs.slides.add_slide(slide_layout(prs))
+add_rect(slide, 0, 0, 13.33, 0.12, AMARELO)
+add_rect(slide, 0, 6.8, 13.33, 0.12, AZUL)
+
+add_text(slide, "Oferta — SAP Business Data Cloud", 0.5, 0.3, 10, 0.6, 22, bold=True, color=AZUL)
+add_divider(slide, 0.5, 0.95, 12.3)
+
+# Coluna esquerda
+oferta_esq = [
+    ("Solução ofertada", "SAP Business Data Cloud (BDC)\nimplementado pela Solveplan"),
+    ("Problema que resolve", "Dados fragmentados entre SAP e non-SAP\nimpede o uso real de IA. A empresa tem\nos dados mas não consegue ativá-los."),
+    ("Benefícios técnicos", "Camada unificada e governada de dados;\nintegração nativa com S/4HANA;\nconectores para fontes non-SAP;\nmodelo semântico compartilhado"),
+    ("Benefícios de negócio", "IA nativa (SAP Joule) sem construir\ninfrastrutura do zero; time-to-value\nmais rápido; governança sem projetos\nparalelos"),
+]
+
+y = 1.1
+for label, valor in oferta_esq:
+    add_rect(slide, 0.5, y, 5.9, 1.3, AZUL_CLARO)
+    add_text(slide, label, 0.65, y+0.07, 5.6, 0.28, 10, bold=True, color=AZUL)
+    add_divider(slide, 0.65, y+0.36, 5.6, AMARELO, 0.03)
+    add_text(slide, valor, 0.65, y+0.42, 5.6, 0.82, 9.5, color=CINZA_TEXTO)
+    y += 1.38
+
+# Coluna direita
+add_rect(slide, 6.9, 1.1, 5.9, 2.0, AZUL)
+add_text(slide, "Diferencial Solveplan", 7.05, 1.2, 5.6, 0.35, 12, bold=True, color=AMARELO)
+add_divider(slide, 7.05, 1.57, 5.6, AMARELO, 0.03)
+diferenciais = [
+    "Melhor Parceiro SAP BDC 2026 — América Latina",
+    "Aceleradores próprios para onboarding rápido",
+    "390+ projetos entregues | 150+ empresas",
+    "60+ especialistas SAP | 13+ anos de atuação",
+]
+y = 1.65
+for d in diferenciais:
+    add_text(slide, f"• {d}", 7.05, y, 5.6, 0.33, 10, color=BRANCO)
+    y += 0.33
+
+# Palavras-chave
+add_rect(slide, 6.9, 3.2, 5.9, 1.1, AZUL_CLARO)
+add_text(slide, "Palavras-chave", 7.05, 3.28, 5.6, 0.3, 10, bold=True, color=AZUL)
+add_text(slide, "SAP BDC  •  Business Data Cloud  •  dados SAP\nIA para dados corporativos  •  SAP Joule\ngovernança de dados  •  analytics integrado",
+         7.05, 3.6, 5.6, 0.65, 9.5, color=CINZA_TEXTO)
+
+# Pontos restritivos
+add_rect(slide, 6.9, 4.4, 5.9, 1.0, RGBColor(0xFF, 0xF0, 0xCC))
+add_text(slide, "⚠ Pontos restritivos", 7.05, 4.48, 5.6, 0.3, 10, bold=True, color=RGBColor(0x7B, 0x58, 0x00))
+add_text(slide, "Não mencionar preço sem qualificação.\nNão comparar com Databricks/Snowflake\nsem contexto adequado.",
+         7.05, 4.8, 5.6, 0.55, 9.5, color=RGBColor(0x7B, 0x58, 0x00))
+
+# Cases
+add_rect(slide, 6.9, 5.5, 5.9, 0.85, AZUL_CLARO)
+add_text(slide, "Cases", 7.05, 5.57, 5.6, 0.28, 10, bold=True, color=AZUL)
+add_text(slide, "A confirmar — candidatos: VALE, Klabin, Aegea, COPEL",
+         7.05, 5.85, 5.6, 0.45, 9.5, italic=True, color=CINZA_TEXTO)
+
+# =======================
+# SLIDE 6 — MENSAGEM
+# =======================
+slide = prs.slides.add_slide(slide_layout(prs))
+add_rect(slide, 0, 0, 13.33, 0.12, AMARELO)
+add_rect(slide, 0, 6.8, 13.33, 0.12, AZUL)
+
+add_text(slide, "Estratégia de Mensagem", 0.5, 0.3, 10, 0.6, 22, bold=True, color=AZUL)
+add_divider(slide, 0.5, 0.95, 12.3)
+
+# Key message em destaque
+add_rect(slide, 0.5, 1.1, 12.3, 1.1, AZUL)
+add_text(slide, "KEY MESSAGE", 0.7, 1.18, 3.0, 0.3, 9, bold=True, color=AMARELO)
+add_text(slide, '"Sua empresa já tem os dados. O BDC entrega a IA."',
+         0.7, 1.48, 12.0, 0.6, 18, bold=True, color=BRANCO, align=PP_ALIGN.CENTER)
+
+# Elevator pitch
+add_rect(slide, 0.5, 2.35, 12.3, 1.3, AZUL_CLARO)
+add_text(slide, "ELEVATOR PITCH", 0.7, 2.42, 4.0, 0.28, 9, bold=True, color=AZUL)
+add_text(slide, "Para CIOs e heads de dados de empresas com SAP que têm dados fragmentados e não conseguem usar IA de forma integrada, o SAP BDC oferece uma camada unificada e governada que ativa inteligência artificial sobre os dados que já existem — sem precisar construir infraestrutura do zero.",
+         0.7, 2.72, 11.9, 0.85, 11, color=CINZA_TEXTO)
+
+# Dores | CTAs em duas colunas
+add_text(slide, "Dores a provocar na comunicação", 0.5, 3.8, 6.0, 0.35, 12, bold=True, color=AZUL)
+dores = [
+    "Você tem SAP há anos. Por que os dados ainda estão em silos?",
+    "IA exige dados limpos e governados. Você tem isso hoje?",
+    "Quanto tempo sua equipe gasta em conciliação manual?",
+    "Você está construindo do zero o que já existe dentro do SAP.",
+    "Projetos de IA falham por dados — não por tecnologia ruim.",
+]
+y = 4.2
+for d in dores:
+    add_rect(slide, 0.5, y, 0.25, 0.32, AMARELO)
+    add_text(slide, d, 0.85, y, 5.6, 0.35, 10, color=CINZA_TEXTO)
+    y += 0.4
+
+# CTAs
+add_text(slide, "CTAs", 7.2, 3.8, 5.8, 0.35, 12, bold=True, color=AZUL)
+add_rect(slide, 7.2, 4.2, 5.8, 0.75, AZUL)
+add_text(slide, "CTA LEAD", 7.35, 4.27, 2.0, 0.25, 9, bold=True, color=AMARELO)
+add_text(slide, "Inscrição no evento\n(landing page / formulário)", 7.35, 4.52, 5.5, 0.38, 10, color=BRANCO)
+
+add_rect(slide, 7.2, 5.05, 5.8, 0.75, AZUL_CLARO)
+add_text(slide, "CTA SQL", 7.35, 5.12, 2.0, 0.25, 9, bold=True, color=AZUL)
+add_text(slide, "Diagnóstico gratuito /\nReunião com especialista BDC (D+7)", 7.35, 5.37, 5.5, 0.38, 10, color=CINZA_TEXTO)
+
+add_rect(slide, 7.2, 5.9, 5.8, 0.55, AZUL_CLARO)
+add_text(slide, "Tom de voz:", 7.35, 5.97, 2.0, 0.25, 9, bold=True, color=AZUL)
+add_text(slide, "Expert / conselheiro — direto, sem hype, orientado a negócio", 7.35, 6.17, 5.5, 0.25, 9, color=CINZA_TEXTO)
+
+# =======================
+# SLIDE 7 — METAS DE SUCESSO (renumerado)
 # =======================
 slide = prs.slides.add_slide(slide_layout(prs))
 add_rect(slide, 0, 0, 13.33, 0.12, AMARELO)
@@ -453,6 +629,6 @@ for num, acao, prazo in passos:
 add_text(slide, "solveplan", 0.8, 6.85, 4, 0.45, 13, bold=True, color=AZUL)
 
 # Salvar
-output_path = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\eventos\sap-bdc-innovation-day-2026\SAP_BDC_Innovation_Day_2026_Planejamento.pptx"
+output_path = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\eventos\sap-bdc-innovation-day-2026\SAP_BDC_Innovation_Day_2026_Planejamento_v2.pptx"
 prs.save(output_path)
 print(f"PPT salvo: {output_path}")
