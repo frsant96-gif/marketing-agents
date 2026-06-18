@@ -80,7 +80,75 @@ Criar a pasta `eventos/[nome-do-evento]/` e salvar o documento como `plano.md`.
 Nomear a pasta usando o nome do evento em minúsculas, sem acentos, com hífens no lugar de espaços.
 Exemplo: "Summit Vendas 2025" → `eventos/summit-vendas-2025/plano.md`
 
-## Passo 5 — Confirmar e orientar
+## Passo 5 — Persona, Oferta e Mensagem
+
+Após gerar o plano, perguntar:
+
+> "Quer que eu construa a estratégia de persona, mensagem e dores para o evento?"
+
+Se sim, preencher as seções abaixo e salvar como `eventos/[nome-do-evento]/estrategia-mensagem.md`.
+
+### Persona
+
+Para cada persona relevante identificada no briefing, preencher:
+
+| Campo | Descrição |
+|---|---|
+| **Cargo / Área** | Ex: CIO, Head de Dados, CFO |
+| **Papel na decisão** | Decisor / Influenciador / Usuário |
+| **Indústria / Porte** | Ex: Cross industry, faturamento acima de R$X |
+| **Desafios principais** | 3–5 dores reais do cargo, ligadas à solução foco |
+| **Motivação para compra** | O que move essa pessoa a buscar a solução |
+| **Barreiras / Objeções** | O que impede ou atrasa a decisão |
+| **Restrições** | Compliance, aprovação orçamentária, TI, etc. |
+
+### Oferta
+
+| Campo | Descrição |
+|---|---|
+| **Solução ofertada** | Nome da solução + quem implementa |
+| **Problema que resolve** | Dor central endereçada |
+| **Benefícios** | Lista de benefícios tangíveis (técnicos e de negócio) |
+| **Diferencial** | Por que Solveplan, não qualquer outro parceiro |
+| **Cases** | Cliente(s) de referência — confirmar autorização |
+| **Pontos restritivos** | O que não abordar sem qualificação (preço, prazo, comparação direta) |
+| **Palavras-chave** | Termos usados em copy, anúncios e SEO |
+
+### Mensagem
+
+| Campo | Descrição |
+|---|---|
+| **Etapa do funil** | Topo / Meio / Fundo |
+| **Tom de voz** | Conforme `_contexto/preferencias.md` |
+| **Key message** | Frase central — curta, memorável, ligada à dor e ao benefício |
+| **Elevator pitch** | "Para [persona] que [dor], o [solução] oferece [benefício]..." |
+| **CTA lead** | Ação esperada para inscrição / registro |
+| **CTA SQL** | Ação esperada para avanço comercial pós-evento |
+| **Timeline** | Período de uso da mensagem |
+| **Palavras-chave** | Para uso em comunicações do evento |
+
+### Referência — Analytics Day 2026 (modelo validado)
+
+Usar como referência para eventos de SAP BDC:
+
+**Personas:**
+- Decisor principal: CIO / Diretor de TI — pressão para entregar IA sem infraestrutura pronta; dados em SAP + sistemas externos sem integração; governança frágil
+- Influenciador: Head de Dados / Head de BI — pipeline manual, dados inconsistentes, dificuldade de conectar SAP com fontes externas
+- Influenciador financeiro: CFO / Controller — fechamento lento, planejamento desconectado do operacional
+
+**Oferta (SAP BDC pela Solveplan):**
+- Diferencial: Melhor Parceiro SAP BDC 2026 — América Latina; aceleradores próprios; 390+ projetos; metodologia comprovada
+- Pontos restritivos: não abordar preço sem qualificação; não comparar com Databricks/Snowflake sem contexto
+
+**Mensagem:**
+- Key message: "Sua empresa já tem os dados. O BDC entrega a IA."
+- Elevator pitch: Para CIOs e heads de dados com dados fragmentados que não conseguem usar IA de forma integrada, o SAP BDC oferece uma camada unificada que ativa inteligência artificial sobre os dados que já existem — sem construir infraestrutura do zero.
+- CTA lead: Inscrição no evento
+- CTA SQL: Diagnóstico gratuito / reunião com especialista BDC
+
+---
+
+## Passo 6 — Confirmar e orientar
 
 Depois de salvar, informar:
 
