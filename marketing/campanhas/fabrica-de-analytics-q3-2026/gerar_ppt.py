@@ -55,7 +55,7 @@ rect(slide, 0, 0, 13.33, 0.12, AMARELO)
 txt(slide, "Campanha de Marketing", 0.8, 1.4, 10, 0.8, 16, color=RGBColor(0xCC,0xCC,0xCC))
 txt(slide, "Fábrica de Analytics", 0.8, 2.1, 11, 1.1, 38, bold=True, color=BRANCO)
 txt(slide, "Geração de Leads — Q3 2026", 0.8, 3.2, 11, 0.7, 22, color=AMARELO)
-txt(slide, "Julho · Agosto · Setembro 2026  |  SAC / Datasphere por demanda", 0.8, 4.0, 11, 0.5, 14, color=RGBColor(0xCC,0xCC,0xCC))
+txt(slide, "Julho · Agosto · Setembro 2026  |  Suporte e melhorias em SAC / Datasphere por demanda", 0.8, 4.0, 11, 0.5, 14, color=RGBColor(0xCC,0xCC,0xCC))
 txt(slide, "solveplan", 0.8, 6.88, 4, 0.45, 14, bold=True, color=AZUL)
 
 # ─────────────────────────────────────────
@@ -67,18 +67,18 @@ header(slide, "As Dores Reais dos Clientes — VoC de 18 Reuniões")
 txt(slide, "Baseado em falas explícitas dos clientes. Nenhuma inferência.", 0.5, 1.0, 12, 0.35, 10, italic=True, color=CINZA_TEXTO)
 
 dores = [
-    ("SAC contratado,\nnão utilizado",
+    ("Sem parceiro\npara suportar SAC",
+     '"a gente queria uma empresa para dar suporte\nnessa passagem de conhecimento"',
+     "DOR CENTRAL", VERDE),
+    ("SAC contratado,\nsem suporte p/ ativar",
      '"tentamos usar, não foi muito bem aceito"\n"temos licenciamento... não chegamos a evoluir"',
      "4 reuniões", AMARELO),
     ("RFC em risco\nde bloqueio SAP",
      '"nós estamos assombrados com isso"\n"sem ele basicamente a fábrica pararia"',
      "3 reuniões", VERMELHO),
-    ("S4 sobrecarregado\ncom relatórios",
+    ("S4 sobrecarregado\nprecisa ser otimizado",
      '"eu preciso desafogar o nosso S4"\n"vai vir uma fatura no final"',
      "3 reuniões", AZUL),
-    ("Capacidade técnica\ninterna insuficiente",
-     '"a gente queria uma empresa para dar suporte\nnessa passagem de conhecimento"',
-     "3 reuniões", VERDE),
 ]
 
 x = 0.4
@@ -144,18 +144,18 @@ slide = prs.slides.add_slide(blank_slide())
 header(slide, "4 Ângulos de Mensagem — Um por Dor")
 
 angulos = [
-    ("01", "SAC Parado",
-     "Você já tem o SAC contratado. Nós colocamos ele pra trabalhar — sem aumentar sua equipe, sem projeto de meses.",
-     AMARELO),
-    ("02", "RFC Urgente",
-     "A SAP vai bloquear suas extrações via RFC. Existe uma rota de transição que não exige reescrever tudo do zero.",
-     VERMELHO),
-    ("03", "S4 Sobrecarregado",
-     "Seu S4 não é para relatórios. Cada query analítica no transacional consome memória e vai aparecer na sua fatura.",
-     AZUL),
-    ("04", "Capacidade Técnica",
-     "Evolua seu SAC sem depender do time interno. Banco de horas, por demanda, com especialistas em +150 empresas SAP.",
+    ("01", "Sem parceiro técnico",
+     "Quem dá suporte no seu SAC hoje? Muitas empresas têm o ambiente implantado mas sem ninguém para evoluir e sustentar. Banco de horas resolve isso sem contratar.",
      VERDE),
+    ("02", "SAC parado, sem suporte",
+     "Não é falta de ferramenta — é falta de suporte para ativar e manter. A Solveplan entra, coloca no ar e sustenta o ambiente sem projeto de meses.",
+     AMARELO),
+    ("03", "RFC Urgente",
+     "A SAP vai bloquear suas extrações via RFC. Com suporte especializado, existe uma rota de transição que não exige reescrever tudo do zero.",
+     VERMELHO),
+    ("04", "S4 Sobrecarregado",
+     "Seu S4 não é para relatórios. Com suporte técnico certo, você move isso para a camada analítica correta — sem projeto interno, por demanda.",
+     AZUL),
 ]
 
 positions = [(0.4, 1.1), (6.8, 1.1), (0.4, 4.0), (6.8, 4.0)]
@@ -314,14 +314,15 @@ txt(slide, "Peças necessárias", 7.2, 1.1, 5.7, 0.45, 14, bold=True, color=AZUL
 divider(slide, 7.2, 1.57, 5.7)
 
 pecas = [
-    ("Email RFC (3 emails)",         "Email marketing",   "/material-campanha"),
-    ("Email SAC parado (3 emails)",  "Email marketing",   "/material-campanha"),
-    ("4 posts LinkedIn",             "LinkedIn orgânico", "/post-social"),
-    ("Banners LinkedIn Ads (3 var)", "LinkedIn Ads",      "/anuncio"),
-    ("Landing page diagnóstico",     "Paid + orgânico",   "/material-campanha"),
-    ("Artigo RFC bloqueado",         "Blog / SEO",        "/artigo-blog"),
-    ("Artigo SAC parado",            "Blog / SEO",        "/artigo-blog"),
-    ("Copy Google Ads",              "Google Ads",        "/anuncio"),
+    ("Email sem parceiro (3 emails)", "Email marketing",   "/material-campanha"),
+    ("Email RFC urgência (3 emails)", "Email marketing",   "/material-campanha"),
+    ("Email SAC parado (3 emails)",   "Email marketing",   "/material-campanha"),
+    ("4 posts LinkedIn",              "LinkedIn orgânico", "/post-social"),
+    ("Banners LinkedIn Ads (3 var)",  "LinkedIn Ads",      "/anuncio"),
+    ("Landing page suporte SAC",      "Paid + orgânico",   "/material-campanha"),
+    ("Artigo RFC bloqueado",          "Blog / SEO",        "/artigo-blog"),
+    ("Artigo quem sustenta seu SAC",  "Blog / SEO",        "/artigo-blog"),
+    ("Copy Google Ads",               "Google Ads",        "/anuncio"),
 ]
 y = 1.65
 headers_p = ["Peça", "Canal", "Skill"]
@@ -355,7 +356,7 @@ passos = [
     ("2", "Segmentar base por dor (RFC / SAC parado / S4 heavy) no HubSpot",                         "Até 27/06"),
     ("3", "Criar sequência de emails por ângulo de dor — /material-campanha",                         "Até 04/07"),
     ("4", "Configurar LinkedIn Ads + Google Ads com ângulos RFC e SAC parado",                        "Até 04/07"),
-    ("5", "Criar landing page: diagnóstico gratuito 30 min do seu ambiente SAC",                      "Até 04/07"),
+    ("5", "Criar landing page: fale com especialista em suporte SAC/Datasphere — 30 min",             "Até 04/07"),
     ("6", "Publicar artigo: 'RFC bloqueado — o que muda no seu ambiente SAP'",                        "Semana 4/jul"),
     ("7", "Revisar performance mid-campaign e otimizar canais",                                       "25/08"),
     ("8", "Relatório Q3 + planejamento Q4 com os aprendizados",                                       "07/10"),

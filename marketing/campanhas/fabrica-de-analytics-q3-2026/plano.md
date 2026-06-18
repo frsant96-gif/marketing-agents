@@ -9,9 +9,9 @@
 
 ## 1. Objetivo
 
-**Objetivo principal:** Geração de leads qualificados para o serviço de Fábrica de Analytics (desenvolvimento por demanda — banco de horas para SAC/Datasphere)
+**Objetivo principal:** Geração de leads qualificados para o serviço de Fábrica de Analytics (suporte técnico e melhorias contínuas no ambiente SAC/Datasphere — banco de horas por demanda, sem projeto)
 
-**Produto / tema central:** Fábrica de Analytics — suporte técnico por demanda para evoluir SAC e Datasphere, criar CDS Views, modelos, stories e resolver dívidas técnicas sem aumentar o time interno.
+**Produto / tema central:** Fábrica de Analytics — suporte contínuo e melhorias no ambiente SAC/Datasphere já implantado: corrigir o que travou, evoluir o que existe, sustentar o ambiente em operação. Por demanda, sem aumentar equipe interna.
 
 ---
 
@@ -24,21 +24,21 @@
 
 **Dores prioritárias — baseadas em VoC de 18 reuniões reais:**
 
-| # | Dor | Frequência | Intensidade |
-|---|-----|-----------|-------------|
-| 1 | SAC contratado mas não utilizado | 4 reuniões | Alta — cliente já pagou, não precisa aprovar nova licença |
-| 2 | RFC em risco de bloqueio SAP | 3 reuniões | Muito alta — urgência real, impacto operacional |
-| 3 | S4 sobrecarregado com relatórios | 3 reuniões | Alta — argumento financeiro e técnico |
-| 4 | Capacidade técnica interna insuficiente para evoluir SAC/Datasphere | 3 reuniões | Alta — cliente busca parceiro por demanda |
-| 5 | SAC usado só como BI, sem planning | 3 reuniões | Média — oportunidade de expansão de uso |
+| # | Dor | Frequência | Intensidade | Conexão com suporte/melhorias |
+|---|-----|-----------|-------------|-------------------------------|
+| 1 | **Sem parceiro técnico para sustentar e evoluir SAC/Datasphere** | 3+ reuniões | **Muito alta** — fala explícita de "suporte" — dor direta do serviço | Tuberfil: "a gente queria uma empresa para dar suporte nessa passagem de conhecimento" |
+| 2 | SAC contratado mas parado — sem suporte para ativar | 4 reuniões | Alta — ferramenta implantada, mas sem ninguém para fazer funcionar | Precisam de suporte para ativação e manutenção contínua |
+| 3 | RFC em risco — precisam de suporte para migrar a arquitetura | 3 reuniões | Muito alta — urgência real, impacto operacional | Migração + sustentação da nova arquitetura |
+| 4 | S4 sobrecarregado — precisam de suporte para mover relatórios | 3 reuniões | Alta — argumento financeiro e técnico | Ajuste e sustentação da camada analítica |
+| 5 | SAC usado só como BI, sem planning — precisam de suporte para evoluir | 3 reuniões | Média — oportunidade de expansão de uso | Melhorias incrementais no ambiente existente |
 
 **Linguagem nativa dos clientes (usar nas peças):**
+- "a gente queria uma empresa para dar suporte nessa passagem de conhecimento" ← **fala central do serviço**
 - "tentamos usar ele aqui, não foi muito bem aceito"
 - "a parte de planning a gente não evoluiu. Temos licenciamento..."
 - "nós estamos assombrados com isso" (RFC)
 - "sem ele basicamente a fábrica pararia"
 - "eu preciso desafogar o nosso S4"
-- "a gente queria uma empresa para dar suporte nessa passagem de conhecimento"
 
 **O que NÃO usar (não ressoa com o cliente, baseado no VoC):**
 - IA / análise preditiva — nenhuma menção espontânea nas 18 reuniões
@@ -50,21 +50,21 @@
 ## 3. Mensagem central
 
 **Proposta de valor:**
-Você já tem o SAC contratado. Nós colocamos ele pra trabalhar — sem aumentar sua equipe, sem projeto de meses, sem dependência de TI para cada ajuste.
+Suporte técnico e melhorias contínuas no seu ambiente SAC/Datasphere — sem projeto, por demanda. Você chama quando precisa: para corrigir o que travou, melhorar o que existe ou avançar para o próximo nível.
 
 **4 ângulos de mensagem (um por dor principal):**
 
-**Ângulo 1 — SAC parado:**
-> "Sua licença do SAC está sendo usada? Muitas empresas no RISE têm o SAC contratado e nunca ativaram. O problema não é a ferramenta — é que ela não vem com modelos prontos para o seu negócio."
+**Ângulo 1 — Sem parceiro técnico (dor central do serviço):**
+> "Quem dá suporte no seu ambiente SAC hoje? Muitas empresas no RISE têm o ambiente implantado mas sem ninguém para evoluir, corrigir e sustentar. Um banco de horas com especialistas SAP resolve isso sem contratar."
 
-**Ângulo 2 — RFC urgência:**
-> "A SAP vai bloquear suas extrações via RFC. Para muitas empresas, isso significa parar relatórios, DWs e até sistemas operacionais. Existe uma rota de transição que não exige reescrever tudo do zero."
+**Ângulo 2 — SAC parado, sem suporte para ativar:**
+> "Sua licença do SAC está sendo usada? Não é falta de ferramenta — é falta de suporte técnico para ativar e manter. A Solveplan entra, coloca no ar e sustenta o ambiente sem projeto de meses."
 
-**Ângulo 3 — S4 sobrecarregado:**
-> "Seu S4 não é para relatórios. Cada query analítica que roda no transacional consome memória, afeta performance e vai aparecer na sua fatura. Existe uma camada certa para isso."
+**Ângulo 3 — RFC urgência:**
+> "A SAP vai bloquear suas extrações via RFC. Para muitas empresas, isso significa parar relatórios, DWs e até sistemas operacionais. Existe uma rota de transição com suporte especializado que não exige reescrever tudo do zero."
 
-**Ângulo 4 — Capacidade técnica:**
-> "Evolua seu SAC sem depender do time interno. Banco de horas, por demanda, com especialistas que já fizeram isso em +150 empresas SAP."
+**Ângulo 4 — S4 sobrecarregado:**
+> "Seu S4 não é para relatórios. Cada query analítica que roda no transacional afeta performance e aparece na fatura. Com suporte técnico certo, você move isso para a camada correta sem projeto interno."
 
 **Prova / argumento de autoridade:**
 - Melhor Parceiro SAP Business Data Cloud 2026 — América Latina
@@ -72,7 +72,7 @@ Você já tem o SAC contratado. Nós colocamos ele pra trabalhar — sem aumenta
 - Cases: VALE, Petrobras, BTG Pactual, C&A, Usiminas
 
 **CTA principal:**
-"Faça um diagnóstico gratuito do seu ambiente SAC/Datasphere — 30 minutos, sem compromisso."
+"Fale com um especialista sobre o suporte ao seu ambiente SAC/Datasphere — 30 minutos, sem compromisso."
 
 ---
 
@@ -167,14 +167,15 @@ Você já tem o SAC contratado. Nós colocamos ele pra trabalhar — sem aumenta
 
 | Peça | Formato | Canal | Prioridade |
 |------|---------|-------|-----------|
-| Email sequência RFC (3 emails) | Texto | Email marketing | Alta |
+| Email sequência "sem parceiro técnico" (3 emails) | Texto | Email marketing | Alta — dor central do serviço |
+| Email sequência RFC urgência (3 emails) | Texto | Email marketing | Alta |
 | Email sequência SAC parado (3 emails) | Texto | Email marketing | Alta |
-| 4 posts LinkedIn (um por ângulo) | Copy + visual | LinkedIn orgânico | Alta |
+| 4 posts LinkedIn (um por ângulo de dor) | Copy + visual | LinkedIn orgânico | Alta |
 | Banner LinkedIn Ads (3 variações A/B) | Visual + copy | LinkedIn Ads | Alta |
-| Landing page diagnóstico gratuito | HTML/copy | Paid + orgânico | Alta |
+| Landing page: suporte SAC/Datasphere por demanda | HTML/copy | Paid + orgânico | Alta |
 | Artigo: "RFC bloqueado — o que muda no seu ambiente SAP" | Blog | SEO + LinkedIn | Média |
-| Artigo: "Sua licença SAC está sendo aproveitada?" | Blog | SEO + LinkedIn | Média |
-| Copy Google Ads (RFC + SAC Planning) | Texto | Google Ads | Alta |
+| Artigo: "Quem sustenta seu SAC depois da implantação?" | Blog | SEO + LinkedIn | Média |
+| Copy Google Ads (suporte SAC + RFC + Datasphere) | Texto | Google Ads | Alta |
 
 *Use `/material-campanha` para briefing e copy de cada peça.*
 *Use `/artigo-blog` para os dois artigos.*
