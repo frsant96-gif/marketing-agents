@@ -65,9 +65,9 @@ txt(slide, "Julho · Agosto · Setembro 2026", 0.8, 5.1, 5.5, 0.4, 11, color=RGB
 
 # Lado direito — números
 stats = [
-    ("31",  "contas-alvo (Tier 1 + 2)"),
-    ("8",   "contas Tier 1 — InMail 1:1"),
-    ("23",  "contas Tier 2 — 3 verticais"),
+    ("8",   "contas — mensagem 1:1"),
+    ("3",   "canais por conta"),
+    ("24",  "emails personalizados"),
     ("2+",  "oportunidades esperadas Q3"),
 ]
 y = 1.4
@@ -95,18 +95,18 @@ txt(slide, "Fase 1 — Q3 2026", 0.55, 1.58, 5.6, 0.5, 14, bold=True, color=AZUL
 txt(slide, "LinkedIn Ads + Email Marketing — 31 contas-alvo", 0.55, 2.08, 5.6, 0.3, 10, italic=True, color=CINZA_TEXTO)
 div(slide, 0.55, 2.42, 5.6, AMARELO)
 itens_f1 = [
-    "Tier 1: 8 contas — InMail + Sponsored + email 1:1",
-    "Tier 2: 23 contas — Sponsored por vertical + email",
-    "3 verticais: Agro, Energia/Indústria, Logística/Saúde",
-    "SDR outreach coordenado com Tier 1",
-    "Mensuração por conta — cobertura e pipeline ABM",
+    "8 contas — mensagem 1:1 por empresa",
+    "LinkedIn Ads: Sponsored Content + InMail por conta",
+    "Email: sequência 3 emails personalizada por empresa",
+    "SDR outreach coordenado — dia 3-5 após ativação",
+    "Mensuração por conta — cobertura e engajamento",
 ]
 y = 2.55
 for item in itens_f1:
     txt(slide, f"• {item}", 0.55, y, 5.6, 0.42, 10, color=CINZA_TEXTO)
     y += 0.45
 rect(slide, 0.55, 5.55, 5.6, 0.6, AZUL)
-txt(slide, "Meta Q3: 2–3 reuniões Tier 1 | 1–2 OPPs | R$ 678k–1,3M pipeline",
+txt(slide, "Meta Q3: 2–3 reuniões | 1–2 OPPs | R$ 678k–1,3M pipeline | Budget: R$ 7.500–8.000",
     0.7, 5.6, 5.3, 0.48, 10, bold=True, color=AMARELO)
 
 # Card direito — Fase 2
@@ -134,27 +134,27 @@ txt(slide, "Escalar o que performou no Q3 para um público mais amplo",
 # SLIDE 3 — TIERS ABM
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Segmentação ABM — 31 Contas em 2 Tiers")
+header(slide, "8 Contas — ABM 1:1 — Q3 2026")
 
 tiers = [
-    ("TIER 1", "1:1 Personalizado", "8 contas",
-     "Maior porte e potencial\nMensagem por empresa",
-     "InMail personalizado\n+ Email sequência 1:1\n+ Sponsored Content\n+ SDR outreach",
-     "R$ 250/conta/mês",
-     VERMELHO,
+    ("FASE 1\nQ3 2026", "ABM 1:1", "8 contas",
+     "Mensagem personalizada\npor empresa\nDor específica por conta",
+     "LinkedIn Sponsored Content\n+ LinkedIn InMail\n+ Email (3 por empresa)\n+ SDR outreach",
+     "R$ 7.500–8.000 / Q3",
+     AZUL,
      "Sírio-Libanês · Rede D'Or\nRandon · Norte Energia\nVLI · Arteris\nGrupo Cimed · Grupo Jacto"),
-    ("TIER 2", "1:Few por Vertical", "23 contas",
-     "3 verticais: Agro, Energia/Ind\nLogística/Saúde\nMensagem por segmento",
-     "Sponsored Content A/B\n+ Email sequência\npor vertical",
-     "R$ 60/conta/mês",
-     AMARELO,
-     "Agro/Alimentos (10)\nEnergia/Indústria (8)\nLogística/Saúde/Farma (5)"),
-    ("FASE 2", "Geração de Demanda", "ICP amplo",
-     "Após Q3 — escalar\no que performou",
-     "Google Ads · Blog / SEO\nLinkedIn orgânico\nLanding page inbound",
-     "Budget Q4",
+    ("FASE 2\nQ4 2026", "Geração de Demanda", "ICP amplo",
+     "Escalar o que performou\nno Q3 para um público\nmais amplo",
+     "Google Ads\nBlog / SEO\nLinkedIn orgânico\nLanding page inbound",
+     "Budget Q4 (a definir)",
      RGBColor(0x88,0x88,0x88),
      "RFC + SAC + Datasphere\nKeywords de busca ativa\nConteúdo orgânico"),
+    ("RESULTADO\nEsperado", "Por conta", "Metas Q3",
+     "Pressão coordenada\nsobre cada conta\naté a reunião",
+     "2–3 reuniões agendadas\n1–2 oportunidades\nR$ 678k–1,3M pipeline",
+     "1 deal paga tudo",
+     VERDE,
+     "Ticket médio: R$ 678.406\nBudget Q3: R$ 7.500–8.000\nROI: 1 deal = 85x o investimento"),
 ]
 
 x = 0.4
@@ -221,24 +221,24 @@ txt(slide, "Tática Tier 1: InMail personalizado por empresa + SDR outreach dia 
 # SLIDE 5 — MENSAGENS POR VERTICAL
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Tier 2 — Mensagens por Vertical (23 Contas) + Email por Segmento")
+header(slide, "Mensagens por Empresa — InMail + Email Personalizado")
 
 verticais = [
-    ("Agro /\nAlimentos", "10 contas",
-     '"Na safra, seu S4 não pode travar com relatórios. Cada query no transacional custa performance e aparece na fatura."',
-     '"Desafogue seu S4 antes da safra"',
-     "Cocatrel · Usina São Manoel\nVB Alimentos · TMG\nBrasilAgro · Cotrijal\nJotabasso · Verde Campo\nAlvoar · Cornélio Brennand",
-     VERDE),
-    ("Energia /\nIndústria", "8 contas",
-     '"A SAP vai bloquear suas extrações via RFC. Empresas com arquiteturas legadas estão em risco operacional real."',
-     '"Sua extração via RFC está em risco"',
-     "Aliança Energia · Petronas\nArgo Energia · Farmax\nBrametal · Morlan\nCimentos Liz · FCC Química",
-     VERMELHO),
-    ("Logística /\nSaúde / Farma", "5 contas",
-     '"O time de consultoria foi embora depois da implantação. Quem cuida do seu ambiente SAC agora?"',
-     '"Sem parceiro técnico para o SAC?"',
-     "BBM Logística · Ferroeste\nDELP Engenharia\nAlthaia · Laboratório Teuto",
+    ("Saúde", "Sírio-Libanês\nRede D'Or",
+     '"Hospitais de referência têm demandas analíticas que vão além de dashboards. O SAC tem tudo isso — falta suporte técnico para ativar e evoluir."',
+     '"Quem cuida do SAC depois da implantação?"',
+     "Orçamento por CC · Indicadores assistenciais\nPlanejamento de escalas · Análise regulatória",
      AZUL),
+    ("Indústria\nEnergia\nLogística", "Randon · Norte Energia\nVLI · Arteris",
+     '"RFC em risco de bloqueio SAP / S4 sobrecarregado com relatórios / SAC contratado sem planning — cada conta tem sua dor, cada InMail tem sua mensagem."',
+     '"S4 pesado · RFC urgente · SAC sem planning"',
+     "1 InMail por empresa\n1 sequência de 3 emails por empresa\nAngulo específico por dor identificada",
+     LARANJA),
+    ("Farma\nAgro", "Grupo Cimed\nGrupo Jacto",
+     '"Farma: SAC parado, licença paga sem uso. Agro: S4 sobrecarregado + SAC sem planning ativo. Dois contextos, duas mensagens diferentes."',
+     '"Sua licença SAC está sendo aproveitada?"',
+     "Cimed: planning de produção e forecast\nJacto: desafogar S4 + ativar planning SAC",
+     VERDE),
 ]
 
 x = 0.4
@@ -362,10 +362,10 @@ slide = prs.slides.add_slide(blank())
 header(slide, "Budget — Q3 2026 (Fase 1: Ads + Email)")
 
 itens = [
-    ("LinkedIn Ads — Tier 1 (8 × R$250 × 3 meses)",          "R$ 6.000",  VERMELHO),
-    ("LinkedIn Ads — Tier 2 (23 × R$60 × 3 meses)",          "R$ 4.140",  AMARELO),
-    ("Produção de peças (banners, InMails, emails)",           "R$ 1.500–2.000", CINZA_TEXTO),
-    ("TOTAL Q3 — FASE 1",                                     "R$ 11.640–12.140", AZUL),
+    ("LinkedIn Ads — InMail (8 contas × R$100 × 3 meses)",    "R$ 2.400",  VERMELHO),
+    ("LinkedIn Ads — Sponsored Content (8 × R$150 × 3 meses)","R$ 3.600",  AMARELO),
+    ("Produção de peças (8 banners + 8 InMails + 24 emails)",  "R$ 1.500–2.000", CINZA_TEXTO),
+    ("TOTAL Q3 — FASE 1",                                     "R$ 7.500–8.000", AZUL),
     ("Fase 2 — Google Ads + Blog + Orgânico (Q4)",            "A definir após Q3", RGBColor(0x88,0x88,0x88)),
 ]
 
