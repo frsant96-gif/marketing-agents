@@ -458,9 +458,9 @@ div(slide, 0.8, 0.98, 11.7, AMARELO)
 
 passos = [
     ("1", "Reativar 95 warm leads via WhatsApp — ângulo RFC urgente — custo zero",        "Agora", VERMELHO),
-    ("2", "Exportar lista 156 empresas do Leads_Geral.xlsx em CSV para LinkedIn",          "Até 01/07", AMARELO),
-    ("3", "Upload no LinkedIn Campaign Manager — criar 4 audiências Matched por tier",     "Até 01/07", AMARELO),
-    ("4", "Criar InMails personalizados para 7 contas Tier 1 (dor por empresa)",           "Até 04/07", AMARELO),
+    ("2", "Upload lista-contas-abm.csv (39 empresas) no LinkedIn Campaign Manager",         "Até 01/07", AMARELO),
+    ("3", "Criar 5 audiências Matched (T1, T2 Agro, T2 Energia/Ind, T2 Log/Saúde, T3)",  "Até 01/07", AMARELO),
+    ("4", "Criar InMails personalizados para 8 contas Tier 1 (dor por empresa)",           "Até 04/07", AMARELO),
     ("5", "Briefar SDR/vendas: conta, dor identificada no VoC, ângulo, timing",           "Até 04/07", AMARELO),
     ("6", "Criar emails demand gen + landing page guarda-chuva",                           "Até 04/07", AMARELO),
     ("7", "Ativar LinkedIn Ads Tier 1 + Google Ads na semana 1 de julho",                 "07/07", VERDE),
