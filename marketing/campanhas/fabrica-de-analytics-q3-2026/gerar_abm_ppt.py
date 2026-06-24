@@ -65,8 +65,8 @@ txt(slide, "Julho · Agosto · Setembro 2026", 0.8, 5.1, 5.5, 0.4, 11, color=RGB
 
 # Lado direito — números
 stats = [
-    ("156", "empresas mapeadas"),
-    ("7",   "contas Tier 1 (VoC)"),
+    ("39",  "contas-alvo definidas"),
+    ("8",   "contas Tier 1 (prioritárias)"),
     ("95",  "warm leads para reativar"),
     ("2+",  "oportunidades esperadas"),
 ]
@@ -134,27 +134,27 @@ txt(slide, "Meta: 2–3 reuniões Tier 1 | 1–2 OPPs ABM | R$ 678k–2M pipelin
 # SLIDE 3 — TIERS ABM
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Segmentação ABM — 156 Empresas em 3 Tiers", "Base: eventos SAP BTP Experience + IT Summit Agro 2026")
+header(slide, "Segmentação ABM — 39 Contas em 3 Tiers")
 
 tiers = [
-    ("TIER 1", "1:1 Personalizado", "7 contas",
-     "Contas do VoC com dor\nexplícita identificada",
+    ("TIER 1", "1:1 Personalizado", "8 contas",
+     "Maior porte e potencial\nMensagem por empresa",
      "InMail personalizado\n+ SDR outreach\n+ Sponsored Content",
      "R$ 250/conta/mês",
      VERMELHO,
-     "COMIGO · Geoavia · Tuberfil\nGrupo Soufer · Docol\nAlgar · BTG Pactual"),
-    ("TIER 2", "1:Few por Vertical", "~50 contas",
-     "Líderes de TI/Dados dos\neventos — agrupados por setor",
+     "Sírio-Libanês · Rede D'Or\nRandon · Norte Energia\nVLI · Arteris\nGrupo Cimed · Grupo Jacto"),
+    ("TIER 2", "1:Few por Vertical", "23 contas",
+     "Agrupadas por setor\nMensagem por vertical",
      "Sponsored Content A/B\npor vertical\n+ SDR reforçado",
      "R$ 60/conta/mês",
      AMARELO,
-     "Agro/Bioenergia · Energia/Utilities\nIndústria/Manufatura"),
-    ("TIER 3", "1:Many ICP", "~99 contas",
-     "Demais empresas dos eventos\ncom perfil SAP",
-     "Matched Audience LinkedIn\nMensagem guarda-chuva",
+     "Agro · Energia · Indústria\nLogística · Saúde / Farma\n(5 verticais)"),
+    ("TIER 3", "1:Many ICP", "8 contas",
+     "Perfil SAP identificado\nMensagem guarda-chuva",
+     "Matched Audience LinkedIn\nMensagem ICP geral",
      "R$ 12/conta/mês",
      AZUL,
-     "Vale · B3 · LATAM · GOL\nGerdau · Braskem\ne outras 93 empresas"),
+     "OCP Brasil · Grupo DMA\nCadastra · Grupo Positivo\nFerroeste · e outras"),
 ]
 
 x = 0.4
@@ -179,16 +179,17 @@ for tier, modelo, qtd, criterio, tatica, budget, cor, exemplos in tiers:
 # SLIDE 4 — CONTAS TIER 1
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Tier 1 — 7 Contas Estratégicas (Dores Identificadas no VoC)")
+header(slide, "Tier 1 — 8 Contas Estratégicas — Mensagem Personalizada por Empresa")
 
 contas_t1 = [
-    ("COMIGO",       "RFC + S4 pesado",     "RFC urgente — a fábrica pode parar",         VERMELHO),
-    ("Geoavia",      "RFC em risco",        "RFC urgente — migração antes do bloqueio",    VERMELHO),
-    ("Tuberfil",     "SAC + RFC + suporte", "Sem parceiro — quem sustenta o ambiente?",    VERDE),
-    ("Grupo Soufer", "SAC parado",          "SAC parado — licença paga, nada em uso",      AMARELO),
-    ("Docol",        "SAC parado",          "SAC parado — licença paga, nada em uso",      AMARELO),
-    ("Algar",        "SAC parado",          "SAC parado + evolução para planning",         AZUL),
-    ("BTG Pactual",  "S4 sobrecarregado",   "S4 pesado — cada query aparece na fatura",   LARANJA),
+    ("Hospital Sírio-Libanês", "Saúde",              "Quem cuida do SAC depois da implantação?",    AZUL),
+    ("Rede D'Or São Luiz",     "Saúde",              "Sem parceiro técnico para evoluir o SAC",     AZUL),
+    ("Empresas Randon",        "Indústria",           "S4 pesado — cada query aparece na fatura",    LARANJA),
+    ("Norte Energia",          "Energia",             "RFC urgente — migração antes do bloqueio",    VERMELHO),
+    ("VLI Logística",          "Logística",           "SAC só como BI — planning esperando",         VERDE),
+    ("Arteris",                "Infraestrutura",      "Sem parceiro técnico para o que vem depois",  VERDE),
+    ("Grupo Cimed",            "Farma",               "SAC parado — licença paga, nada em uso",      AMARELO),
+    ("Grupo Jacto",            "Agro / Equipamentos", "S4 pesado + SAC sem planning",               LARANJA),
 ]
 
 headers_row = ["Empresa", "Dor (VoC)", "Ângulo da mensagem", "Prioridade"]
@@ -220,24 +221,24 @@ txt(slide, "Tática Tier 1: InMail personalizado por empresa + SDR outreach dia 
 # SLIDE 5 — MENSAGENS POR VERTICAL
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Tier 2 — Mensagens por Vertical (50 Contas)")
+header(slide, "Tier 2 — Mensagens por Vertical (23 Contas)")
 
 verticais = [
-    ("Agro /\nBioenergia", "25 contas",
-     '"Na safra, seu S4 não pode travar. Cada relatório no transacional custa performance."',
+    ("Agro /\nAlimentos", "10 contas",
+     '"Na safra, seu S4 não pode travar. Cada relatório no transacional custa performance e aparece na fatura."',
      '"Desafogue seu S4 antes da safra"',
-     "Atvos, São Martinho, Citrosuco, CTC, Coopercitrus, Copercana, Usina Coruripe, Tereos + 17 outras",
+     "Cocatrel · Usina São Manoel · VB Alimentos\nTMG · BrasilAgro · Cotrijal\nSementes Jotabasso · Verde Campo\nAlvoar · Cornélio Brennand",
      VERDE),
-    ("Energia /\nUtilities", "12 contas",
-     '"A SAP vai bloquear extrações via RFC. Empresas de energia com arquiteturas legadas estão em alerta."',
+    ("Energia /\nIndústria", "8 contas",
+     '"A SAP vai bloquear suas extrações via RFC. Empresas com arquiteturas legadas estão em risco operacional."',
      '"Sua extração via RFC está em risco"',
-     "Cemig, CPFL, Eletrobras, Samarco, Petrobras, BRK Ambiental, Nexa Resources + 5 outras",
-     AZUL),
-    ("Indústria /\nManufatura", "13 contas",
-     '"O time de consultoria foi embora depois da implantação. Quem evolui seu SAC agora?"',
+     "Aliança Geração de Energia · Petronas · Argo Energia\nFarmax · Brametal · Morlan\nCimentos Liz · FCC Química",
+     VERMELHO),
+    ("Logística /\nSaúde / Farma", "5 contas",
+     '"O time de consultoria foi embora depois da implantação. Quem evolui seu ambiente SAC agora?"',
      '"Sem parceiro técnico para o SAC?"',
-     "Gerdau, Braskem, Embraer, Tupy, WEG, Tramontina, Klabin, Arauco, M. Dias Branco + 4 outras",
-     LARANJA),
+     "BBM Logística · Rota das Bandeiras\nDELP Engenharia\nAlthaia · Laboratório Teuto",
+     AZUL),
 ]
 
 x = 0.4
