@@ -58,17 +58,17 @@ rect(slide, 6.5, 0.12, 0.05, 6.76, AMARELO)
 
 txt(slide, "Campanha Integrada — Q3 2026", 0.8, 1.2, 5.5, 0.55, 14, color=RGBColor(0xCC,0xCC,0xCC))
 txt(slide, "Fábrica de\nAnalytics", 0.8, 1.8, 5.5, 1.5, 36, bold=True, color=BRANCO)
-txt(slide, "Geração de Demanda + ABM", 0.8, 3.35, 5.5, 0.6, 18, color=AMARELO, bold=True)
+txt(slide, "LinkedIn Ads + Email Marketing — Fase 1", 0.8, 3.35, 5.5, 0.6, 16, color=AMARELO, bold=True)
 txt(slide, '"A implantação do SAP foi só o começo.\nQuem cuida do que vem depois?"',
     0.8, 4.05, 5.5, 0.9, 12, italic=True, color=RGBColor(0xBB,0xBB,0xBB))
 txt(slide, "Julho · Agosto · Setembro 2026", 0.8, 5.1, 5.5, 0.4, 11, color=RGBColor(0x88,0x88,0x88))
 
 # Lado direito — números
 stats = [
-    ("39",  "contas-alvo definidas"),
-    ("8",   "contas Tier 1 (prioritárias)"),
-    ("95",  "warm leads para reativar"),
-    ("2+",  "oportunidades esperadas"),
+    ("31",  "contas-alvo (Tier 1 + 2)"),
+    ("8",   "contas Tier 1 — InMail 1:1"),
+    ("23",  "contas Tier 2 — 3 verticais"),
+    ("2+",  "oportunidades esperadas Q3"),
 ]
 y = 1.4
 for num, label in stats:
@@ -83,78 +83,78 @@ txt(slide, "solveplan", 0.8, 6.96, 4, 0.38, 13, bold=True, color=AZUL)
 # SLIDE 2 — ESTRATÉGIA: 2 MOVIMENTOS
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Dois Movimentos Simultâneos — Mesma Mensagem")
+header(slide, "Estrutura da Campanha — Fase 1 Q3 2026")
 
 txt(slide, '"A implantação do SAP foi só o começo. Quem cuida do que vem depois?"',
     0.5, 1.0, 12.3, 0.38, 12, bold=True, italic=True, color=AZUL, align=PP_ALIGN.CENTER)
 
-# Card esquerdo — Demand Gen
+# Card esquerdo — Fase 1
 rect(slide, 0.4, 1.5, 5.9, 5.1, AZUL_CLARO)
 rect(slide, 0.4, 1.5, 5.9, 0.08, AMARELO)
-txt(slide, "Geração de Demanda", 0.55, 1.58, 5.6, 0.5, 14, bold=True, color=AZUL)
-txt(slide, "Para quem ainda não nos conhece", 0.55, 2.08, 5.6, 0.3, 10, italic=True, color=CINZA_TEXTO)
+txt(slide, "Fase 1 — Q3 2026", 0.55, 1.58, 5.6, 0.5, 14, bold=True, color=AZUL)
+txt(slide, "LinkedIn Ads + Email Marketing — 31 contas-alvo", 0.55, 2.08, 5.6, 0.3, 10, italic=True, color=CINZA_TEXTO)
 div(slide, 0.55, 2.42, 5.6, AMARELO)
-itens_dg = [
-    "Email marketing — 95 warm leads (reativação imediata)",
-    "LinkedIn Ads — ICP geral (fora da lista ABM)",
-    "Google Ads — keywords RFC + SAC + Datasphere",
-    "LinkedIn orgânico — 4-5 posts/mês",
-    "Blog — 2 artigos SEO (RFC + quem sustenta SAC)",
-]
-y = 2.55
-for item in itens_dg:
-    txt(slide, f"• {item}", 0.55, y, 5.6, 0.42, 10, color=CINZA_TEXTO)
-    y += 0.45
-rect(slide, 0.55, 5.55, 5.6, 0.6, AZUL)
-txt(slide, "Meta: 8–12 leads | 2–4 reuniões | R$ 678k–1,3M pipeline",
-    0.7, 5.6, 5.3, 0.48, 10, bold=True, color=AMARELO)
-
-# Card direito — ABM
-rect(slide, 7.0, 1.5, 5.9, 5.1, AZUL_CLARO)
-rect(slide, 7.0, 1.5, 5.9, 0.08, VERDE)
-txt(slide, "Account-Based Marketing", 7.15, 1.58, 5.6, 0.5, 14, bold=True, color=AZUL)
-txt(slide, "Para quem já foi impactado nos eventos H1 2026", 7.15, 2.08, 5.6, 0.3, 10, italic=True, color=CINZA_TEXTO)
-div(slide, 7.15, 2.42, 5.6, VERDE)
-itens_abm = [
-    "Tier 1: 7 contas VoC — InMail personalizado + SDR",
-    "Tier 2: ~50 contas por vertical (Agro, Energia, Indústria)",
-    "Tier 3: ~99 contas — matched audience LinkedIn",
-    "Orquestração com vendas — alerta de engajamento",
+itens_f1 = [
+    "Tier 1: 8 contas — InMail + Sponsored + email 1:1",
+    "Tier 2: 23 contas — Sponsored por vertical + email",
+    "3 verticais: Agro, Energia/Indústria, Logística/Saúde",
+    "SDR outreach coordenado com Tier 1",
     "Mensuração por conta — cobertura e pipeline ABM",
 ]
 y = 2.55
-for item in itens_abm:
+for item in itens_f1:
+    txt(slide, f"• {item}", 0.55, y, 5.6, 0.42, 10, color=CINZA_TEXTO)
+    y += 0.45
+rect(slide, 0.55, 5.55, 5.6, 0.6, AZUL)
+txt(slide, "Meta Q3: 2–3 reuniões Tier 1 | 1–2 OPPs | R$ 678k–1,3M pipeline",
+    0.7, 5.6, 5.3, 0.48, 10, bold=True, color=AMARELO)
+
+# Card direito — Fase 2
+rect(slide, 7.0, 1.5, 5.9, 5.1, RGBColor(0xEE,0xEE,0xEE))
+rect(slide, 7.0, 1.5, 5.9, 0.08, CINZA_TEXTO)
+txt(slide, "Fase 2 — Após Q3", 7.15, 1.58, 5.6, 0.5, 14, bold=True, color=CINZA_TEXTO)
+txt(slide, "Geração de demanda inbound — ativada com os aprendizados do Q3", 7.15, 2.08, 5.6, 0.3, 10, italic=True, color=CINZA_TEXTO)
+div(slide, 7.15, 2.42, 5.6, CINZA_TEXTO)
+itens_f2 = [
+    "Google Ads — RFC + SAC + Datasphere suporte",
+    "LinkedIn orgânico — posts por ângulo de dor",
+    "Blog / SEO — 2 artigos (RFC + quem sustenta SAC)",
+    "Landing page inbound",
+    "ICP amplo — além das 31 contas ABM",
+]
+y = 2.55
+for item in itens_f2:
     txt(slide, f"• {item}", 7.15, y, 5.6, 0.42, 10, color=CINZA_TEXTO)
     y += 0.45
-rect(slide, 7.15, 5.55, 5.6, 0.6, VERDE)
-txt(slide, "Meta: 2–3 reuniões Tier 1 | 1–2 OPPs ABM | R$ 678k–2M pipeline",
-    7.3, 5.6, 5.3, 0.48, 10, bold=True, color=BRANCO)
+rect(slide, 7.15, 5.55, 5.6, 0.6, RGBColor(0x88,0x88,0x88))
+txt(slide, "Escalar o que performou no Q3 para um público mais amplo",
+    7.3, 5.6, 5.3, 0.48, 10, italic=True, color=BRANCO)
 
 # ═══════════════════════════════════════
 # SLIDE 3 — TIERS ABM
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Segmentação ABM — 39 Contas em 3 Tiers")
+header(slide, "Segmentação ABM — 31 Contas em 2 Tiers")
 
 tiers = [
     ("TIER 1", "1:1 Personalizado", "8 contas",
      "Maior porte e potencial\nMensagem por empresa",
-     "InMail personalizado\n+ SDR outreach\n+ Sponsored Content",
+     "InMail personalizado\n+ Email sequência 1:1\n+ Sponsored Content\n+ SDR outreach",
      "R$ 250/conta/mês",
      VERMELHO,
      "Sírio-Libanês · Rede D'Or\nRandon · Norte Energia\nVLI · Arteris\nGrupo Cimed · Grupo Jacto"),
     ("TIER 2", "1:Few por Vertical", "23 contas",
-     "Agrupadas por setor\nMensagem por vertical",
-     "Sponsored Content A/B\npor vertical\n+ SDR reforçado",
+     "3 verticais: Agro, Energia/Ind\nLogística/Saúde\nMensagem por segmento",
+     "Sponsored Content A/B\n+ Email sequência\npor vertical",
      "R$ 60/conta/mês",
      AMARELO,
-     "Agro · Energia · Indústria\nLogística · Saúde / Farma\n(5 verticais)"),
-    ("TIER 3", "1:Many ICP", "8 contas",
-     "Perfil SAP identificado\nMensagem guarda-chuva",
-     "Matched Audience LinkedIn\nMensagem ICP geral",
-     "R$ 12/conta/mês",
-     AZUL,
-     "OCP Brasil · Grupo DMA\nCadastra · Grupo Positivo\nFerroeste · e outras"),
+     "Agro/Alimentos (10)\nEnergia/Indústria (8)\nLogística/Saúde/Farma (5)"),
+    ("FASE 2", "Geração de Demanda", "ICP amplo",
+     "Após Q3 — escalar\no que performou",
+     "Google Ads · Blog / SEO\nLinkedIn orgânico\nLanding page inbound",
+     "Budget Q4",
+     RGBColor(0x88,0x88,0x88),
+     "RFC + SAC + Datasphere\nKeywords de busca ativa\nConteúdo orgânico"),
 ]
 
 x = 0.4
@@ -221,23 +221,23 @@ txt(slide, "Tática Tier 1: InMail personalizado por empresa + SDR outreach dia 
 # SLIDE 5 — MENSAGENS POR VERTICAL
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Tier 2 — Mensagens por Vertical (23 Contas)")
+header(slide, "Tier 2 — Mensagens por Vertical (23 Contas) + Email por Segmento")
 
 verticais = [
     ("Agro /\nAlimentos", "10 contas",
-     '"Na safra, seu S4 não pode travar. Cada relatório no transacional custa performance e aparece na fatura."',
+     '"Na safra, seu S4 não pode travar com relatórios. Cada query no transacional custa performance e aparece na fatura."',
      '"Desafogue seu S4 antes da safra"',
-     "Cocatrel · Usina São Manoel · VB Alimentos\nTMG · BrasilAgro · Cotrijal\nSementes Jotabasso · Verde Campo\nAlvoar · Cornélio Brennand",
+     "Cocatrel · Usina São Manoel\nVB Alimentos · TMG\nBrasilAgro · Cotrijal\nJotabasso · Verde Campo\nAlvoar · Cornélio Brennand",
      VERDE),
     ("Energia /\nIndústria", "8 contas",
-     '"A SAP vai bloquear suas extrações via RFC. Empresas com arquiteturas legadas estão em risco operacional."',
+     '"A SAP vai bloquear suas extrações via RFC. Empresas com arquiteturas legadas estão em risco operacional real."',
      '"Sua extração via RFC está em risco"',
-     "Aliança Geração de Energia · Petronas · Argo Energia\nFarmax · Brametal · Morlan\nCimentos Liz · FCC Química",
+     "Aliança Energia · Petronas\nArgo Energia · Farmax\nBrametal · Morlan\nCimentos Liz · FCC Química",
      VERMELHO),
     ("Logística /\nSaúde / Farma", "5 contas",
-     '"O time de consultoria foi embora depois da implantação. Quem evolui seu ambiente SAC agora?"',
+     '"O time de consultoria foi embora depois da implantação. Quem cuida do seu ambiente SAC agora?"',
      '"Sem parceiro técnico para o SAC?"',
-     "BBM Logística · Rota das Bandeiras\nDELP Engenharia\nAlthaia · Laboratório Teuto",
+     "BBM Logística · Ferroeste\nDELP Engenharia\nAlthaia · Laboratório Teuto",
      AZUL),
 ]
 
@@ -359,16 +359,14 @@ txt(slide, "Cobertura · Engajamento por empresa · Velocidade de pipeline · Wi
 # SLIDE 8 — BUDGET INTEGRADO
 # ═══════════════════════════════════════
 slide = prs.slides.add_slide(blank())
-header(slide, "Budget Integrado — Q3 2026")
+header(slide, "Budget — Q3 2026 (Fase 1: Ads + Email)")
 
 itens = [
-    ("LinkedIn Ads — ABM Tier 1 (7 × R$250 × 3 meses)",      "R$ 5.250",  VERMELHO),
-    ("LinkedIn Ads — ABM Tier 2 (50 × R$60 × 3 meses)",      "R$ 9.000",  AMARELO),
-    ("LinkedIn Ads — ABM Tier 3 (99 × R$12 × 3 meses)",      "R$ 3.564",  AZUL),
-    ("LinkedIn Ads — Demand gen (fora da lista ABM)",         "R$ 3.000–5.000", AZUL),
-    ("Google Ads — RFC + SAC + Datasphere suporte",           "R$ 4.500–9.000", VERDE),
-    ("Produção de peças (banners, LP, emails, InMails)",      "R$ 1.500–2.500", CINZA_TEXTO),
-    ("TOTAL Q3 ESTIMADO",                                     "R$ 26.800–34.300", AZUL),
+    ("LinkedIn Ads — Tier 1 (8 × R$250 × 3 meses)",          "R$ 6.000",  VERMELHO),
+    ("LinkedIn Ads — Tier 2 (23 × R$60 × 3 meses)",          "R$ 4.140",  AMARELO),
+    ("Produção de peças (banners, InMails, emails)",           "R$ 1.500–2.000", CINZA_TEXTO),
+    ("TOTAL Q3 — FASE 1",                                     "R$ 11.640–12.140", AZUL),
+    ("Fase 2 — Google Ads + Blog + Orgânico (Q4)",            "A definir após Q3", RGBColor(0x88,0x88,0x88)),
 ]
 
 y = 1.1
