@@ -27,8 +27,8 @@ Nos dias 9 e 10 de setembro, em São Paulo, a Solveplan estará no maior evento 
 📅 9 e 10 de setembro de 2026
 📍 Transamerica Expo Center — Av. Dr. Mário Villas Boas Rodrigues, 387, Santo Amaro, São Paulo/SP
 
-**CTA principal:** [Garanta seu ingresso]
-_(link para a página oficial de registro SAP — participação sujeita à análise da SAP)_
+**CTA principal:** [Saiba mais e garanta seu ingresso](https://www.sap.com/brazil/events/sapnowbrazil.html)
+_Participação sujeita à análise da SAP._
 
 ---
 
@@ -110,7 +110,7 @@ Clientes como VALE, Klabin, COPEL, Aegea, Alpargatas e ACHE confiam na Solveplan
 
 Se você vai ao evento, marque presença na nossa sessão e aproveite para conversar com nosso time. Temos especialistas disponíveis para trocar ideias sobre dados, planejamento e o que o SAP pode fazer pela sua empresa.
 
-**[Garanta seu ingresso no SAP NOW AI Tour Brazil 2026]**
+**[Saiba mais e garanta seu ingresso](https://www.sap.com/brazil/events/sapnowbrazil.html)**
 _Participação sujeita à análise da SAP._
 
 **[Fale com um especialista Solveplan antes do evento]**
