@@ -38,7 +38,7 @@ def default_dates(days: int = 30):
     return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
 
 
-METRICS = "clicks,impressions,costInLocalCurrency,leads,opens,oneClickLeads,externalWebsiteConversions,videoViews"
+METRICS = "clicks,impressions,costInLocalCurrency,leads"
 
 
 def cmd_account(args):
