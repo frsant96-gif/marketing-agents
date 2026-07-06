@@ -1,26 +1,27 @@
 # Plano de Evento — SAP BDC Innovation Day 2026
 
 **Data:** 26 de agosto de 2026
-**Local / Formato:** SAP Brasil — Av. das Nações Unidas, 14171 — Auditório MASP (até 60 pessoas) | Físico
+**Local / Formato:** SAP Brasil — Av. das Nações Unidas, 14171 (Auditório, exp. 60 pessoas) | Físico
 **Responsável principal:** Francielle Beline
 **Criado em:** 15/06/2026
+**Atualizado em:** 06/07/2026 (v2 — conforme deck de planejamento)
 
 ---
 
 ## 1. Briefing inicial
 
-- **Nome da ação/evento:** Analytics Day: Inteligência Artificial com os dados que você já tem *(case de cliente a confirmar — pode ser incorporado ao título)*
+- **Nome da ação/evento:** ⏳ **Pendente** — Andrey pediu outro nome (a substituir "Analytics Day: Inteligência Artificial com os dados que você já tem"). Aguardando definição do nome final.
 - **Data e local:** 26 de agosto de 2026 — SAP Brasil, Av. das Nações Unidas, 14171
-- **Horário:** 08:30 às 12h
+- **Horário:** 09h às 12h (coffee a partir das 08:30)
 - **Responsável principal:** Francielle Beline
-- **Objetivo principal:** Awareness + geração de demanda (deals no pipe)
-- **Público-alvo:** Controllers, heads de dados/BI, CIOs, CFOs — Diretor, gerente, coordenador e analista sênior — empresas com faturamento acima de R$ 2B, cross industry
+- **Objetivo principal:** Geração de demanda + conversão de leads (deals no pipe) — Topo e Meio de funil
+- **Público-alvo:** Controllers, Head de Dados, CIO, CFO, Diretor, Gerente, Coordenador, Analista Sênior — Base SAP + Base Solveplan, +R$ 800M/ano, cross industry
 - **Solução foco:** SAP Business Data Cloud (BDC)
-- **Orçamento disponível:** R$ 6.000,00
-- **Resultado esperado:** 120 inscrições, 70 participantes, 6+ SQLs, 5+ oportunidades
+- **Orçamento disponível:** ~R$ 6,5 mil (considerando 220K de fundo* — valor sujeito a ajuste)
+- **Resultado esperado:** 120 inscrições, 50 participantes esperados, ≥42% de comparecimento, 20 contas participantes, 5 oportunidades geradas, R$ 1.100.000 de pipeline potencial
 
-> **Referência:** Edição anterior (fev/2025) — 108 inscrições, 63 participantes, 6 SQLs, 5 deals, ROI 9.824% com R$ 5.034,80. Este evento visa superar esses números.
-> **Case:** Cliente a confirmar (candidatos: VALE, Klabin, Aegea, COPEL). Quando definido, avaliar incorporar o nome ao título do evento.
+> **Case de sucesso:** ⏳ **Em negociação** — Ourofino aparece na agenda proposta, mas ainda não está confirmado. Alternativas seguem em aberto (VALE, Klabin, Aegea, COPEL).
+> **Inscrições:** Abertas via landing page — sem lista curada de convidados. Meta de 120 inscrições considerando quebra histórica de ~42%.
 
 ---
 
@@ -42,15 +43,16 @@
 | Meta | Número esperado |
 |------|----------------|
 | Inscrições | 120 |
-| Participantes | 70 |
-| Leads qualificados (MQL) | 70 |
-| SQLs | 7 |
-| Oportunidades (deals) | 6 |
-| Valor de pipeline esperado | R$ 3.000.000 |
-| Taxa de comparecimento | ≥ 58% |
-| ROI estimado | > 9.000% |
+| Participantes esperados | 50 |
+| Taxa de comparecimento | ≥ 42% |
+| Contas participantes | 20 |
+| Oportunidades geradas | 5 |
+| Pipeline potencial | R$ 1.100.000 |
+| Investimento potencial | R$ 6,5 mil |
+| ROI potencial | 168x |
 
 > Baseline: edição de fev/2025 — 108 inscrições / 63 presentes / 5 deals / R$5.034,80 investimento.
+> Metas atualizadas em 06/07/2026 conforme deck de planejamento — revisadas para baixo em relação à v1 deste plano (mais conservadoras).
 
 ---
 
@@ -86,18 +88,19 @@
 
 ## 7. Orçamento detalhado
 
-| Item | Previsto | Realizado |
-|------|----------|-----------|
-| Coffee (70 pax) | R$ 4.400,00 | |
-| Brindes (Moleskine + Caneta) | R$ 800,00 | |
-| LinkedIn Ads (convite) | R$ 800,00 | |
-| **Total** | **R$ 6.000,00** | |
+| Item | Qtd | Previsto | Realizado | Status |
+|------|-----|----------|-----------|--------|
+| Anúncios (LinkedIn Ads) | | R$ 1.000,00 | | Em andamento |
+| Coffee | 50 | R$ 4.410,90 | | Pendente |
+| Crachás e Cordões | 70 | R$ 1.100,00 | | Pendente |
+| Brindes | | R$ 200,00 | | Pendente |
+| **Total** | | **R$ 6.710,90** | | |
 
-> Coffee anterior: R$ 3.956,00 para 50 pax. Ajustado para 70 pax (~R$ 4.400,00 estimado).
+> ⏳ **Pendente:** valores realizados a preencher — Fran vai passar os números por item.
 
-**Custo por inscrito esperado:** ~R$ 50,00
-**Custo por participante esperado:** ~R$ 86,00
-**Custo por oportunidade esperado:** ~R$ 1.000,00
+**Custo por inscrito esperado:** R$ 45,09
+**Custo por participante esperado:** R$ 108,21
+**Custo por oportunidade esperado:** R$ 1.302,18
 
 ---
 
@@ -105,25 +108,24 @@
 
 | Horário | Atividade |
 |---------|-----------|
-| 08:30 – 09:00 | Coffee de boas-vindas + networking |
-| 09:00 – 09:30 | Abertura — Solveplan + contexto BDC no mercado |
-| 09:30 – 10:15 | SAP Business Data Cloud: unificando dados SAP e non-SAP com IA integrada + demo ao vivo |
-| 10:15 – 10:45 | Case de sucesso — cliente Solveplan (a confirmar) |
-| 10:45 – 11:15 | Mesa redonda: desafios reais de dados nas empresas |
-| 11:15 – 11:30 | Encerramento + próximos passos |
-| 11:30 – 12:00 | Networking livre |
+| 08:30 – 09:00 | Coffee |
+| 09:00 – 09:30 | Abertura — Junior Freitas (SAP) e Andrey (Solveplan) |
+| 09:30 – 10:00 | SAP Business Data Cloud e IA |
+| 10:00 – 10:30 | Demo |
+| 10:30 – 11:00 | Case Ourofino ⏳ (pendente confirmação — ver seção 1) |
+| 11:00 – 11:30 | Encerramento |
 
-> Adaptar a grade conforme confirmação de speakers e casos.
+> Agenda atualizada em 06/07/2026 conforme deck de planejamento. Adaptar conforme confirmação do case.
 
 ---
 
 ## 9. Planejamento de atividades
 
-- [ ] Confirmar reserva do auditório MASP na SAP Brasil
-- [ ] Definir nome definitivo do evento
-- [ ] Criar página / formulário de inscrição
-- [ ] Montar lista de convidados (clientes + prospects)
-- [ ] Contratar coffee para 70 pax
+- [ ] Confirmar reserva do auditório na SAP Brasil
+- [ ] Definir nome definitivo do evento (Andrey)
+- [ ] Criar página / formulário de inscrição (inscrição aberta, sem lista curada)
+- [ ] Confirmar case de sucesso (Ourofino ou alternativa)
+- [ ] Contratar coffee para 50 pax
 - [ ] Comprar brindes (Moleskine + Caneta)
 - [ ] Produzir card WhatsApp
 - [ ] Produzir e-mails de convite (6 envios)
@@ -262,20 +264,36 @@ Antes do evento, alinhar com todos os presentes:
 
 | E-mail | Data | Objetivo |
 |--------|------|----------|
-| E-mail 01 | 21/07 | 1º convite |
-| E-mail 02 | 28/07 | 2º convite |
-| E-mail 03 | 04/08 | 3º convite |
-| E-mail 04 | 11/08 | 4º convite + WhatsApp |
-| E-mail 05 | 18/08 | RSVP / últimas vagas |
-| Lembrete | 24/08 | D-2 |
-| Agradecimento | 27/08 | Pós-evento |
+| E-mail 01 | 21/07 | Convite |
+| E-mail 02 | 27/07 | Convite |
+| E-mail 03 | 06/08 | Convite |
+| E-mail 04 | 11/08 | Convite |
+| E-mail 05 | 19/08 | Convite |
+| E-mail 06 | 21/08 | Convite |
+| E-mail 07 | 25/08 | Último e-mail de convite |
+| WhatsApp | 20/08 – 25/08 | Reforço de convite |
+| RSVP | 23/08 e 25/08 | Confirmação de presença |
+| Lembrete "É amanhã" | 25/08 | D-1 |
+| E-mail evento hoje | 26/08 | Dia do evento |
+| E-mail de agradecimento | 27/08 | Pós-evento |
 
 **Canais de divulgação:**
-- LinkedIn (posts orgânicos + anúncios pagos)
-- Instagram (posts + Stories + Reels no dia)
-- WhatsApp (disparo direto para contatos qualificados)
+- LinkedIn, Facebook, Instagram (posts orgânicos)
+- Anúncios pagos — LinkedIn Ads & Google Ads
+- ABM — contatos via Sales Navigator (material rico) direcionados à LP de convite
+- WhatsApp (disparo direto)
 - E-mail marketing (base de contatos)
-- Site SAP Brasil
+
+**Posts de redes sociais (pré e pós-evento):**
+
+| Post | Conteúdo | Data |
+|------|----------|------|
+| Post 01 | Lançamento do evento | 21/07 |
+| Post 02 | Convite 01 | 30/07 |
+| Post 03 | Convite 02 | 12/08 |
+| Post 04 | Convite 03 | 17/08 |
+| Post 05 | Última chance | 25/08 |
+| Post 06 | Agradecimento | 27/08 |
 
 ---
 
@@ -392,8 +410,11 @@ Antes do evento, alinhar com todos os presentes:
 
 ## Notas gerais
 
-- Nome do evento ainda a definir — sugestão: **"SAP BDC Innovation Day: Dados como Ativo Estratégico"** ou **"SAP BDC Innovation Day: Do Dado à Decisão"**
-- Case de sucesso a confirmar com cliente (avaliar VALE, Klabin ou Aegea)
-- Verificar com SAP Brasil a disponibilidade da sala Experience para demo complementar (na edição anterior foi cancelada)
+- ⏳ **Pendências abertas (06/07/2026):**
+  - Nome definitivo do evento — Andrey pediu outro nome, ainda não recebido
+  - Key message / elevator pitch — precisam de validação do Andrey (dores e CTAs já estão validados)
+  - Case de sucesso — Ourofino em negociação (alternativas: VALE, Klabin, Aegea, COPEL)
+  - Budget — valores realizados a preencher por item (Fran vai passar os números)
+- Inscrição aberta via landing page, sem lista curada de convidados
 - Manter brinde condicionado ao QR Code — funcionou bem na edição anterior
 - Formato de anúncio 1200x1200 teve melhor performance na edição anterior

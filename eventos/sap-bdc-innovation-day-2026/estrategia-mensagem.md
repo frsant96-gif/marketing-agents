@@ -68,8 +68,8 @@
 |---|---|
 | **Etapa do funil** | Meio e fundo |
 | **Tom de voz** | Expert / conselheiro — direto, sem hype, orientado a negócio. Conectar com dor real antes de falar em tecnologia. |
-| **Key message** | "Sua empresa já tem os dados. O BDC entrega a IA." |
-| **Elevator pitch** | Para CIOs e heads de dados de empresas com SAP que têm dados fragmentados em múltiplos sistemas e não conseguem usar IA de forma integrada, o SAP BDC oferece uma camada unificada e governada que ativa inteligência artificial sobre os dados que já existem — sem precisar construir infraestrutura do zero. |
+| **Key message** ⏳ | "Sua empresa já tem os dados. O BDC entrega a IA." — *pendente de validação do Andrey* |
+| **Elevator pitch** ⏳ | Para CIOs e heads de dados de empresas com SAP que têm dados fragmentados em múltiplos sistemas e não conseguem usar IA de forma integrada, o SAP BDC oferece uma camada unificada e governada que ativa inteligência artificial sobre os dados que já existem — sem precisar construir infraestrutura do zero. — *pendente de validação do Andrey* |
 | **CTA lead** | Inscrição no evento (formulário / landing page) |
 | **CTA SQL** | Diagnóstico gratuito / reunião com especialista BDC (follow-up D+7) |
 | **Timeline de uso** | Jun–Ago 2026 |
