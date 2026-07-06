@@ -10,6 +10,7 @@ Direto e orientado a negócio. Focado em valor real e impacto prático. Técnico
 - Excesso de jargão SAP sem aplicação prática para o leitor
 - Comunicação que não conecta com a dor real do cliente
 - Linguagem de hype ou entusiasmo artificial
+- Tom ou construção de frase que soa gerado por IA — escrever como uma pessoa escreveria, não como texto robótico
 
 ## Estilo geral
 - Frases curtas e objetivas
