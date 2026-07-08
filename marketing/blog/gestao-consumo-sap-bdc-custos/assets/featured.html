@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: linear-gradient(135deg, #0A0E19 0%, #0A0837 100%);
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+  /* faint grid backdrop */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,106,255,0.35) 0%, rgba(0,106,255,0) 70%);
+    top: -150px;
+    right: -100px;
+  }
+
+  .glow2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(148,255,150,0.12) 0%, rgba(148,255,150,0) 70%);
+    bottom: -120px;
+    left: -80px;
+  }
+
+  .dashboard {
+    position: absolute;
+    left: 90px;
+    top: 90px;
+    width: 1020px;
+    height: 450px;
+    display: flex;
+    gap: 28px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    backdrop-filter: blur(2px);
+  }
+
+  /* left: big bar chart card */
+  .card-bars {
+    flex: 1.3;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .bars-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    height: 300px;
+  }
+  .bar {
+    flex: 1;
+    border-radius: 6px 6px 2px 2px;
+  }
+  .bar-track {
+    flex: 1;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px 6px 2px 2px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .bar-fill {
+    width: 100%;
+    border-radius: 6px 6px 2px 2px;
+  }
+  .baseline {
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.18);
+    margin-top: 14px;
+  }
+
+  /* right column: gauge + line chart stacked */
+  .col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .card-gauge {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-line {
+    flex: 1;
+    padding: 26px 30px;
+  }
+
+  svg { display: block; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+
+  <div class="dashboard">
+    <div class="card card-bars">
+      <div class="bars-row">
+        <div class="bar-track"><div class="bar-fill" style="height:38%; background:linear-gradient(180deg,#3A8CFF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:55%; background:linear-gradient(180deg,#3A8CFF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:47%; background:linear-gradient(180deg,#3A8CFF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:72%; background:linear-gradient(180deg,#5FA8FF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:64%; background:linear-gradient(180deg,#3A8CFF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:88%; background:linear-gradient(180deg,#94FF96,#1FB05F);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:81%; background:linear-gradient(180deg,#3A8CFF,#006AFF);"></div></div>
+        <div class="bar-track"><div class="bar-fill" style="height:93%; background:linear-gradient(180deg,#5FA8FF,#006AFF);"></div></div>
+      </div>
+      <div class="baseline"></div>
+    </div>
+
+    <div class="col-right">
+      <div class="card card-gauge">
+        <svg width="220" height="220" viewBox="0 0 220 220">
+          <circle cx="110" cy="110" r="92" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="16"/>
+          <circle cx="110" cy="110" r="92" fill="none" stroke="#006AFF" stroke-width="16"
+                  stroke-dasharray="578" stroke-dashoffset="145" stroke-linecap="round"
+                  transform="rotate(-90 110 110)"/>
+          <circle cx="110" cy="110" r="92" fill="none" stroke="#94FF96" stroke-width="16"
+                  stroke-dasharray="578" stroke-dashoffset="0" stroke-linecap="round"
+                  transform="rotate(-90 110 110)"
+                  style="stroke-dasharray: 90 488;"/>
+        </svg>
+      </div>
+
+      <div class="card card-line">
+        <svg width="100%" height="140" viewBox="0 0 380 140" preserveAspectRatio="none">
+          <polyline points="0,110 40,95 80,100 120,70 160,80 200,45 240,55 280,25 320,35 380,15"
+                    fill="none" stroke="#006AFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="0,110 40,95 80,100 120,70 160,80 200,45 240,55 280,25 320,35 380,15 380,140 0,140"
+                    fill="rgba(0,106,255,0.15)" stroke="none"/>
+          <circle cx="380" cy="15" r="6" fill="#94FF96"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
