@@ -105,10 +105,10 @@ A Solveplan avalia a maturidade do seu ambiente SAP Analytics e identifica risco
 
 ### Fontes
 
-- SAP Help Portal — Monitoring SAP Datasphere in the System Monitor
-- SAP-docs GitHub — Managing and Monitoring Data Integration
-- SAP Help Portal — Monitor Your Space Storage Consumption
-- SAP Community — How to Monitor Consumption for SAP Business Data Cloud (BDC)
-- Gartner — custo médio de downtime em TI corporativa
-- ITIC, 2025 — Cost of Downtime Survey
-- IDC — previsão de adoção de monitoramento orientado por IA até 2026
+- [SAP Help Portal — Monitoring SAP Datasphere in the System Monitor](https://help.sap.com/docs/SAP_DATASPHERE/9f804b8efa8043539289f42f372c4862/28910cded17a42a0bf16225309cb8bf6.html)
+- [SAP-docs GitHub — Managing and Monitoring Data Integration](https://github.com/SAP-docs/sap-datasphere/blob/main/docs/Integrating-data-and-managing-spaces/Data-Integration-Monitor/managing-and-monitoring-data-integration-4cbf7c7.md)
+- [SAP Help Portal — Monitor Your Space Storage Consumption](https://help.sap.com/docs/SAP_DATASPHERE/be5967d099974c69b77f4549425ca4c0/94fe6c13f6a340288cd50ee355566591.html)
+- [SAP Community — How to Monitor Consumption for SAP Business Data Cloud (BDC)](https://community.sap.com/t5/technology-blog-posts-by-sap/how-to-monitor-consumption-for-sap-business-data-cloud-bdc-and-its/ba-p/14257413)
+- [InvGate — The Cost of Downtime: How Much Does an IT Outage Cost Your Business? (citando Gartner)](https://blog.invgate.com/the-cost-of-downtime-for-it-services)
+- [Calyptix/ITIC — Examining the Financial Impact of Downtime (2025 Survey)](https://www.calyptix.com/press-releases/examining-the-financial-impact-of-downtime-insights-from-the-2025-calyptix-itic-smb-security-survey/)
+- [IDC — Worldwide Future of Digital Infrastructure Predictions](https://blogs.idc.com/2021/10/27/idcs-worldwide-future-of-digital-infrastructure-2022-predictions/)
