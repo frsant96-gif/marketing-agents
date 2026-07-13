@@ -50,7 +50,7 @@ Rastreamento de consultas caras (Expensive Statement Tracing) precisa ser habili
 
 Ao contrário do que a documentação oficial sugere, ter as telas disponíveis não é o mesmo que ter um processo de monitoramento. A ferramenta existe; o hábito de revisão — quem olha, com que frequência, o que faz quando encontra um problema — precisa ser construído pela equipe.
 
-Segundo a IDC, até 2026, 90% das grandes organizações vão depender de monitoramento orientado por IA para gestão proativa de performance de TI — o que reforça que monitoramento manual e reativo já não acompanha a complexidade dos ambientes atuais. Para empresas que operam SAP Datasphere com múltiplos espaços, integrações e usuários, o caminho recomendado é estruturar uma rotina formal de revisão, não depender de alertas isolados.
+Segundo a IDC, até 2026, 90% dos CIOs de empresas Global 2000 vão depender de monitoramento orientado por IA para gestão proativa de performance de TI — o que reforça que monitoramento manual e reativo já não acompanha a complexidade dos ambientes atuais. Para empresas que operam SAP Datasphere com múltiplos espaços, integrações e usuários, o caminho recomendado é estruturar uma rotina formal de revisão, não depender de alertas isolados.
 
 ## Como estruturar uma rotina de monitoramento SAP BDC
 
