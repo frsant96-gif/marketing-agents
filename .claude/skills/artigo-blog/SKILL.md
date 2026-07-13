@@ -25,17 +25,26 @@ Fazer as perguntas abaixo, uma por vez:
 
 Se o usuário já informou algum dado, não perguntar de novo.
 
-## Passo 2 — Estratégia de keywords e benchmark
+## Passo 2 — Pesquisa online e estratégia de keywords
 
-Antes de escrever, montar o mapa:
+Antes de montar o mapa, pesquisar online (usar o Agent tool ou WebSearch/WebFetch) — nunca escrever o artigo só com conhecimento prévio do modelo. Pesquisar:
+
+1. **Conteúdo técnico oficial sobre o tema** — documentação (ex: help.sap.com, blogs.sap.com, SAP Community para temas SAP), nomes exatos de features/telas/produtos, terminologia real usada por quem já domina o assunto.
+2. **O que os concorrentes já publicaram** — se o usuário informou concorrentes (Passo 1, pergunta 9), buscar artigos deles sobre o mesmo tema ou tema adjacente. Resumir: ângulo usado, o que cobrem, o que NÃO cobrem (lacunas). Se o usuário não informou concorrentes, pesquisar quem rankeia hoje pra keyword principal e mapear as lacunas do mesmo jeito.
+3. **Dados/estatísticas concretas com fonte** — números que sirvam de argumento de negócio (custo, tempo, risco, adoção). Preferir fontes de analistas (Gartner, IDC, Forrester) ou estudos setoriais reconhecidos.
+4. **Termos/conceitos-chave relacionados** — pra usar como variações semânticas (LSI) naturais no texto.
+
+Delegar essa pesquisa a um agent (Agent tool, subagent_type general-purpose) quando o tema for amplo ou envolver múltiplos concorrentes — evita gastar contexto da conversa principal com resultados de busca brutos. Pedir ao agent um relatório estruturado (não o artigo em si), com fontes citadas.
+
+Com o resultado da pesquisa em mãos, montar o mapa:
 
 ```
 Palavra-chave principal:     [KW1] — vai no H1, URL, meta title, primeiros 100 palavras
 Palavra-chave secundária:    [KW2] — vai em pelo menos 1 H2
-Variações semânticas (LSI):  [3-4 variações naturais distribuídas pelo texto]
+Variações semânticas (LSI):  [3-4 variações naturais distribuídas pelo texto, vindas da pesquisa]
 Intenção de busca:           [Informacional / Comercial / Investigacional]
 Topic cluster:               [tema guarda-chuva — ex: "analytics SAP"]
-Lacunas do concorrente:      [o que o artigo benchmark não cobre e a Solveplan pode cobrir]
+Lacunas do concorrente:      [o que a pesquisa encontrou que o benchmark não cobre]
 Palavras a evitar:           [jargões genéricos que não ranqueiam]
 ```
 

@@ -24,9 +24,11 @@ Fazer as perguntas abaixo, uma por vez:
 
 Se o usuário já informou algum dado antes de rodar a skill, não perguntar de novo.
 
-## Passo 2 — Análise de concorrentes
+## Passo 2 — Pesquisa online e análise de concorrentes
 
-Se o usuário informou uma página concorrente no briefing (pergunta 8), analisar antes de escrever:
+Pesquisar online antes de escrever (usar Agent tool ou WebSearch/WebFetch) — nunca montar a análise de benchmark só com conhecimento prévio do modelo. Delegar a um agent (subagent_type general-purpose) quando envolver múltiplos concorrentes ou pesquisa ampla, pedindo um relatório estruturado com fontes citadas.
+
+Se o usuário informou uma página concorrente no briefing (pergunta 8), pesquisar essa página (WebFetch) e analisar:
 
 ```
 Concorrente analisado:    [URL]
@@ -36,9 +38,7 @@ Lacunas (o que ele não cobre): [tópicos, ângulos, provas que faltam]
 Ângulo diferenciador:     [o que a Solveplan pode fazer melhor ou diferente]
 ```
 
-Se o usuário não informou concorrente, gerar análise de benchmark com base no tema:
-
-> "Para [keyword principal], páginas que costumam ranquear bem cobrem: [tópicos típicos]. Vou garantir que essa página supere o benchmark nos pontos onde a Solveplan tem diferencial real."
+Se o usuário não informou concorrente, pesquisar quem rankeia hoje pra keyword principal (WebSearch) e quais documentações/fontes técnicas oficiais existem sobre o tema, e gerar a mesma análise com base no que foi encontrado de fato — nunca com tópicos genéricos inventados.
 
 ## Passo 3 — Definir estratégia de keywords
 
