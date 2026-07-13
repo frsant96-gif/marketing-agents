@@ -40,6 +40,8 @@ Lacunas (o que ele não cobre): [tópicos, ângulos, provas que faltam]
 
 Se o usuário não informou concorrente, pesquisar quem rankeia hoje pra keyword principal (WebSearch) e quais documentações/fontes técnicas oficiais existem sobre o tema, e gerar a mesma análise com base no que foi encontrado de fato — nunca com tópicos genéricos inventados.
 
+**Importante:** essa análise de concorrente serve só pra mapear lacunas e posicionamento — nunca citar, linkar ou usar dado/case de concorrente como fonte dentro da página final. Se um dado bom só existir via case de concorrente, procurar um case equivalente da Solveplan antes de escrever essa seção.
+
 ## Passo 3 — Definir estratégia de keywords
 
 Antes de escrever qualquer seção, montar o mapa de keywords da página:

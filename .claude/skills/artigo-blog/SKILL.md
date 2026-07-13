@@ -30,7 +30,7 @@ Se o usuário já informou algum dado, não perguntar de novo.
 Antes de montar o mapa, pesquisar online (usar o Agent tool ou WebSearch/WebFetch) — nunca escrever o artigo só com conhecimento prévio do modelo. Pesquisar:
 
 1. **Conteúdo técnico oficial sobre o tema** — documentação (ex: help.sap.com, blogs.sap.com, SAP Community para temas SAP), nomes exatos de features/telas/produtos, terminologia real usada por quem já domina o assunto.
-2. **O que os concorrentes já publicaram** — se o usuário informou concorrentes (Passo 1, pergunta 9), buscar artigos deles sobre o mesmo tema ou tema adjacente. Resumir: ângulo usado, o que cobrem, o que NÃO cobrem (lacunas). Se o usuário não informou concorrentes, pesquisar quem rankeia hoje pra keyword principal e mapear as lacunas do mesmo jeito.
+2. **O que os concorrentes já publicaram** — se o usuário informou concorrentes (Passo 1, pergunta 9), buscar artigos deles sobre o mesmo tema ou tema adjacente. Resumir: ângulo usado, o que cobrem, o que NÃO cobrem (lacunas). Se o usuário não informou concorrentes, pesquisar quem rankeia hoje pra keyword principal e mapear as lacunas do mesmo jeito. **Importante:** essa pesquisa serve só pra mapear lacunas e posicionamento — nunca citar, linkar ou usar dado/case de concorrente como fonte dentro do artigo final. Se um dado bom só existir via case de concorrente, procurar um case equivalente da Solveplan antes de escrever essa seção.
 3. **Dados/estatísticas concretas com fonte** — números que sirvam de argumento de negócio (custo, tempo, risco, adoção). Preferir fontes de analistas (Gartner, IDC, Forrester) ou estudos setoriais reconhecidos.
 4. **Termos/conceitos-chave relacionados** — pra usar como variações semânticas (LSI) naturais no texto.
 
