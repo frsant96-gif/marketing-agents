@@ -1,6 +1,6 @@
-# Estratégia de Mensagem — Analytics Day 2026
+# Estratégia de Mensagem — SAP Innovation Day | Data Foundation First
 
-**Evento:** Analytics Day: Inteligência Artificial com os dados que você já tem
+**Evento:** SAP Innovation Day | Data Foundation First — "Antes da IA, vêm os dados."
 **Data:** 26/08/2026 | SAP Brasil — Auditório MASP
 **Solução foco:** SAP Business Data Cloud (BDC)
 **Criado em:** 18/06/2026

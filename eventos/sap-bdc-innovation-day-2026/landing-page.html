@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAP Innovation Day | Data Foundation First — Solveplan</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-primary: #0A0E19;
+    --bg-alt: #0A0837;
+    --accent: #006AFF;
+    --accent-green: #94FF96;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg-primary);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: 'Prompt', sans-serif; }
+  a { color: inherit; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header {
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  header .container { display: flex; align-items: center; justify-content: space-between; }
+  header img { height: 32px; }
+  .badge {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-green);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-alt) 100%);
+    padding: 80px 0 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 340px;
+    height: 340px;
+    background: radial-gradient(circle, rgba(0,106,255,0.25) 0%, rgba(0,106,255,0) 70%);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-green);
+    border: 1px solid rgba(148,255,150,0.35);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.15;
+    max-width: 780px;
+    margin: 0 auto 12px;
+  }
+  .hero .tagline {
+    font-family: 'Prompt', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 24px;
+  }
+  .hero .subhead {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.85);
+    max-width: 620px;
+    margin: 0 auto 36px;
+  }
+  .event-meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 16px 28px;
+    margin-bottom: 36px;
+  }
+  .event-meta span { white-space: nowrap; }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--white);
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .cta-sub {
+    display: block;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 12px;
+  }
+
+  /* Sections */
+  section { padding: 64px 0; }
+  section.alt { background: var(--bg-alt); }
+  .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .section-title span { color: var(--accent-green); }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .pain-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 28px 24px;
+  }
+  .pain-card .num {
+    color: var(--accent);
+    font-family: 'Prompt', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .pain-card p { font-size: 15px; color: rgba(255,255,255,0.85); }
+
+  .see-list {
+    display: grid;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .see-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 20px 24px;
+  }
+  .see-item .check {
+    color: var(--accent-green);
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .see-item p { font-size: 16px; color: var(--white); }
+
+  table.agenda {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  table.agenda th {
+    text-align: left;
+    font-family: 'Prompt', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.5);
+    padding: 0 0 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  table.agenda td {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+  }
+  table.agenda td:first-child {
+    color: var(--accent-green);
+    font-weight: 600;
+    white-space: nowrap;
+    width: 160px;
+  }
+
+  .form-block {
+    max-width: 520px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+  }
+  .form-block .limited {
+    font-size: 14px;
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .form-fields {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .form-fields input {
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.03);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+  }
+  .form-fields input::placeholder { color: rgba(255,255,255,0.4); }
+  .form-block .cta-btn { width: 100%; }
+
+  .trust-footer {
+    text-align: center;
+    padding: 40px 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+  }
+  .trust-footer strong { color: var(--white); }
+  .trust-footer .logo-footer { height: 24px; margin-bottom: 16px; opacity: 0.8; }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 30px; }
+    .hero .tagline { font-size: 18px; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .event-meta { flex-direction: column; gap: 10px; }
+    table.agenda td:first-child { width: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="../../marca/logo-escuro.png.png" alt="Solveplan">
+      <span class="badge">Evento Presencial</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">SAP Business Data Cloud</span>
+      <h1>SAP Innovation Day | Data Foundation First</h1>
+      <p class="tagline">Antes da IA, vêm os dados.</p>
+      <p class="subhead">Veja como preparar seus dados SAP e non-SAP para iniciativas reais de inteligência artificial com SAP Business Data Cloud.</p>
+
+      <div class="event-meta">
+        <span>📅 26 de agosto de 2026</span>
+        <span>🕘 09h às 12h (coffee a partir das 08h30)</span>
+        <span>📍 SAP Brasil — Av. das Nações Unidas, 14171</span>
+      </div>
+
+      <br>
+      <a href="#inscricao" class="cta-btn">Garantir minha vaga</a>
+      <span class="cta-sub">Vagas limitadas — inscrição gratuita</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Para quem é <span>esse evento</span></h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="num">01</span>
+          <p>Dados espalhados entre SAP e sistemas externos, sem visão única do negócio</p>
+        </div>
+        <div class="pain-card">
+          <span class="num">02</span>
+          <p>Equipe gastando tempo em conciliação manual em vez de análise</p>
+        </div>
+        <div class="pain-card">
+          <span class="num">03</span>
+          <p>Pressão pra entregar IA sem uma base de dados pronta pra isso</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container">
+      <h2 class="section-title">O que você vai <span>ver</span></h2>
+      <div class="see-list">
+        <div class="see-item">
+          <span class="check">✓</span>
+          <p>Como o SAP Business Data Cloud unifica dados de SAP e non-SAP numa camada única e governada</p>
+        </div>
+        <div class="see-item">
+          <span class="check">✓</span>
+          <p>Demo ao vivo da plataforma funcionando — não é slide, é produto rodando</p>
+        </div>
+        <div class="see-item">
+          <span class="check">✓</span>
+          <p>Espaço aberto pra tirar dúvidas com especialistas Solveplan sobre o seu ambiente SAP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Programação</h2>
+      <table class="agenda">
+        <tr><th>Horário</th><th>Atividade</th></tr>
+        <tr><td>08:30 – 09:00</td><td>Coffee e credenciamento</td></tr>
+        <tr><td>09:00 – 09:30</td><td>Abertura</td></tr>
+        <tr><td>09:30 – 10:00</td><td>SAP Business Data Cloud e IA</td></tr>
+        <tr><td>10:00 – 10:30</td><td>Demo ao vivo</td></tr>
+        <tr><td>10:30 – 11:00</td><td>Case de cliente</td></tr>
+        <tr><td>11:00 – 11:30</td><td>Encerramento e networking</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="alt" id="inscricao">
+    <div class="container">
+      <h2 class="section-title">Garanta sua <span>vaga</span></h2>
+      <div class="form-block">
+        <p class="limited">Vagas limitadas — inscrição gratuita</p>
+        <div class="form-fields">
+          <input type="text" placeholder="Nome completo">
+          <input type="email" placeholder="E-mail corporativo">
+          <input type="text" placeholder="Empresa">
+          <input type="text" placeholder="Cargo">
+          <input type="tel" placeholder="Telefone">
+        </div>
+        <a href="#" class="cta-btn">Garantir minha vaga</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-footer container">
+    <img src="../../marca/logo-escuro.png.png" alt="Solveplan" class="logo-footer">
+    <p><strong>Melhor Parceiro SAP BDC 2026 — América Latina</strong> · 200+ projetos entregues · 13+ anos de atuação em SAP</p>
+  </div>
+
+</body>
+</html>

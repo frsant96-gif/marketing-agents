@@ -10,7 +10,7 @@
 
 ## 1. Briefing inicial
 
-- **Nome da ação/evento:** ⏳ **Pendente** — Andrey pediu outro nome (a substituir "Analytics Day: Inteligência Artificial com os dados que você já tem"). Aguardando definição do nome final.
+- **Nome da ação/evento:** SAP Innovation Day | Data Foundation First — "Antes da IA, vêm os dados." (nome definitivo, confirmado em 14/07/2026)
 - **Data e local:** 26 de agosto de 2026 — SAP Brasil, Av. das Nações Unidas, 14171
 - **Horário:** 09h às 12h (coffee a partir das 08:30)
 - **Responsável principal:** Francielle Beline
@@ -410,8 +410,8 @@ Antes do evento, alinhar com todos os presentes:
 
 ## Notas gerais
 
-- ⏳ **Pendências abertas (06/07/2026):**
-  - Nome definitivo do evento — Andrey pediu outro nome, ainda não recebido
+- ⏳ **Pendências abertas (atualizado 14/07/2026):**
+  - Nome definitivo do evento — ✅ confirmado: "SAP Innovation Day | Data Foundation First"
   - Key message / elevator pitch — precisam de validação do Andrey (dores e CTAs já estão validados)
   - Case de sucesso — Ourofino em negociação (alternativas: VALE, Klabin, Aegea, COPEL)
   - Budget — valores realizados a preencher por item (Fran vai passar os números)

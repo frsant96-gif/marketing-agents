@@ -1,8 +1,9 @@
-# Landing page + WhatsApp — [Nome do evento — SAP BDC Innovation Day 2026] ⏳
+# Landing page + WhatsApp — SAP Innovation Day | Data Foundation First
 
-> ⏳ Nome do evento pendente (Andrey). Substituir `[NOME DO EVENTO]` quando confirmado.
+> ✅ Nome do evento confirmado em 14/07/2026: "SAP Innovation Day | Data Foundation First".
 > ⏳ Key message pendente de validação.
 > ⏳ Case de sucesso não é citado — Ourofino ainda não confirmado.
+> HTML da LP em `../landing-page.html`.
 
 ---
 
@@ -10,9 +11,11 @@
 
 ### Hero
 
-**Headline:** Sua empresa já tem os dados. Falta só ativar a IA.
+**Título:** SAP Innovation Day | Data Foundation First
 
-**Subheadline:** Evento presencial sobre SAP Business Data Cloud — como unificar dados de SAP e non-SAP numa camada só e colocar IA pra funcionar sobre o que você já tem.
+**Headline:** Antes da IA, vêm os dados.
+
+**Subheadline:** Veja como preparar seus dados SAP e non-SAP para iniciativas reais de inteligência artificial com SAP Business Data Cloud.
 
 **Data / Local:** 26 de agosto · 9h às 12h · SAP Brasil, Av. das Nações Unidas, 14171
 
