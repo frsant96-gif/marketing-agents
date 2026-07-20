@@ -41,8 +41,9 @@ Já existe o artigo ["Monitoramento de ambientes SAP Datasphere"](../monitoramen
 FAQPage schema deve ser adicionado com as 5 perguntas da seção FAQ do artigo.
 
 ## WordPress
-- **Status:** rascunho (a publicar)
-- **Post ID:** (preencher após publicar)
+- **Status:** rascunho (publicado como draft)
+- **Post ID:** 11311
+- **Link:** https://solveplan.com/?p=11311
 - **CTA URL:** https://bdcstrategy.solveplan.ai/
 
 ## Metas de performance
