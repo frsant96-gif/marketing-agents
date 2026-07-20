@@ -9,6 +9,8 @@
 
 ## Post 1 — Institucional (página Solveplan)
 
+**Criativo (Canva):** editar em https://www.canva.com/d/y6pQepPHWe9lr0g | ver em https://www.canva.com/d/mDP6e8i8TLSa2SL
+
 Seu SAP Datasphere entrou em produção.
 
 Agora começa o verdadeiro desafio.
@@ -35,6 +37,8 @@ Quer saber como está a saúde do seu ambiente? Solicite uma avaliação gratuit
 ---
 
 ## Post 2 — Sócios (perfil pessoal)
+
+**Criativo (Canva):** editar em https://www.canva.com/d/GGsWiNSGwagST_s | ver em https://www.canva.com/d/e4zBSXkAT8NLB7x
 
 Depois de anos vendo o mesmo padrão se repetir em projetos de SAP Datasphere, decidimos transformar isso em produto.
 
