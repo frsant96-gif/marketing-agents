@@ -1,5 +1,8 @@
 # Carrossel — Lançamento Solvewatch (sustentação)
 
+**Versão Canva (formato quadrado 1080x1080):** editar em https://www.canva.com/d/H9SKxFqRk2xFGBA | ver em https://www.canva.com/d/L7qFIjNfMLJ41MT
+**Versão HTML/PNG local:** `marketing/campanhas/lancamento-solvewatch/carrossel/slides/` (gerada via `gerar.js`, mesmo texto)
+
 **Ângulo:** as 4 dores trabalhadas na fase de sustentação do lançamento (confiabilidade, custos, governança, IA)
 **Formato:** Instagram/LinkedIn, 1080x1080
 **Persona:** CIO, Head de Dados/BI, COO
