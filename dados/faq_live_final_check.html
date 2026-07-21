@@ -1,0 +1,251 @@
+<!-- FAQ SCHEMA — AEO/GEO (invisível, lido pelo Google e IAs) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o Solve Watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Solve Watch é um serviço gerenciado especializado em SAP Datasphere que combina tecnologia própria com especialistas Solveplan. Ele monitora continuamente seu ambiente, identifica riscos antes que impactem o negócio e entrega recomendações práticas para melhorar performance, governança e consumo de Capacity Units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais problemas o Solve Watch resolve no SAP Datasphere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Solve Watch resolve os principais problemas silenciosos do SAP Datasphere: falhas ocultas em cargas de dados, crescimento descontrolado de Capacity Units, falta de governança de objetos, retrabalho operacional e ambientes sem visibilidade histórica — problemas que o monitoramento nativo do SAP Datasphere não identifica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como o Solve Watch complementa os recursos nativos do SAP Datasphere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O monitoramento nativo do SAP Datasphere entrega painéis básicos sem histórico, sem alertas proativos e sem análise. O Solve Watch adiciona histórico de performance, alertas configurados por criticidade de negócio, análise de FinOps para controle de Capacity Units e governança de metadados — com a interpretação de especialistas SAP em cima dos dados."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Solve Watch é necessário antes de implementar IA sobre dados SAP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Toda iniciativa de IA sobre dados SAP depende de uma camada semântica governada — objetos com nome claro, descrições preenchidas, arquitetura consistente e metadados que fazem sentido. O Solve Watch identifica e estrutura esse ambiente antes de ativar soluções de IA, garantindo que a IA leia dados confiáveis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quando começo a receber os primeiros diagnósticos e recomendações?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Em 30 dias, o Solve Watch já identifica falhas ocultas, entrega um diagnóstico completo e estabelece o baseline de consumo de Capacity Units. Em 90 dias, o ambiente se torna previsível e a performance está otimizada. Em 180 dias, a empresa tem controle financeiro ampliado e maturidade operacional para crescer com segurança."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Solve Watch funciona apenas com SAP Datasphere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim, o Solve Watch é especializado em SAP Datasphere. A Solveplan é parceira SAP Gold com foco em implementação e gestão de SAP Datasphere e SAP Business Data Cloud na América Latina — o que garante profundidade técnica e conhecimento do ecossistema SAP no serviço."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A IA do Solve Watch decide sozinha o que mudar no meu ambiente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A IA faz a leitura do ambiente e propõe recomendações priorizadas, mas nada chega até você sem a validação de um arquiteto especialista da Solveplan. Você recebe orientação confiável e mantém o controle total das decisões — a IA acelera o diagnóstico, o especialista garante a qualidade, e a ação é sempre sua."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Solve Watch é uma plataforma ou um software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. O Solve Watch é um serviço gerenciado da Solveplan. O cliente recebe diagnósticos, relatórios executivos, recomendações priorizadas e apoio especializado, sem a necessidade de operar uma nova plataforma."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ VISUAL -->
+<style>
+.sw-faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.sw-faq-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.sw-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0;
+}
+.sw-faq-item:first-of-type {
+  border-top: 1px solid #e2e8f0;
+}
+.sw-faq-question {
+  width: 100%;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+  padding: 20px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2e4a !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+.sw-faq-question:hover,
+.sw-faq-question:focus,
+.sw-faq-question:active,
+.sw-faq-question:visited {
+  color: #0b1a2e !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+.sw-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0057B8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+.sw-faq-item.open .sw-faq-icon {
+  transform: rotate(45deg);
+}
+.sw-faq-answer {
+  display: none;
+  padding: 0 8px 20px;
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+.sw-faq-item.open .sw-faq-answer {
+  display: block;
+}
+</style>
+
+<div class="sw-faq-section">
+  <h2>Perguntas frequentes</h2>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O que é o Solve Watch?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O Solve Watch é um serviço gerenciado especializado em SAP Datasphere que combina tecnologia própria com especialistas Solveplan. Ele monitora continuamente seu ambiente, identifica riscos antes que impactem o negócio e entrega recomendações práticas para melhorar performance, governança e consumo de Capacity Units.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Quais problemas o Solve Watch resolve no SAP Datasphere?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O Solve Watch resolve os principais problemas silenciosos do SAP Datasphere: falhas ocultas em cargas de dados, crescimento descontrolado de Capacity Units, falta de governança de objetos, retrabalho operacional e ambientes sem visibilidade histórica — problemas que o monitoramento nativo do SAP Datasphere não identifica.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Como o Solve Watch complementa os recursos nativos do SAP Datasphere?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      O monitoramento nativo do SAP Datasphere entrega painéis básicos sem histórico, sem alertas proativos e sem análise. O Solve Watch adiciona histórico de performance, alertas configurados por criticidade de negócio, análise de FinOps para controle de Capacity Units e governança de metadados — com a interpretação de especialistas SAP em cima dos dados.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O Solve Watch é necessário antes de implementar IA sobre dados SAP?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Sim. Toda iniciativa de IA sobre dados SAP depende de uma camada semântica governada — objetos com nome claro, descrições preenchidas, arquitetura consistente e metadados que fazem sentido. O Solve Watch identifica e estrutura esse ambiente antes de ativar soluções de IA, garantindo que a IA leia dados confiáveis.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      Quando começo a receber os primeiros diagnósticos e recomendações?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Em 30 dias, o Solve Watch já identifica falhas ocultas, entrega um diagnóstico completo e estabelece o baseline de consumo de Capacity Units. Em 90 dias, o ambiente se torna previsível e a performance está otimizada. Em 180 dias, a empresa tem controle financeiro ampliado e maturidade operacional para crescer com segurança.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O Solve Watch funciona apenas com SAP Datasphere?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Sim, o Solve Watch é especializado em SAP Datasphere. A Solveplan é parceira SAP Gold com foco em implementação e gestão de SAP Datasphere e SAP Business Data Cloud na América Latina — o que garante profundidade técnica e conhecimento do ecossistema SAP no serviço.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      A IA do Solve Watch decide sozinha o que mudar no meu ambiente?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Não. A IA faz a leitura do ambiente e propõe recomendações priorizadas, mas nada chega até você sem a validação de um arquiteto especialista da Solveplan. Você recebe orientação confiável e mantém o controle total das decisões — a IA acelera o diagnóstico, o especialista garante a qualidade, e a ação é sempre sua.
+    </div>
+  </div>
+
+  <div class="sw-faq-item">
+    <button class="sw-faq-question" onclick="swToggleFaq(this)">
+      O Solve Watch é uma plataforma ou um software?
+      <span class="sw-faq-icon">+</span>
+    </button>
+    <div class="sw-faq-answer">
+      Não. O Solve Watch é um serviço gerenciado da Solveplan. O cliente recebe diagnósticos, relatórios executivos, recomendações priorizadas e apoio especializado, sem a necessidade de operar uma nova plataforma.
+    </div>
+  </div>
+
+</div>
+
+<script>
+function swToggleFaq(btn) {
+  var item = btn.closest('.sw-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.sw-faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+</script>
