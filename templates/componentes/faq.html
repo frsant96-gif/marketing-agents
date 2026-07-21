@@ -1,0 +1,164 @@
+<!-- ============================================================
+COMPONENTE: FAQ (accordion)
+Origem: marketing/paginas/faq-solvewatch.html
+Uso: reutilizar em qualquer página do site que precise de seção de FAQ.
+
+Como usar:
+1. Copiar o bloco inteiro (schema + style + html + script) pra página nova
+2. Trocar o texto do <h2> pelo título da página
+3. Trocar as perguntas/respostas do bloco <script type="application/ld+json"> (schema FAQPage — lido por Google/IAs)
+4. Trocar as perguntas/respostas do HTML visual (precisa ser IDÊNTICO ao schema, senão perde o efeito AEO/GEO)
+5. Se a página já tem outro bloco de FAQ, não duplicar o <script> de toggleFaq — reaproveitar o mesmo
+============================================================ -->
+
+<!-- FAQ SCHEMA — AEO/GEO (invisível, lido pelo Google e IAs) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PERGUNTA 1",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RESPOSTA 1"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PERGUNTA 2",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "RESPOSTA 2"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ VISUAL — exibido na página -->
+<style>
+.site-faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.site-faq-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a2e4a;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.site-faq-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0;
+}
+
+.site-faq-item:first-of-type {
+  border-top: 1px solid #e2e8f0;
+}
+
+.site-faq-question {
+  width: 100%;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: left;
+  padding: 20px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a2e4a !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.4;
+  text-decoration: none !important;
+}
+
+.site-faq-question:hover,
+.site-faq-question:focus,
+.site-faq-question:active,
+.site-faq-question:visited {
+  color: #0b1a2e !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.site-faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0057B8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+
+.site-faq-item.open .site-faq-icon {
+  transform: rotate(45deg);
+}
+
+.site-faq-answer {
+  display: none;
+  padding: 0 8px 20px;
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.7;
+}
+
+.site-faq-item.open .site-faq-answer {
+  display: block;
+}
+</style>
+
+<div class="site-faq-section">
+  <h2>Perguntas frequentes sobre [TEMA DA PÁGINA]</h2>
+
+  <div class="site-faq-item">
+    <button class="site-faq-question" onclick="siteToggleFaq(this)">
+      PERGUNTA 1
+      <span class="site-faq-icon">+</span>
+    </button>
+    <div class="site-faq-answer">
+      RESPOSTA 1
+    </div>
+  </div>
+
+  <div class="site-faq-item">
+    <button class="site-faq-question" onclick="siteToggleFaq(this)">
+      PERGUNTA 2
+      <span class="site-faq-icon">+</span>
+    </button>
+    <div class="site-faq-answer">
+      RESPOSTA 2
+    </div>
+  </div>
+</div>
+
+<script>
+function siteToggleFaq(btn) {
+  var item = btn.closest('.site-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.site-faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+  });
+  if (!isOpen) item.classList.add('open');
+}
+</script>

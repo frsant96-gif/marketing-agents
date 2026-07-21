@@ -82,6 +82,12 @@
 
 ---
 
+## Componentes reutilizáveis
+
+- **FAQ (accordion):** layout aprovado em `templates/componentes/faq.html`. Usar em qualquer página do site que precise de seção de FAQ — inclui schema FAQPage (AEO/GEO) + visual + toggle JS. Copiar o bloco inteiro e trocar perguntas/respostas (schema e HTML precisam ficar idênticos).
+
+---
+
 ## Observações adicionais
 
 - A marca usa letras minúsculas no logotipo ("solveplan") — manter esse padrão quando escrever o nome da marca em contexto visual
