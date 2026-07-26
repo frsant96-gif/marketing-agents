@@ -1,6 +1,8 @@
 # Guia Power BI — Passo a Passo do Zero
 **Solveplan H1 2026 | Para quem nunca usou Power BI**
 
+> **Atualização 25/07/2026:** o arquivo `dados/PowerBI_Solveplan_H1_2026.xlsx` ganhou 2 abas novas com dados ao vivo do HubSpot (pipeline e receita até 25/07): **fReceita_Mensal** (receita fechada por mês, Jan-Jul) e **fPipeline_Etapas_Jul26** (pipeline aberto por etapa, snapshot atual — inclui os 20 negócios em "Sleep Deals" parados). A `KPIs_Resumo` também ganhou linhas novas no final com os números atualizados. As abas originais (fLeads, fNegocios, fSessoes_GA4 etc.) continuam intactas com o recorte Jan-Mai. Ao importar no Power BI, marque também essas 2 abas novas no Passo 1.
+
 ---
 
 ## O que você vai criar
