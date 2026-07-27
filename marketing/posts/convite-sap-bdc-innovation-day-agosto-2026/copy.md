@@ -12,7 +12,7 @@
 | 01 | Lançamento — a pergunta que ninguém faz | 28/07 |
 | 02 | Provocação — IA sem base de dados | 04/08 |
 | 03 | Dor específica — TI x Finanças no fechamento | 11/08 |
-| 04 | Autoridade — por que ouvir a Solveplan | 18/08 |
+| 04 | Case de sucesso — SSA Alimentos (SAP Datasphere) | 18/08 |
 | 05 | Última chance — urgência + recapitulação | 25/08 |
 
 ---
@@ -157,42 +157,50 @@ Link na bio — vagas limitadas
 
 ---
 
-## POST 04 — Autoridade
-**"Por que ouvir a Solveplan sobre isso"**
-**Data:** 18/08 · **Objetivo:** Autoridade executiva + credibilidade · **Persona:** Geral (CIO/CFO/Controller)
+## POST 04 — Case de sucesso
+**"Como a SSA Alimentos parou de operar com dados fragmentados"**
+**Data:** 18/08 · **Objetivo:** Autoridade executiva + prova social · **Persona:** Geral (CIO/CFO/Controller)
 
 ### LinkedIn
 
-Existe um motivo concreto pra Solveplan estar à frente dessa conversa sobre SAP Business Data Cloud: fomos reconhecidos como Melhor Parceiro SAP Business Data Cloud da América Latina em 2026.
+A SSA Alimentos rodava SAP, mas vivia o mesmo problema de boa parte das empresas que atendemos: dados operacionais e financeiros espalhados entre sistemas, sem uma camada única que desse visão confiável pra quem decide.
 
-Não é selo de parede. É resultado de estar dentro da implementação — como parceira Gold SAP, com mais de 200 soluções entregues e 90 clientes atendidos em dados, analytics, planejamento financeiro e consolidação.
+Com o SAP Datasphere, a Solveplan estruturou essa camada — unificando dados de diferentes fontes numa base governada, tirando a liderança da posição de reconciliar planilha antes de discutir resultado.
 
-Dia 26/08, na SAP Brasil, levamos esse repertório pro auditório: não uma apresentação institucional, uma demonstração de como o BDC resolve, na prática, o problema de dados fragmentados em empresas que rodam SAP.
+Esse é o mesmo problema que resolvemos, em escala maior, com o SAP Business Data Cloud: unificar SAP e non-SAP numa camada só, pronta pra analytics e IA em tempo real.
 
-Pra quem decide sobre dados, TI e finanças nesse tipo de empresa, vale a manhã.
+Dia 26/08, na SAP Brasil, mostramos como aplicar essa lógica com o BDC — com case real, não promessa institucional.
+
+Pra CIOs, CFOs, Controllers e Heads de Dados de empresas SAP.
 
 Inscrição (vagas limitadas): https://solveplan.com/evento/sap-innovation-day-dados-ia-sap-bdc/
 
-#SAPBDC #SAPGoldPartner #DataFoundation
+#SAPBDC #SAPDatasphere #CaseDeSucesso
 
 ### Instagram
 
-Melhor Parceiro SAP Business Data Cloud da América Latina em 2026 🏆
+Case real: como a SSA Alimentos saiu dos dados fragmentados 📊
 
-Não é selo de parede — é repertório de mais de 200 implementações levado pro auditório da SAP Brasil, dia 26/08.
+Com o SAP Datasphere, unificamos dados operacionais e financeiros numa camada única — a liderança parou de reconciliar planilha pra discutir resultado.
 
-Dados, analytics, planejamento financeiro e consolidação, na prática.
+Dia 26/08 mostramos como aplicar essa lógica em escala com o SAP Business Data Cloud.
 
 📍 SAP Brasil · 🗓️ 26/08
 Link na bio — vagas limitadas
 
-#SAPBDC #SAPGoldPartner
+#SAPBDC #SAPDatasphere #CaseDeSucesso
 
 ### Briefing visual — Imagem estática
-- **Headline na imagem:** "Melhor Parceiro SAP Business Data Cloud — América Latina 2026"
-- **Dado/frase de destaque:** "+200 soluções entregues · +90 clientes atendidos"
-- **Elemento visual:** selo/badge de reconhecimento SAP em destaque, com identidade visual Solveplan — evitar estética de "prêmio genérico", usar tipografia sóbria
+- **Headline na imagem:** "SSA Alimentos: de dados fragmentados a uma camada única"
+- **Dado/frase de destaque:** "SAP Datasphere unificou o que a planilha não conseguia."
+- **Elemento visual:** logo SSA Alimentos (com autorização já confirmada) + ícone de transição de sistemas fragmentados para camada única, identidade visual Solveplan em segundo plano
 - **Paleta:** fundo `#0A0837`, destaque `#006AFF`, texto `#FFFFFF`
+
+### Briefing visual — Carrossel (4 slides)
+1. **Capa:** "Case real: SSA Alimentos" — logo do cliente + Solveplan
+2. **Dor:** "Dados operacionais e financeiros espalhados, sem camada única de confiança."
+3. **Solução:** "SAP Datasphere unificou as fontes numa base governada — a liderança parou de reconciliar pra discutir resultado."
+4. **CTA:** "Essa é a mesma lógica que aplicamos com o SAP Business Data Cloud. 26/08 · SAP Brasil · vagas limitadas."
 
 ---
 
@@ -246,7 +254,7 @@ Se sua empresa roda SAP e ainda vive de planilha pra fechar número, essa manhã
 - [x] Sem "transformação digital" genérica
 
 **Posicionamento**
-- [x] Solveplan como especialista (Post 04 usa credencial verificável — Melhor Parceiro SAP BDC América Latina 2026, Gold Partner, +200 soluções)
+- [x] Solveplan como especialista (Post 04 usa case real e autorizado — SSA Alimentos, projeto SAP Datasphere)
 - [x] Pelo menos 1 dado/afirmação verificável por post
 
 **Plataforma**
@@ -256,5 +264,6 @@ Se sua empresa roda SAP e ainda vive de planilha pra fechar número, essa manhã
 
 **Pendência a resolver antes de publicar**
 - [x] Link da LP confirmado: https://solveplan.com/evento/sap-innovation-day-dados-ia-sap-bdc/
-- [ ] Case de sucesso (Ourofino ou alternativa) ainda não confirmado — nenhum post cita cliente por nome, conforme orientação de não citar concorrente/case não confirmado
+- [x] Case de sucesso confirmado: SSA Alimentos (SAP Datasphere) — autorização de uso do nome já concedida
+- [ ] Confirmar formato exato do resultado a citar (hoje só qualitativo — se surgir número validado pelo cliente, atualizar o Post 04 antes de publicar)
 - [ ] Datas recalendarizadas pra depois de 27/07 (hoje) — validar com o calendário de e-mail/WhatsApp do plano do evento
