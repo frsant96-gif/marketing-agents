@@ -226,8 +226,18 @@ def resolve_site_url(args_site=None):
 # ---------------------------------------------------------------------------
 
 def print_json(obj):
-    """Serializa e printa qualquer objeto para stdout."""
-    print(json.dumps(obj, indent=2, ensure_ascii=False, default=str))
+    """Serializa e printa qualquer objeto para stdout.
+
+    Escreve bytes UTF-8 direto no stdout.buffer: no console do Windows,
+    print() normal decodifica pela codepage ativa (cp1252/cp850) e corrompe
+    acentos mesmo com ensure_ascii=False.
+    """
+    text = json.dumps(obj, indent=2, ensure_ascii=False, default=str)
+    try:
+        sys.stdout.buffer.write((text + "\n").encode("utf-8"))
+        sys.stdout.buffer.flush()
+    except AttributeError:
+        print(text)
 
 
 def print_error(msg):
