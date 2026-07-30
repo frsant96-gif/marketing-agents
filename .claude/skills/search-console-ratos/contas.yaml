@@ -1,0 +1,13 @@
+# Search Console Ratos — Cadastro de sites
+# O Claude consulta este arquivo para resolver nomes de clientes para site URLs.
+#
+# Exemplo:
+# - nome: Meu Cliente
+#   site_url: "https://exemplo.com.br/"   (ou "sc-domain:exemplo.com.br")
+
+sites:
+
+  # -- Teus sites abaixo --
+
+  - nome: Solveplan
+    site_url: "https://solveplan.com/"
