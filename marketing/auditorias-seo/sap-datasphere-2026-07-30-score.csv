@@ -1,0 +1,16 @@
+Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,7,10,Parcial,Title com 27 caracteres (fora da faixa 50-60). Ampliar mantendo a keyword.
+SEO On-Page,Meta Description,6,10,Parcial,Descrição com ~156 caracteres cortada no meio da frase e sem CTA claro. Reescrever dentro de 120-155 caracteres com fechamento completo e CTA.
+SEO On-Page,Estrutura de Headings,1,10,Faltando,Não existe H1 na página. Todos os títulos estão em H2 sem hierarquia.
+SEO On-Page,URL + Imagens + Links,6,10,Parcial,URL e HTTPS OK. Todas as imagens têm alt vazio. Links internos existem só no rodapé (nenhum no corpo do conteúdo).
+Performance Técnica,PageSpeed Mobile,0,8,Não verificado,Cota gratuita da API PageSpeed esgotada hoje. Rodar manualmente em pagespeed.web.dev.
+Performance Técnica,PageSpeed Desktop,0,5,Não verificado,Cota gratuita da API PageSpeed esgotada hoje. Rodar manualmente em pagespeed.web.dev.
+Performance Técnica,LCP,0,4,Não verificado,Rodar manualmente em pagespeed.web.dev.
+Performance Técnica,CLS,0,3,Não verificado,Rodar manualmente em pagespeed.web.dev.
+AEO,Bloco Featured Snippet,6,10,Parcial,Existe um parágrafo de definição de ~44 palavras sobre o SAP Datasphere, mas não está logo abaixo de um H2 em formato de pergunta.
+AEO,FAQ,0,8,Faltando,Não existe seção de FAQ na página.
+AEO,Perguntas nos Headings,0,7,Faltando,Nenhum H2 está formulado como pergunta (todos são rótulos: "Antes do DataSphere"; "A transição: SAP DWC" etc).
+GEO,Schema Markup,2,6,Parcial,JSON-LD existe mas o tipo é BlogPosting (deveria ser Service/WebPage para página de solução) e não há FAQPage.
+GEO,E-E-A-T,0,5,Faltando,Autor é um slug técnico (não nome real) e o conteúdo não menciona prova social (parceira SAP Gold/150+ empresas/prêmios).
+GEO,Entidades e Citações,2,4,Parcial,Solveplan e produtos SAP citados corretamente. Falta citar dados/fontes externas e localização (América Latina/Brasil).
+TOTAL,,30,100,,
