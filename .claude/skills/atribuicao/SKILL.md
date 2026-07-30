@@ -210,6 +210,7 @@ Criar pasta `marketing/relatorios/atribuicao-[periodo]/` e salvar:
 
 - Nunca atribuir 100% do resultado a um canal só quando há jornada multi-touch — é sempre parcial
 - Sempre registrar as limitações dos dados disponíveis — dado ruim gera conclusão errada
+- **Dado ausente não é zero** — se um canal não tem custo, lead ou touchpoint registrado, marcar a célula como "sem dado" na tabela, nunca como 0. Tratar ausência como zero enviesa CAC/ROAS/taxa de conversão pra baixo (parece pior do que é) ou some com o canal da análise sem avisar. Sempre destacar quais canais têm lacuna antes de tirar conclusão comparativa entre eles
 - ROAS e CAC só calcular com dados reais — não estimar sem base
 - UTM inconsistente é problema de atribuição — registrar e sugerir correção
 - Recomendações de budget têm que ter justificativa em dado, não em intuição

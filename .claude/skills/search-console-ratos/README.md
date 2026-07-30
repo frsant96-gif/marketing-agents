@@ -19,6 +19,6 @@ scripts/
   lib/__init__.py    — auth, .env loader, helpers
   read.py            — sites, sitemaps
   reports.py          — queries, pages, countries, devices, dates, custom, compare
-  inspect.py          — URL Inspection API (status de indexação)
+  url_inspect.py      — URL Inspection API (status de indexação)
 contas.yaml           — cadastro de sites por nome de cliente
 ```

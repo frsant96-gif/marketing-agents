@@ -128,11 +128,11 @@ Parametros comuns:
 | `--start-date` / `--end-date` | Periodo explicito (YYYY-MM-DD) | `2026-06-01` / `2026-06-30` |
 | `--limit` | Limite de linhas | `50` |
 
-### Inspecao de URL (inspect.py)
+### Inspecao de URL (url_inspect.py)
 
 | Subcomando | O que faz | Exemplo |
 |---|---|---|
-| `url` | Status de indexacao, canonical, cobertura, mobile usability, rich results de uma URL | `inspect.py url --url https://solveplan.com/blog/artigo` |
+| `url` | Status de indexacao, canonical, cobertura, mobile usability, rich results de uma URL | `url_inspect.py url --url https://solveplan.com/blog/artigo` |
 
 ---
 
@@ -140,7 +140,7 @@ Parametros comuns:
 
 O Claude DEVE seguir estas regras ao executar operacoes:
 
-1. **Leitura por padrao** — os comandos de `reports.py`, `read.py sites/sitemaps` e `inspect.py` sao somente leitura. O unico comando que escreve algo no GSC e `read.py sitemap-submit` (reenvio de sitemap) — usar so quando o usuario pedir explicitamente
+1. **Leitura por padrao** — os comandos de `reports.py`, `read.py sites/sitemaps` e `url_inspect.py` sao somente leitura. O unico comando que escreve algo no GSC e `read.py sitemap-submit` (reenvio de sitemap) — usar so quando o usuario pedir explicitamente
 2. **Nunca hardcodar site URLs ou credenciais** — sempre usar env vars ou contas.yaml
 3. **Respeitar rate limits** — se receber erro de quota, aguardar 60 segundos antes de tentar novamente
 4. **Sempre especificar o periodo e o site** ao mostrar metricas — dados de GSC tem defasagem de ~2-3 dias
@@ -163,10 +163,10 @@ Sim, da pra fechar o ciclo completo: **diagnosticar no Search Console e aplicar 
 | Sitemap com erro ou desatualizado | Reenviar sitemap | `read.py sitemap-submit` |
 
 **Fluxo recomendado quando o usuario pedir "corrige com base no Search Console":**
-1. Rodar `reports.py pages` e `reports.py queries` (ou `page-queries` pra uma URL especifica) pra achar o problema: posicao boa + CTR baixo = titulo/meta fraco; impressao alta + posicao ruim = conteudo fraco pra intencao de busca; `inspect.py url` pra confirmar que a pagina esta indexada e sem erro de cobertura
+1. Rodar `reports.py pages` e `reports.py queries` (ou `page-queries` pra uma URL especifica) pra achar o problema: posicao boa + CTR baixo = titulo/meta fraco; impressao alta + posicao ruim = conteudo fraco pra intencao de busca; `url_inspect.py url` pra confirmar que a pagina esta indexada e sem erro de cobertura
 2. Propor a correcao especifica (novo title, nova meta description, novo trecho de conteudo, alt text) e mostrar pro usuario antes de aplicar
 3. Aplicar via API do WordPress (usar as credenciais e endpoints documentados na skill `wordpress` e na memoria `reference-wordpress-rankmath-api`)
-4. Sugerir reinspecionar a URL depois de 1-2 dias com `inspect.py url` pra ver se o status mudou
+4. Sugerir reinspecionar a URL depois de 1-2 dias com `url_inspect.py url` pra ver se o status mudou
 
 ### O que NAO da pra corrigir via API — precisa de acao manual no painel/plugin
 
@@ -190,7 +190,7 @@ Quando o achado cair nessa segunda lista, o Claude deve apontar o problema com o
 ### Pagina com trafego caindo
 
 1. `reports.py page-queries --page <url> --days 90` — quais queries perderam posicao/impressao
-2. `inspect.py url --url <url>` — ainda esta indexada? algum erro de cobertura?
+2. `url_inspect.py url --url <url>` — ainda esta indexada? algum erro de cobertura?
 3. Comparar com `ga4-ratos reports.py landing-pages` pra ver se o problema e so ranking ou tambem conversao
 
 ### Oportunidade de CTR (posicao boa, poucos cliques)
@@ -202,4 +202,4 @@ Quando o achado cair nessa segunda lista, o Claude deve apontar o problema com o
 ### Antes de publicar conteudo novo
 
 1. `reports.py queries --days 90` — ver quais termos ja trazem trafego pro tema, evitar canibalizacao
-2. Depois de publicar: `read.py sitemap-submit` (se o sitemap nao atualizar sozinho) + `inspect.py url` pra acompanhar a indexacao
+2. Depois de publicar: `read.py sitemap-submit` (se o sitemap nao atualizar sozinho) + `url_inspect.py url` pra acompanhar a indexacao
