@@ -169,3 +169,31 @@ O Claude DEVE seguir estas regras ao executar operacoes:
 1. `reports.py landing-pages --date-range 30daysAgo --limit 20` — paginas com maior bounce
 2. `reports.py devices --date-range 30daysAgo` — se mobile tem bounce maior
 3. `reports.py traffic-sources --date-range 30daysAgo` — se alguma fonte tem bounce anomalo
+
+---
+
+## Diagnostico com recomendacoes priorizadas
+
+Quando o usuario pedir um "diagnostico", "analise com recomendacoes" ou "o que fazer com esses dados" (em vez de so puxar numeros crus), o Claude deve rodar o fluxo de leitura relevante e depois estruturar o output como uma tabela de recomendacoes — nao so listar metricas.
+
+### Formato do output
+
+1. **Resumo do periodo** — periodo consultado, propriedade, e 2-3 linhas com o cenario geral (tendencia de alta/queda vs periodo anterior)
+2. **Achados** — o que os dados mostram, com o numero que sustenta cada achado
+3. **Recomendacoes priorizadas** — tabela:
+
+| Prioridade | Achado | Recomendacao | Impacto esperado |
+|---|---|---|---|
+| Alta | [ex: bounce rate 78% em landing page X vindo de LinkedIn Ads] | [ex: revisar alinhamento copy do anuncio vs H1 da pagina] | [ex: reduzir bounce, melhorar CPL] |
+| Media | ... | ... | ... |
+| Baixa | ... | ... | ... |
+
+### Criterio de priorizacao
+
+- **Alta** — metrica com desvio grande vs media historica E ligada a canal pago (custo direto envolvido) ou a pagina de conversao
+- **Media** — desvio relevante mas em canal organico/sem custo direto, ou afeta volume mas nao conversao
+- **Baixa** — variacao dentro do esperado ou dado informativo sem acao clara associada
+
+### Regra
+
+Nunca recomendar sem citar o dado que sustenta — toda linha da tabela precisa apontar pra uma metrica especifica do relatorio rodado. Se o dado nao for suficiente pra afirmar causa, dizer isso explicitamente em vez de especular.

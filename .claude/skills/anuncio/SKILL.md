@@ -22,6 +22,15 @@ Fazer as perguntas abaixo, uma por vez:
 
 Se o usuário já informou algum dado antes de rodar a skill, não perguntar de novo.
 
+## Frameworks de copy (PAS / BAB)
+
+Usar um framework diferente por variante — isso garante que o teste A/B compara ângulos de verdade, não só palavras diferentes pro mesmo ângulo.
+
+- **PAS (Problem-Agitate-Solve):** nomeia a dor → intensifica a consequência de não resolver → apresenta a Solveplan como solução. Funciona bem pra público que já sente o problema (ex: controller com fechamento lento).
+- **BAB (Before-After-Bridge):** descreve o cenário atual doloroso → pinta o cenário ideal depois da solução → a Solveplan é a ponte entre os dois. Funciona bem pra público que ainda não nomeou a dor claramente, mas reconhece o estado ideal.
+
+**Regra:** Variante A usa PAS, Variante B usa BAB (ou o inverso) — nunca as duas variantes no mesmo framework.
+
 ## Passo 2 — Gerar por plataforma
 
 ---
@@ -30,17 +39,17 @@ Se o usuário já informou algum dado antes de rodar a skill, não perguntar de 
 
 #### Copy do anúncio (Single Image Ad — formato principal)
 
-Gerar 2 variantes pra teste A/B:
+Gerar 2 variantes pra teste A/B, cada uma seguindo um framework diferente (ver seção "Frameworks de copy" acima):
 
-**Variante A:**
-- **Intro text** (texto acima da imagem — máximo 150 caracteres): [foco na dor ou no resultado]
-- **Headline** (título do card — máximo 70 caracteres): [proposta de valor direta com palavra-chave]
+**Variante A — framework PAS:**
+- **Intro text** (texto acima da imagem — máximo 150 caracteres): [Problem — nomeia a dor] + [Agitate — consequência de não resolver]
+- **Headline** (título do card — máximo 70 caracteres): [Solve — proposta de valor direta com palavra-chave]
 - **Description** (subtítulo — máximo 70 caracteres): [complemento ou prova]
 - **CTA button:** [opções: Saiba mais / Registre-se / Entre em contato / Baixe agora / Solicite uma demonstração]
 
-**Variante B:**
-- **Intro text:** [abordagem diferente — dado, pergunta ou afirmação provocativa]
-- **Headline:** [ângulo diferente da variante A]
+**Variante B — framework BAB:**
+- **Intro text:** [Before — cenário atual doloroso]
+- **Headline:** [After — cenário ideal + Bridge, a Solveplan como ponte]
 - **Description:** [complemento]
 - **CTA button:** [mesmo ou diferente]
 
@@ -142,6 +151,15 @@ Gerar assets pra preencher no Google Ads:
 **UTM sugerido:** `utm_source=google&utm_medium=cpc&utm_campaign=[nome-campanha]&utm_term={keyword}&utm_content=[grupo-de-anuncios]`
 
 ---
+
+## Alocação de budget (quando já existe campanha rodando)
+
+Se o usuário já tem campanhas ativas e está pedindo pra alocar budget novo ou redistribuir entre campanhas/anúncios, usar a matriz 70/30:
+
+- **70% pro que já é comprovado** — campanhas/anúncios com CPL ou CTR acima da média histórica da conta
+- **30% pra teste** — novos ângulos de copy, novos formatos ou novos segmentos ainda sem dado
+
+Nunca alocar 100% no comprovado (a conta para de aprender) nem mais de 30% em teste sem dado (queima budget sem base). Se o usuário não tiver histórico ainda (conta nova), pular essa lógica e usar o budget mínimo recomendado normalmente.
 
 ## Passo 3 — Salvar
 
