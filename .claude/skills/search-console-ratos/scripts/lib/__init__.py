@@ -157,6 +157,14 @@ def _build_credentials(readwrite=False):
 
 
 def _build_oauth_credentials(client_id, client_secret, refresh_token, scopes):
+    """Constroi Credentials a partir de um refresh_token.
+
+    NAO passamos 'scopes' aqui: o google-auth inclui o parametro 'scope' no
+    request de refresh quando as credenciais tem scopes definidos, e o Google
+    rejeita com 'invalid_scope' se o valor nao bater EXATAMENTE com o que foi
+    concedido na autorizacao original. Omitindo, o refresh usa os escopos ja
+    concedidos ao token, sem risco de mismatch.
+    """
     from google.oauth2.credentials import Credentials
     return Credentials(
         token=None,
@@ -164,7 +172,6 @@ def _build_oauth_credentials(client_id, client_secret, refresh_token, scopes):
         token_uri="https://oauth2.googleapis.com/token",
         client_id=client_id,
         client_secret=client_secret,
-        scopes=scopes,
     )
 
 

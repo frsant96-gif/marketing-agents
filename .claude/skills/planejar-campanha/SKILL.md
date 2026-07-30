@@ -52,8 +52,19 @@ Perguntar, uma por vez, só as mais relevantes ao contexto:
 - "Esse público já conhece a Solveplan ou vai ser o primeiro contato? A campanha está calibrada pra esse nível de awareness?"
 
 **Sobre o canal:**
-- "Por que esses canais e não outros? Tem dado anterior que mostra que esse público converte nesses canais?"
+- "Por que esses canais e não outros? Tem dado anterior que mostra que esse público converte nesses canais?" — se o usuário não souber, oferecer rodar `/atribuicao` (histórico de conversão por canal) ou `/ga4-ratos` (tráfego e comportamento) antes de fechar a escolha, em vez de assumir
 - "Se o canal principal não performar, qual é o plano B?"
+
+**Framework de seleção de canal (urgência × consciência do público):**
+
+Usar como referência pra validar ou ajustar a escolha de canal do usuário:
+
+| Urgência da campanha | Público já ciente da dor | Público frio (não nomeou a dor ainda) |
+|---|---|---|
+| **Alta** (ex: evento com data fechada, oferta com prazo) | Email direto pra base + ABM + sales-led outreach | Ads de conversão direta (arriscado — considerar aquecer com conteúdo em paralelo) |
+| **Baixa** (institucional, awareness, construção de autoridade) | Conteúdo orgânico (artigo, LinkedIn) + remarketing leve | SEO, conteúdo de topo de funil, mídia paga de awareness |
+
+Se a combinação urgência/canal escolhida pelo usuário não bater com a tabela, sinalizar antes de prosseguir — ex: "campanha de alta urgência com público frio usando só ads de conversão direta tende a converter mal; vale considerar aquecer com conteúdo primeiro ou redirecionar pra ABM."
 
 **Sobre a mensagem:**
 - "Qual é a suposição central da mensagem? O público realmente tem essa dor ou estamos supondo?"
