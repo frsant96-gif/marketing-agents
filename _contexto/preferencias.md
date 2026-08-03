@@ -25,3 +25,4 @@ CIOs, CFOs, controllers, heads de dados/BI — pessoas que decidem e que valoriz
 ## Preferências adicionais
 - Sempre conectar o conteúdo ao objetivo de geração de pipeline quando possível
 - Evitar comunicação "feita pra parecer SAP" — preferir comunicação de negócio que usa SAP como veículo
+- Posicionamento "antes da IA, vem dados": em conteúdo sobre IA, deixar claro que dados organizados são pré-requisito — IA é consequência de uma base de dados sólida, não o ponto de partida
