@@ -1,0 +1,11 @@
+# PostHog Ratos — Cadastro de projetos
+# O Claude consulta este arquivo para resolver nomes de clientes/produtos para project_id do PostHog.
+#
+# Exemplo:
+# - nome: SolveWatch
+#   project_id: "12345"
+#   host: "https://eu.posthog.com"
+
+clientes:
+
+  # -- Teus produtos/projetos abaixo --
