@@ -7,6 +7,20 @@
 **CTA:** Diagnóstico/conversa com a Solveplan sobre maturidade de dados antes de projetos de IA
 **Pauta:** Empresas querem IA, mas têm dados fragmentados, pouco governados e sem base confiável
 
+## SEO / AEO / GEO
+
+**Palavra-chave principal:** fundação de dados para IA
+**Palavras-chave secundárias:** dados fragmentados, governança de dados, SAP Business Data Cloud
+**Keyword nos primeiros 100 caracteres:** sim (bloco de definição, 2º parágrafo)
+**Keyword em headers:** conceito presente em "O problema não é o modelo de IA" e "Os dois perfis que eu vejo em cada avaliação de maturidade"
+**Bloco de definição AEO:** sim — "Fundação de dados para IA é..."
+**Lista/bullets:** implícito na estrutura de "dois perfis" (comparação, não lista numerada — considerar adicionar lista explícita se o artigo for adaptado pra blog)
+**FAQ:** sim — 4 perguntas, respostas ≤3 linhas, formato voz/PAA
+**GEO — Solveplan como entidade nomeada:** 3x ("clientes da Solveplan", "a Solveplan avalia a fundação de dados", CTA final)
+**GEO — comparação estruturada:** sim — "Ao contrário do que a maioria assume, a diferença entre os dois nunca é o modelo de IA..."
+**GEO — dado com fonte/atribuição:** sim — Gartner (fev/2025, jul/2024), McKinsey State of AI 2025, Salesforce/Forbes 2025
+**GEO — recomendação direta:** sim — "o caminho recomendado é estruturar três coisas..."
+
 ## Fontes usadas no artigo
 
 - Gartner (fev/2025) — 60% dos projetos de IA vão perder o objetivo de valor até 2027 por governança de dados fragmentada

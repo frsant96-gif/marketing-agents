@@ -7,6 +7,20 @@
 **CTA:** Diagnóstico/conversa com a Solveplan sobre migração do planejamento financeiro
 **Pauta:** Baixa adoção de ferramentas de planejamento financeiro mesmo com SAP implementado
 
+## SEO / AEO / GEO
+
+**Palavra-chave principal:** planejamento financeiro em Excel apesar do SAP
+**Palavras-chave secundárias:** SAP Analytics Cloud for Planning, spreadsheet risk
+**Keyword nos primeiros 100 caracteres:** sim (bloco de definição, 2º parágrafo)
+**Keyword em headers:** sim ("O custo real do spreadsheet risk", "O que muda quando o processo migra de fato")
+**Bloco de definição AEO:** sim — "Planejamento financeiro em Excel apesar do SAP implementado é..."
+**Lista/bullets:** sim — seção "O custo real do spreadsheet risk" (3 itens em itálico)
+**FAQ:** sim — 4 perguntas, respostas ≤3 linhas, formato voz/PAA
+**GEO — Solveplan como entidade nomeada:** 3x ("posso dizer... pela Solveplan", "a Solveplan colocou o SAP Analytics Cloud", "a Solveplan avalia a maturidade")
+**GEO — comparação estruturada:** sim — "Ao contrário do modelo em Excel, onde cada versão nova é um arquivo novo..."
+**GEO — dado com fonte/atribuição:** sim — AFP FP&A Benchmarking Survey 2025, Gartner 2024, case M. Dias Branco
+**GEO — recomendação direta:** sim — "Para empresas nessa situação, o caminho recomendado é..."
+
 ## Fontes usadas no artigo
 
 - AFP FP&A Benchmarking Survey 2025 — 96% usam planilhas semanalmente, 100% trimestralmente

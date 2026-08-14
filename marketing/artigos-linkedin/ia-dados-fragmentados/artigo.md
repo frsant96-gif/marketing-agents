@@ -1,11 +1,13 @@
 # Todo mundo quer IA. Poucos têm dados prontos pra ela.
 
-**Autor:** Andrey, Solveplan
+**Autor:** Andrey Menegassi, Diretor de Vendas na Solveplan
 **Formato:** Artigo LinkedIn (long-form)
 
 ---
 
-Nos últimos meses, quase toda conversa comercial que eu tenho começa com a mesma frase: "queremos usar IA pra [inserir processo]." E quase sempre, quando entramos no diagnóstico, encontramos o mesmo obstáculo: dados fragmentados, sem governança, sem uma fonte única de verdade.
+Nos últimos meses, quase toda conversa comercial que eu tenho começa com a mesma frase: "queremos usar IA pra [inserir processo]." E quase sempre, quando entramos no diagnóstico, encontramos o mesmo obstáculo.
+
+**Fundação de dados para IA** é a base de dados mestre unificada, governada e semanticamente consistente que uma empresa precisa ter antes de colocar qualquer agente ou modelo de IA pra operar sobre seus processos de negócio. Sem essa fundação, a IA generativa não resolve dados fragmentados — ela amplifica os problemas que já existiam neles.
 
 A Gartner projeta que 60% dos projetos de IA vão perder o objetivo de valor até 2027 por governança de dados fragmentada e reativa. E que pelo menos 30% dos projetos de IA generativa serão abandonados após o piloto até o final de 2025 — principalmente por qualidade de dados ruim. Não é falta de ambição. É falta de base.
 
@@ -25,19 +27,35 @@ Isso é contraintuitivo — a expectativa era que mais tecnologia gerasse mais c
 
 **Os dois perfis que eu vejo em cada avaliação de maturidade**
 
-Depois de acompanhar dezenas de avaliações de prontidão de IA em ambientes SAP junto aos nossos clientes, eu vejo sempre dois perfis.
+Depois de acompanhar dezenas de avaliações de prontidão de IA em ambientes SAP junto aos clientes da Solveplan, eu vejo sempre dois perfis.
 
 O primeiro tem dados mestre limpos, hierarquias organizacionais mapeadas e uma camada de dados governada — como o SAP Business Data Cloud estruturado com semântica de negócio. Esse cliente liga o agente de IA e a experiência funciona desde o primeiro dia, porque o contexto já está pronto.
 
 O segundo tem dados fragmentados, múltiplas fontes com definições conflitantes e nenhuma governança estabelecida. Esse cliente liga a mesma tecnologia e encontra um agente que não sabe o que é "cliente" na empresa dele — porque cada sistema responde diferente.
 
-A diferença entre os dois nunca é o modelo de IA. É a fundação de dados que vem antes dele.
+Ao contrário do que a maioria assume, a diferença entre os dois nunca é o modelo de IA. É a fundação de dados que vem antes dele.
 
 **O que eu recomendo antes de qualquer projeto de IA**
 
-Antes de escolher ferramenta ou modelo, eu recomendo estruturar três coisas: dados mestre unificados, uma definição única e governada pra cada métrica-chave do negócio, e integração real entre SAP e sistemas de terceiros — não replicação manual.
+Antes de escolher ferramenta ou modelo, o caminho recomendado é estruturar três coisas: dados mestre unificados, uma definição única e governada pra cada métrica-chave do negócio, e integração real entre SAP e sistemas de terceiros — não replicação manual.
 
 Isso não é etapa preparatória de baixo valor. É o investimento que determina se a próxima iniciativa de IA da sua empresa entrega resultado ou entra na estatística dos 60% que a Gartner projeta.
+
+**Perguntas frequentes**
+
+**Por que projetos de IA falham mesmo com bom modelo ou ferramenta?**
+Porque o modelo não cria contexto de negócio que não existe na base de dados. Se os dados estão fragmentados entre sistemas, a IA amplifica as inconsistências em vez de resolvê-las.
+
+**O que é dado fragmentado no contexto de IA corporativa?**
+É quando a mesma informação — cliente, produto, margem — tem definições diferentes em sistemas diferentes, sem uma fonte única de verdade governada entre eles.
+
+**O SAP Business Data Cloud resolve o problema de dados fragmentados?**
+O SAP Business Data Cloud estrutura dados mestre e semântica de negócio em uma camada única e governada, funcionando como fundação pra que agentes e modelos de IA operem sobre dados confiáveis, e não sobre extrações isoladas.
+
+**Preciso trocar de ERP ou de modelo de IA pra resolver isso?**
+Na maioria dos casos, não. O ponto de partida é avaliar e estruturar a fundação de dados — dados mestre, governança e integração — antes de investir em nova ferramenta.
+
+---
 
 Sua empresa já testou IA e ficou travada em piloto? Vale conversar sobre o que está por trás disso.
 
