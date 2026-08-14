@@ -149,6 +149,8 @@ Antes de executar qualquer tarefa, verificar se existe uma skill relevante em `.
 Se encontrar, seguir as instruções da skill.
 Se não encontrar, executar a tarefa normalmente.
 
+Ao finalizar a criação ou edição de qualquer arquivo (documento, plano, HTML, planilha etc.), abrir automaticamente o arquivo pra visualização (`start` no Windows), sem precisar que o usuário peça.
+
 Ao concluir uma tarefa que não tinha skill mas parece repetível (o usuário provavelmente vai pedir de novo no futuro), perguntar:
 
 > "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
