@@ -71,4 +71,12 @@ Se esse é um problema que você identifica de dentro, vale uma conversa. A Solv
 
 ---
 
+### Fontes
+
+- [AFP FP&A Benchmarking Survey 2025](https://www.financialprofessionals.org/training-resources/resources/survey-research-economic-data/Details/FPAbenchmarking)
+- [Cube Software — FP&A Statistics (citando FP&A Trends/AFP e Gartner)](https://www.cubesoftware.com/blog/fpa-statistics)
+- [Solveplan — Case M. Dias Branco: SAP Analytics Cloud em 10 meses com 96% de redução de tempo](https://solveplan.com/case/m-dias-branco-implementa-sap-analytics-cloud-em-10-meses-com-96-de-reducao/)
+
+---
+
 #SAP #FPandA #PlanejamentoFinanceiro #SAPAnalyticsCloud #CFO

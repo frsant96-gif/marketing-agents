@@ -65,4 +65,13 @@ Se esse é um problema que você reconhece de dentro, a Solveplan avalia a funda
 
 ---
 
+### Fontes
+
+- [Gartner — Lack of AI-Ready Data Puts AI Projects at Risk (fev/2025)](https://www.gartner.com/en/newsroom/press-releases/2025-02-26-lack-of-ai-ready-data-puts-ai-projects-at-risk)
+- [Gartner — press release sobre abandono de projetos de IA generativa (jul/2024)](https://www.gartner.com/en/newsroom/press-releases/2024-07-29)
+- [McKinsey & Company — The State of AI 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+- [Forbes (Joe McKendrick) — Garbage In, Garbage Out? Trust In The Data Behind AI Is Vanishing, citando pesquisa Salesforce (abr/2025)](https://www.forbes.com/sites/joemckendrick/2025/04/22)
+
+---
+
 #SAP #InteligenciaArtificial #GovernancaDeDados #SAPBusinessDataCloud #CIO

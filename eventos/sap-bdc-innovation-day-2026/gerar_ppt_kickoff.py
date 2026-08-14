@@ -161,15 +161,17 @@ add_text(slide, "Hoje é 14/08 — evento em 12 dias. Divulgação e e-mails de 
 
 headers_tbl = ["Frente", "Status", "Pendência crítica"]
 rows = [
-    ["Lista de convidados", "Em branco", "Fechar lista hoje"],
-    ["Case de sucesso", "Em validação", "Confirmar cliente esta semana"],
+    ["Case de sucesso", "✅ SSA Alimentos / Rodrigo Dumont", "Alinhar roteiro do case"],
+    ["Palestrantes", "✅ Junior Freitas, Andrey, André Ferreira", "Alinhar conteúdo e tempo de fala"],
+    ["Lista de convidados", "Ajustada p/ 50/60 pessoas", "Fechar lista final hoje/amanhã"],
+    ["Inscrições até agora", "Em aberto (XX)", "Levantar número atual"],
     ["Página + formulário", "Layout pronto", "Confirmar publicação/link ativo"],
-    ["E-mails de convite", "2 disparos perdidos", "Replanejar cadência comprimida"],
+    ["E-mails de convite", "Cadência atrasada", "Replanejar disparos comprimidos"],
     ["Posts redes sociais", "Atrasados (post 01 e 02)", "Publicar retroativo esta semana"],
     ["Anúncios (LinkedIn/Google)", "Budget aprovado R$1.000", "Confirmar campanha no ar"],
     ["Brindes", "Pendente aprovação", "Aprovar R$ 300,00"],
 ]
-add_table(slide, headers_tbl, rows, 0.5, 2.6, [3.2, 3.0, 5.9], row_height=0.55, font_size=12)
+add_table(slide, headers_tbl, rows, 0.5, 2.6, [3.2, 3.5, 5.4], row_height=0.5, font_size=11)
 
 # =======================
 # SLIDE 5 — AGENDA DO DIA
