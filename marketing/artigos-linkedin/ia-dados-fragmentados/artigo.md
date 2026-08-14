@@ -1,6 +1,6 @@
 # Todo mundo quer IA. Poucos têm dados prontos pra ela.
 
-**Autor:** Alexandre Kuntgen, Partner na Solveplan
+**Autor:** Andrey, Solveplan
 **Formato:** Artigo LinkedIn (long-form)
 
 ---
@@ -25,7 +25,7 @@ Isso é contraintuitivo — a expectativa era que mais tecnologia gerasse mais c
 
 **Os dois perfis que eu vejo em cada avaliação de maturidade**
 
-Depois de avaliar dezenas de ambientes SAP pra prontidão de IA, eu vejo sempre dois perfis.
+Depois de acompanhar dezenas de avaliações de prontidão de IA em ambientes SAP junto aos nossos clientes, eu vejo sempre dois perfis.
 
 O primeiro tem dados mestre limpos, hierarquias organizacionais mapeadas e uma camada de dados governada — como o SAP Business Data Cloud estruturado com semântica de negócio. Esse cliente liga o agente de IA e a experiência funciona desde o primeiro dia, porque o contexto já está pronto.
 

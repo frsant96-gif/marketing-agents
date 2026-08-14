@@ -1,8 +1,8 @@
 # Metadados — Todo mundo quer IA. Poucos têm dados prontos pra ela.
 
-**Autor:** Alexandre Kuntgen, Partner na Solveplan
+**Autor:** Andrey Menegassi, Diretor de Vendas na Solveplan
 **Canal:** LinkedIn — Artigo (long-form), não post curto
-**Objetivo:** Construir autoridade pessoal do Alexandre no tema fundação de dados para IA
+**Objetivo:** Construir autoridade pessoal do Andrey no tema fundação de dados para IA
 **Leitor-alvo:** Executivo (CFO, CIO, COO)
 **CTA:** Diagnóstico/conversa com a Solveplan sobre maturidade de dados antes de projetos de IA
 **Pauta:** Empresas querem IA, mas têm dados fragmentados, pouco governados e sem base confiável
@@ -24,4 +24,4 @@
 
 ## Sugestão de publicação
 
-Publicar como **Artigo do LinkedIn** direto no perfil pessoal do Alexandre. Sugestão de imagem de capa: identidade visual Solveplan, tema de dados/IA (ex: visual de camadas de dados fragmentadas vs. unificadas).
+Publicar como **Artigo do LinkedIn** direto no perfil pessoal do Andrey. Sugestão de imagem de capa: identidade visual Solveplan, tema de dados/IA (ex: visual de camadas de dados fragmentadas vs. unificadas).
