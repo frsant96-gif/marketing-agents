@@ -114,6 +114,8 @@ info = [
     ("Data", "26/08 · 08h30 às 12h"),
     ("Local", "SAP Brasil — Av. das Nações Unidas, 14171"),
     ("Tema", "SAP Business Data Cloud com IA"),
+    ("Case de sucesso", "✅ SSA Alimentos — apresentado por Rodrigo Dumont"),
+    ("Público-alvo", "50/60 pessoas convidadas (considerando quebra)"),
     ("Objetivo", "Gerar demanda qualificada para SAP BDC, aproximar contas\nestratégicas (+R$800M/ano) e converter em reunião/diagnóstico/PoC"),
 ]
 top = 1.5
@@ -150,13 +152,26 @@ for i, (num, label) in enumerate(metas):
     add_text(slide, label, x, y+0.85, box_w, 0.5, 13, color=BRANCO, align=PP_ALIGN.CENTER)
 
 # =======================
+# SLIDE 3B — O QUE TEREMOS
+# =======================
+slide = prs.slides.add_slide(slide_layout())
+header(slide, "O Que Teremos", "CONFIRMADO")
+add_bullets(slide, [
+    "Coffee",
+    "Brindes",
+    "Apresentação de case (SSA Alimentos)",
+    "Pesquisa de engajamento",
+], 0.6, 1.6, 10, 3, 16, line_spacing=1.4)
+add_text(slide, "*Inscrições até o momento: XX — atualizar na reunião", 0.6, 5.5, 10, 0.5, 13, italic=True, color=RGBColor(0x99,0x66,0x00))
+
+# =======================
 # SLIDE 4 — ALERTA DE PRAZO
 # =======================
 slide = prs.slides.add_slide(slide_layout())
 header(slide, "Onde Estamos", "3. STATUS")
 add_rect(slide, 0.5, 1.4, 12.3, 1.0, RGBColor(0xFC, 0xEA, 0xD8))
 add_text(slide, "⚠ ALERTA DE PRAZO", 0.8, 1.55, 5, 0.4, 14, bold=True, color=VERMELHO)
-add_text(slide, "Hoje é 14/08 — evento em 12 dias. Divulgação e e-mails de convite já deveriam ter\ncomeçado em 21/07 e 26/07. Estamos atrasados no funil — foco #1 da reunião.",
+add_text(slide, "Hoje é 14/08 — evento em 12 dias. Case e palestrantes já confirmados.\nDivulgação e e-mails de convite seguem atrasados — foco #1 da reunião.",
          0.8, 1.9, 11.5, 0.6, 13, color=CINZA_TEXTO)
 
 headers_tbl = ["Frente", "Status", "Pendência crítica"]
@@ -180,12 +195,12 @@ slide = prs.slides.add_slide(slide_layout())
 header(slide, "Agenda do Dia 26/08", "4. PROGRAMAÇÃO")
 headers_ag = ["Horário", "Bloco", "Responsável"]
 rows_ag = [
-    ["08h30–09h00", "Recepção e networking", "Coffee / chegada"],
-    ["09h00–09h30", "Abertura: antes da IA, vêm os dados", "SAP + Solveplan"],
-    ["09h30–10h00", "SAP BDC: fundação de dados integrados", "Especialista SAP/Solveplan"],
-    ["10h00–10h30", "Demonstração prática", "Solveplan + SAP"],
-    ["10h30–10h40", "Break", "—"],
-    ["10h40–11h10", "Case de sucesso", "Cliente convidado (pendente)"],
+    ["08h30–09h00", "Recepção e networking executivo", "Coffee / chegada"],
+    ["09h00–09h30", "Abertura: antes da IA, vêm os dados", "Junior Freitas e Andrey"],
+    ["09h30–10h00", "SAP BDC: fundação de dados integrados", "SAP, Andrey e André Ferreira"],
+    ["10h00–10h30", "Demonstração prática", "Andrey e André Ferreira"],
+    ["10min", "Break", "All"],
+    ["10h40–11h10", "Case de sucesso SSA", "Rodrigo Dumont (SSA Alimentos)"],
     ["11h10–11h40", "Próximos passos / encerramento", "—"],
     ["11h40–12h00", "Networking final", "—"],
 ]
@@ -212,14 +227,14 @@ add_bullets(slide, [
 slide = prs.slides.add_slide(slide_layout())
 header(slide, "Decisões para Sair Desta Reunião", "6. AÇÃO")
 decisoes = [
-    "Quem fecha a lista de convidados hoje/amanhã",
-    "Quem confirma o cliente do case de sucesso — e até quando",
-    "Replanejar cadência de e-mails (2–3 disparos comprimidos até 24/08)",
+    "Reportar número de inscrições até hoje (comparar com meta de 120)",
+    "Fechar lista final de 50/60 convidados",
+    "Alinhar roteiro do case com Rodrigo Dumont (SSA Alimentos)",
+    "Replanejar cadência de e-mails (disparos comprimidos até 24/08)",
     "Quem publica os posts atrasados (lançamento + convite 01) esta semana",
     "Confirmar se anúncios (LinkedIn/Google) já estão ativos",
     "Aprovar custo de brindes (R$ 300)",
-    "Confirmar apresentador SAP e especialista Solveplan",
-    "Definir dono de cada frente com prazo até fim desta semana",
+    "Alinhar conteúdo e tempo de fala de Junior Freitas, Andrey e André Ferreira",
 ]
 add_bullets(slide, decisoes, 0.6, 1.5, 12, 5, 15, line_spacing=1.3)
 
@@ -229,14 +244,15 @@ add_bullets(slide, decisoes, 0.6, 1.5, 12, 5, 15, line_spacing=1.3)
 slide = prs.slides.add_slide(slide_layout())
 header(slide, "Próximos Passos Imediatos", "7. CHECKLIST")
 passos = [
-    "Fechar lista de 120 contas/contatos-alvo",
-    "Confirmar cliente do case de sucesso",
-    "Disparar e-mail de convite 01 (atrasado) ainda esta semana",
+    "Reportar número de inscrições atuais",
+    "Fechar lista final de convidados (50/60)",
+    "Alinhar roteiro do case com Rodrigo Dumont",
+    "Disparar e-mail de convite (comprimido) ainda esta semana",
     "Publicar post de lançamento + convite 01 (atrasados)",
     "Validar página do evento e formulário ao vivo",
     "Confirmar campanha de anúncios no ar",
     "Aprovar budget de brindes",
-    "Confirmar palestrantes (SAP + Solveplan + cliente)",
+    "Alinhar apresentação com os 3 palestrantes internos",
 ]
 add_bullets(slide, passos, 0.6, 1.5, 12, 5, 15, line_spacing=1.3)
 add_text(slide, "Fonte: Planejamento de Evento — Abril 2026 | eventos/sap-bdc-innovation-day-2026/", 0.6, 6.9, 11, 0.4, 10, italic=True, color=RGBColor(0x99,0x99,0x99))
