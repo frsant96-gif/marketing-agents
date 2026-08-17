@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 480px;
+    background: #0A0E19;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .title {
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    right: 60px;
+  }
+  .title h1 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  .title p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .stats {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    top: 130px;
+    bottom: 46px;
+    display: flex;
+    gap: 24px;
+  }
+
+  .tile {
+    flex: 1;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .tile::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 22px; bottom: 22px;
+    width: 3px;
+    background: #006AFF;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .num {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 800;
+    font-size: 58px;
+    line-height: 1;
+    color: #FFFFFF;
+  }
+  .num .accent { color: #94FF96; }
+
+  .desc {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.45;
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+  }
+
+  .source {
+    margin-top: auto;
+    padding-top: 16px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+
+  <div class="title">
+    <h1>O que os dados dizem sobre a corrida por IA</h1>
+    <p>Não é falta de ambição — é falta de fundação</p>
+  </div>
+
+  <div class="stats">
+    <div class="tile">
+      <div class="num">60<span class="accent">%</span></div>
+      <div class="desc">dos projetos de IA sem dados prontos serão abandonados até 2026</div>
+      <div class="source">Gartner</div>
+    </div>
+    <div class="tile">
+      <div class="num">2/3</div>
+      <div class="desc">das empresas usam IA em produção, mas continuam travadas em piloto — mesmo com 88% já adotando IA em alguma função</div>
+      <div class="source">McKinsey — State of AI 2025</div>
+    </div>
+    <div class="tile">
+      <div class="num">40<span class="accent">%</span></div>
+      <div class="desc">é a confiança atual na precisão dos próprios dados — caiu de 54% em 2023 pra 40% em 2025</div>
+      <div class="source">Salesforce</div>
+    </div>
+  </div>
+</body>
+</html>

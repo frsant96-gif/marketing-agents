@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 620px;
+    background: #0A0E19;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .title {
+    position: absolute;
+    left: 60px;
+    top: 44px;
+    right: 60px;
+  }
+  .title h1 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #FFFFFF;
+  }
+  .title p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .cards {
+    position: absolute;
+    left: 60px;
+    right: 60px;
+    top: 140px;
+    bottom: 50px;
+    display: flex;
+    gap: 28px;
+  }
+
+  .card {
+    flex: 1;
+    border-radius: 12px;
+    padding: 28px 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card.good {
+    background: linear-gradient(180deg, rgba(0,106,255,0.10) 0%, rgba(10,14,25,0.2) 100%);
+    border: 1.5px solid #006AFF;
+  }
+  .card.bad {
+    background: rgba(255,255,255,0.03);
+    border: 1.5px solid rgba(255,255,255,0.15);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 16px;
+  }
+  .tag.good { background: rgba(148,255,150,0.12); color: #94FF96; }
+  .tag.bad { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.55); }
+
+  .card h2 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+  }
+  .card .sub {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 22px;
+  }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 11px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 14.5px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.4;
+  }
+  .row:first-of-type { border-top: none; }
+
+  .icon {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+  }
+
+  .footer-line {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .footer-line.good { color: #94FF96; }
+  .footer-line.bad { color: rgba(255,255,255,0.55); }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+
+  <div class="title">
+    <h1>Os dois perfis que aparecem em toda avaliação de maturidade de IA</h1>
+    <p>A diferença nunca é o modelo de IA — é a fundação de dados que vem antes dele</p>
+  </div>
+
+  <div class="cards">
+    <div class="card good">
+      <div class="tag good">Fundação pronta</div>
+      <h2>Dados mestre governados</h2>
+      <div class="sub">Estruturado sobre SAP Business Data Cloud</div>
+
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="#94FF96" stroke-width="1.4"/><path d="M5 9.3 L7.6 12 L13 5.8" fill="none" stroke="#94FF96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Dados mestre unificados e hierarquias organizacionais mapeadas</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="#94FF96" stroke-width="1.4"/><path d="M5 9.3 L7.6 12 L13 5.8" fill="none" stroke="#94FF96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Definição única e governada pra cada métrica-chave do negócio</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="#94FF96" stroke-width="1.4"/><path d="M5 9.3 L7.6 12 L13 5.8" fill="none" stroke="#94FF96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>Integração real entre SAP e sistemas de terceiros — sem replicação manual</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="#94FF96" stroke-width="1.4"/><path d="M5 9.3 L7.6 12 L13 5.8" fill="none" stroke="#94FF96" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>O agente de IA (Joule) funciona desde o primeiro dia</div>
+      </div>
+
+      <div class="footer-line good">Resultado: contexto real, resposta confiável</div>
+    </div>
+
+    <div class="card bad">
+      <div class="tag bad">Fundação ausente</div>
+      <h2>Dados fragmentados</h2>
+      <div class="sub">Múltiplas fontes, nenhuma governança estabelecida</div>
+
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4"/><path d="M6.2 6.2 L11.8 11.8 M11.8 6.2 L6.2 11.8" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div>Cada sistema tem uma definição diferente pra "cliente" ou "margem líquida"</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4"/><path d="M6.2 6.2 L11.8 11.8 M11.8 6.2 L6.2 11.8" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div>Nenhuma governança estabelecida sobre as métricas-chave</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4"/><path d="M6.2 6.2 L11.8 11.8 M11.8 6.2 L6.2 11.8" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div>Integração manual entre SAP e sistemas de terceiros</div>
+      </div>
+      <div class="row">
+        <svg class="icon" viewBox="0 0 18 18"><circle cx="9" cy="9" r="8.5" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="1.4"/><path d="M6.2 6.2 L11.8 11.8 M11.8 6.2 L6.2 11.8" stroke="rgba(255,255,255,0.4)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <div>O agente de IA não sabe o que é "cliente" na empresa</div>
+      </div>
+
+      <div class="footer-line bad">Resultado: GIAGO — a inconsistência sai amplificada</div>
+    </div>
+  </div>
+</body>
+</html>
