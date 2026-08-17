@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    background: #0A0E19;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* subtle background grid — "dados, estrutura, tecnologia" */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+  }
+
+  .glow {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(0,106,255,0.25) 0%, rgba(0,106,255,0) 70%);
+    top: -220px;
+    right: -180px;
+    pointer-events: none;
+  }
+
+  /* --- illustration: scattered fragments converging into one governed base --- */
+  .stage {
+    position: absolute;
+    right: 70px;
+    top: 90px;
+    width: 480px;
+    height: 460px;
+  }
+
+  .fragment {
+    position: absolute;
+    border-radius: 6px;
+    border: 1.5px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.03);
+  }
+  .fragment.dim { border-color: rgba(255,255,255,0.18); }
+
+  .link {
+    position: absolute;
+    background: rgba(255,255,255,0.22);
+    height: 1.5px;
+    transform-origin: left center;
+  }
+
+  .base {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    width: 400px;
+    height: 130px;
+    background: linear-gradient(180deg, #0E2E63 0%, #071633 100%);
+    border: 1.5px solid #006AFF;
+    border-radius: 10px;
+    box-shadow: 0 0 60px rgba(0,106,255,0.35);
+  }
+  .base::before {
+    content: '';
+    position: absolute;
+    left: 18px; right: 18px; top: 16px;
+    height: 1px;
+    background: rgba(0,106,255,0.4);
+  }
+  .base-label {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: #94FF96;
+    text-transform: uppercase;
+  }
+  .base-sub {
+    position: absolute;
+    left: 30px;
+    top: 56px;
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+  .base-dot {
+    position: absolute;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #94FF96;
+    box-shadow: 0 0 10px rgba(148,255,150,0.8);
+  }
+
+  .spark {
+    position: absolute;
+    left: 195px;
+    top: -46px;
+    width: 90px;
+    height: 90px;
+  }
+  .spark svg { width: 100%; height: 100%; }
+
+  .beam {
+    position: absolute;
+    left: 236px;
+    top: 40px;
+    width: 8px;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(148,255,150,0.9), rgba(148,255,150,0));
+  }
+
+  /* --- text block --- */
+  .content {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+    width: 560px;
+  }
+  .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #006AFF;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 2px;
+    background: #006AFF;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  h1 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 1.22;
+    color: #FFFFFF;
+  }
+  h1 .fade {
+    color: rgba(255,255,255,0.45);
+    font-weight: 600;
+  }
+  .rule {
+    width: 60px;
+    height: 4px;
+    background: #94FF96;
+    margin-top: 28px;
+    border-radius: 2px;
+  }
+
+  .footer {
+    position: absolute;
+    left: 80px;
+    bottom: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-wordmark {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+  }
+  .footer-tag {
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow"></div>
+
+  <div class="content">
+    <div class="eyebrow">Fundação de dados para IA</div>
+    <h1>Todo mundo quer IA.<br><span class="fade">Poucos têm dados</span><br>prontos pra ela.</h1>
+    <div class="rule"></div>
+  </div>
+
+  <div class="stage">
+    <!-- scattered fragments (fragmented sources) -->
+    <div class="fragment dim" style="left:10px; top:10px; width:60px; height:44px; transform: rotate(-6deg);"></div>
+    <div class="fragment" style="left:100px; top:0px; width:50px; height:38px; transform: rotate(4deg);"></div>
+    <div class="fragment dim" style="left:190px; top:22px; width:64px; height:48px; transform: rotate(-3deg);"></div>
+    <div class="fragment" style="left:20px; top:90px; width:46px; height:36px; transform: rotate(8deg);"></div>
+    <div class="fragment dim" style="left:280px; top:6px; width:52px; height:40px; transform: rotate(6deg);"></div>
+    <div class="fragment" style="left:340px; top:80px; width:58px; height:42px; transform: rotate(-5deg);"></div>
+    <div class="fragment dim" style="left:110px; top:110px; width:54px; height:40px; transform: rotate(-8deg);"></div>
+    <div class="fragment" style="left:230px; top:100px; width:48px; height:36px; transform: rotate(5deg);"></div>
+
+    <!-- converging links -->
+    <div class="link" style="left:60px; top:70px; width:150px; transform: rotate(38deg);"></div>
+    <div class="link" style="left:150px; top:55px; width:140px; transform: rotate(52deg);"></div>
+    <div class="link" style="left:280px; top:45px; width:130px; transform: rotate(-42deg);"></div>
+    <div class="link" style="left:360px; top:105px; width:110px; transform: rotate(-58deg);"></div>
+    <div class="link" style="left:130px; top:130px; width:120px; transform: rotate(30deg);"></div>
+    <div class="link" style="left:250px; top:135px; width:110px; transform: rotate(-30deg);"></div>
+
+    <!-- unified, governed base -->
+    <div class="base">
+      <div class="base-dot" style="left:30px; top:16px;"></div>
+      <div class="base-label">dados mestre &nbsp;·&nbsp; governança</div>
+      <div class="base-sub">fundação unificada</div>
+    </div>
+
+    <!-- AI spark sitting on top of the foundation -->
+    <div class="beam"></div>
+    <div class="spark">
+      <svg viewBox="0 0 90 90" fill="none">
+        <path d="M45 6 L54 36 L84 45 L54 54 L45 84 L36 54 L6 45 L36 36 Z"
+          fill="#0A0E19" stroke="#94FF96" stroke-width="2.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-wordmark">solveplan</div>
+    <div class="footer-tag">Fundação de dados para IA</div>
+  </div>
+</body>
+</html>
