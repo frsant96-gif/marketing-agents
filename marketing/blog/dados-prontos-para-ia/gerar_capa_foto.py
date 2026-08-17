@@ -1,9 +1,9 @@
 from PIL import Image, ImageDraw
 
 SRC = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\dados\business-analyst-reviewing-data-digital-screen.jpg"
-OUT = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\marketing\blog\dados-prontos-para-ia\capa-foto.png"
+OUT = r"c:\Users\franc\solveplan.com\Roberto Molina - Marketing\1. MKT Estrategy\3. Agentes de IA\ccos-ratos\marketing\blog\dados-prontos-para-ia\capa-foto-linkedin.png"
 
-TARGET_W, TARGET_H = 1200, 630
+TARGET_W, TARGET_H = 1200, 627  # tamanho recomendado LinkedIn (capa de artigo)
 target_ratio = TARGET_W / TARGET_H
 
 img = Image.open(SRC).convert("RGB")
