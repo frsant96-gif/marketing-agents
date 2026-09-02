@@ -133,10 +133,12 @@
 ### Antes
 | Fase | Prazo | Status |
 |------|-------|--------|
-| Planejamento | A definir | |
-| Produção (roteiro, slides, aprovação Klabin) | A definir | |
-| Divulgação (ads + orgânico) | A definir | |
-| Treinamento do time | A definir | |
+| Planejamento | Até 08/09/2026 | |
+| Produção (roteiro, slides, aprovação Klabin) | Até 08/09/2026 | |
+| Lançamento institucional — SAP NOW AI Tour | 08/09/2026 | |
+| Lançamento nas redes sociais + início da campanha paga | 14/09/2026 | |
+| Divulgação (ads + orgânico, reforço semanal) | 14/09 a 19/10/2026 | |
+| Treinamento do time | Antes de 21/10/2026 | |
 
 ### Durante
 | Fase | Responsável | Status |
@@ -250,12 +252,16 @@ Validar no momento da captação:
 
 ## 17. Comunicação
 
-- [ ] Convite
-- [ ] Reforço
-- [ ] Lembrete
+- [ ] Lançamento institucional no SAP NOW AI Tour (08/09/2026)
+- [ ] Lançamento nas redes sociais + início de anúncios pagos (14/09/2026)
+- [ ] Convite (e-mail/LinkedIn para base SAP e clientes Datasphere)
+- [ ] Reforço semanal (14/09, 21/09, 28/09, 05/10, 12/10)
+- [ ] Lembrete final (19/10/2026)
 - [ ] Pós-evento
 - [ ] Posts
-- [ ] Cobertura
+- [ ] Cobertura (fotos/vídeos do SAP NOW AI Tour para reaproveitamento)
+
+> Ver detalhamento completo da estratégia de lançamento em `estrategia-mensagem.md`.
 
 ---
 
