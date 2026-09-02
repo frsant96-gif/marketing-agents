@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Atém Distribuidora",
+    "domain": "atem.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AUDI DO BRASIL",
+    "domain": "audi.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AUREN ENERGIA",
+    "domain": "auren.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Auren Energia - grupo Votorantim",
+    "domain": "auren.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AUTO PEÇAS PADRE CÍCERO LTDA",
+    "domain": "pecicero.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Automob S/A",
+    "domain": "automob.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Autoridade Portuária de Santos",
+    "domain": "portodesantos.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AVIPAM VIAGENS E TURISMO",
+    "domain": "avipam.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "avl aplicativos",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Avos",
+    "domain": "avos.com.br",
+    "confidence": "low"
+  },
+  {
+    "name": "AXAI",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "AXIA Energia",
+    "domain": "axia.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AZZAS 2154",
+    "domain": "azzas2154.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Azzas 2154 - Shoes&Bags",
+    "domain": "azzas2154.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "AZZAS2154 - AREZZO&CO",
+    "domain": "azzas2154.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Açucareira Quatá (Zilor)",
+    "domain": "zilor.com",
+    "confidence": "high"
+  },
+  {
+    "name": "B3 Brasil Bolsa Balcao",
+    "domain": "b3.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Baerlocher do Brasil SA",
+    "domain": "baerlocher.com",
+    "confidence": "high"
+  },
+  {
+    "name": "Baldan",
+    "domain": "baldan.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BALDAN IMPLEMENTO AGRíCOLAS",
+    "domain": "baldan.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Bradesco",
+    "domain": "bradesco.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco BTG Pactual",
+    "domain": "btgpactual.com",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco BV",
+    "domain": "bv.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BANCO C6 S.A.",
+    "domain": "c6bank.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Daycoval",
+    "domain": "daycoval.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Inter",
+    "domain": "bancointer.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Itau Unibanco S/A",
+    "domain": "itau.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Pine",
+    "domain": "pine.com",
+    "confidence": "medium"
+  },
+  {
+    "name": "Banco Rendimento",
+    "domain": "rendimento.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Banco Safra",
+    "domain": "safra.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Banco Santander",
+    "domain": "santander.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Bandmar",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Barra Mansa",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BAT",
+    "domain": "bat.com",
+    "confidence": "medium"
+  },
+  {
+    "name": "Baterias Moura",
+    "domain": "moura.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Bauducco ou Pandurata Alimentos?",
+    "domain": "bauducco.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BAUSCH LOMB",
+    "domain": "bauschlomb.com",
+    "confidence": "medium"
+  },
+  {
+    "name": "BB Tecnologia e Serviços",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BBM Administradora de Shopping",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BBM Logistica",
+    "domain": "bbmlogistica.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "BBM Serviços de Gestão e Desenvolvimento de Shopping Centers Ltda",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BBM Shoppings",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Be8 Energy",
+    "domain": "be8.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Befly",
+    "domain": "befly.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Belgo Arames",
+    "domain": "belgoarames.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Bendito Fermento",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Benevix",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Benvista Oftalmologia",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Berneck S/A Painéis e Serrados",
+    "domain": "berneck.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BERTUOL INDUSTRIA DE FERTILIZANTES LTDA",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Bettanin Industrial S/A",
+    "domain": "bettanin.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BGRE",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Bichara Advogados",
+    "domain": "bichara.adv.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Binatural",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Bio-Manguinhos / Fiocruz",
+    "domain": "bio.fiocruz.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BIOENERGÉTICA AROEIRA S.A.",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Bionovis",
+    "domain": "bionovis.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Blau Farmacêutica",
+    "domain": "blau.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Blum do Brasil",
+    "domain": "blum.com",
+    "confidence": "medium"
+  },
+  {
+    "name": "Blum do Brasil Industria e Comercio de Ferragens Ltda",
+    "domain": "blum.com",
+    "confidence": "medium"
+  },
+  {
+    "name": "BNDES",
+    "domain": "bndes.gov.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BO Paper",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "Boa Safra Sementes S.A.",
+    "domain": "boasafra.agr.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "BOBST LATINOAMERICA DO SUL LTDA",
+    "domain": "bobst.com",
+    "confidence": "high"
+  },
+  {
+    "name": "BOM JESUS AGRO",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BOM SUCESSO AGROINDUSTRIA S.A.",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "bomjesusagro",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "BorgWarner do Brasil",
+    "domain": "borgwarner.com",
+    "confidence": "high"
+  },
+  {
+    "name": "Bosch",
+    "domain": "bosch.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BOTICARIO PRODUTOS DE BELEZA LTDA",
+    "domain": "boticario.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "BOXNET",
+    "domain": null,
+    "confidence": "not_found"
+  },
+  {
+    "name": "BP Bioenergy",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "bpbioenergy",
+    "domain": null,
+    "confidence": "low"
+  },
+  {
+    "name": "Bracell Celulose LTDA",
+    "domain": "bracell.com",
+    "confidence": "high"
+  },
+  {
+    "name": "Bracell SP Celulose LTDA",
+    "domain": "bracell.com",
+    "confidence": "high"
+  },
+  {
+    "name": "BRACELL SP LTDA",
+    "domain": "bracell.com",
+    "confidence": "high"
+  },
+  {
+    "name": "Bradesco Seguros",
+    "domain": "bradescoseguros.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Brainfarma Ind. Farmacêutica SA",
+    "domain": "brainfarma.com.br",
+    "confidence": "medium"
+  },
+  {
+    "name": "Brainfarma/Hypera",
+    "domain": "hypera.com.br",
+    "confidence": "high"
+  },
+  {
+    "name": "Brasal",
+    "domain": null,
+    "confidence": "low"
+  }
+]
