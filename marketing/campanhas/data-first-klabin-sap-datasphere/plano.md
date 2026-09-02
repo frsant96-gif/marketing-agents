@@ -10,7 +10,7 @@
 ## 0. Observação estratégica (validação de suposições)
 
 - **Budget vs. público-alvo:** R$ 2.000 em ads para um público de C-level/Head de Dados (CIO, Head de Dados, Arquitetos) rende alcance pago limitado — CPL de LinkedIn para esse perfil costuma ficar em R$150-400+. **O ads não deve carregar a meta de inscrição sozinho.** O motor principal precisa ser e-mail direto para a base própria e outreach comercial (ABM leve) para contas estratégicas; o ads paga entra como reforço de alcance/retargeting, não como canal primário.
-- **Autorização do case Klabin:** nenhuma peça, post ou menção pública pode sair antes da confirmação formal da Klabin sobre o que pode ser citado (nome, dados, resultados).
+- **Autorização do case Klabin:** ✅ confirmada em 02/09/2026 — Klabin autorizou o uso do case. Validar ainda, antes da produção das peças, o que especificamente pode ser citado (nome, dados, resultados, cotações).
 - **Nível de consciência do público:** parte do público já usa Datasphere (consciente da dor de manutenção/governança) e parte é mais fria (só sabe que "precisa de IA"). A mensagem do funil (ver seção 3) foi calibrada para funcionar nos dois casos, mas o e-mail direto deve ser segmentado — mensagem diferente para quem já usa Datasphere vs. quem ainda não usa.
 
 ---
@@ -84,7 +84,7 @@ Inscrição no webinar (topo) → pós-evento: agendar o Diagnóstico do ambient
 | Atividade | Prazo | Responsável | Status |
 |-----------|-------|-------------|--------|
 | Definir mensagem central | Concluído (`estrategia-mensagem.md`) | | ✅ |
-| Confirmar autorização do case Klabin | Antes de 08/09 | | |
+| Confirmar autorização do case Klabin | Concluído (02/09) | | ✅ |
 | Criar peças (landing page, formulário, banners, copy) | Antes de 08/09 | | |
 | Configurar rastreamento (UTM, CRM) | Antes de 08/09 | | |
 | Aprovar budget | Concluído — R$ 2.000 verba SAP | | ✅ |

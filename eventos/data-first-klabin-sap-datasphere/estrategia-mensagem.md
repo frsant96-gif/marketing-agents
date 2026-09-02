@@ -54,7 +54,7 @@
 | **Problema que resolve** | Fundação de dados sem governança que trava projetos de IA — qualidade de dados, controle de risco e valor de negócio (3 das 4 causas de abandono de projetos de IA, segundo Gartner, vivem na fundação, não no modelo) |
 | **Benefícios** | Camada semântica governada (Knowledge Graph); redução de até 70% em custo de tokens de IA com fundação bem construída; detecção de falhas em 1 dia (vs. 15h+ sem monitoramento); redução de CU/custo de armazenamento; IPIA (Índice de Prontidão para IA) como métrica contínua de saúde do ambiente |
 | **Diferencial** | Melhor Parceiro SAP BDC da América Latina (SAP Partner Award 2026); SAP Gold Partner especializado em Data & Analytics; +200 clientes, +400 projetos, +600 mil horas; não é só implementação — é cuidado contínuo da fundação com Solve Watch (agentes vigiam, arquiteto valida, cliente decide) |
-| **Cases** | Klabin (case principal do webinar — confirmar autorização de uso de nome, dados e citações antes da divulgação); referências adicionais: Hospital Israelita Albert Einstein (3min de folha), Vale (186 empresas consolidadas), Zilor (6 meses planejamento agrícola) |
+| **Cases** | Klabin (case principal do webinar — **autorização confirmada em 02/09/2026**; ainda validar com o cliente o escopo exato do que pode ser citado: nome, dados numéricos, cotações); referências adicionais: Hospital Israelita Albert Einstein (3min de folha), Vale (186 empresas consolidadas), Zilor (6 meses planejamento agrícola) |
 | **Pontos restritivos** | Não abordar preço sem qualificação; não comparar tecnicamente com Databricks/Snowflake fora de contexto (são complementares via Delta Sharing, não concorrentes); não fazer promessa de prazo/resultado específico do case Klabin sem validar com o cliente o que pode ser público |
 | **Palavras-chave** | SAP Datasphere, SAP Business Data Cloud, BDC, fundação de dados, Data-First, IA agêntica, governança de dados, Knowledge Graph, Delta Sharing, IPIA, Solve Watch, prontidão para IA |
 
@@ -81,7 +81,7 @@
 
 **Objetivo:** Aproveitar a presença da Solveplan no evento SAP NOW AI Tour para anunciar o webinar presencialmente e gerar buzz inicial com a audiência já qualificada (SAP, clientes, prospects presentes no evento).
 
-- [ ] Confirmar com Klabin a autorização de uso do nome/case antes de qualquer menção pública
+- [x] Confirmar com Klabin a autorização de uso do nome/case antes de qualquer menção pública — **confirmada em 02/09/2026**
 - [ ] Preparar menção/anúncio do webinar no stand ou apresentação da Solveplan no SAP NOW AI Tour
 - [ ] Distribuir material físico ou digital (QR code) com pré-inscrição no evento
 - [ ] Capturar contatos presenciais interessados para lista de convite direcionado
