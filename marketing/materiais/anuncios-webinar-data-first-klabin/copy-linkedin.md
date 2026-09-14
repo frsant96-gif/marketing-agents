@@ -56,10 +56,10 @@
 **Formato:** Lead Gen Form com campos pré-preenchidos (nome, email corporativo, empresa, cargo)
 
 **Lance e budget:**
-- Budget alocado: **R$ 1.200/mês** (60% do budget total de R$ 2.000 — LinkedIn prioritário pro público C-level)
+- Budget alocado: **R$ 2.000/mês** (100% do budget — campanha concentrada só em LinkedIn)
 - Estratégia de lance: Maximum Delivery no início
 - Frequência ideal: 3-5 impressões/semana
-- Nota: abaixo do mínimo recomendado (R$3.000) pra volume ideal — acompanhar CPL de perto e realocar se performance vier fraca
+- Nota: abaixo do mínimo recomendado (R$3.000) pra volume ideal — acompanhar CPL de perto nas primeiras 2 semanas; se o custo por lead vier alto, considerar reduzir a segmentação (ex: só C-level, sem "Gerente Sênior") em vez de aumentar budget
 
 **Janela de veiculação:** iniciar ~4 semanas antes do evento (a partir de ~22/09), intensificar na última semana (13-21/10)
 
