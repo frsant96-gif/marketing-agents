@@ -210,6 +210,13 @@ Inscrição no link nos comentários (ou na bio). Começa em instantes.
 
 ## Arquivos-fonte
 
-- `marketing/materiais/anuncios-webinar-data-first-klabin/` — copy LinkedIn Ads, copy Google Ads (em espera), briefing visual
-- `marketing/materiais/webinar-data-first-klabin/` — email + banner, briefing visual
-- `marketing/posts/webinar-data-first-klabin/` — posts orgânicos + `post-dados.xlsx` (calendário editorial)
+Tudo reunido em `marketing/campanhas/webinar-data-first-klabin/`:
+
+- `plano-completo.md` — este documento
+- `anuncios-linkedin.md` — copy LinkedIn Ads (variantes A/B, segmentação, budget)
+- `anuncios-google-em-espera.md` — copy Google Ads (fora do plano ativo, mantido caso retome)
+- `anuncios-briefing-visual.md` — briefing visual dos anúncios pagos
+- `email-banner.md` — copy do email de convite/lembrete + banner
+- `email-banner-briefing-visual.md` — briefing visual do email + banner
+- `posts-organicos.md` — sequência de 3 posts LinkedIn
+- `posts-dados.xlsx` — calendário editorial dos posts
