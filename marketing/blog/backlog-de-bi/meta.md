@@ -94,8 +94,11 @@
 ```
 
 ## WordPress
-- **Status:** não publicado (aguardando revisão)
+- **Status:** rascunho (draft) publicado via API
+- **post_id:** 11472
+- **Editar:** https://solveplan.com/wp-admin/post.php?post=11472&action=edit
 - **CTA URL:** https://bdcstrategy.solveplan.ai/
+- **Pendência manual:** os campos do Rank Math (focus keyword, título, meta description) não persistem via REST API — precisam ser preenchidos manualmente em WP Admin → post → Rank Math → Edit Snippet, usando os valores em "SEO" acima.
 
 ## Metas de performance
 - **Ranking:** top 10 para "backlog de BI" em 90 dias
