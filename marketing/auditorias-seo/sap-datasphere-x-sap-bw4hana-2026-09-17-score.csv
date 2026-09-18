@@ -1,0 +1,16 @@
+Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,7,10,Parcial,"Título atual (post title, 46 caracteres) tem a keyword mas é curto. Definir Rank Math Title com 50-60 caracteres: ""SAP Datasphere ou SAP BW/4HANA: qual escolher | Solveplan"""
+SEO On-Page,Meta Description,0,10,Faltando,"Campo vazio. Preencher com: ""Entenda a diferença entre SAP Datasphere e SAP BW/4HANA, quando migrar e como escolher a solução certa de data warehousing para sua empresa."""
+SEO On-Page,Estrutura de Headings,9,10,Parcial,"H1 (título do post) contém a keyword. Headings de seção usam H5 em vez de H2 (padrão do site) — perde um pouco de peso semântico, mas não é urgente corrigir isoladamente nesta página."
+SEO On-Page,URL + Imagens + Links,2,10,Faltando,"Slug vazio — definir /blog/sap-datasphere-x-sap-bw4hana/. Só 1 link interno (para /sap-datasphere/) — adicionar 2º link interno (ex: para /sap-business-data-cloud/ ou outro artigo sobre Datasphere). Nenhuma imagem no post — adicionar imagem destacada com alt text ""SAP Datasphere e SAP BW/4HANA""."
+Performance Técnica,PageSpeed Mobile,0,8,Não verificado,"Post está em rascunho, sem URL pública. Testar em pagespeed.web.dev depois de publicar."
+Performance Técnica,PageSpeed Desktop,0,5,Não verificado,"Post está em rascunho, sem URL pública. Testar em pagespeed.web.dev depois de publicar."
+Performance Técnica,LCP,0,4,Não verificado,"Post está em rascunho, sem URL pública. Testar em pagespeed.web.dev depois de publicar."
+Performance Técnica,CLS,0,3,Não verificado,"Post está em rascunho, sem URL pública. Testar em pagespeed.web.dev depois de publicar."
+AEO,Bloco Featured Snippet,10,10,OK,"O parágrafo de definição do SAP Datasphere (42 palavras, logo após ""O que é o SAP Datasphere?"") já está no formato ideal. Usar como modelo para reforçar a definição do SAP BW/4HANA (hoje com só 29 palavras — expandir para 40-60)."
+AEO,FAQ,0,8,Faltando,"Não existe seção de FAQ. Adicionar bloco com 5 perguntas (ver texto completo na seção de plano de ação)."
+AEO,Perguntas nos Headings,7,7,OK,"6 headings já estão em formato de pergunta e refletem dúvidas reais de quem pesquisa (o que é / benefícios / vantagens / relação / como escolher). Manter esse padrão."
+GEO,Schema Markup,0,6,Faltando,"Nenhum schema JSON-LD no post. Adicionar Article + FAQPage (código pronto na seção de plano de ação)."
+GEO,E-E-A-T,0,5,Faltando,"Sem autor visível, sem data de publicação (rascunho nunca publicado) e sem prova social da Solveplan (nº de clientes, projetos, reconhecimento SAP). Adicionar parágrafo de autoridade antes do CTA final."
+GEO,Entidades e Citações,3,4,Parcial,"""SolvePlan"" citado incorretamente (corrigir para ""Solveplan""). Produtos SAP citados com typos em 2 pontos (""SAP BW/HANA"" e ""DAP BW/4HANA"" — corrigir ambos para ""SAP BW/4HANA""). Pesquisa Serasa Experian citada, mas falta localização (América Latina/Brasil) — adicionar."
+TOTAL,,38,100,,
