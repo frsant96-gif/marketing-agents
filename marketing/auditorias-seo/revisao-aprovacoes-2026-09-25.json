@@ -1,0 +1,50 @@
+﻿{
+    "1":  {
+              "obs":  "marcado na planilha",
+              "aprovado":  "Sim"
+          },
+    "2":  {
+              "obs":  "marcado na planilha",
+              "aprovado":  "Sim"
+          },
+    "3":  {
+              "obs":  "Só title e description. H1 fica para o rascunho (muda o visual)",
+              "aprovado":  "Sim"
+          },
+    "4":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "5":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "6":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "7":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "8":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "9":  {
+              "obs":  "aprovado no chat (bloco 1)",
+              "aprovado":  "Sim"
+          },
+    "10":  {
+               "obs":  "aprovado no chat (bloco 1)",
+               "aprovado":  "Sim"
+           },
+    "11":  {
+               "obs":  "aprovado no chat (bloco 1)",
+               "aprovado":  "Sim"
+           },
+    "12":  {
+               "obs":  "aprovado no chat (bloco 1)",
+               "aprovado":  "Sim"
+           }
+}
