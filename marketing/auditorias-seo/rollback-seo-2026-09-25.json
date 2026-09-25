@@ -1,0 +1,578 @@
+﻿[
+    {
+        "n":  "1",
+        "id":  7,
+        "url":  "/",
+        "title_antes":  "Home - Solveplan",
+        "desc_antes":  "Soluções SAP para decisões mais inteligentes",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "2",
+        "id":  9913,
+        "url":  "/sap-business-data-cloud/",
+        "title_antes":  "SAP BUSINESS DATA CLOUD - Solveplan",
+        "desc_antes":  "Unifique e governe todos os seus dados críticos com a solução SaaS que conecta dados SAP e de terceiros para impulsionar a inovação e a eficiência operacional",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "3",
+        "id":  235,
+        "url":  "/servicos/",
+        "title_antes":  "Serviços - Solveplan",
+        "desc_antes":  "Unifique e governe todos os seus dados críticos com a solução SaaS que conecta dados SAP e de terceiros para impulsionar a inovação e a eficiência operacional",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "5",
+        "id":  11059,
+        "url":  "/solve-watch-gestao-sap-datasphere/",
+        "title_antes":  "Solve Watch: Gestao Inteligente para SAP Datasphere em 30 Dias | Solveplan",
+        "desc_antes":  "Solve Watch é a plataforma da Solveplan que usa IA para diagnosticar seu ambiente SAP Datasphere, priorizar riscos e entregar recomendacoes validadas por arquitetos. Resultados em 30 dias.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "7",
+        "id":  9938,
+        "url":  "/fabrica-de-bi/",
+        "title_antes":  "FÁBRICA DE BI - Solveplan",
+        "desc_antes":  "A Solveplan oferece soluções de Business Intelligence adaptadas à realidade de cada empresa. Unimos tecnologias como SAP Analytics Cloud e DataSphere a uma",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "8",
+        "id":  9928,
+        "url":  "/planejamento-e-simulacao/",
+        "title_antes":  "PLANEJAMENTO E SIMULAÇÃO - Solveplan",
+        "desc_antes":  "A solução de planejamento da Solveplan com SAP Analytics Cloud transforma dados em previsões estratégicas. Com análise preditiva, BI e planejamento",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "9",
+        "id":  9922,
+        "url":  "/consolidacao-contabil/",
+        "title_antes":  "CONSOLIDAÇÃO CONTÁBIL - Solveplan",
+        "desc_antes":  "A solução de consolidação da Solveplan reúne automação, flexibilidade e inteligência em um só ambiente. Com ela, é possível agilizar o fechamento contábil,",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "10",
+        "id":  141,
+        "url":  "/sobre-nos/",
+        "title_antes":  "Sobre Nós - Solveplan",
+        "desc_antes":  "Sobre Nós",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "11",
+        "id":  298,
+        "url":  "/contato/",
+        "title_antes":  "Contato - Solveplan",
+        "desc_antes":  "CONTATO",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "12",
+        "id":  329,
+        "url":  "/cases/",
+        "title_antes":  "Cases - Solveplan",
+        "desc_antes":  "Cases de Sucesso",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "13",
+        "id":  873,
+        "url":  "/blog/",
+        "title_antes":  "Blog - Solveplan",
+        "desc_antes":  "",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "14",
+        "id":  9297,
+        "url":  "/eventos/",
+        "title_antes":  "Eventos - Solveplan",
+        "desc_antes":  "Eventos Search",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "15",
+        "id":  9275,
+        "url":  "/noticias/",
+        "title_antes":  "Notícias - Solveplan",
+        "desc_antes":  "Notícias Search",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "16",
+        "id":  381,
+        "url":  "/aceleradores/",
+        "title_antes":  "Aceleradores - Solveplan",
+        "desc_antes":  "Transforme dados em decisões inteligentes com o SAP Analytics Cloud integrando análise preditiva, planejamento estratégico e visualização em tempo real",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "17",
+        "id":  441,
+        "url":  "/analytics/",
+        "title_antes":  "Analytics - Solveplan",
+        "desc_antes":  "Analytics",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "18",
+        "id":  603,
+        "url":  "/planejamento/",
+        "title_antes":  "Planejamento - Solveplan",
+        "desc_antes":  "Planejar é antecipar, direcionar e executar com inteligência. Com a solução SAP Analytics Cloud, sua empresa projeta cenários, alinha estratégias e transforma",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "19",
+        "id":  632,
+        "url":  "/consolidacao/",
+        "title_antes":  "Consolidação - Solveplan",
+        "desc_antes":  "Com o SAP Group Reporting e SAP Analytics Cloud conjugados com a expertise da Solveplan, a consolidação financeira ganha agilidade, precisão e governança.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "20",
+        "id":  667,
+        "url":  "/planejamento-de-rh/",
+        "title_antes":  "Planejamento de RH - Solveplan",
+        "desc_antes":  "Com a Solveplan, o RH atua com mais estratégia, menos esforço manual e total controle dos números.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "21",
+        "id":  691,
+        "url":  "/people-analytics/",
+        "title_antes":  "PEOPLE ANALYTICS - Solveplan",
+        "desc_antes":  "Uma gestão de pessoas baseada em dados permite decisões mais estratégicas e direcionadas. Com indicadores confiáveis e relatórios visuais, o RH evolui com",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "22",
+        "id":  729,
+        "url":  "/historias-classicas/",
+        "title_antes":  "Histórias clássicas - Solveplan",
+        "desc_antes":  "A SAP anunciou a descontinuação das Histórias Clássicas no SAP Analytics Cloud e essa mudança pode impactar diretamente análises, ciclos de planejamento e",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "23",
+        "id":  769,
+        "url":  "/planejamento-de-opex/",
+        "title_antes":  "Planejamento de OPEX - Solveplan",
+        "desc_antes":  "Impulsione a eficiência do seu negócio com um planejamento robusto, dinâmico e conectado aos objetivos estratégicos da empresa. A solução de Planejamento de",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "24",
+        "id":  810,
+        "url":  "/investimentos/",
+        "title_antes":  "INVESTIMENTOS - Solveplan",
+        "desc_antes":  "Automatize o planejamento de investimentos com controle total dos projetos, unindo projeções financeiras, análise de CAPEX e decisões mais ágeis com dados",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "25",
+        "id":  878,
+        "url":  "/agro-usinas/",
+        "title_antes":  "Agro Usinas - Solveplan",
+        "desc_antes":  "Custos operacionais, mercado instável e pressão por resultados exigem das usinas uma nova abordagem no planejamento. Nossa solução integra ERP agrícola e SAP",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "26",
+        "id":  923,
+        "url":  "/agro-graos/",
+        "title_antes":  "Agro Grãos - Solveplan",
+        "desc_antes":  "Com o aumento contínuo no custo dos insumos, a variação nos preços das commodities e a pressão por margens mais saudáveis, o planejamento agrícola deixou de",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "27",
+        "id":  926,
+        "url":  "/dashboard/",
+        "title_antes":  "Dashboards com SAP Analytics Cloud | Solveplan",
+        "desc_antes":  "Ganhe clareza total em tempo real. Com os dashboards da Solveplan, você transforma dados complexos em insights estratégicos, organizando KPIs e relatórios em",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "28",
+        "id":  929,
+        "url":  "/acompanhamento-de-despesas/",
+        "title_antes":  "Acompanhamento de Despesas - Solveplan",
+        "desc_antes":  "Mantenha o orçamento sob controle com inteligência, precisão e tecnologia de ponta. Com as soluções da Solveplan, você acompanha em tempo real o comparativo",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "33",
+        "id":  362,
+        "url":  "/cases-abertos/",
+        "title_antes":  "Cases Abertos - Solveplan",
+        "desc_antes":  "matrix Energia",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "34",
+        "id":  9534,
+        "url":  "/banner/banner-2/",
+        "title_antes":  "Banner 2 - Solveplan",
+        "desc_antes":  "",
+        "robots_antes":  "nofollow, noindex"
+    },
+    {
+        "n":  "35",
+        "id":  9537,
+        "url":  "/banner/banner-3/",
+        "title_antes":  "Banner 3 - Solveplan",
+        "desc_antes":  "",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "36",
+        "id":  9625,
+        "url":  "/midia-em-acelerador/analytics/",
+        "title_antes":  "Analytics - Solveplan",
+        "desc_antes":  "",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "37",
+        "id":  9377,
+        "url":  "/video-aceleradores/video-teste/",
+        "title_antes":  "Vídeo Teste - Solveplan",
+        "desc_antes":  "",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "38",
+        "id":  11311,
+        "url":  "/blog/gestao-de-ambientes-sap-datasphere/",
+        "title_antes":  "Gestão de ambientes SAP Datasphere: 3 telas que não bastam | Solveplan",
+        "desc_antes":  "Gestão de ambientes SAP Datasphere vai além do monitoramento nativo. Veja por que a tela mostra o sintoma e o que falta para gestão ativa.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "39",
+        "id":  10689,
+        "url":  "/blog/sap-business-data-cloud-knowledge-core/",
+        "title_antes":  "SAP Business Data Cloud Knowledge Core: a camada que os agentes SAP precisam",
+        "desc_antes":  "O SAP Business Data Cloud é o Knowledge Core que transforma o SAP Knowledge Graph genérico no mapa de dados da sua empresa — com Domain Models, data products governados e governança nativa para agentes SAP",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "40",
+        "id":  10691,
+        "url":  "/blog/sap-knowledge-graph/",
+        "title_antes":  "SAP Knowledge Graph: o que é e por que os agentes SAP dependem dele",
+        "desc_antes":  "O SAP Knowledge Graph mapeia 452 mil tabelas do S/4HANA para dar contexto real aos agentes SAP. Entenda a abordagem neuro-simbólica e o impacto para o seu negócio",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "41",
+        "id":  10653,
+        "url":  "/blog/sap-business-ai-platform/",
+        "title_antes":  "SAP Business AI Platform: o que mudou no SAPPHIRE 2026 e o que isso significa para sua empresa",
+        "desc_antes":  "Durante o SAP SAPPHIRE Orlando 2026, a SAP unificou BTP, BDC e AI Foundation em uma única plataforma de IA. Entenda o que muda e o que sua empresa precisa fazer agora.",
+        "robots_antes":  "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "42",
+        "id":  10690,
+        "url":  "/blog/sap-joule-work/",
+        "title_antes":  "SAP Joule Work: de assistente de chat a camada operacional do ERP - Solveplan",
+        "desc_antes":  "O SAP Joule Work executa processos em linguagem natural — lançamentos, workflows e análises no SAP Datasphere. Entenda o que mudou no Joule e o impacto para usuários SAP.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "44",
+        "id":  10478,
+        "url":  "/blog/sap-bdc-com-cloud-ia-joule/",
+        "title_antes":  "Joule e SAP BDC: o que muda com a IA integrada à governança de dados? - Solveplan",
+        "desc_antes":  "Descubra como a integração entre Joule e SAP BDC transforma a governança de dados, unifica informações e fortalece decisões estratégicas.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "45",
+        "id":  10423,
+        "url":  "/blog/planejamento-financeiro/planejamento-financeiro-2026/",
+        "title_antes":  "Planejamento financeiro 2026: como estruturar o orçamento com o SAC Planning? - Solveplan",
+        "desc_antes":  "Planejamento financeiro 2026: como estruturar o orçamento com o SAC Planning? Descubra como estruturar o orçamento de 2026 com o SAC Planning e alavancar a performance financeira da sua empresa com dados confiáveis.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "46",
+        "id":  10380,
+        "url":  "/blog/checklist-dados-processos-inicio-do-ano/",
+        "title_antes":  "Checklist estratégico 2026: o que revisar nos dados e processos neste início de ano - Solveplan",
+        "desc_antes":  "Neste início de ano, saiba o que revisar em dados, processos e dashboards para garantir um ciclo de planejamento mais ágil, seguro e eficiente. Leia o checklist prático da SolvePlan.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "47",
+        "id":  10128,
+        "url":  "/blog/planilhas/por-que-planilhas-nao-sao-suficientes-para-decisoes-estrategicas/",
+        "title_antes":  "Por que planilhas não são suficientes para decisões estratégicas? - Solveplan",
+        "desc_antes":  "Fazendo a analogia, se os mapas de papel foram substituídos por aplicativos que são rotas em tempo real, por que algumas empresas ainda dependem de planilhas?",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "48",
+        "id":  10115,
+        "url":  "/blog/planejamento-financeiro/health-analytics-como-melhorar-o-planejamento-da-industria-da-saude/",
+        "title_antes":  "Health Analytics: como melhorar o planejamento da indústria da saúde? - Solveplan",
+        "desc_antes":  "“O Health Analytics é o diário de bordo da indústria da saúde do futuro”.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "49",
+        "id":  10049,
+        "url":  "/blog/sap-analytics-cloud/sap-analytics-cloud-como-ele-revoluciona-a-consolidacao-societaria/",
+        "title_antes":  "SAP Analytics Cloud: como ele revoluciona a consolidação societária? - Solveplan",
+        "desc_antes":  "Ter um processo simplificado e estruturado da consolidação societária é uma meta complexa de ser atingida por muitas empresas que buscam otimizar suas",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "50",
+        "id":  10166,
+        "url":  "/blog/gestao-de-dados-como-realizar-de-forma-eficiente-nas-empresas/",
+        "title_antes":  "Gestão de dados: como realizar de forma eficiente nas empresas? - Solveplan",
+        "desc_antes":  "Toda empresa lida com um alto volume de informações diariamente, o que exige delas um investimento contínuo em uma boa gestão de dados, prezando pela",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "51",
+        "id":  8052,
+        "url":  "/blog/quais-as-principais-tendencias-de-tecnologia-e-negocios-para-2025/",
+        "title_antes":  "Quais as principais tendências de tecnologia e negócios para 2025? - Solveplan",
+        "desc_antes":  "Mais um ano chegou, e a pergunta que não quer calar no mundo dos negócios e TI é: o que virá pela frente?",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "52",
+        "id":  10138,
+        "url":  "/blog/qual-o-papel-da-sustentacao-de-projetos-no-planejamento-orcamentario/",
+        "title_antes":  "Qual o papel da sustentação de projetos no planejamento orçamentário? - Solveplan",
+        "desc_antes":  "O papel da sustentação de projetos no planejamento orçamentário é assegurar que a saúde financeira e a estratégia da empresa continuarão sendo aplicadas a",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "53",
+        "id":  8353,
+        "url":  "/blog/por-que-investir-em-data-analytics-e-tao-importante/",
+        "title_antes":  "Por que investir em Data \u0026 Analytics é tão importante? - Solveplan",
+        "desc_antes":  "Investir na gestão de dados deixou, há muito tempo, de ser um diferencial. Hoje, tendo em vista a quantidade de informações que são geradas diariamente, se tornou uma necessidade. Data \u0026 Analytics é uma ferramenta que tem a capacidade de analisar uma alta quantidade de dados, contribuindo para tomadas de decisões efetivas.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "55",
+        "id":  8412,
+        "url":  "/blog/quais-as-vantagens-da-consolidacao-atraves-do-sap-analytics-cloud/",
+        "title_antes":  "Quais as vantagens da consolidação através do SAP Analytics Cloud? - Solveplan",
+        "desc_antes":  "As vantagens da consolidação através do SAP Analytics Cloud, solução de análise e planejamento de dados em nuvem, vão desde o preparar e consolidar dados de planejamento, até automatizar processos críticos, como validação de informações e conversão de moedas.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "56",
+        "id":  8628,
+        "url":  "/blog/sap-analytics-cloud-quais-seus-beneficios-para-a-governanca-de-dados/",
+        "title_antes":  "SAP Analytics Cloud: Quais seus benefícios para a governança de dados? - Solveplan",
+        "desc_antes":  "O SAP Analytics Cloud é uma das ferramentas mais robustas do mercado para inteligência de negócio e análise de dados, com funcionalidades que permitem o acesso em tempo real às informações corporativas a fim de tomadas de decisões mais assertivas para ter mais governança de dados.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "57",
+        "id":  8655,
+        "url":  "/blog/sap-analytics-cloud-quais-seus-beneficios-para-a-governanca-de-dados-2/",
+        "title_antes":  "SAP Analytics Cloud: como ele apoia a consolidação e planejamento empresarial? - Solveplan",
+        "desc_antes":  "Consolidar dados tendo informações em tempo real que embasem o planejamento empresarial é um cuidado essencial para o sucesso corporativo, algo que o SAP Analytics Cloud (SAC) pode contribuir!",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "58",
+        "id":  8664,
+        "url":  "/blog/planejamento-de-rh-guia-completo-para-elaborar-o-seu/",
+        "title_antes":  "Planejamento de RH: guia completo para elaborar o seu - Solveplan",
+        "desc_antes":  "Com um bom planejamento de RH, as empresas conseguirão unir pilares essenciais para o destaque competitivo: as metas corporativas, e seus ativos preciosos que conduzirão as estratégias definidas, seu capital humano.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "59",
+        "id":  8670,
+        "url":  "/blog/consolidacao-societaria-o-que-e-e-quais-os-seus-beneficios-2/",
+        "title_antes":  "Consolidação societária: o que é e quais os seus benefícios? - Solveplan",
+        "desc_antes":  "A consolidação societária ajuda a fortalecer a competitividade do negócio uma vez que contribui para a melhor visualização e gerenciamento das operações.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "60",
+        "id":  8675,
+        "url":  "/blog/como-o-sap-analytics-cloud-impulsiona-a-consolidacao-do-agronegocio/",
+        "title_antes":  "Como o SAP Analytics Cloud impulsiona a consolidação do agronegócio? - Solveplan",
+        "desc_antes":  "Investir em ferramentas como o SAP Analytics Cloud e estratégia de consolidação são elementos indispensáveis para garantir que o segmento do agronegócio possa avançar constantemente.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "61",
+        "id":  8901,
+        "url":  "/blog/sap-business-data-cloud-tudo-o-que-voce-precisa-saber/",
+        "title_antes":  "SAP Business Data Cloud: tudo o que você precisa saber! - Solveplan",
+        "desc_antes":  "Se a sua empresa quer se diferenciar dos concorrentes e se destacar em termos de gestão corporativa, o SAP Business Data Cloud será, certamente, uma solução estratégica para alavancar este potencial.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "62",
+        "id":  8886,
+        "url":  "/blog/clean-core/clean-core-em-data-analytics-como-ele-melhora-a-gestao-de-dados/",
+        "title_antes":  "Clean Core em Data \u0026 Analytics: como ele melhora a gestão de dados? - Solveplan",
+        "desc_antes":  "Investir em ferramentas como o SAP Analytics Cloud e estratégia de consolidação são elementos indispensáveis para garantir que o segmento do agronegócio possa avançar constantemente.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "63",
+        "id":  10079,
+        "url":  "/blog/ams-como-ele-impulsiona-as-solucoes-analiticas-da-sua-empresa/",
+        "title_antes":  "AMS: como ele impulsiona as soluções analíticas da sua empresa? - Solveplan",
+        "desc_antes":  "Em um mercado onde os dados são o novo petróleo, ter a capacidade de extrair valor desses ativos e transformá-lo em insights estratégicos é crucial para a",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "64",
+        "id":  8891,
+        "url":  "/blog/planejamento-de-rh/planejamento-de-rh-quais-os-maiores-desafios-e-como-supera-los/",
+        "title_antes":  "Planejamento de RH: quais os maiores desafios e como superá-los? - Solveplan",
+        "desc_antes":  "Ter um bom planejamento de RH vai muito além do que atingir os objetivos corporativos, focando alcançar um desempenho muito mais estratégico que una os",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "65",
+        "id":  10484,
+        "url":  "/blog/sustentacao-analitica-sap-pos-go-live-erp/",
+        "title_antes":  "Sustentação Analítica SAP: 3 Pilares Pós Go-Live de ERP - Solveplan",
+        "desc_antes":  "A maioria das empresas trata o go-live do ERP SAP como linha de chegada. Entenda o que é sustentação analítica SAP, seus 3 pilares e por que 33,31% das empresas vão trocar de ERP até 2026.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "66",
+        "id":  8909,
+        "url":  "/blog/sap-datasphere-como-ajuda-no-planejamento-empresarial/",
+        "title_antes":  "SAP Datasphere: como ajuda no planejamento empresarial? - Solveplan",
+        "desc_antes":  "O SAP Datasphere ajuda no planejamento empresarial pois trata-se de uma ferramenta que apoia no gerenciamento de dados facilitando o acesso e obtenção de",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "67",
+        "id":  10054,
+        "url":  "/blog/sap-analytics-cloud-como-ele-favorece-o-fluxo-de-caixa/",
+        "title_antes":  "SAP Analytics Cloud: como ele favorece o fluxo de caixa? - Solveplan",
+        "desc_antes":  "Um fluxo de caixa saudável é uma peça-chave para a prosperidade sustentável corporativa, tendo uma visão mais detalhada acerca das entradas e saídas",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "68",
+        "id":  704,
+        "url":  "/case/matrix-energia/",
+        "title_antes":  "Matrix Energia realiza consolidação societária através do SAP Analytics Cloud   - Solveplan",
+        "desc_antes":  "Matrix Energia, em apenas três meses, conquistou automação, agilidade e autonomia nos processos financeiros, transformando suas operações e reduzindo significativamente os prazos de fechamento.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "69",
+        "id":  10297,
+        "url":  "/case/m-dias-branco-implementa-sap-analytics-cloud-em-10-meses-com-96-de-reducao/",
+        "title_antes":  "M. Dias Branco implementa SAP Analytics Cloud em 10 meses com 96% de redução tempo nas operações orçamentárias - Solveplan",
+        "desc_antes":  "M. Dias Branco reduziu 96% do tempo de orçamento ao adotar SAP Analytics Cloud com a SolvePlan, integrando dados e acelerando decisões.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "70",
+        "id":  10310,
+        "url":  "/case/zilor-implementa-sac-em-6-meses-e-elimina-uso-de-planilhas-eletronicas/",
+        "title_antes":  "Zilor implementa SAC em 6 meses e elimina uso de planilhas eletrônicas - Solveplan",
+        "desc_antes":  "Zilor implementou o SAP Analytics Cloud em 6 meses com a Solveplan, eliminando planilhas eletrônicas e reduzindo de 14 dias úteis para agilidade total na consolidação orçamentária.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "71",
+        "id":  10580,
+        "url":  "/noticia/sap-partner-awards-2026-solveplan-lac/",
+        "title_antes":  "SolvePlan é reconhecida no SAP Partner Awards 2026 para América Latina (LAC) - Solveplan",
+        "desc_antes":  "A SolvePlan foi premiada no SAP Partner Awards 2026 – América Latina. Entenda o impacto do reconhecimento e o que isso significa para o mercado SAP.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "72",
+        "id":  10443,
+        "url":  "/noticia/melhor-parceiro-sap-business-data-cloud-2025/",
+        "title_antes":  "Solveplan é reconhecida no Partner Excellence Awards 2025 como Melhor Parceiro SAP Business Data Cloud - Solveplan",
+        "desc_antes":  "Solveplan é reconhecida como Melhor Parceiro SAP Business Data Cloud 2025 no Partner Excellence Awards. Saiba como o SAP BDC transforma dados e analytics.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "73",
+        "id":  9269,
+        "url":  "/noticia/solveplan-e-reconhecida-no-sap-partner-success-meeting-q1-2025-em-3-categorias/",
+        "title_antes":  "Solveplan é reconhecida no SAP Partner Success Meeting Q1/2025 em 3 categorias - Solveplan",
+        "desc_antes":  "A Solveplan foi premiada no SAP Partner Success Meeting Q1/2025, sendo reconhecida em três categorias do Excellence Award.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "74",
+        "id":  9273,
+        "url":  "/noticia/melhor-parceira-do-ecossistema-sap-2022/",
+        "title_antes":  "Melhor parceira do ecossistema SAP 2022 - Solveplan",
+        "desc_antes":  "Prêmio Best Partner 2022  Solveplan é reconhecida como melhor parceiro SAP de 2022",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "75",
+        "id":  9271,
+        "url":  "/noticia/solveplan-recebe-o-premio-de-quote-achiever-no-ecossistema-sap-no-q1-e-q2-de-2024/",
+        "title_antes":  "SolvePlan Recebe o Prêmio de ‘Quote Achiever’ no Ecossistema SAP no Q1 e Q2 de 2024 - Solveplan",
+        "desc_antes":  "Reconhecimento reflete o compromisso com a excelência e o alto desempenho em soluções SAP",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "76",
+        "id":  9309,
+        "url":  "/evento/sap-xfpa-innovation-day-planejamento-e-consolidacao-para-a-gestao-eficiente/",
+        "title_antes":  "SAP XFP\u0026A Innovation Day: Planejamento e Consolidação para a Gestão Eficiente - Solveplan",
+        "desc_antes":  "SAP XFP\u0026A Innovation Day: Planejamento e Consolidação para a Gestão Eficiente",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "77",
+        "id":  9307,
+        "url":  "/evento/sap-btp-experience-em-2025/",
+        "title_antes":  "SAP BTP Experience em 2025 - Solveplan",
+        "desc_antes":  "SAP BTP Experience em 2025 – Além do ver. Começar",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "78",
+        "id":  9313,
+        "url":  "/evento/webinar-conectando-fluxo-de-caixa-e-orcamento-case-aco-cearense/",
+        "title_antes":  "WEBINAR: Conectando Fluxo de Caixa e Orçamento: Case Aço Cearense - Solveplan",
+        "desc_antes":  "Participe deste webinar e descubra como automatizar os processos financeiros da empresa. Demonstraremos como é feita a integração entre o fluxo de caixa com o orçamento para automatizar as análises de forma interativa e utilização de análises preditivas para trazer mais agilidade, precisão e controle.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "79",
+        "id":  9315,
+        "url":  "/evento/webinar-rfi-revisao-financeira-integrada-entre-o-sap-ibp-e-sap-analytics/",
+        "title_antes":  "WEBINAR: (RFI) Revisão Financeira Integrada entre o SAP IBP e SAP Analytics - Solveplan",
+        "desc_antes":  "Neste evento, você vai conhecer na prática o conceito de Revisão Financeira Integrada (RFI), aplicado ao ciclo de planejamento (S\u0026OP) e evoluindo para o modelo xP\u0026A (Extended Planning \u0026 Analysis), que permite uma análise financeira contínua, alinhada aos objetivos operacionais e às demandas do mercado.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    },
+    {
+        "n":  "80",
+        "id":  9317,
+        "url":  "/evento/solveplan-no-sap-now-ai-tour-brazil-2025-com-ia-e-performance/",
+        "title_antes":  "SolvePlan no SAP NOW AI Tour Brazil 2025 com IA e Performance - Solveplan",
+        "desc_antes":  "Nos dias 19 e 20 de agosto de 2025, o SAP NOW AI Tour Brazil reúne as maiores lideranças empresariais do país para falar sobre transformação digital, automação, inteligência artificial e decisões baseadas em dados.",
+        "robots_antes":  "follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+    }
+]
