@@ -1,0 +1,85 @@
+﻿Campanha;Grupo de anuncio;Tipo;Keyword;Correspondencia;Buscas/mes BR;Lance min (R$);Lance max (R$);Estagio;Prioridade;Observacao
+Search BDC;SAP BDC;Keyword;sap bdc;Exata + Frase;390;1,44;33,3;2 Exploracao;Alta;Maior volume do nucleo BDC
+Search BDC;SAP BDC;Keyword;sap business data cloud;Exata + Frase;90;6,09;53,18;2 Exploracao;Alta;Lance alto: disputa com a propria SAP
+Search BDC;SAP BDC;Keyword;business data cloud;Frase;30;;;2 Exploracao;Media;
+Search BDC;Datasphere;Keyword;sap datasphere;Exata + Frase;320;4,88;41,58;2 Exploracao;Alta;
+Search BDC;SAC;Keyword;sap analytics cloud;Exata + Frase;390;2,45;25,59;2 Exploracao;Alta;Historico: 114 impressoes, 4 cliques, 0 conv
+Search BDC;SAC;Keyword;sac sap;Exata;210;2,91;18,03;2 Exploracao;Media;
+Search BDC;SAC;Keyword;analytics sap;Exata;110;4,38;21,15;2 Exploracao;Media;Competicao media
+Search BDC;SAC;Keyword;sac planning sap;Frase;30;4,53;21,64;2 Exploracao;Media;Ponte para FP&A
+Search BDC;BDC + Databricks;Keyword;sap databricks;Exata + Frase;50;8,82;37,87;2 Exploracao;Alta;Publico tecnico com projeto
+Search BDC;BDC + Databricks;Keyword;sap bdc databricks;Frase;10;;;2 Exploracao;Media;
+Search BDC;BW e migracao;Keyword;sap bw 4hana;Exata + Frase;30;3,36;10,23;2 Exploracao;Alta;Gatilho BW 2027
+Search BDC;BW e migracao;Keyword;sap bw 7.5;Frase;10;;;1 Dor;Media;Gatilho BW 2027
+Search BDC;BW e migracao;Keyword;sap bw;Exata;;;;1 Dor;Media;Termo curto: monitorar termos de pesquisa
+Search BDC;Consultoria SAP dados;Keyword;parceiro sap;Exata;70;3,99;26,18;3 Avaliacao;Media;Competicao alta
+Search BDC;Consultoria SAP dados;Keyword;consultoria sap analytics;Frase;<10;;;3 Avaliacao;Media;Volume baixo, intencao alta
+Search BDC;Consultoria SAP dados;Keyword;consultoria sap datasphere;Frase;<10;;;3 Avaliacao;Media;Volume baixo, intencao alta
+Search BDC;Consultoria SAP dados;Keyword;consultoria sap;Exata (so com RLSA);1000;2,0;25,59;3 Avaliacao;Teste;Generico: usar apenas com publico de remarketing
+Search BDC;SAP Joule (teste);Keyword;sap joule;Exata;390;4,2;22,94;1 Dor;Teste;Angulo: Joule depende de dado organizado
+Search BDC;SAP Joule (teste);Keyword;sap business ai;Exata;50;4,64;37,07;1 Dor;Teste;
+Search BDC;Consolidacao (opcional);Keyword;sap group reporting;Exata;50;3,26;21,32;2 Exploracao;Baixa;Gap de conteudo sem concorrente
+Marca;Solveplan;Keyword;solveplan;Exata + Frase;390;;;4 Validacao;Alta;Nao existe campanha de marca hoje
+Demand Gen BDC;Segmento busca SAP dados;Publico;Segmento personalizado: sap bdc, sap business data cloud, sap datasphere, sap databricks, sap bw 4hana, sap analytics cloud;—;;;;1 Dor / 2 Exploracao;Alta;Verba SAP
+Demand Gen BDC;Segmento busca SAP dados;Publico;Segmento por URL: paginas de BDC, Datasphere e Databricks (sap.com, databricks.com);—;;;;1 Dor / 2 Exploracao;Alta;Verba SAP
+Demand Gen BDC;Remarketing BDC;Publico;Visitantes /sap-business-data-cloud/ e /sap-datasphere/ (ultimos 90 dias) sem conversao;—;;;;5 Reengajamento;Alta;
+Demand Gen BDC;Lista HubSpot;Publico;Customer Match: 95 leads hot/warm dos eventos H1;—;;;;5 Reengajamento;Alta;Depende de elegibilidade da conta
+Todas (lista compartilhada);—;Negativa;vaga;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;vagas;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;emprego;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;salario;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;curriculo;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;trainee;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;freelancer;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;jobs;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;job;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;curso;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;cursos;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;certificacao;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;certificação;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;treinamento;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;tutorial;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;manual;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;apostila;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;pdf;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;udemy;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;opensap;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;learning;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;o que é (só Search consultoria);Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;login;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;download;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;baixar;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;trial;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;gratis;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;grátis;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;free;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;sap help;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;note;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;registro;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;pequenas empresas;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;pequena empresa;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;micro;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;mei;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;pessoal;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;planilha;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;planilhas;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;excel;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;business one;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;omie;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;totvs;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;fluig;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;gesplan;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;perplexity;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;chatgpt;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;lasy ai;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;2short ai;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;automação de ia;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;ai automation;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;marketing cloud;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;abap;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;fiori;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;mm;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;sd;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;wm;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;wms;Frase;;;;—;—;
+Todas (lista compartilhada);—;Negativa;ariba;Frase;;;;—;—;
