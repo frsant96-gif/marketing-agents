@@ -1,150 +1,642 @@
 ﻿{
     "1":  {
-              "obs":  "marcado na planilha",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/",
+              "title":  "Consultoria SAP BDC, Analytics e Planejamento | Solveplan",
+              "desc":  "Parceira SAP Gold e Melhor Parceiro SAP Business Data Cloud 2026 na América Latina. Analytics, planejamento e consolidação com dados confiáveis.",
+              "h1":  "Trocar tag para H1: \"Planejamento, Analytics e Consolidação\"",
+              "obs":  ""
           },
     "2":  {
-              "obs":  "marcado na planilha",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/sap-business-data-cloud/",
+              "title":  "Consultoria SAP Business Data Cloud (BDC) | Solveplan",
+              "desc":  "Implemente SAP Business Data Cloud com o Melhor Parceiro SAP BDC 2026 da América Latina. Unifique dados SAP e não-SAP para analytics e IA.",
+              "h1":  "Trocar tag para H1: \"SAP Business Data Cloud\"",
+              "obs":  ""
           },
     "3":  {
-              "obs":  "Só title e description. H1 fica para o rascunho (muda o visual)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/servicos/",
+              "title":  "Serviços SAP: BDC, Datasphere, BI e consolidação | Solveplan",
+              "desc":  "Serviços SAP da Solveplan: Business Data Cloud, Datasphere, Fábrica de BI, planejamento, consolidação e SAP PaPM para médias e grandes empresas.",
+              "h1":  "Não há título de página. Adicionar título \"Serviços SAP\" no topo",
+              "obs":  "Só title e description. H1 fica para o rascunho (muda o visual)"
           },
     "4":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/sap-datasphere/",
+              "title":  "(manter)",
+              "desc":  "(manter)",
+              "h1":  "Já tem H1: \"O que é o SAP Datasphere?\"",
+              "obs":  ""
           },
     "5":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/solve-watch-gestao-sap-datasphere/",
+              "title":  "Solve Watch: gestão de SAP Datasphere com IA | Solveplan",
+              "desc":  "Solve Watch usa agentes de IA e especialistas da Solveplan para diagnosticar seu SAP Datasphere, priorizar riscos e recomendar ações em 30 dias.",
+              "h1":  "Trocar tag para H1: \"Solve Watch\"",
+              "obs":  ""
           },
     "6":  {
-              "obs":  "Não publicar: voltar a página para rascunho + redirecionamento 301 para /contato/. Tirar o card \"SAP PaPM\" de /servicos/ no rascunho dessa página (opção C). Não aplicar o SEO sugerido",
-              "aprovado":  "Rascunho"
+              "aprovado":  "Rascunho",
+              "url":  "/sap-profitability-and-performance-management/",
+              "title":  "SAP PaPM: gestão de rentabilidade e custos | Solveplan",
+              "desc":  "Analise a rentabilidade por produto, cliente e canal com SAP Profitability and Performance Management (PaPM). Implementação com a Solveplan.",
+              "h1":  "Trocar tag para H1: \"SAP PROFITABILITY AND PERFORMANCE MANAGEMENT\"",
+              "obs":  "Não publicar: voltar a página para rascunho + redirecionamento 301 para /contato/. Tirar o card \"SAP PaPM\" de /servicos/ no rascunho dessa página (opção C). Não aplicar o SEO sugerido"
           },
     "7":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/fabrica-de-bi/",
+              "title":  "Fábrica de BI com SAP Analytics Cloud | Solveplan",
+              "desc":  "BI sob medida com SAP Analytics Cloud e SAP Datasphere: dashboards, KPIs e relatórios governados, entregues de forma contínua pela Solveplan.",
+              "h1":  "Trocar tag para H1: \"FÁBRICA DE BI\"",
+              "obs":  ""
           },
     "8":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/planejamento-e-simulacao/",
+              "title":  "Planejamento e simulação com SAP Analytics Cloud | Solveplan",
+              "desc":  "(manter)",
+              "h1":  "Trocar tag para H1: \"PLANEJAMENTO E SIMULAÇÃO\"",
+              "obs":  ""
           },
     "9":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "aprovado":  "Sim",
+              "url":  "/consolidacao-contabil/",
+              "title":  "Consolidação contábil com SAP | Solveplan",
+              "desc":  "Automatize a consolidação contábil com SAP Group Reporting e SAP Analytics Cloud: fechamento mais rápido, menos erros e números confiáveis.",
+              "h1":  "Trocar tag para H1: \"CONSOLIDAÇÃO CONTÁBIL\"",
+              "obs":  ""
           },
     "10":  {
-               "obs":  "aprovado no chat (bloco 1)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/sobre-nos/",
+               "title":  "Sobre nós: consultoria SAP Gold há 13 anos | Solveplan",
+               "desc":  "Há mais de 13 anos a Solveplan entrega soluções SAP em analytics, planejamento e consolidação: 150+ empresas, 300+ projetos e 68+ especialistas.",
+               "h1":  "Trocar tag para H1: \"Excelência SAP para Decisões estratégicas\"",
+               "obs":  ""
            },
     "11":  {
-               "obs":  "aprovado no chat (bloco 1)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/contato/",
+               "title":  "Contato: fale com especialistas SAP | Solveplan",
+               "desc":  "Fale com a Solveplan, Melhor Parceiro SAP BDC 2026 na América Latina. Tire dúvidas sobre BDC, analytics, planejamento e consolidação.",
+               "h1":  "Trocar tag para H1: \"Vamos conversar?\"",
+               "obs":  ""
            },
     "12":  {
-               "obs":  "aprovado no chat (bloco 1)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/cases/",
+               "title":  "Cases de sucesso SAP | Solveplan",
+               "desc":  "Veja como Zilor, M. Dias Branco, Lins Agroindustrial e Matrix Energia ganharam agilidade com SAP Analytics Cloud e a Solveplan.",
+               "h1":  "Trocar tag para H1: \"Cases de Sucesso\"",
+               "obs":  ""
            },
     "13":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/blog/",
+               "title":  "Blog: SAP BDC, Datasphere e analytics | Solveplan",
+               "desc":  "Artigos sobre SAP Business Data Cloud, Datasphere, SAP Analytics Cloud, planejamento financeiro e consolidação, por especialistas SAP da Solveplan.",
+               "h1":  "Trocar tag para H1 e corrigir o texto: \"BLog\" \u003e \"Blog\"",
+               "obs":  ""
            },
     "14":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/eventos/",
+               "title":  "Eventos SAP e webinars | Solveplan",
+               "desc":  "Webinars e eventos da Solveplan sobre SAP Business Data Cloud, Datasphere, analytics e planejamento. Veja a agenda e inscreva-se.",
+               "h1":  "Já tem H1: \"Eventos\"",
+               "obs":  ""
            },
     "15":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/noticias/",
+               "title":  "Notícias e prêmios | Solveplan",
+               "desc":  "Prêmios, reconhecimentos SAP e novidades da Solveplan, incluindo Melhor Parceiro SAP Business Data Cloud 2026 na América Latina.",
+               "h1":  "Já tem H1: \"Notícias\"",
+               "obs":  ""
            },
     "16":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/aceleradores/",
+               "title":  "Aceleradores SAP Analytics Cloud | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Já tem H1: \"ACELERADORES\"",
+               "obs":  ""
            },
     "17":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/analytics/",
+               "title":  "Acelerador de analytics com SAP Analytics Cloud | Solveplan",
+               "desc":  "Dashboards e análises em tempo real com SAP Analytics Cloud. O acelerador da Solveplan entrega dados confiáveis e visão estratégica em menos tempo.",
+               "h1":  "Trocar tag para H1: \"ANALYTICS\"",
+               "obs":  ""
            },
     "18":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/planejamento/",
+               "title":  "Planejamento orçamentário com SAC | Solveplan",
+               "desc":  "Projete cenários, alinhe estratégias e transforme metas em planos com SAP Analytics Cloud Planning, o acelerador de planejamento da Solveplan.",
+               "h1":  "Trocar tag para H1: \"PLANEJAMENTO\"",
+               "obs":  ""
            },
     "19":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/consolidacao/",
+               "title":  "Consolidação com SAP Group Reporting e SAC | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"CONSOLIDAÇÃO\"",
+               "obs":  ""
            },
     "20":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/planejamento-de-rh/",
+               "title":  "Planejamento de RH com SAP Analytics Cloud | Solveplan",
+               "desc":  "Planeje headcount, folha e orçamento de pessoal no SAP Analytics Cloud. Com a Solveplan, o RH ganha estratégia, menos planilha e controle.",
+               "h1":  "Trocar tag para H1: \"PLANEJAMENTO DE RH\"",
+               "obs":  ""
            },
     "21":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/people-analytics/",
+               "title":  "People Analytics com SAP Analytics Cloud | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"PEOPLE ANALYTICS\"",
+               "obs":  ""
            },
     "22":  {
-               "obs":  "aprovado no chat (bloco 2)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/historias-classicas/",
+               "title":  "Migração de Histórias Clássicas do SAC | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"HISTÓRIAS CLÁSSICAS\"",
+               "obs":  ""
            },
     "23":  {
-               "obs":  "marcado na planilha",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/planejamento-de-opex/",
+               "title":  "Planejamento de OPEX com SAP Analytics Cloud | Solveplan",
+               "desc":  "Planeje o OPEX de forma dinâmica e conectada à estratégia com SAP Analytics Cloud. Acelerador da Solveplan para despesas operacionais.",
+               "h1":  "Trocar tag para H1: \"Planejamento de OPEX\"",
+               "obs":  ""
            },
     "24":  {
-               "obs":  "marcado na planilha",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/investimentos/",
+               "title":  "Planejamento de investimentos e CAPEX com SAP | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"INVESTIMENTOS\"",
+               "obs":  ""
            },
     "25":  {
-               "obs":  "marcado na planilha",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/agro-usinas/",
+               "title":  "Planejamento para usinas com SAP Analytics Cloud | Solveplan",
+               "desc":  "Planejamento para usinas que integra ERP agrícola e SAP Analytics Cloud: custos, safra e resultados em um só lugar, com a Solveplan.",
+               "h1":  "Trocar tag para H1: \"AGRO USINAS\"",
+               "obs":  ""
            },
     "26":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/agro-graos/",
+               "title":  "Planejamento agrícola para grãos com SAP | Solveplan",
+               "desc":  "Planeje a safra de grãos com SAP Analytics Cloud: custo de insumos, preço de commodities e margens em um só modelo, com a Solveplan.",
+               "h1":  "Trocar tag para H1: \"AGRO GRÃOS\"",
+               "obs":  ""
            },
     "27":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/dashboard/",
+               "title":  "Dashboards com SAP Analytics Cloud | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"DASHBOARDS\"",
+               "obs":  ""
            },
     "28":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/acompanhamento-de-despesas/",
+               "title":  "Acompanhamento de despesas com SAP | Solveplan",
+               "desc":  "Compare orçado e realizado em tempo real com SAP Analytics Cloud. O acelerador da Solveplan dá controle das despesas com precisão.",
+               "h1":  "Trocar tag para H1: \"ACOMPANHAMENTO DE DESPESAS\"",
+               "obs":  ""
            },
     "29":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/privacy-policy/",
+               "title":  "(manter)",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"Política de Privacidade\"",
+               "obs":  ""
            },
     "30":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/termos-de-uso/",
+               "title":  "(manter)",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"Termos de Uso\"",
+               "obs":  ""
            },
     "31":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/cookies/",
+               "title":  "(manter)",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1: \"Cookies\"",
+               "obs":  ""
            },
     "32":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/responsabilidade-e-disclosure/",
+               "title":  "(manter)",
+               "desc":  "(manter)",
+               "h1":  "Trocar tag para H1 e corrigir: \"Divulgação Responsavél\" \u003e \"Divulgação Responsável\"",
+               "obs":  ""
            },
     "33":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/cases-abertos/",
+               "title":  "NOINDEX",
+               "desc":  "NOINDEX",
+               "h1":  "-",
+               "obs":  ""
            },
     "34":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/banner/banner-2/",
+               "title":  "NOINDEX",
+               "desc":  "NOINDEX",
+               "h1":  "-",
+               "obs":  ""
            },
     "35":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/banner/banner-3/",
+               "title":  "NOINDEX",
+               "desc":  "NOINDEX",
+               "h1":  "-",
+               "obs":  ""
            },
     "36":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/midia-em-acelerador/analytics/",
+               "title":  "NOINDEX",
+               "desc":  "NOINDEX",
+               "h1":  "-",
+               "obs":  ""
            },
     "37":  {
-               "obs":  "aprovado no chat (bloco 3)",
-               "aprovado":  "Sim"
+               "aprovado":  "Sim",
+               "url":  "/video-aceleradores/video-teste/",
+               "title":  "NOINDEX",
+               "desc":  "NOINDEX",
+               "h1":  "-",
+               "obs":  ""
+           },
+    "38":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/gestao-de-ambientes-sap-datasphere/",
+               "title":  "Gestão de SAP Datasphere: por que a tela nativa não basta",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "39":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-business-data-cloud-knowledge-core/",
+               "title":  "SAP BDC como Knowledge Core dos agentes SAP | Solveplan",
+               "desc":  "Entenda por que o SAP Business Data Cloud é o Knowledge Core que dá contexto de negócio aos agentes de IA da SAP e o que isso muda na prática.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "40":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-knowledge-graph/",
+               "title":  "SAP Knowledge Graph: o que é e por que importa | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "41":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-business-ai-platform/",
+               "title":  "SAP Business AI Platform: o que mudou no SAPPHIRE 2026",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "42":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-joule-work/",
+               "title":  "SAP Joule Work: a camada operacional do ERP | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "43":  {
+               "aprovado":  "Não",
+               "url":  "/blog/sap-business-data-cloud-governanca-financeira/",
+               "title":  "SAP BDC: 5 desafios na governança financeira | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "44":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-bdc-com-cloud-ia-joule/",
+               "title":  "Joule e SAP BDC: IA na governança de dados | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "45":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/planejamento-financeiro/planejamento-financeiro-2026/",
+               "title":  "Planejamento financeiro 2026 com SAC Planning | Solveplan",
+               "desc":  "Veja como estruturar o orçamento de 2026 com SAC Planning: premissas, cenários e integração com o ERP para um planejamento mais preciso.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "46":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/checklist-dados-processos-inicio-do-ano/",
+               "title":  "Checklist 2026: o que revisar em dados e processos",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "47":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/planilhas/por-que-planilhas-nao-sao-suficientes-para-decisoes-estrategicas/",
+               "title":  "Por que planilhas não bastam para decisões estratégicas",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "48":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/planejamento-financeiro/health-analytics-como-melhorar-o-planejamento-da-industria-da-saude/",
+               "title":  "Health Analytics no planejamento da saúde | Solveplan",
+               "desc":  "Entenda como o Health Analytics ajuda a indústria da saúde a planejar com dados integrados, previsões mais precisas e decisões mais rápidas.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "49":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-analytics-cloud/sap-analytics-cloud-como-ele-revoluciona-a-consolidacao-societaria/",
+               "title":  "SAP Analytics Cloud na consolidação societária | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "50":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/gestao-de-dados-como-realizar-de-forma-eficiente-nas-empresas/",
+               "title":  "Gestão de dados eficiente nas empresas | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "51":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/quais-as-principais-tendencias-de-tecnologia-e-negocios-para-2025/",
+               "title":  "Tendências de tecnologia e negócios para 2025 | Solveplan",
+               "desc":  "Veja as principais tendências de tecnologia e negócios para 2025 e como dados, analytics e IA impactam a estratégia das empresas.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "52":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/qual-o-papel-da-sustentacao-de-projetos-no-planejamento-orcamentario/",
+               "title":  "Sustentação de projetos no planejamento orçamentário",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "53":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/por-que-investir-em-data-analytics-e-tao-importante/",
+               "title":  "Por que investir em Data \u0026 Analytics | Solveplan",
+               "desc":  "Entenda por que investir em Data \u0026 Analytics deixou de ser diferencial e virou condição para decisões rápidas, confiáveis e competitivas.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "54":  {
+               "aprovado":  "Não",
+               "url":  "/blog/por-que-automatizar-o-planejamento-orcamentario-2/",
+               "title":  "(manter)",
+               "desc":  "Saiba por que automatizar o planejamento orçamentário reduz erros, acelera o ciclo de orçamento e dá mais controle financeiro à empresa.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "55":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/quais-as-vantagens-da-consolidacao-atraves-do-sap-analytics-cloud/",
+               "title":  "Consolidação com SAP Analytics Cloud: vantagens | Solveplan",
+               "desc":  "Conheça as vantagens da consolidação com SAP Analytics Cloud: fechamento mais rápido, menos erros manuais e números confiáveis para a gestão.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "56":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-analytics-cloud-quais-seus-beneficios-para-a-governanca-de-dados/",
+               "title":  "SAP Analytics Cloud na governança de dados | Solveplan",
+               "desc":  "Veja como o SAP Analytics Cloud fortalece a governança de dados com fonte única, controle de acesso e informações confiáveis para decidir.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "57":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-analytics-cloud-quais-seus-beneficios-para-a-governanca-de-dados-2/",
+               "title":  "SAP Analytics Cloud na consolidação e no planejamento",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "58":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/planejamento-de-rh-guia-completo-para-elaborar-o-seu/",
+               "title":  "(manter)",
+               "desc":  "Guia de planejamento de RH: como unir headcount, folha e orçamento de pessoal em um plano alinhado à estratégia da empresa.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "59":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/consolidacao-societaria-o-que-e-e-quais-os-seus-beneficios-2/",
+               "title":  "Consolidação societária: o que é e benefícios | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "60":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/como-o-sap-analytics-cloud-impulsiona-a-consolidacao-do-agronegocio/",
+               "title":  "SAP Analytics Cloud na consolidação do agronegócio",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "61":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-business-data-cloud-tudo-o-que-voce-precisa-saber/",
+               "title":  "SAP Business Data Cloud: guia completo | Solveplan",
+               "desc":  "Guia do SAP Business Data Cloud: o que é, o que inclui (Datasphere, SAC, BW e Databricks) e como unifica dados SAP e não-SAP.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "62":  {
+               "aprovado":  "Não",
+               "url":  "/blog/clean-core/clean-core-em-data-analytics-como-ele-melhora-a-gestao-de-dados/",
+               "title":  "Clean Core em Data \u0026 Analytics: gestão de dados SAP",
+               "desc":  "Entenda o que é Clean Core em Data \u0026 Analytics, como ele simplifica o ambiente SAP e melhora a governança e a gestão de dados da empresa.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "63":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/ams-como-ele-impulsiona-as-solucoes-analiticas-da-sua-empresa/",
+               "title":  "AMS: como impulsiona suas soluções analíticas | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "64":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/planejamento-de-rh/planejamento-de-rh-quais-os-maiores-desafios-e-como-supera-los/",
+               "title":  "Planejamento de RH: desafios e como superá-los | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "65":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sustentacao-analitica-sap-pos-go-live-erp/",
+               "title":  "Sustentação analítica SAP: 3 pilares pós go-live | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "66":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-datasphere-como-ajuda-no-planejamento-empresarial/",
+               "title":  "SAP Datasphere no planejamento empresarial | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "67":  {
+               "aprovado":  "Sim",
+               "url":  "/blog/sap-analytics-cloud-como-ele-favorece-o-fluxo-de-caixa/",
+               "title":  "SAP Analytics Cloud e fluxo de caixa | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "68":  {
+               "aprovado":  "Sim",
+               "url":  "/case/matrix-energia/",
+               "title":  "Case Matrix Energia: consolidação com SAC | Solveplan",
+               "desc":  "Em três meses, a Matrix Energia automatizou a consolidação societária com SAP Analytics Cloud e a Solveplan, reduzindo o prazo de fechamento.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "69":  {
+               "aprovado":  "Sim",
+               "url":  "/case/m-dias-branco-implementa-sap-analytics-cloud-em-10-meses-com-96-de-reducao/",
+               "title":  "Case M. Dias Branco: -96% no tempo do orçamento com SAC",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "70":  {
+               "aprovado":  "Sim",
+               "url":  "/case/zilor-implementa-sac-em-6-meses-e-elimina-uso-de-planilhas-eletronicas/",
+               "title":  "Case Zilor: SAC em 6 meses e fim das planilhas | Solveplan",
+               "desc":  "A Zilor implementou o SAP Analytics Cloud em 6 meses com a Solveplan e eliminou as planilhas no planejamento. Veja como foi o projeto.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "71":  {
+               "aprovado":  "Sim",
+               "url":  "/noticia/sap-partner-awards-2026-solveplan-lac/",
+               "title":  "Solveplan premiada no SAP Partner Awards 2026 (LAC)",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "72":  {
+               "aprovado":  "Sim",
+               "url":  "/noticia/melhor-parceiro-sap-business-data-cloud-2025/",
+               "title":  "Melhor Parceiro SAP BDC 2025: Solveplan é premiada",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "73":  {
+               "aprovado":  "Sim",
+               "url":  "/noticia/solveplan-e-reconhecida-no-sap-partner-success-meeting-q1-2025-em-3-categorias/",
+               "title":  "SAP Partner Success Meeting Q1/2025: 3 prêmios | Solveplan",
+               "desc":  "(manter)",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "74":  {
+               "aprovado":  "Sim",
+               "url":  "/noticia/melhor-parceira-do-ecossistema-sap-2022/",
+               "title":  "(manter)",
+               "desc":  "A Solveplan foi reconhecida como Melhor Parceira do ecossistema SAP em 2022 no prêmio Best Partner. Saiba mais sobre o reconhecimento.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "75":  {
+               "aprovado":  "Sim",
+               "url":  "/noticia/solveplan-recebe-o-premio-de-quote-achiever-no-ecossistema-sap-no-q1-e-q2-de-2024/",
+               "title":  "Prêmio Quote Achiever SAP Q1 e Q2 2024 | Solveplan",
+               "desc":  "A Solveplan recebeu o prêmio Quote Achiever do ecossistema SAP no primeiro e no segundo trimestre de 2024 pelo desempenho em soluções SAP.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "76":  {
+               "aprovado":  "Sim",
+               "url":  "/evento/sap-xfpa-innovation-day-planejamento-e-consolidacao-para-a-gestao-eficiente/",
+               "title":  "SAP XFP\u0026A Innovation Day: planejamento e consolidação",
+               "desc":  "Evento SAP XFP\u0026A Innovation Day: como planejamento e consolidação integrados no SAP apoiam uma gestão financeira mais eficiente.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "77":  {
+               "aprovado":  "Sim",
+               "url":  "/evento/sap-btp-experience-em-2025/",
+               "title":  "(manter)",
+               "desc":  "A Solveplan esteve no SAP BTP Experience 2025. Veja os destaques sobre SAP BTP, dados e analytics apresentados no evento.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "78":  {
+               "aprovado":  "Sim",
+               "url":  "/evento/webinar-conectando-fluxo-de-caixa-e-orcamento-case-aco-cearense/",
+               "title":  "Webinar: fluxo de caixa e orçamento | Case Aço Cearense",
+               "desc":  "Webinar com o case Aço Cearense: como conectar fluxo de caixa e orçamento e automatizar processos financeiros com soluções SAP.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "79":  {
+               "aprovado":  "Sim",
+               "url":  "/evento/webinar-rfi-revisao-financeira-integrada-entre-o-sap-ibp-e-sap-analytics/",
+               "title":  "Webinar RFI: SAP IBP e SAC na revisão financeira",
+               "desc":  "Webinar sobre Revisão Financeira Integrada (RFI): como conectar SAP IBP e SAP Analytics Cloud para alinhar operação e finanças.",
+               "h1":  "(ok)",
+               "obs":  ""
+           },
+    "80":  {
+               "aprovado":  "Sim",
+               "url":  "/evento/solveplan-no-sap-now-ai-tour-brazil-2025-com-ia-e-performance/",
+               "title":  "Solveplan no SAP NOW AI Tour Brazil 2025 | Solveplan",
+               "desc":  "A Solveplan participou do SAP NOW AI Tour Brazil 2025, em 19 e 20 de agosto, com conteúdos sobre IA, dados e performance financeira.",
+               "h1":  "(ok)",
+               "obs":  ""
            }
 }
