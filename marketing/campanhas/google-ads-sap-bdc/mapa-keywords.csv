@@ -20,10 +20,14 @@ Search BDC;SAP Joule (teste);Keyword;sap joule;Exata;390;4,2;22,94;1 Dor;Teste;A
 Search BDC;SAP Joule (teste);Keyword;sap business ai;Exata;50;4,64;37,07;1 Dor;Teste;
 Search BDC;Consolidacao (opcional);Keyword;sap group reporting;Exata;50;3,26;21,32;2 Exploracao;Baixa;Gap de conteudo sem concorrente
 Marca;Solveplan;Keyword;solveplan;Exata + Frase;390;;;4 Validacao;Alta;Nao existe campanha de marca hoje
-Demand Gen BDC;Segmento busca SAP dados;Publico;Segmento personalizado: sap bdc, sap business data cloud, sap datasphere, sap databricks, sap bw 4hana, sap analytics cloud;—;;;;1 Dor / 2 Exploracao;Alta;Verba SAP
-Demand Gen BDC;Segmento busca SAP dados;Publico;Segmento por URL: paginas de BDC, Datasphere e Databricks (sap.com, databricks.com);—;;;;1 Dor / 2 Exploracao;Alta;Verba SAP
-Demand Gen BDC;Remarketing BDC;Publico;Visitantes /sap-business-data-cloud/ e /sap-datasphere/ (ultimos 90 dias) sem conversao;—;;;;5 Reengajamento;Alta;
-Demand Gen BDC;Lista HubSpot;Publico;Customer Match: 95 leads hot/warm dos eventos H1;—;;;;5 Reengajamento;Alta;Depende de elegibilidade da conta
+Demand Gen Alcance;Segmento busca SAP dados;Publico;Segmento personalizado: sap bdc, sap business data cloud, sap datasphere, sap databricks, sap bw 4hana, sap analytics cloud;—;;;;1 Dor / 2 Exploracao;Alta;Alimenta listas. Verba SAP
+Demand Gen Alcance;Segmento busca SAP dados;Publico;Segmento por URL: paginas de BDC, Datasphere e Databricks (sap.com, databricks.com);—;;;;1 Dor / 2 Exploracao;Alta;Alimenta listas. Verba SAP
+Remarketing;Visitantes BDC 1-14d;Publico;Visitou /sap-business-data-cloud/ ou /sap-datasphere/ sem converter, ultimos 14 dias;—;;;;5 Remarketing;Alta;RLSA +50% e Demand Gen. Destino: LP diagnostico
+Remarketing;Visitantes BDC 15-90d;Publico;Mesma lista, 15 a 90 dias;—;;;;5 Remarketing;Alta;Demand Gen e LinkedIn. Mensagem de prova (Klabin, premio)
+Remarketing;Video 50%+;Publico;Assistiu 50%+ do video do Demand Gen, ultimos 30 dias;—;;;;5 Remarketing;Alta;Demand Gen e RLSA
+Remarketing;LP diagnostico sem agendar;Publico;Visitou LP de diagnostico e nao agendou, ultimos 30 dias;—;;;;5 Remarketing;Alta;RLSA +100%. Mensagem de objecao
+Remarketing;Leads eventos H1;Publico;Customer Match: 95 leads hot/warm dos eventos H1;—;;;;5 Remarketing;Alta;Depende de elegibilidade. Alternativa: LinkedIn Matched Audiences
+Todas;Exclusao;Publico;Clientes ativos + quem ja agendou diagnostico;—;;;;—;Alta;Excluir em todas as campanhas
 Todas (lista compartilhada);—;Negativa;vaga;Frase;;;;—;—;
 Todas (lista compartilhada);—;Negativa;vagas;Frase;;;;—;—;
 Todas (lista compartilhada);—;Negativa;emprego;Frase;;;;—;—;

@@ -46,6 +46,21 @@ Isso muda a leitura do H1. O CPC de R$ 2,48 e o CTR de 4,97% que estão em `estr
 1. **Busca não consegue absorver muita verba em BDC.** Com cerca de 1.500 buscas/mês no núcleo, uma campanha bem feita gasta algo entre R$ 1.500 e R$ 3.000/mês antes de saturar. Colocar mais dinheiro em busca só vai empurrar o anúncio para termo errado de novo.
 2. **Quem busca não é quem assina.** Quem digita "sap datasphere" é head de dados, arquiteto SAP ou gerente de TI. CFO e CIO não buscam BDC. O anúncio e a página precisam dar a esse avaliador **argumento para levar o assunto para cima**: custo, prazo, risco, case.
 3. **O resto da verba (inclusive a da SAP) tem que ir para alcance qualificado:** Demand Gen/YouTube com público de quem buscou esses termos, remarketing e reforço no LinkedIn. Detalhes na seção 5.
+4. **Sem e-book.** O e-book gerou download e não virou pipeline (7 conversões em R$ 3.962, nenhuma em termo relevante). A partir daqui, **toda campanha trabalha para uma única conversão: o diagnóstico BDC** (reunião com especialista). O remarketing é o que leva o avaliador até lá.
+
+---
+
+## 1.1 A lógica: alcançar, trazer de volta, converter
+
+Ninguém marca reunião com uma consultoria SAP no primeiro clique. Por isso o plano não mede cada campanha pela conversão direta. Cada uma tem um papel:
+
+| Papel | Campanhas | O que medir |
+|---|---|---|
+| **Alcançar** quem tem o perfil certo e alimentar as listas | Search BDC, Demand Gen (segmento de busca), Marca | Visitas qualificadas nas páginas BDC/Datasphere, tamanho das listas |
+| **Trazer de volta** quem já visitou ou já é lead | Remarketing em Search (RLSA), Demand Gen remarketing, LinkedIn retargeting | Retorno ao site, visitas à LP de diagnóstico |
+| **Converter** | LP de diagnóstico BDC | Reunião agendada, e depois oportunidade no HubSpot |
+
+As listas já existem e são boas: a página BDC recebeu 11.149 sessões no H1, cerca de 2.200 por mês, e 78,8% saíram sem fazer nada. Há ainda os 95 leads hot/warm dos eventos. Esse é o público mais barato de converter e ainda não foi trabalhado.
 
 ---
 
@@ -73,14 +88,14 @@ Para o Q4, os dois mais fortes são **BW 2027** (tem prazo, obriga decisão) e *
 - **Quem:** head de dados, coordenador de BI, arquiteto SAP.
 - **Comportamento:** não busca "BDC". Busca o problema de forma genérica, e esses termos ("análise de dados", "inteligência artificial") foram exatamente os que queimaram verba no H1.
 - **Como alcançar:** **não por busca.** Demand Gen/YouTube com segmento personalizado (quem buscou termos SAP de dados e visitou páginas de BDC/Datasphere), LinkedIn e conteúdo orgânico.
-- **Oferta:** conteúdo que resolve parte da dúvida (guia de decisão BW, case Klabin, webinar).
+- **Papel:** alimentar as listas de remarketing. O vídeo (case Klabin, "BW 2027: 3 caminhos") gera visualização e visita. A conversão vem depois, no remarketing.
 
 ### Estágio 2 — Exploração (conhece o BDC e quer entender)
 
 - **Quem:** o mesmo avaliador, agora com o nome do produto na cabeça (ouviu da SAP, viu no SAP NOW, leu no LinkedIn).
 - **O que busca:** "sap bdc", "sap business data cloud", "sap datasphere", "sap analytics cloud", "sap databricks", "sap bw 4hana". **É aqui que está quase todo o volume de busca.**
 - **O que precisa ouvir:** o que é na prática, o que muda para quem já tem Datasphere/BW, por onde começar. Resposta direta, sem folder de produto.
-- **Oferta:** página que explica o BDC com clareza e dois CTAs: material (lead morno) e conversa com especialista (lead quente).
+- **Oferta:** página que explica o BDC com clareza e um CTA só: diagnóstico com especialista. Quem não converte na primeira visita entra na lista de remarketing.
 - **Peso no budget de busca:** o maior. Aqui o prêmio de **Melhor Parceiro SAP BDC 2026 LATAM** pesa mais: a pessoa está formando opinião sobre com quem aprender.
 
 ### Estágio 3 — Avaliação de parceiro (fundo de funil)
@@ -97,10 +112,11 @@ Para o Q4, os dois mais fortes são **BW 2027** (tem prazo, obriga decisão) e *
 - **Oferta:** cases, prêmio, contato direto.
 - **Peso no budget:** mínimo. Campanha de marca é barata e evita que concorrente apareça em cima do nosso nome. Hoje não existe.
 
-### Estágio 5 — Reengajamento (já entrou e parou)
+### Estágio 5 — Remarketing (o estágio que converte)
 
-- **Quem:** os 95 leads hot/warm dos eventos do H1 e quem visitou a página BDC sem converter (a página recebe 65% do tráfego do site).
-- **Mecânica:** listas de remarketing aplicadas à busca (RLSA), Demand Gen para visitantes e, se a conta for elegível, Customer Match com a lista do HubSpot.
+- **Quem:** quem visitou as páginas BDC/Datasphere sem converter, quem assistiu ao vídeo do Demand Gen e os 95 leads hot/warm dos eventos do H1.
+- **Mecânica:** detalhada na seção 4.1. Em resumo: lance maior quando essas pessoas buscam no Google (RLSA), anúncios em YouTube/Gmail/Discover (Demand Gen) e LinkedIn retargeting, todos levando para o diagnóstico.
+- **Peso na verba:** o maior depois da busca. É onde a verba da SAP tem mais chance de virar reunião.
 
 ---
 
@@ -117,7 +133,8 @@ Com pouco volume, dividir busca em muitas campanhas só fragmenta dados e o Smar
 | | BW e migração | sap bw 4hana (30), sap bw 7.5 (10) | LP de migração BW (a criar) | |
 | | Consultoria SAP dados | "consultoria sap analytics", "consultoria sap datasphere", parceiro sap (70) | LP de diagnóstico BDC (a criar) | |
 | **Marca** | Solveplan | solveplan (390) | Home / cases | R$ 200 a 400 |
-| **Demand Gen BDC** | Segmento de busca SAP dados · Remarketing BDC · Lista HubSpot | Público, não keyword (seção 5) | LP de diagnóstico / webinar / e-book | O restante, incluindo verba SAP |
+| **Demand Gen — Alcance** | Segmento de busca SAP dados | Público, não keyword (seção 5) | Página BDC / vídeo | Parte da verba SAP |
+| **Demand Gen — Remarketing** | Visitantes BDC · Quem viu o vídeo · Lista HubSpot | Público (seção 4.1) | LP de diagnóstico BDC | Maior parte da verba SAP |
 
 **Configuração da busca:**
 - Correspondência **exata e de frase apenas**. Nada de ampla até ter conversões qualificadas registradas. Foi a ampla que levou 97% da verba do H1 para termo errado.
@@ -127,6 +144,23 @@ Com pouco volume, dividir busca em muitas campanhas só fragmenta dados e o Smar
 - Horário: seg a sex, 7h às 20h.
 - Lance: Maximizar Cliques com teto de CPC (R$ 15 a 20) nas primeiras 3 semanas. Depois Maximizar Conversões, e tCPA quando houver 15 a 30 conversões por mês.
 - **Pausar ou limpar as campanhas atuais** antes de subir a nova. A "[Leads] Search - download e-book SAP BDC" está ativa e competindo pelo mesmo orçamento com tráfego errado.
+
+### 4.1 Remarketing: listas, janelas e mensagem
+
+| Lista | Janela | Onde roda | Mensagem | Destino |
+|---|---|---|---|---|
+| Visitou /sap-business-data-cloud/ ou /sap-datasphere/, sem converter | 1 a 14 dias | RLSA (+50% no lance) · Demand Gen | "Você estava olhando o BDC. Em 45 minutos a gente mostra por onde começar no seu cenário" | LP de diagnóstico |
+| Mesma lista | 15 a 90 dias | Demand Gen · LinkedIn | Prova: case Klabin, Melhor Parceiro SAP BDC 2026 LATAM | LP de diagnóstico |
+| Assistiu 50%+ do vídeo do Demand Gen | 30 dias | Demand Gen · RLSA | Continuação do vídeo, com CTA direto | LP de diagnóstico |
+| Visitou a LP de diagnóstico e não agendou | 1 a 30 dias | Demand Gen · RLSA (+100% no lance) | Tirar a objeção: sem custo, sem compromisso, quem conduz é especialista BDC | LP de diagnóstico |
+| 95 leads hot/warm dos eventos (Customer Match) | Contínuo | Demand Gen · Search · LinkedIn | "Retomando a conversa do evento" | LP de diagnóstico |
+| Clientes ativos e quem já agendou | — | **Exclusão** em todas | — | — |
+
+**Requisitos técnicos:**
+- Tag do Google Ads (ou GA4 vinculado) no site inteiro, com evento nas páginas BDC, Datasphere e LP de diagnóstico. **Conferir antes de tudo:** sem tag, não tem lista.
+- Listas precisam de pelo menos 100 pessoas ativas para rodar em busca. Com cerca de 2.200 sessões por mês na página BDC, isso não deve ser problema.
+- Customer Match depende de a conta cumprir os requisitos do Google. Se não cumprir, a lista HubSpot roda só no LinkedIn (Matched Audiences).
+- Limite de frequência no Demand Gen: 3 a 5 impressões por pessoa por semana, para não virar perseguição com um público que é pequeno.
 
 **"sap joule" (390/mês):** tem volume, mas é interesse em IA da SAP, não em dados. Vale testar num grupo à parte com o ângulo "Joule só funciona com dado organizado", com verba limitada e mensagem honesta de que a conversa é sobre a base de dados.
 
@@ -139,7 +173,7 @@ Como a busca satura em R$ 1.500 a 3.000/mês, a verba da SAP (fundos de marketin
 | Onde | Por que | Ideia de uso |
 |---|---|---|
 | **Demand Gen / YouTube** | Alcança o avaliador antes de ele buscar. Permite segmento personalizado com as keywords da seção 1 e URLs de BDC/Datasphere/Databricks | Vídeo curto do case Klabin ou "BW 2027: 3 caminhos", CTA para diagnóstico |
-| **Remarketing** | 65% do tráfego do site já cai na página BDC, com 78,8% de rejeição. É público quente sendo desperdiçado | Sequência: prova social → material → diagnóstico |
+| **Remarketing** | 65% do tráfego do site já cai na página BDC, com 78,8% de rejeição. É público quente sendo desperdiçado | Listas e sequência da seção 4.1, sempre levando ao diagnóstico |
 | **LinkedIn Ads** | Único canal que segmenta por cargo e empresa. Complementa o Google com CFO/CIO, que não buscam | Contas ABM do plano Q3 |
 | **Busca** | Só até o teto de demanda | Garante presença em 100% das buscas de sap bdc / datasphere |
 
@@ -187,18 +221,18 @@ Se for para escolher uma coisa só antes de subir: **CRO da página BDC**, porqu
 
 O H1 mostrou o que acontece quando o Google otimiza por clique barato. Agora ele precisa aprender com o que vira pipeline.
 
-1. **Conversões primárias:** reunião agendada e formulário de diagnóstico. Download de e-book como secundária.
+1. **Conversão primária única:** diagnóstico agendado. Visita à LP de diagnóstico e 50% do vídeo assistido ficam como secundárias, só para montar lista e observar, nunca para otimizar lance.
 2. **GCLID no HubSpot:** capturar no formulário e ativar a integração Google Ads ↔ HubSpot.
 3. **Conversões offline:** devolver ao Google os estágios MQL → SQL → Oportunidade.
 4. **UTM:** `utm_source=google&utm_medium=cpc&utm_campaign=bdc-[search|marca|demandgen]&utm_term={keyword}&utm_content={adgroupid}`
 5. **Revisão semanal dos termos de pesquisa** nas primeiras 4 semanas, toda segunda-feira.
 6. **Relatório de comprovação para a SAP** montado desde o primeiro dia, no formato que o programa pedir.
 
-| KPI | Search BDC | Demand Gen | Marca |
-|---|---|---|---|
-| Principal | Custo por lead qualificado | Custo por visita engajada / lead | Parcela de impressões |
-| Qualidade | % de termos de pesquisa relevantes (meta: > 80%) | % que volta ao site | CTR |
-| Alerta | Termo irrelevante com gasto > R$ 20 | Rejeição > 70% na LP | Concorrente na marca |
+| KPI | Search BDC | Demand Gen Alcance | Remarketing | Marca |
+|---|---|---|---|---|
+| Principal | Custo por visita qualificada + diagnósticos | Crescimento das listas | Custo por diagnóstico agendado | Parcela de impressões |
+| Qualidade | % de termos de pesquisa relevantes (meta: > 80%) | % que volta ao site | % de diagnósticos que viram oportunidade | CTR |
+| Alerta | Termo irrelevante com gasto > R$ 20 | Visualização sem visita | Frequência > 5/semana ou zero diagnóstico em 4 semanas | Concorrente na marca |
 
 ---
 
@@ -219,14 +253,15 @@ A lista completa está no CSV, já incluindo os termos que queimaram verba no H1
 | # | Ação | Depende de |
 |---|---|---|
 | 1 | Confirmar valor, prazo e regras da verba SAP | Gerente de canal SAP |
-| 2 | Pausar a campanha atual de e-book BDC e adicionar as negativas do CSV nas campanhas ativas | — |
-| 3 | CRO da página /sap-business-data-cloud/ | — |
-| 4 | Configurar GCLID + conversões offline no HubSpot | — |
-| 5 | Definir a oferta de fundo (diagnóstico BDC: formato, duração, quem conduz) | Comercial |
-| 6 | Escrever RSAs por grupo de anúncio com `/anuncio` | Itens 3 e 5 |
-| 7 | Subir Search BDC + Marca com `/google-ads-ratos` | Itens 2, 4 e 6 |
-| 8 | Roteiro e criativo para Demand Gen (vídeo curto) com `/video-editor` | Item 1 |
-| 9 | Criar LPs de diagnóstico e de migração BW | Item 5 |
+| 2 | Pausar as campanhas de e-book (BDC, SAC Planning) | — |
+| 3 | Conferir a tag do Google Ads/GA4 no site e criar as listas da seção 4.1 (elas começam a acumular desde já) | — |
+| 4 | Definir o diagnóstico BDC: formato, duração, quem conduz, agenda | Comercial |
+| 5 | Criar a LP de diagnóstico BDC com agendamento direto | Item 4 |
+| 6 | CRO da página /sap-business-data-cloud/ com CTA para o diagnóstico | Item 5 |
+| 7 | Configurar GCLID + conversões offline no HubSpot | — |
+| 8 | Escrever RSAs e anúncios de remarketing com `/anuncio` | Itens 4 e 5 |
+| 9 | Subir Search BDC + Marca + Remarketing com `/google-ads-ratos` | Itens 3, 5, 7 e 8 |
+| 10 | Roteiro do vídeo do Demand Gen com `/video-editor` | Item 1 |
 
 **Decisões em aberto:**
 - Rodar só no Brasil ou incluir México/Colômbia em espanhol, aproveitando o prêmio LATAM? Com a demanda brasileira pequena, pode valer testar.
