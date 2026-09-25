@@ -1,0 +1,16 @@
+﻿Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,2,10,Parcial,"Trocar ""Home - Solveplan"" (16 caracteres) por ""Consultoria SAP BDC, Analytics e Planejamento | Solveplan"" (57)"
+SEO On-Page,Meta Description,7,10,Parcial,"Tem 47 caracteres; trocar pelo texto de 144 caracteres do plano de ação"
+SEO On-Page,Estrutura de Headings,3,10,Parcial,"A página não tem H1; mudar o título do hero para H1 com ""Consultoria SAP"""
+SEO On-Page,URL + Imagens + Links,7,10,Parcial,"10 de 31 imagens sem alt (logos, fotos, selo SAP)"
+Performance Técnica,PageSpeed Mobile,0,8,Não verificado,"Cota da API PageSpeed esgotada; rodar em pagespeed.web.dev"
+Performance Técnica,PageSpeed Desktop,0,5,Não verificado,"Rodar em pagespeed.web.dev"
+Performance Técnica,LCP,0,4,Não verificado,"Rodar em pagespeed.web.dev"
+Performance Técnica,CLS,0,3,Não verificado,"Rodar em pagespeed.web.dev"
+AEO,Bloco Featured Snippet,0,10,Faltando,"Criar H2 ""O que a Solveplan faz?"" + parágrafo de 54 palavras"
+AEO,FAQ,0,8,Faltando,"Criar seção FAQ com 4 perguntas sobre BDC, Datasphere, prazos e saída das planilhas"
+AEO,Perguntas nos Headings,0,7,Faltando,"Só 1 heading em forma de pergunta (card do blog); o snippet e o FAQ resolvem isso"
+GEO,Schema Markup,3,6,Parcial,"Tirar o schema BlogPosting/Person da home, adicionar FAQPage e corrigir addressCountry ""55"" para ""BR"""
+GEO,E-E-A-T,2,5,Parcial,"Números e case estão presentes; mostrar o prêmio BDC 2026 e o selo Gold na dobra"
+GEO,Entidades e Citações,2,4,Parcial,"Citar a América Latina e o SAP Partner Awards 2026 como fonte externa; corrigir ""Analitycs"" no menu"
+TOTAL,,26,100,,

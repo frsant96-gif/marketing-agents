@@ -1,0 +1,12 @@
+﻿Prioridade,Item,Pontos a Ganhar,Dificuldade,O que fazer,Onde mudar no WordPress
+1,PageSpeed / Core Web Vitals,até +20,Fácil (medir),"Rodar pagespeed.web.dev (mobile e desktop) e colar os scores para fechar a nota",pagespeed.web.dev
+2,Bloco Featured Snippet,+10,Fácil,"H2 ""O que a Solveplan faz?"" + parágrafo de 54 palavras (texto no relatório)",Elementor > Home > novo widget Título (H2) + Editor de texto logo abaixo do hero
+3,FAQ + FAQPage schema,+10,Médio,"Seção com 4 perguntas + JSON-LD FAQPage (código no relatório)",Elementor > widget Acordeão + widget HTML com o script JSON-LD
+4,H1 com keyword,+7,Fácil,"Transformar o título do hero em H1: ""Consultoria SAP em dados, analytics, planejamento e consolidação""",Elementor > widget Título do hero > Tag HTML: H1
+5,Perguntas nos headings,+7,Fácil,"Resolvido com os itens 2 e 3 (H2 e H3 em forma de pergunta)",Elementor
+6,Title tag,+8,Fácil,"Consultoria SAP BDC, Analytics e Planejamento | Solveplan",Rank Math > Editar página Home > Editar snippet > Título
+7,Meta description,+3,Fácil,"Parceira SAP Gold e Melhor Parceiro SAP Business Data Cloud 2026 na América Latina. Analytics, planejamento e consolidação com dados confiáveis.",Rank Math > Editar snippet > Descrição
+8,Alt das imagens,+3,Fácil,"Preencher o alt: logo = ""Solveplan logo""; selo = ""SAP Gold Partner""; fotos = descrição real",Mídia > Biblioteca > Texto alternativo (e no widget Imagem do Elementor)
+9,Mercado e fonte externa,+2,Fácil,"Citar ""América Latina"" e linkar o SAP Partner Awards 2026 (notícia no site)",Elementor > seção Sobre
+10,Schema correto,+1,Fácil,"Tipo de schema das Páginas = Nenhum/WebPage (sem Article); País em Local SEO = BR",Rank Math > Títulos e Meta > Páginas; Rank Math > Títulos e Meta > Local SEO
+11,Data de atualização visível,+1,Fácil,"Opcional na home; priorizar em páginas de solução",Elementor
