@@ -488,12 +488,12 @@
                "obs":  ""
            },
     "62":  {
-               "aprovado":  "Não",
+               "aprovado":  "Sim",
                "url":  "/blog/clean-core/clean-core-em-data-analytics-como-ele-melhora-a-gestao-de-dados/",
-               "title":  "Clean Core em Data \u0026 Analytics: gestão de dados SAP",
-               "desc":  "Entenda o que é Clean Core em Data \u0026 Analytics, como ele simplifica o ambiente SAP e melhora a governança e a gestão de dados da empresa.",
+               "title":  "Clean Core em Data \u0026 Analytics e gestão de dados | Solveplan",
+               "desc":  "Dados imprecisos adiam 39% das decisões nas empresas. Veja como o Clean Core em Data \u0026 Analytics estrutura a governança e melhora a qualidade dos dados.",
                "h1":  "(ok)",
-               "obs":  ""
+               "obs":  "Reescrito a pedido (opção A)"
            },
     "63":  {
                "aprovado":  "Sim",
