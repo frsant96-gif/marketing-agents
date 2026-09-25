@@ -20,8 +20,8 @@
               "aprovado":  "Sim"
           },
     "6":  {
-              "obs":  "aprovado no chat (bloco 1)",
-              "aprovado":  "Sim"
+              "obs":  "Não publicar: voltar a página para rascunho + redirecionamento 301 para /contato/. Tirar o card \"SAP PaPM\" de /servicos/ no rascunho dessa página (opção C). Não aplicar o SEO sugerido",
+              "aprovado":  "Rascunho"
           },
     "7":  {
               "obs":  "aprovado no chat (bloco 1)",
@@ -85,6 +85,18 @@
            },
     "22":  {
                "obs":  "aprovado no chat (bloco 2)",
+               "aprovado":  "Sim"
+           },
+    "23":  {
+               "obs":  "marcado na planilha",
+               "aprovado":  "Sim"
+           },
+    "24":  {
+               "obs":  "marcado na planilha",
+               "aprovado":  "Sim"
+           },
+    "25":  {
+               "obs":  "marcado na planilha",
                "aprovado":  "Sim"
            }
 }
