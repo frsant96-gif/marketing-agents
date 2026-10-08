@@ -151,6 +151,8 @@ Se não encontrar, executar a tarefa normalmente.
 
 Ao finalizar a criação ou edição de qualquer arquivo (documento, plano, HTML, planilha etc.), abrir automaticamente o arquivo pra visualização (`start` no Windows), sem precisar que o usuário peça.
 
+Antes de salvar uma página do WordPress pela API, pedir pra fechar (sem salvar) as abas do editor dessa página. Depois de salvar, conferir que as tags `<script>` (formulário HubSpot, schema) continuam no conteúdo e que nada aparece como texto na página publicada.
+
 Ao concluir uma tarefa que não tinha skill mas parece repetível (o usuário provavelmente vai pedir de novo no futuro), perguntar:
 
 > "Isso pode virar uma skill pra próxima vez. Quer que eu crie?"
