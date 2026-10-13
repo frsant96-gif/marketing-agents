@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Aço Cearense + SAP Analytics Cloud | Case Solveplan</title>
+<meta name="description" content="Como o Grupo Aço Cearense conectou planejamento operacional e financeiro com SAP Analytics Cloud, IBP e S/4HANA, menos trabalho manual e mais governança.">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0A0837; --blue:#006AFF; --ink:#1b1d29; --muted:#5b6070; --line:#e3e6ef; --soft:#f3f6fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Montserrat,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.7; font-size:17px; }
+  .draft { background:#fff4d6; color:#6b4b00; text-align:center; font-size:14px; padding:8px 16px; }
+  header.hero { background:var(--navy); color:#fff; padding:72px 16px 64px; }
+  .wrap { max-width:960px; margin:0 auto; padding:0 16px; }
+  .tag { color:#7fb2ff; font-weight:600; letter-spacing:.08em; text-transform:uppercase; font-size:13px; }
+  h1, h2, h3 { font-family:Prompt,Arial,sans-serif; line-height:1.25; }
+  h1 { font-size:clamp(30px,4.4vw,46px); margin:12px 0 20px; font-weight:700; }
+  .hero p { color:#d5d9ee; max-width:780px; }
+  h2 { color:var(--navy); font-size:clamp(24px,3vw,32px); margin:56px 0 16px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin:-36px auto 0; position:relative; }
+  .card { background:#fff; border:1px solid var(--line); border-top:4px solid var(--blue); border-radius:6px; padding:22px; box-shadow:0 8px 24px rgba(10,8,55,.08); }
+  .card strong { display:block; font-family:Prompt,Arial,sans-serif; font-size:26px; color:var(--blue); line-height:1.2; margin-bottom:6px; }
+  .card span { color:var(--muted); font-size:15px; }
+  blockquote { margin:32px 0; padding:20px 24px; border-left:4px solid var(--blue); background:var(--soft); font-style:italic; color:var(--muted); }
+  .ba { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin-top:24px; }
+  .ba div { border-radius:6px; padding:22px 24px; }
+  .ba .before { background:#f5f5f7; }
+  .ba .after { background:var(--navy); color:#fff; }
+  .ba h3 { margin:0 0 10px; font-size:19px; }
+  .ba ul { margin:0; padding-left:20px; }
+  .video { display:flex; align-items:center; justify-content:center; height:320px; margin-top:16px; border-radius:6px; background:#fff4d6; color:#6b4b00; font-weight:600; text-align:center; padding:16px; }
+  .caption { font-size:15px; color:var(--muted); }
+  a { color:var(--blue); }
+  .cta { background:var(--navy); color:#fff; border-radius:8px; padding:36px 28px; text-align:center; margin:56px 0; }
+  .cta p { font-family:Prompt,Arial,sans-serif; font-size:22px; margin:0 0 18px; }
+  .btn { display:inline-block; background:var(--blue); color:#fff; text-decoration:none; padding:13px 26px; border-radius:4px; font-weight:600; }
+  details { border-bottom:1px solid var(--line); padding:14px 0; }
+  summary { cursor:pointer; font-weight:600; color:var(--navy); }
+  details p { margin:10px 0 0; color:var(--muted); }
+  .pending { background:#fff4d6; color:#6b4b00; font-style:normal; }
+  footer { text-align:center; padding:40px 16px 64px; }
+</style>
+</head>
+<body>
+<div class="draft">Prévia de rascunho · não publicado · trechos em amarelo estão pendentes</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tag">Case de sucesso · SAP Analytics Cloud</div>
+    <h1>Como o Grupo Aço Cearense integrou o planejamento com SAP Analytics Cloud</h1>
+    <p>Planejar uma operação industrial de grande porte exige conectar decisões comerciais, produtivas e financeiras que acontecem em ritmos diferentes. No Grupo Aço Cearense, essa complexidade envolvia vendas, suprimentos, pessoas, investimentos, custos, tributos, demonstrativos e diferentes etapas de consolidação.</p>
+    <p>Com 46 anos de atuação no mercado brasileiro do aço e presença no Ceará, Pará e Tocantins, o Grupo Aço Cearense reúne operações integradas de comercialização, metalurgia, siderurgia e logística.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="cards">
+    <div class="card"><strong>SAC + IBP + S/4HANA</strong><span>Planejamento operacional e financeiro conectados em uma arquitetura única</span></div>
+    <div class="card"><strong>Da venda ao balanço</strong><span>Vendas, produção, custos, pessoas, investimentos, tributos, caixa e demonstrativos no mesmo modelo</span></div>
+    <div class="card"><strong>8 áreas com papéis definidos</strong><span>Produção, Suprimentos, Vendas, RH, Logística, Fiscal, Finanças e Controladoria</span></div>
+  </section>
+
+  <h2>O desafio</h2>
+  <p>Antes do projeto, determinadas etapas do planejamento e da consolidação dependiam de planilhas e de atividades manuais. Esse cenário ampliava o esforço operacional, dificultava a gestão integrada de versões e reduzia o tempo disponível para análises e simulações.</p>
+  <p>A resposta foi estruturar um modelo de planejamento integrado com SAP Analytics Cloud (SAC) Planning, conectado ao SAP IBP e ao SAP S/4HANA.</p>
+
+  <blockquote class="pending">"[Trecho do vídeo]" — Renan Lacerda, [cargo], Grupo Aço Cearense<br><small>Opcional: se não houver citação, esta seção sai.</small></blockquote>
+
+  <h2>Por que o SAP Analytics Cloud foi escolhido?</h2>
+  <p>O objetivo do Grupo Aço Cearense era evoluir para um planejamento mais integrado, automatizado e governado, conectando projeções operacionais e financeiras em uma arquitetura única.</p>
+  <p>Com o SAP Analytics Cloud, cálculos antes realizados em planilhas puderam ser estruturados como regras de negócio no sistema, enquanto workflows de aprovação passaram a apoiar diferentes etapas do planejamento. A integração com SAP IBP e SAP S/4HANA também permitiu aproximar projeções operacionais, dados transacionais e planejamento financeiro.</p>
+  <p>A transformação, portanto, não se limitou à troca de ferramenta. O projeto reorganizou a forma como diferentes áreas participam do planejamento e como as informações percorrem o ciclo orçamentário. Conheça também a atuação da Solveplan em <a href="https://solveplan.com/planejamento-e-simulacao/">Planejamento e Simulação</a> com soluções SAP.</p>
+
+  <div class="ba">
+    <div class="before"><h3>Antes do projeto</h3><ul>
+      <li>Etapas do planejamento e da consolidação apoiadas em planilhas</li>
+      <li>Atividades manuais em diferentes frentes</li>
+      <li>Gestão de versões pouco integrada</li>
+      <li>Informações intermediadas entre áreas em alguns processos</li>
+      <li>Menos tempo para análises e simulações</li></ul></div>
+    <div class="after"><h3>Depois da implementação</h3><ul>
+      <li>SAC Planning conectado ao SAP IBP e ao SAP S/4HANA</li>
+      <li>Cálculos de planilha convertidos em regras de negócio</li>
+      <li>Workflows de aprovação nas etapas do planejamento</li>
+      <li>Extração automática de dados do SAP S/4HANA</li>
+      <li>Responsabilidades definidas por área</li></ul></div>
+  </div>
+
+  <h2>Assista o case completo</h2>
+  <div class="video">[Vídeo pendente: link do YouTube]</div>
+  <p class="caption">No vídeo, Renan Lacerda, <span class="pending">[cargo]</span> do Grupo Aço Cearense, apresenta a experiência da companhia com o planejamento integrado.</p>
+
+  <h2>Um escopo que conecta diferentes dimensões do negócio</h2>
+  <p>O projeto contemplou diferentes dimensões do negócio, incluindo vendas, produção, custos, estoques, pessoas, despesas operacionais, investimentos, suprimentos, tributos, demonstrativos financeiros, fluxo de caixa, balanço patrimonial, operação florestal e simulações.</p>
+  <p>Essa amplitude é especialmente relevante porque o planejamento de uma companhia industrial não acontece de forma isolada. Uma projeção de vendas afeta produção e necessidade de matéria-prima; custos e investimentos influenciam caixa e resultado; movimentações de pessoas impactam despesas; e todas essas variáveis precisam convergir para demonstrativos e cenários consistentes.</p>
+  <p>Ao organizar essas frentes em uma arquitetura de planejamento comum, o Grupo Aço Cearense passou a trabalhar com regras, integrações e responsabilidades mais estruturadas.</p>
+
+  <h2>SAP IBP, SAP S/4HANA e SAC Planning: como as informações se conectam</h2>
+  <p>Um dos pontos centrais do projeto foi a integração entre o planejamento operacional e o financeiro.</p>
+  <p>Na frente de Supply, por exemplo, as projeções de volume do SAP IBP passaram a se conectar às projeções financeiras no SAP Analytics Cloud. Em outras frentes, o SAC passou a receber dados automaticamente do SAP S/4HANA, reduzindo atividades de extração e preparação manual.</p>
+  <p>O projeto também substituiu cálculos em planilhas por regras de negócio, implantou workflows de aprovação e eliminou intermediações de dados entre áreas em determinados processos.</p>
+  <p>Na frente financeira, os dados planejados dos diferentes módulos passaram a ser integrados para apoiar consolidação, cálculo de tributos sobre o lucro e revisões periódicas do orçamento.</p>
+
+  <h2>Quais benefícios o SAP Analytics Cloud trouxe para o Grupo Aço Cearense?</h2>
+  <p>Os benefícios aparecem em diferentes etapas do planejamento e variam conforme a frente de negócio.</p>
+  <p>Entre os principais ganhos estão a redução de atividades manuais, automação de extrações a partir do SAP S/4HANA, workflows de aprovação, maior governança, integração entre SAP IBP e SAC Planning e redução de ciclos de planejamento em áreas como Supply, Payroll, CAPEX e custos.</p>
+  <p>Na prática, o projeto reduziu a necessidade de replicar informações entre áreas e liberou mais tempo para análises. A governança também passou a definir responsabilidades para Produção, Suprimentos, Vendas, RH, Logística, Fiscal, Finanças e Controladoria.</p>
+  <p>Em resumo: menos trabalho manual, mais integração, processos mais governados e ciclos de planejamento mais ágeis.</p>
+
+  <h2>Mais governança para um planejamento que atravessa toda a organização</h2>
+  <p>Em projetos de planejamento integrado, tecnologia e governança precisam avançar juntas. No Grupo Aço Cearense, esse aspecto ganhou importância porque diferentes áreas alimentam e consomem informações que impactam o orçamento e os demonstrativos.</p>
+  <p>Ao estruturar responsabilidades, regras de negócio e workflows, o projeto cria uma lógica mais clara para participação das áreas e reduz a dependência de controles paralelos.</p>
+  <p>Isso também favorece revisões periódicas e simulações de cenários, já que as informações passam a percorrer um processo mais conectado entre operação e finanças.</p>
+
+  <h2>A atuação da Solveplan no projeto</h2>
+  <p>A Solveplan conduziu a transformação em conjunto com o Grupo Aço Cearense, estruturando as diferentes dimensões do planejamento em uma arquitetura integrada.</p>
+  <p>A construção por frentes permitiu respeitar particularidades de vendas, suprimentos, pessoas, investimentos, custos e finanças, ao mesmo tempo em que regras de negócio, integrações e governança eram organizadas para sustentar um processo mais conectado e escalável.</p>
+  <p>Para outras empresas, a recomendação do Grupo Aço Cearense é tratar uma iniciativa como essa como evolução de processo, e não apenas como troca de ferramenta: integrar áreas, definir responsabilidades, estruturar regras de negócio e reduzir atividades manuais são partes da mesma transformação.</p>
+  <p>Veja outro exemplo de transformação de planejamento com SAP Analytics Cloud no <a href="https://solveplan.com/case/lins-agroindustrial-sap-analytics-cloud/">case da Lins Agroindustrial</a>.</p>
+
+  <h2>Uma base mais preparada para ciclos de planejamento e revisão</h2>
+  <p>Com uma estrutura mais integrada, automatizada e governada, o Grupo Aço Cearense passa a ter uma base preparada para ciclos de planejamento e revisão mais ágeis, simulações de cenários e análises mais aprofundadas.</p>
+  <p>A evolução também cria condições para ampliar a integração entre planejamento operacional e financeiro e utilizar as informações de forma mais consistente na tomada de decisão.</p>
+  <p>O principal aprendizado do case está justamente nessa conexão: transformar o planejamento exige aproximar áreas, processos e dados para que a tecnologia consiga reduzir complexidade em vez de apenas digitalizá-la.</p>
+
+  <div class="cta">
+    <p>Sua empresa também precisa conectar planejamento operacional e financeiro?</p>
+    <a class="btn" href="https://solveplan.com/contato/">Fale conosco</a>
+  </div>
+
+  <h2>FAQ — SAP Analytics Cloud no Grupo Aço Cearense</h2>
+  <details><summary>Qual solução SAP foi implementada no Grupo Aço Cearense?</summary><p>O <a href="https://solveplan.com/sap-analytics-cloud/">SAP Analytics Cloud</a> (SAC) Planning, integrado ao SAP IBP e ao SAP S/4HANA, para estruturar um planejamento mais integrado, automatizado e governado.</p></details>
+  <details><summary>Qual era o principal desafio antes do projeto?</summary><p>Determinadas etapas do planejamento e da consolidação dependiam de planilhas e de atividades manuais. Isso ampliava o esforço operacional, dificultava a gestão integrada de versões e reduzia o tempo disponível para análises e simulações.</p></details>
+  <details><summary>Quais áreas fazem parte do escopo?</summary><p>Vendas, produção, custos, estoques, pessoas, despesas operacionais, investimentos, suprimentos, tributos, demonstrativos financeiros, fluxo de caixa, balanço patrimonial, operação florestal e simulações.</p></details>
+  <details><summary>Como SAP IBP e SAP Analytics Cloud se integram no projeto?</summary><p>Na frente de Supply, as projeções de volume do SAP IBP se conectam às projeções financeiras no SAP Analytics Cloud, aproximando o planejamento operacional do financeiro.</p></details>
+  <details><summary>Como o SAP S/4HANA participa da arquitetura?</summary><p>O SAP Analytics Cloud recebe dados automaticamente do SAP S/4HANA em diferentes frentes, o que reduz etapas manuais de extração e preparação e dá mais consistência ao planejamento.</p></details>
+  <details><summary>Quais benefícios o projeto trouxe?</summary><p>Redução de trabalho manual, workflows de aprovação, maior governança, integração entre áreas e sistemas, menos intermediação de dados e ciclos de planejamento mais ágeis em frentes como Supply, Payroll, CAPEX e custos.</p></details>
+  <details><summary>Qual foi o papel da Solveplan?</summary><p>A Solveplan conduziu o projeto com o Grupo Aço Cearense, organizando regras de negócio, integrações e governança em diferentes frentes para tornar o planejamento mais conectado e escalável.</p></details>
+</main>
+
+<footer><a class="btn" href="https://bdcstrategy.solveplan.ai/">Avalie a maturidade dos seus dados com a Solveplan</a></footer>
+</body>
+</html>
