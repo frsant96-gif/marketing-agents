@@ -162,3 +162,31 @@ Assista ao depoimento de Wesley Rosa Mendanha, Gerente de Transformação Digita
 
 #SAPDatasphere #SAPBusinessDataCloud #SAP #Agronegócio #GovernançaDeDados #SolvePlan
 ```
+
+
+---
+
+## Versão E — Versão D + FAQ ✅
+
+```
+A SSA Alimentos, com 9.000 colaboradores, R$ 4 bilhões de faturamento e exportação para mais de 90 países, não tinha uma camada consolidada de dados. Extrações manuais, planilhas e Power BI conectado nessas planilhas faziam com que cada nova demanda da área de negócio fosse refeita do zero, sem reuso e com governança baixa.
+
+Com a implementação do SAP Datasphere pela SolvePlan, concluída em 8 meses, a empresa passou a ter governança centralizada, dados reutilizáveis e domínios de dados organizados por área de negócio. Hoje, o dado que chega às áreas é confiável, validado e reaproveitado, em vez de reconstruído a cada pedido.
+
+O ganho não está só em eficiência. É ter uma base de dados pronta para escalar as análises e, depois, a inteligência artificial.
+
+Perguntas frequentes
+
+Qual solução foi implementada?
+SAP Datasphere, como data warehouse da SSA, integrando SAP S/4HANA, SAP Analytics Cloud, SAP IBP e sistemas não-SAP.
+
+Quanto tempo levou o projeto?
+8 meses, com áreas de negócio, tecnologia e SolvePlan trabalhando juntas.
+
+O que mudou no dia a dia?
+Os dados passaram a ser reutilizados em vez de refeitos a cada demanda, com governança centralizada por área de negócio.
+
+Assista ao depoimento de Wesley Rosa Mendanha, Gerente de Transformação Digital da SSA Alimentos: [link]
+
+#SAPDatasphere #SAPBusinessDataCloud #SAP #Agronegócio #GovernançaDeDados #SolvePlan
+```

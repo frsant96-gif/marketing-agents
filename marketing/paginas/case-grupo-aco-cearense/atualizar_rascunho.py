@@ -12,6 +12,7 @@ WP = "https://solveplan.com/wp-json"
 POST_ID = 11520
 PLAN_URL = "https://solveplan.com/planejamento-e-simulacao/"
 SERVICOS_URL = "https://solveplan.com/servicos/"
+SAC_URL = "https://solveplan.com/sap-analytics-cloud/"
 VIDEO = "https://youtu.be/wVj2x8VfYQs"
 
 
@@ -27,6 +28,11 @@ def p(html):
 def h2(text):
     return ('<!-- wp:heading {"style":{"elements":{"link":{"color":{"text":"#006cff"}}},"color":{"text":"#006cff"}}} -->\n'
             f'<h2 class="wp-block-heading has-text-color has-link-color" style="color:#006cff">{text}</h2>\n<!-- /wp:heading -->')
+
+
+def faq(q, ans):
+    return (f'<!-- wp:details -->\n<details class="wp-block-details"><summary>{q}</summary><!-- wp:paragraph -->\n<p>{ans}</p>\n'
+            '<!-- /wp:paragraph --></details>\n<!-- /wp:details -->')
 
 
 def build():
@@ -76,6 +82,23 @@ def build():
         p("A evolução também cria condições para ampliar a integração entre planejamento operacional e financeiro e utilizar as informações de forma mais consistente na tomada de decisão."),
         p("O principal aprendizado do case está justamente nessa conexão: transformar o planejamento exige aproximar áreas, processos e dados para que a tecnologia consiga reduzir complexidade em vez de apenas digitalizá-la."),
         p(f'<strong>Sua empresa também precisa conectar planejamento operacional e financeiro?</strong> {a("Conheça as soluções da Solveplan", SERVICOS_URL)}.'),
+        # FAQ (pedido da Fran em 13/10; não estava no PDF aprovado, respostas tiradas do texto aprovado)
+        spacer(),
+        '<!-- wp:heading {"level":5} -->\n<h5 class="wp-block-heading"><strong>FAQ — SAP Analytics Cloud no Grupo Aço Cearense</strong></h5>\n<!-- /wp:heading -->',
+        faq("Qual solução SAP foi implementada no Grupo Aço Cearense?",
+            f'O {a("SAP Analytics Cloud", SAC_URL)} (SAC) Planning, integrado ao SAP IBP e ao SAP S/4HANA, para estruturar um planejamento mais integrado, automatizado e governado.'),
+        faq("Qual era o principal desafio antes do projeto?",
+            "Determinadas etapas do planejamento e da consolidação dependiam de planilhas e de atividades manuais. Isso ampliava o esforço operacional, dificultava a gestão integrada de versões e reduzia o tempo disponível para análises e simulações."),
+        faq("Quais áreas fazem parte do escopo?",
+            "Vendas, produção, custos, estoques, pessoas, despesas operacionais, investimentos, suprimentos, tributos, demonstrativos financeiros, fluxo de caixa, balanço patrimonial, operação florestal e simulações."),
+        faq("Como SAP IBP e SAP Analytics Cloud se integram no projeto?",
+            "Na frente de Supply, as projeções de volume do SAP IBP se conectam às projeções financeiras no SAP Analytics Cloud, aproximando o planejamento operacional do financeiro."),
+        faq("Como o SAP S/4HANA participa da arquitetura?",
+            "O SAP Analytics Cloud recebe dados automaticamente do SAP S/4HANA em diferentes frentes, o que reduz etapas manuais de extração e preparação e dá mais consistência ao planejamento."),
+        faq("Quais benefícios o projeto trouxe?",
+            "Redução de trabalho manual, workflows de aprovação, maior governança, integração entre áreas e sistemas, menos intermediação de dados e ciclos de planejamento mais ágeis em frentes como Supply, Payroll, CAPEX e custos."),
+        faq("Qual foi o papel da Solveplan?",
+            "A Solveplan conduziu o projeto com o Grupo Aço Cearense, organizando regras de negócio, integrações e governança em diferentes frentes para tornar o planejamento mais conectado e escalável."),
     ]
     return "\n\n".join(blocks)
 
