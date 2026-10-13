@@ -1,0 +1,21 @@
+00:06 A cearense é um grupo da do aço, começa com a usina, a gente produz e beneficia aço. O grupo acearense é localizado no Nordeste, [música] na cidade de
+00:19 Fortaleza, no Ceará, mas possuímos operação no Pará, em Tocantins e em São Paulo. Grupo cearense, ele tem um diferencial muito grande na questão das
+00:29 vendas. é uma empresa que nasceu de uma operação comercial, então ela tem uma logística muito forte de venda e entrega no Brasil inteiro e exportação. [música]
+00:39 O maior desafio da do grupo acearense no que concerne ao orçamento, né, o planejamento orçamentário, planejamento financeiro de modo geral, questões de
+00:48 processos e a descentralização, ou seja, governança, automações e a demora, muitos dados, muitos processos, a empresa muito verticalizada. Cada área
+01:00 tinha uma forma sugênçamento, seu planejamento financeiro. Então, eh, o saque plan ele veio para aumentar a governança e automatizar. &gt;&gt; O processo de implementação. Ele demorou
+01:17 em torno de 12 meses. Ah, e ele foi dividido em três etapas. Epa de explorar, construir e homologar. O [música] processo contemplou Capex, OPIC, sals, supply, eh custos
+01:29 financeiros e florestais, assim como financial e demonstrativos em um simulador. Bom, o projeto ele previa goles [música] progressivos e nós tivemos o nosso primeiro marco técnico
+01:41 em setembro. Eh, em seguida nós tivemos em outubro o nosso uma entrega funcional e por último, a evolução do simulador em dezembro. A parceria entre SVEPLAN e Aço
+01:52 Cearense já dura por mais de 10 anos. O primeiro projeto que nós implementamos do SAC em 2015 foi com a SVEPLAN. E nesse tempo nós vimos a evolução tanto
+02:04 do grupo A cearense no mercado quanto a evolução [música] também da da SVEP plan no mercado voltado pra área de planejamento, dados e pro ecossistema do
+02:15 SAP. Então a SOVPLAN hoje na nossa opinião é o parceiro mais sólido quando você fala de SAP Analytics Cloud. Então o nome da Sverpl quando nós estávamos
+02:26 [música] avaliando migrar pro SF Forrana foi um nome fácil de decidir até pela parceria que já perdura por longos e longos anos. Os principais benefícios
+02:37 trazidos pelo SC Planning para o grupo Acearense, sem dúvida alguma, foi na questão da organização. Então, governança dos processos e dos dados,
+02:47 segurança dos dados, velocidade, né, processamento bem mais rápido, integração entre as áreas e um último benefício, não menos importante, foi a
+02:58 melhoria na eficiência do processo como um todo. Após a implementação do SAP Analytics Cloud junto com a SPLAN, esse projeto estruturou a empresa para
+03:08 simplificar o modelo orçamentário, deixando os ciclos orçamentários mais ágeis, criando variações de cenários, seja para área industrial, área financeira. Então esse projeto ele
+03:22 cria uma musculatura pra gente ir além. Então esse é o trabalho que nós vamos estruturar no grupo AS cearense para os próximos anos. ver como nós podemos
+03:31 extrair o máximo possível do saque analytic cloud, pensando sempre numa evolução e trazendo valor para área de negócio. Qual o conselho que eu poderia
+03:40 dar para as empresas que ainda não foram pro SAP? Vá pro SAP, tenha seu sistema [música] integrado, os dados em tempo real e preparado para o futuro. เฮ
+03:52 [música]
