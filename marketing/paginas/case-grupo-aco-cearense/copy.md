@@ -1,6 +1,7 @@
 # Case Grupo Aço Cearense — SAP Analytics Cloud Planning
 
-**Status:** rascunho para aprovação · não publicado
+**Status:** rascunho criado no WordPress em 13/10/2026 (case ID 11520, ícones 11517–11519) · não publicado · SEO do Rank Math a preencher à mão
+**Editar:** https://solveplan.com/wp-admin/post.php?post=11520&action=edit
 **Tipo de post no WordPress:** `case` (mesmo modelo da Lins Agroindustrial e da SSA Alimentos)
 **Fonte:** "Case Grupo Aço Cearense planejamento integrado com SAP Analytics Cloud_rev_cliente.docx" (revisão do cliente, 13/10/2026) + "[Texto do Site] Case Aco Cearense SAC.docx" (SEO e FAQ) + "Roteiro Aco Cearense - VF"
 **Prévia visual:** `preview.html` (nesta pasta)
