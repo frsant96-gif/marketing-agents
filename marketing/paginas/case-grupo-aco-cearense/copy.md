@@ -79,7 +79,7 @@ A transformação, portanto, não se limitou à troca de ferramenta. O projeto r
 
 ## 7. Vídeo — "Assista o case completo"
 
-Embed: **[PENDENTE — link do YouTube]** (o arquivo final ainda está como `VT Aço Cearense - v02.mp4`)
+Embed: `https://www.youtube.com/embed/wVj2x8VfYQs` (título no YouTube: "Aço Cearense", canal SolvePlan)
 
 Legenda: No vídeo, Renan Lacerda, [cargo] do Grupo Aço Cearense, apresenta a experiência da companhia com o planejamento integrado.
 
@@ -181,7 +181,7 @@ Botão: **Avalie a maturidade dos seus dados com a Solveplan** → `https://bdcs
 - SAP Analytics Cloud → `https://solveplan.com/sap-analytics-cloud/` (FAQ)
 - Case Lins Agroindustrial → `https://solveplan.com/case/lins-agroindustrial-sap-analytics-cloud/` (seção 8)
 - Contato → `https://solveplan.com/contato/` (CTA intermediário)
-- Vídeo → pendente
+- Vídeo → `https://youtu.be/wVj2x8VfYQs`
 
 ## Revisão do cliente aplicada (Salmo Euzebio, 13/10)
 
@@ -201,9 +201,8 @@ Botão: **Avalie a maturidade dos seus dados com a Solveplan** → `https://bdcs
 
 ## Pendências antes de publicar
 
-1. Link do vídeo no YouTube (hoje só existe o `VT Aço Cearense - v02.mp4`)
-2. Cargo do Renan Lacerda (legenda do vídeo e citação)
-3. Citação do vídeo para a seção 5 (opcional; sem ela, a seção sai)
-4. Imagem destacada do case (o logo já está em `Customer Story/2026/Aço Cearense/Logo/`)
-5. Ícones dos 3 cards (no SSA foram gerados à parte)
-6. Backup do site (hPanel) antes de criar o post
+1. Cargo do Renan Lacerda (legenda do vídeo e citação)
+2. Citação do vídeo para a seção 5 (opcional; sem ela, a seção sai)
+3. Imagem destacada do case (o logo já está em `Customer Story/2026/Aço Cearense/Logo/`)
+4. Ícones dos 3 cards (no SSA foram gerados à parte)
+5. Backup do site (hPanel) antes de criar o post
