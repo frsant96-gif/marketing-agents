@@ -141,3 +141,24 @@ Seu time está nesse ponto? Manda uma mensagem pra gente.
 
 #SAPDatasphere #SAPBusinessDataCloud #GovernancaDeDados
 ```
+
+
+---
+
+## Versão D — padrão do case Lins Agroindustrial (referência da Fran) ✅
+
+Narrativa em 3ª pessoa: cenário → solução SolvePlan → resultado → frase de fechamento → link do depoimento.
+
+**Marcar no LinkedIn:** SSA Alimentos, SolvePlan, Wesley Rosa Mendanha. **[link]:** vídeo nativo ou https://youtu.be/T3k8MTIggjA
+
+```
+A SSA Alimentos, com 9.000 colaboradores, R$ 4 bilhões de faturamento e exportação para mais de 90 países, não tinha uma camada consolidada de dados. Extrações manuais, planilhas e Power BI conectado nessas planilhas faziam com que cada nova demanda da área de negócio fosse refeita do zero, sem reuso e com governança baixa.
+
+Com a implementação do SAP Datasphere pela SolvePlan, concluída em 8 meses, a empresa passou a ter governança centralizada, dados reutilizáveis e domínios de dados organizados por área de negócio. Hoje, o dado que chega às áreas é confiável, validado e reaproveitado, em vez de reconstruído a cada pedido.
+
+O ganho não está só em eficiência. É ter uma base de dados pronta para escalar as análises e, depois, a inteligência artificial.
+
+Assista ao depoimento de Wesley Rosa Mendanha, Gerente de Transformação Digital da SSA Alimentos: [link]
+
+#SAPDatasphere #SAPBusinessDataCloud #SAP #Agronegócio #GovernançaDeDados #SolvePlan
+```
