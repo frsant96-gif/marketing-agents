@@ -2,6 +2,8 @@
 
 **Status:** rascunho criado no WordPress em 13/10/2026 (case ID 11520, ícones 11517–11519) · não publicado · SEO do Rank Math a preencher à mão
 **Editar:** https://solveplan.com/wp-admin/post.php?post=11520&action=edit
+
+> **Atualização 13/10/2026, 16:20:** a pedido da Fran, o conteúdo do rascunho foi trocado pelo texto aprovado pelo cliente, palavra por palavra ("..._rev_cliente - Copia.pdf"), via `atualizar_rascunho.py`. Cards, antes/depois, FAQ, link da Lins, vídeo incorporado e CTAs em bloco **saíram**. Este copy.md e o `preview.html` abaixo mostram a versão anterior e servem só de referência.
 **Tipo de post no WordPress:** `case` (mesmo modelo da Lins Agroindustrial e da SSA Alimentos)
 **Fonte:** "Case Grupo Aço Cearense planejamento integrado com SAP Analytics Cloud_rev_cliente.docx" (revisão do cliente, 13/10/2026) + "[Texto do Site] Case Aco Cearense SAC.docx" (SEO e FAQ) + "Roteiro Aco Cearense - VF"
 **Prévia visual:** `preview.html` (nesta pasta)
