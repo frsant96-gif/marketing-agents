@@ -7,7 +7,7 @@ Editar: https://solveplan.com/wp-admin/post.php?post=11520&action=edit
 
 | Campo | Valor |
 |---|---|
-| Título (57 caracteres) | Grupo Aço Cearense + SAP Analytics Cloud \| Case Solveplan |
+| Título (59 caracteres) | SAP Analytics Cloud, IBP e S/4HANA: case Grupo Aço Cearense |
 | Link permanente | grupo-aco-cearense-sap-analytics-cloud (já está assim) |
 | Descrição (153 caracteres) | Como o Grupo Aço Cearense conectou planejamento operacional e financeiro com SAP Analytics Cloud, IBP e S/4HANA, menos trabalho manual e mais governança. |
 
