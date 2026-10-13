@@ -1,0 +1,63 @@
+1
+00:00:00,080 --> 00:00:02,750
+Antes do SAP Datasphere, a gente não tinha
+
+2
+00:00:02,800 --> 00:00:05,750
+uma camada consolidada de dados.
+
+3
+00:00:05,800 --> 00:00:06,670
+A gente tinha, na verdade,
+
+4
+00:00:06,720 --> 00:00:09,230
+muitas extrações manuais de base de dados,
+
+5
+00:00:09,280 --> 00:00:10,950
+uso de planilhas, muitas das vezes
+
+6
+00:00:11,000 --> 00:00:12,950
+Power BI conectado nessas planilhas.
+
+7
+00:00:13,000 --> 00:00:14,510
+E era um trabalho hercúleo
+
+8
+00:00:14,560 --> 00:00:16,110
+fazer a gestão de tudo isso.
+
+9
+00:00:16,160 --> 00:00:18,070
+Obviamente, a governança era muito baixa
+
+10
+00:00:18,120 --> 00:00:20,230
+e a gente contava com
+
+11
+00:00:20,280 --> 00:00:21,630
+um retrabalho muito grande
+
+12
+00:00:21,680 --> 00:00:24,230
+a cada demanda que surgia da área de negócio.
+
+13
+00:00:24,280 --> 00:00:26,710
+Todo o trabalho era refeito
+
+14
+00:00:26,760 --> 00:00:28,470
+sempre que uma demanda nova surgia.
+
+15
+00:00:28,520 --> 00:00:30,070
+A gente não contava com reuso
+
+16
+00:00:30,120 --> 00:00:31,750
+e a governança disso era muito baixa.

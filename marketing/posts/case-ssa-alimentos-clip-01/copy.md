@@ -118,3 +118,26 @@ Depoimento completo da SSA Alimentos: https://youtu.be/T3k8MTIggjA
 - [x] Abaixo de 1.300 caracteres
 - [x] Hashtags específicas
 - [x] CTA proporcional: conversa (A) / diagnóstico (B)
+
+
+---
+
+## Versão C — reescrita (13/10, após feedback: copy anterior não ficou boa)
+
+Mais curta, menos "fórmula", tom de conversa.
+
+```
+Todo pedido novo da área de negócio virava trabalho refeito do zero.
+
+É assim que o Wesley Rosa Mendanha, Gerente de Transformação Digital da SSA Alimentos, lembra da rotina de dados antes do SAP Datasphere.
+
+Extração manual, planilha, Power BI puxando dado da planilha. Numa empresa de R$ 4 bilhões que exporta para mais de 90 países.
+
+Isso costuma acontecer quando a operação cresce mais rápido que a estrutura de dados. Cada área resolve do jeito que dá, e o time de dados passa mais tempo refazendo relatório do que analisando.
+
+A SSA levou 8 meses, junto com a Solveplan, para colocar uma camada única de dados no lugar. No vídeo, o Wesley conta como era antes.
+
+Seu time está nesse ponto? Manda uma mensagem pra gente.
+
+#SAPDatasphere #SAPBusinessDataCloud #GovernancaDeDados
+```
