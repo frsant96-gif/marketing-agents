@@ -20,11 +20,11 @@ uso de planilhas, muitas das vezes
 
 6
 00:00:11,000 --> 00:00:12,950
-Power BI conectado nessas planilhas.
+Power BI conectar nessas planilhas.
 
 7
 00:00:13,000 --> 00:00:14,510
-E era um trabalho hercúleo
+E era um trabalho hercúrio
 
 8
 00:00:14,560 --> 00:00:16,110
