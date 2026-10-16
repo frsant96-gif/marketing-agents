@@ -74,6 +74,26 @@ Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas d
 
 ---
 
+## Versão G — linha do post de referência (concorrente): pergunta sobre IA → dor → case → link nos comentários
+
+```
+Muita empresa quer começar pela IA. Mas antes vem uma pergunta mais básica: quanto tempo leva para um dado novo chegar a quem precisa decidir?
+
+Na U&M Mineração e Construção, a resposta dependia de fila. Cada nova necessidade de informação podia virar um relatório customizado no SAP e uma demanda de desenvolvimento ABAP. Enquanto isso, ETLs fora da governança faziam cada área tratar os dados do seu jeito, com risco de relatórios que não batem.
+
+Foi esse cenário que levou a U&M a reorganizar sua arquitetura de dados com o SAP Datasphere, com o apoio da SolvePlan.
+
+Neste case, Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas, contam como a empresa saiu de mais de 55 tabelas dispersas para uma base governada, e como isso chegou até a manutenção dos equipamentos.
+
+O case completo está no nosso canal do YouTube. O link está nos comentários.
+
+#SAPDatasphere #GovernancaDeDados #ArquiteturaDeDados #SAPBusinessDataCloud #SolvePlan
+```
+
+**1º comentário:** Assista ao case completo da U&M: https://youtu.be/b2ftt2R33CU
+
+---
+
 ## Observações
 
 - Números usados como estão no texto aprovado (55 tabelas, 155 views, 133 tabelas locais), sem converter em percentual.
