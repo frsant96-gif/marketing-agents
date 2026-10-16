@@ -1,0 +1,39 @@
+[0:06] Somos da hoje Papéis, sou uma empresa multinacional japonesa, estamos localizados no interior de São Paulo,
+[0:12] em Piraça de Caba, é uma empresa de papel, o nosso diferencial é o papel térmico,
+[0:18] que está presente em todos os lugares, elotérica, todos os pontos fiscal,
+[0:24] esse é o diferencial dessa empresa de papel. Calar um pouquinho das dores antes da implementação
+[0:31] do SAC, e do DAXFIR também, mas começando aí principalmente pelo SAC, que é o que antigamente
+[0:39] era tudo feito em Excel, então tinha uma dor de entregar isso de uma forma rápida e integrada
+[0:46] também, conjunto com as áreas de negócio, então o SAC veio justamente para tirar isso do papel e
+[0:53] levar isso para o sistema, isso era uma dor. E a outra era como integrar últimas plataformas
+[0:59] em um lugar, e aí veio o DAXFIR, então a gente juntou o SAC e o DAXFIR integrando as múltimas
+[1:06] plataformas e agilizando os processos de cada área. A gente teve dois sistemas, a gente tem o DAXFIR
+[1:14] e o SAC, que é onde a passira soube e planos ajudou a implementar isso, então ao todo do SAC
+[1:19] foram seis meses de implementação, entregando todos os modos, tanto de receita, folha de pagamento,
+[1:25] custos, DRE, todas essas frentes e também o DAXFIR após a implementação do SAC, que antes a gente
+[1:33] tinha o ECC, Emigran, FlashFore e adquirimos também o DAXFIR. Nessa aquisição efetuamos também a
+[1:40] compra do DAXFIR, onde foi implementado todas as comunicações que a gente tinha dentro da
+[1:45] base de dados e transformamos ela dentro da DAXFIR para jogar para as outras ferramentas de BI.
+[1:51] Nesse túnel entre o DAXFIR e as composições dessas informações, essa implementação do DAXFIR
+[1:58] rolou em torno de três meses e até fazia todo o canal que a gente já tinha nas outras
+[2:03] ferramentas, contextualizando essas informações dentro do DAXFIR e trazendo também para o SAC
+[2:09] e para as outras frentes, outras camadas de modelagem. A gente tem uma parceria muito
+[2:14] novo e plana, tá? É o nosso parceiro número um no fisico de comunicação com BI entre a forma
+[2:21] do SAC e DAXFIR, tá? Ele nos apoia em todos os momentos, então dificuldades que a gente tem,
+[2:27] não só da ferramenta, mas projeções futuras de como está o mercado, de como está a
+[2:32] acessabilidade das informações, de qual o melhor formato que a gente pode estar acessando
+[2:36] as informações e qual o melhor modelo de dados que a gente pode estar apresentando isso para
+[2:40] a empresa e o mercado oferece também. Cada dia mais a gente tem melhorado nossa comunicação
+[2:45] e nosso relacionamento com eles e a gente tem um grande apoio com eles, isso é fundamental.
+[2:49] Os principais benefícios que nós tivemos foram as tomadas de decisões rápidas, a quantidade
+[2:55] de informações hoje centralizadas, então hoje tanta camada operacional, quanta camada da
+[3:02] diretoria, ela tem um poder de decisão, uma tomada de decisão que as informações
+[3:05] estão cada vez mais rápidas e mais acessível, isso tornando cada vez melhor a nosso tempo de
+[3:11] resposta e também a qualidade dos dados e informações reportadas. O que podemos dizer
+[3:17] para o futuro, para as empresas que ainda não adquiriram ou que ainda não trabalham com o
+[3:23] DAXFIR, de poder integrar as muitas plataformas, uma gestão de dados, uma governança e
+[3:29] entregar esses dados trabalhados nas áreas de negócio, dando mais autonomia e fazer
+[3:35] um negócio, ele foi com uma leveza ainda maior com segurança, com integrado das informações
+[3:41] e todo mundo consumindo as mesmas informações e também já se preparando para as IAS, para
+[3:48] consumir informações, precisa ter uma base de dados consolidada, que é o que o DAXFIR nos
+[3:55] proporciona.
