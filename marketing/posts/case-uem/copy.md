@@ -94,6 +94,20 @@ Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas, 
 
 ---
 
+## Versão H — curta, no modelo da Fran
+
+```
+A U&M Mineração e Construção, empresa especializada em serviços e locação de equipamentos para grandes movimentações de solo e rocha em obras de infraestrutura e mineração, estruturou com a SolvePlan uma arquitetura de dados governada com SAP Datasphere.
+
+Neste case, Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas, contam como a empresa saiu de mais de 55 tabelas dispersas para uma base governada, e como isso chegou até a manutenção dos equipamentos.
+
+Assista ao case completo em nosso site: https://solveplan.com/case/um-sap-datasphere-arquitetura-dados/
+
+#SAPDatasphere #GovernancaDeDados #ArquiteturaDeDados #SAPBusinessDataCloud #SolvePlan
+```
+
+---
+
 ## Observações
 
 - Números usados como estão no texto aprovado (55 tabelas, 155 views, 133 tabelas locais), sem converter em percentual.
