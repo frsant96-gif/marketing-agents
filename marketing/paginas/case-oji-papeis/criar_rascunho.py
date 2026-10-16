@@ -1,6 +1,6 @@
 """Cria o case Oji Papéis como RASCUNHO no WordPress, no mesmo modelo de blocos dos cases Lins e Aço Cearense.
 
-Uso: WP_APP_PASSWORD="xxxx xxxx ..." python criar_rascunho.py <url-do-video-youtube>
+Uso: WP_APP_PASSWORD="xxxx xxxx ..." python criar_rascunho.py [url-do-video-youtube]
 A senha não fica gravada neste arquivo.
 """
 import os, sys, pathlib, requests
@@ -13,7 +13,7 @@ ICON_DIR = pathlib.Path(__file__).parent
 
 SAC_URL = "https://solveplan.com/sap-analytics-cloud/"
 SERVICOS_URL = "https://solveplan.com/servicos/"
-VIDEO = sys.argv[1]
+VIDEO = sys.argv[1] if len(sys.argv) > 1 else ""   # sem link: o bloco do vídeo fica de fora
 
 SLUG = "oji-papeis-sap-analytics-cloud"
 TITLE = "Oji Papéis: SAP Analytics Cloud reduz ciclo orçamentário de 15 para 2 dias"
@@ -130,8 +130,7 @@ def build(media):
         h2("Oji Papéis, SAP Analytics Cloud e Solveplan"),
         p("O case da Oji Papéis mostra como a modernização do planejamento financeiro pode gerar impacto mensurável quando tecnologia, processos e adoção caminham juntos."),
         p("Em seis meses de projeto, a companhia estruturou um novo ambiente de planejamento e reduziu de 15 para 2 dias o tempo de resposta orçamentária, ao mesmo tempo em que avançou na centralização e no acesso às informações."),
-        p("<strong>Assista ao vídeo do case</strong>"),
-        embed(VIDEO),
+        *([p("<strong>Assista ao vídeo do case</strong>"), embed(VIDEO)] if VIDEO else []),
         spacer(),
         h2("O que mudou no planejamento da Oji Papéis?"),
         p("A transformação pode ser observada em quatro frentes principais: centralização, agilidade, acesso e confiabilidade."),
