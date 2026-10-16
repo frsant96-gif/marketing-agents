@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.18,0:00:03.59,Tarja,,0,0,0,,Eu acho que o principal objetivo
+Dialogue: 0,0:00:03.62,0:00:05.83,Tarja,,0,0,0,,é as empresas começarem de uma forma
+Dialogue: 0,0:00:05.86,0:00:07.63,Tarja,,0,0,0,,organizada, com governança,
+Dialogue: 0,0:00:07.66,0:00:09.91,Tarja,,0,0,0,,entenderem o benefício que isso
+Dialogue: 0,0:00:09.94,0:00:11.83,Tarja,,0,0,0,,vai estar trazendo para elas
+Dialogue: 0,0:00:11.86,0:00:14.03,Tarja,,0,0,0,,no curto prazo,
+Dialogue: 0,0:00:14.06,0:00:16.35,Tarja,,0,0,0,,porque vão ter informações
+Dialogue: 0,0:00:16.38,0:00:17.83,Tarja,,0,0,0,,mais confiáveis,
+Dialogue: 0,0:00:17.86,0:00:20.11,Tarja,,0,0,0,,e que vão apoiar a tomada de decisão
+Dialogue: 0,0:00:20.14,0:00:21.40,Tarja,,0,0,0,,final de cada área de negócio.

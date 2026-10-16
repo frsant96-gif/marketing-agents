@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.38,0:00:01.95,Tarja,,0,0,0,,Antes de implementar o Datasphere,
+Dialogue: 0,0:00:01.98,0:00:03.90,Tarja,,0,0,0,,nós tínhamos um desafio muito grande
+Dialogue: 0,0:00:03.93,0:00:07.60,Tarja,,0,0,0,,para disponibilizar dados para as áreas de negócio.
+Dialogue: 0,0:00:08.46,0:00:11.47,Tarja,,0,0,0,,Às vezes dependia muito de customizações,
+Dialogue: 0,0:00:11.50,0:00:13.87,Tarja,,0,0,0,,retirada manual de relatórios.
+Dialogue: 0,0:00:13.90,0:00:16.75,Tarja,,0,0,0,,Então a gente tinha um cenário realmente desafiador
+Dialogue: 0,0:00:16.78,0:00:19.27,Tarja,,0,0,0,,e era muito demorada a disponibilização
+Dialogue: 0,0:00:19.30,0:00:20.20,Tarja,,0,0,0,,dessas informações.

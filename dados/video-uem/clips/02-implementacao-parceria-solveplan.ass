@@ -1,0 +1,33 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.38,0:00:03.63,Tarja,,0,0,0,,A implementação foi rápida.
+Dialogue: 0,0:00:03.66,0:00:05.60,Tarja,,0,0,0,,Eu acredito que em torno de dois meses
+Dialogue: 0,0:00:05.63,0:00:07.80,Tarja,,0,0,0,,a gente já estava com a plataforma pronta
+Dialogue: 0,0:00:07.83,0:00:10.63,Tarja,,0,0,0,,e construindo os relatórios,
+Dialogue: 0,0:00:10.66,0:00:12.83,Tarja,,0,0,0,,as informações que a gente precisava.
+Dialogue: 0,0:00:12.86,0:00:15.00,Tarja,,0,0,0,,O ponto-chave foi a agilidade
+Dialogue: 0,0:00:15.03,0:00:18.19,Tarja,,0,0,0,,de ter a plataforma já disponibilizada
+Dialogue: 0,0:00:18.22,0:00:20.43,Tarja,,0,0,0,,e já começar a fazer a conversão
+Dialogue: 0,0:00:20.46,0:00:23.91,Tarja,,0,0,0,,dos ETLs antigos para esse modelo novo,
+Dialogue: 0,0:00:23.94,0:00:25.19,Tarja,,0,0,0,,que é o que a gente precisava:
+Dialogue: 0,0:00:25.22,0:00:29.59,Tarja,,0,0,0,,uma ferramenta mais em compliance com a SAP.
+Dialogue: 0,0:00:29.62,0:00:32.50,Tarja,,0,0,0,,A Solveplan foi muito parceira
+Dialogue: 0,0:00:32.53,0:00:34.55,Tarja,,0,0,0,,nossa no dia a dia.
+Dialogue: 0,0:00:34.58,0:00:35.95,Tarja,,0,0,0,,Eles têm uma agilidade muito grande
+Dialogue: 0,0:00:35.98,0:00:37.11,Tarja,,0,0,0,,no atendimento
+Dialogue: 0,0:00:37.14,0:00:39.47,Tarja,,0,0,0,,e o entendimento de todo o ecossistema,
+Dialogue: 0,0:00:39.50,0:00:42.15,Tarja,,0,0,0,,que facilitou muito o trabalho no dia a dia.
+Dialogue: 0,0:00:42.18,0:00:43.87,Tarja,,0,0,0,,Eles foram sempre muito solícitos,
+Dialogue: 0,0:00:43.90,0:00:45.91,Tarja,,0,0,0,,parceiros
+Dialogue: 0,0:00:45.94,0:00:47.50,Tarja,,0,0,0,,e sempre entregando muita agilidade pra gente.

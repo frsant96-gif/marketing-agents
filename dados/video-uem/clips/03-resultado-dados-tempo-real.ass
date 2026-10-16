@@ -1,0 +1,31 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.05,0:00:01.90,Tarja,,0,0,0,,O grande benefício que a gente tem
+Dialogue: 0,0:00:01.93,0:00:03.54,Tarja,,0,0,0,,hoje é ter os dados
+Dialogue: 0,0:00:03.57,0:00:05.26,Tarja,,0,0,0,,praticamente em tempo real.
+Dialogue: 0,0:00:05.29,0:00:08.26,Tarja,,0,0,0,,Isso facilita muito a tomada de decisão
+Dialogue: 0,0:00:08.29,0:00:10.46,Tarja,,0,0,0,,das áreas da empresa como um todo.
+Dialogue: 0,0:00:10.49,0:00:11.82,Tarja,,0,0,0,,A gente disponibiliza os dados
+Dialogue: 0,0:00:11.85,0:00:13.30,Tarja,,0,0,0,,para algumas áreas específicas,
+Dialogue: 0,0:00:13.33,0:00:15.14,Tarja,,0,0,0,,mas também de forma corporativa,
+Dialogue: 0,0:00:15.17,0:00:17.38,Tarja,,0,0,0,,e consegue agregar também
+Dialogue: 0,0:00:17.41,0:00:18.78,Tarja,,0,0,0,,dados de outros sistemas
+Dialogue: 0,0:00:18.81,0:00:22.50,Tarja,,0,0,0,,para fornecer essas informações
+Dialogue: 0,0:00:22.53,0:00:24.22,Tarja,,0,0,0,,para a tomada de decisão na empresa.
+Dialogue: 0,0:00:24.25,0:00:26.10,Tarja,,0,0,0,,Acho que o principal fator transformador
+Dialogue: 0,0:00:26.13,0:00:28.42,Tarja,,0,0,0,,foi ter uma base de dados centralizada,
+Dialogue: 0,0:00:28.45,0:00:30.40,Tarja,,0,0,0,,confiável, com governança,
+Dialogue: 0,0:00:30.43,0:00:32.02,Tarja,,0,0,0,,e automaticamente
+Dialogue: 0,0:00:32.05,0:00:34.54,Tarja,,0,0,0,,dando subsídios para as áreas tomarem
+Dialogue: 0,0:00:34.57,0:00:36.30,Tarja,,0,0,0,,decisões de uma forma muito mais segura.

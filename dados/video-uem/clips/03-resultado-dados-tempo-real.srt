@@ -1,0 +1,71 @@
+1
+00:00:00,050 --> 00:00:01,900
+O grande benefício que a gente tem
+
+2
+00:00:01,930 --> 00:00:03,540
+hoje é ter os dados
+
+3
+00:00:03,570 --> 00:00:05,260
+praticamente em tempo real.
+
+4
+00:00:05,290 --> 00:00:08,260
+Isso facilita muito a tomada de decisão
+
+5
+00:00:08,290 --> 00:00:10,460
+das áreas da empresa como um todo.
+
+6
+00:00:10,490 --> 00:00:11,820
+A gente disponibiliza os dados
+
+7
+00:00:11,850 --> 00:00:13,300
+para algumas áreas específicas,
+
+8
+00:00:13,330 --> 00:00:15,140
+mas também de forma corporativa,
+
+9
+00:00:15,170 --> 00:00:17,380
+e consegue agregar também
+
+10
+00:00:17,410 --> 00:00:18,780
+dados de outros sistemas
+
+11
+00:00:18,810 --> 00:00:22,500
+para fornecer essas informações
+
+12
+00:00:22,530 --> 00:00:24,220
+para a tomada de decisão na empresa.
+
+13
+00:00:24,250 --> 00:00:26,100
+Acho que o principal fator transformador
+
+14
+00:00:26,130 --> 00:00:28,420
+foi ter uma base de dados centralizada,
+
+15
+00:00:28,450 --> 00:00:30,400
+confiável, com governança,
+
+16
+00:00:30,430 --> 00:00:32,020
+e automaticamente
+
+17
+00:00:32,050 --> 00:00:34,540
+dando subsídios para as áreas tomarem
+
+18
+00:00:34,570 --> 00:00:36,300
+decisões de uma forma muito mais segura.

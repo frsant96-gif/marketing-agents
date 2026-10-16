@@ -48,7 +48,7 @@ Mesma sequência do Aço Cearense e da SSA: antes → parceiro → resultado, co
 
 ## Antes de publicar
 
-- **Legenda queimada:** a maioria assiste sem som. Usar legenda corrigida (a automática erra Datasphere, Solveplan e U&M). Posso gerar o .srt corrigido e queimar no vídeo, como no clip 01 da SSA.
+- **Legenda queimada (feito em 16/10):** cada corte tem uma versão `-legendado.mp4`, com legenda revisada (Datasphere, Solveplan e U&M corrigidos, sem "eh" e repetições), no padrão do corte 1 da SSA. Também há o `.srt` de cada corte, para subir a legenda separada. Script: `dados/video-uem/gerar_legendas.py`.
 - **Corte 2:** cita um dado que não está no texto aprovado (implementação em cerca de dois meses). É fala do cliente num vídeo já publicado, então pode usar, mas vale avisar o cliente. O mesmo vale para "11 operações no Brasil" e "equipamentos de até 300 toneladas", que aparecem na abertura do vídeo (não entraram em nenhum corte).
 - **Corte 3:** começa em "O grande benefício…". O "Aí" do início da frase ficou de fora para não pegar a tela azul de transição do vídeo.
 - **Ordem sugerida:** um corte por semana (1 → 2 → 3 → 4), cada um com post próprio, linkando o case.

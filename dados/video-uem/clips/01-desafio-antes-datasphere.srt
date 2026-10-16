@@ -1,0 +1,31 @@
+1
+00:00:00,380 --> 00:00:01,950
+Antes de implementar o Datasphere,
+
+2
+00:00:01,980 --> 00:00:03,900
+nós tínhamos um desafio muito grande
+
+3
+00:00:03,930 --> 00:00:07,600
+para disponibilizar dados para as áreas de negócio.
+
+4
+00:00:08,460 --> 00:00:11,470
+Às vezes dependia muito de customizações,
+
+5
+00:00:11,500 --> 00:00:13,870
+retirada manual de relatórios.
+
+6
+00:00:13,900 --> 00:00:16,750
+Então a gente tinha um cenário realmente desafiador
+
+7
+00:00:16,780 --> 00:00:19,270
+e era muito demorada a disponibilização
+
+8
+00:00:19,300 --> 00:00:20,200
+dessas informações.
