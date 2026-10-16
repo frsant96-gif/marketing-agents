@@ -74,10 +74,10 @@ Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas d
 
 ---
 
-## Versão G — linha do post de referência (concorrente): pergunta sobre IA → dor → case → link nos comentários
+## Versão G — pergunta → dor → case → link nos comentários
 
 ```
-Muita empresa quer começar pela IA. Mas antes vem uma pergunta mais básica: quanto tempo leva para um dado novo chegar a quem precisa decidir?
+Quanto tempo leva para um dado novo chegar a quem precisa decidir?
 
 Na U&M Mineração e Construção, a resposta dependia de fila. Cada nova necessidade de informação podia virar um relatório customizado no SAP e uma demanda de desenvolvimento ABAP. Enquanto isso, ETLs fora da governança faziam cada área tratar os dados do seu jeito, com risco de relatórios que não batem.
 
