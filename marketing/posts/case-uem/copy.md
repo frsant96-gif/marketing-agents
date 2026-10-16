@@ -56,6 +56,24 @@ Assista ao depoimento de Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, E
 
 ---
 
+## Versão F — mesma linha, abrindo pelo número
+
+```
+Em apenas um dos bancos SQL Server usados pelos ETLs antigos da U&M havia mais de 55 tabelas dispersas, sem padronização nem governança.
+
+Para uma empresa com cerca de 4.000 funcionários e 10 filiais, que atua em grandes movimentações de solo e rocha em obras de infraestrutura e mineração, isso significava retrabalho, risco de divergência entre relatórios e uma demanda de desenvolvimento ABAP a cada nova necessidade de informação.
+
+Com a SolvePlan, a U&M passou a usar o SAP Datasphere como camada central entre o SAP S/4HANA e as áreas de negócio. Dados SAP e não-SAP, como RM TOTVS, SQL Server e arquivos Parquet e CSV, agora seguem uma arquitetura em camadas Bronze, Silver e Gold, com 155 views e 133 tabelas locais catalogadas.
+
+O resultado aparece na ponta. As áreas passaram a trabalhar sobre as mesmas informações, e a manutenção identifica mais rápido desvios no consumo de lubrificantes, antecipando ações antes da falha.
+
+Ednaldo Teixeira, Gerente de TI, e Bruner Filgueiras, Especialista em Sistemas da U&M, contam como foi essa jornada: [link]
+
+#SAPDatasphere #SAPS4HANA #GovernancaDeDados #SAPBusinessDataCloud #SolvePlan
+```
+
+---
+
 ## Observações
 
 - Números usados como estão no texto aprovado (55 tabelas, 155 views, 133 tabelas locais), sem converter em percentual.
