@@ -1,0 +1,18 @@
+00:06 Aem é uma empresa brasileira, atualmente mais focada no mercado de mineração, né? Ela opera minas abertas de grande porte, trabalho com caminhões fora de
+00:15 estrada, equipamentos de grande porte de até 300 toneladas. Ela possui, né, 11 operações do Brasil, sendo duas filiais para reforma desses equipamentos,
+00:25 né, onde tem uma manutenção muito forte e duas e duas centrais. O principal diferencial da companhia, por ser um ming contract, ela ter uma agilidade muito
+00:34 grande para ajudar os clientes no aumento de produtividade, né, esse e também na manutenção dos equipamentos, que é um diferencial enorme por ser equipamentos
+00:42 de grande porte. antes de implementar o DATF, né, nós tínhamos um desafio muito grande para poder disponibilizar dados paraas áreas de negócio, né, e às
+00:52 vezes dependia muito de customizações, retirada manual de relatórios, né? Então a gente tinha um cenário realmente desafiador e era muito demorada a disponibilização
+01:03 dessas informações. A implementação eh ela foi rápida. Eh, eu acredito que em torno de dois meses a gente já tava com a plataforma pronta e construindo
+01:12 já o o os relatórios, as informações que a gente precisava, né? Então assim, o ponto chave foi a agilidade mesmo da gente ter a plataforma já disponibilizada
+01:22 e já começar a fazer a conversão dos ETLs antigos que a gente tinha para esse modelo novo, que é o que a gente precisava de ter ali uma ferramenta já e
+01:31 mais em compliance com a SAP. Av foi muito eh eh parceira nossa no dia a dia, né? Eles têm uma agilidade muito grande no atendimento e o entendimento de
+01:42 todo o ecossistema, que facilitou muito o trabalho no dia a dia. Então eles foram sempre muito solistos, parceiros e e sempre entregando muita agilidade
+01:51 pra gente. Aí o grande benefício que a gente tem hoje é ter os dados eh praticamente em tempo real, né? Isso facilita muito nas tomadas de decisões eh das
+02:01 áreas da empresa como um todo, né? Então, a gente disponibiliza os dados para algumas áreas específicas, mas também de forma corporativa e a gente consegue
+02:09 agregar também eh dados de outros sistemas, né, pra gente poder eh fornecer essas informações para para tomar de decisão na empresa. >> Acho que o principal
+02:18 fator transformador foi ter uma base de dados centralizada, confiável, com governança, né, e automaticamente dando eh subsídios para as áreas tomarem decisões
+02:28 de uma forma muito mais segura. Eu acho que o principal objetivo, né, eh, as empresas começarem de uma forma organizada, com governança, né, entenderem
+02:38 o benefício que isso vai estar trazendo para elas no prazo, no curto prazo, porque vão ter informações ali e mais confiáveis, né, e que vai apoiar na tomada
+02:49 de decisão final de cada área de negócio. เฮ
