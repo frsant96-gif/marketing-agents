@@ -1,0 +1,19 @@
+﻿Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,8,8,OK,
+SEO On-Page,Meta Description,8,8,OK,
+SEO On-Page,Estrutura de Headings,3,10,Faltando,"Sem H1. Trocar a tag de ""SAP Business Data Cloud"" para H1"
+SEO On-Page,URL + Imagens + Links internos,3,8,Faltando,"6 de 6 imagens sem alt; nenhum link interno no corpo (há 6+ posts de BDC no blog)"
+SEO On-Page,Indexação e leitura por robôs e IAs,4,6,Parcial,"Sem H1 e sem prova em texto"
+Performance Técnica,PageSpeed Mobile,0,8,Não verificado,"Medir em pagespeed.web.dev"
+Performance Técnica,PageSpeed Desktop,0,5,Não verificado,"Medir em pagespeed.web.dev"
+Performance Técnica,LCP,0,4,Não verificado,"Medir em pagespeed.web.dev"
+Performance Técnica,CLS,0,3,Não verificado,"Medir em pagespeed.web.dev"
+AEO,Bloco de resposta direta,0,8,Faltando,"Definição tem ~30 palavras e fica sob ""A Solução"". Trocar por H2 ""O que é o SAP Business Data Cloud?"" + 40-60 palavras"
+AEO,Cobertura de subperguntas,0,6,Faltando,"Responde só 1 de 6: falta BDC x Datasphere x BW, prazo e pré-requisitos, riscos e custos de consumo, quem já fez, por que a Solveplan"
+AEO,FAQ,0,7,Faltando,"Criar FAQ com as 5 subperguntas que faltam + FAQPage"
+AEO,Perguntas nos Headings,0,4,Faltando,"H2 em forma de pergunta"
+GEO,Dados estruturados coerentes,1,6,Faltando,"Página de solução marcada como BlogPosting: trocar para WebPage/Service; addressCountry BR"
+GEO,E-E-A-T,0,5,Faltando,"Sem prêmio, sem Gold, sem case, sem data"
+GEO,Entidades + estatísticas + fontes,1,4,Faltando,"""Solveplan"" não aparece no texto; sem dado/estatística; sem América Latina"
+TOTAL,,28,100,,
+TOTAL SEM PERFORMANCE,,28,80,,

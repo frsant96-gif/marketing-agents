@@ -1,0 +1,19 @@
+﻿Categoria,Item,Pontuação Obtida,Pontuação Máxima,Status,O que corrigir
+SEO On-Page,Title Tag,8,8,OK,
+SEO On-Page,Meta Description,8,8,OK,
+SEO On-Page,Estrutura de Headings,3,10,Faltando,"Sem H1. Trocar a tag do título do hero para H1 (texto aprovado em 25/09)"
+SEO On-Page,URL + Imagens + Links internos,6,8,Parcial,"8 de 29 imagens sem alt (logos, selo SAP, fotos)"
+SEO On-Page,Indexação e leitura por robôs e IAs,4,6,Parcial,"Contadores aparecem como ""0 +"" no HTML e não há H1"
+Performance Técnica,PageSpeed Mobile,0,8,Não verificado,"Cota da API esgotada; medir em pagespeed.web.dev"
+Performance Técnica,PageSpeed Desktop,0,5,Não verificado,"Medir em pagespeed.web.dev"
+Performance Técnica,LCP,0,4,Não verificado,"Medir em pagespeed.web.dev"
+Performance Técnica,CLS,0,3,Não verificado,"Medir em pagespeed.web.dev"
+AEO,Bloco de resposta direta,0,8,Faltando,"H2 ""O que a Solveplan faz?"" + parágrafo de 40-60 palavras"
+AEO,Cobertura de subperguntas,0,6,Faltando,"Responde só 2 de 6: falta BDC/Datasphere, setores atendidos, como funciona o trabalho e por que a Solveplan (prêmio, Gold)"
+AEO,FAQ,0,7,Faltando,"Criar FAQ com as subperguntas que faltam"
+AEO,Perguntas nos Headings,0,4,Faltando,"Resolvido junto com o bloco de resposta e o FAQ"
+GEO,Dados estruturados coerentes,1,6,Parcial,"Remover BlogPosting/Person da home; addressCountry ""55"" > ""BR""; FAQPage quando houver FAQ"
+GEO,E-E-A-T,2,5,Parcial,"Mostrar o prêmio BDC 2026 LATAM e o selo Gold em texto"
+GEO,Entidades + estatísticas + fontes,3,4,Parcial,"Citar América Latina"
+TOTAL,,35,100,,
+TOTAL SEM PERFORMANCE,,35,80,,
