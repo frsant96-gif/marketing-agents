@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;width:1200px;height:628px;overflow:hidden;background:#0A0E19}
+  svg{display:block}
+</style></head>
+<body>
+<svg width="1200" height="628" viewBox="0 0 1200 628" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glowL" cx="22%" cy="55%" r="45%">
+      <stop offset="0" stop-color="#0A0837"/><stop offset="1" stop-color="#0A0E19"/>
+    </radialGradient>
+    <radialGradient id="glowR" cx="80%" cy="45%" r="40%">
+      <stop offset="0" stop-color="#006AFF" stop-opacity=".28"/><stop offset="1" stop-color="#006AFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stream" x1="0" x2="1">
+      <stop offset="0" stop-color="#006AFF" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#006AFF" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#006AFF" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A2340"/><stop offset="1" stop-color="#121a31"/>
+    </linearGradient>
+    <linearGradient id="cardOn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0F3FA8"/><stop offset="1" stop-color="#0A2C7A"/>
+    </linearGradient>
+    <g id="dash">
+      <rect width="96" height="66" rx="6" fill="url(#card)" stroke="#2A3558" stroke-width="1.2"/>
+      <rect x="10" y="10" width="34" height="5" rx="2" fill="#3A4670"/>
+      <rect x="12" y="44" width="8" height="12" fill="#3A4670"/>
+      <rect x="25" y="36" width="8" height="20" fill="#3A4670"/>
+      <rect x="38" y="40" width="8" height="16" fill="#3A4670"/>
+      <circle cx="74" cy="40" r="12" fill="none" stroke="#3A4670" stroke-width="5"/>
+    </g>
+    <g id="dashOn">
+      <rect width="96" height="66" rx="6" fill="url(#cardOn)" stroke="#2F7BFF" stroke-width="1.4"/>
+      <rect x="10" y="10" width="34" height="5" rx="2" fill="#7FB0FF"/>
+      <rect x="12" y="42" width="8" height="14" fill="#BFD7FF"/>
+      <rect x="25" y="32" width="8" height="24" fill="#BFD7FF"/>
+      <rect x="38" y="26" width="8" height="30" fill="#94FF96"/>
+      <circle cx="74" cy="40" r="12" fill="none" stroke="#BFD7FF" stroke-width="5" stroke-dasharray="52 76"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="628" fill="url(#glowL)"/>
+  <rect width="1200" height="628" fill="url(#glowR)"/>
+
+  <!-- grade sutil -->
+  <g stroke="#ffffff" stroke-opacity=".035">
+    <path d="M0 157H1200M0 314H1200M0 471H1200"/>
+    <path d="M150 0V628M300 0V628M450 0V628M600 0V628M750 0V628M900 0V628M1050 0V628"/>
+  </g>
+
+  <!-- pilha represada (esquerda) -->
+  <g opacity=".95">
+    <g transform="translate(70 360) rotate(-4)"><use href="#dash"/></g>
+    <g transform="translate(160 372) rotate(3)"><use href="#dash"/></g>
+    <g transform="translate(250 362) rotate(-2)"><use href="#dash"/></g>
+    <g transform="translate(110 296) rotate(5)"><use href="#dash"/></g>
+    <g transform="translate(205 300) rotate(-6)"><use href="#dash"/></g>
+    <g transform="translate(290 290) rotate(2)"><use href="#dash"/></g>
+    <g transform="translate(80 232) rotate(-3)"><use href="#dash"/></g>
+    <g transform="translate(170 228) rotate(4)"><use href="#dash"/></g>
+    <g transform="translate(258 222) rotate(-5)"><use href="#dash"/></g>
+    <g transform="translate(130 164) rotate(-7)"><use href="#dash"/></g>
+    <g transform="translate(220 158) rotate(3)"><use href="#dash"/></g>
+    <g transform="translate(175 96) rotate(-2)" opacity=".7"><use href="#dash"/></g>
+    <g transform="translate(40 440) rotate(2)"><use href="#dash"/></g>
+    <g transform="translate(132 446) rotate(-3)"><use href="#dash"/></g>
+    <g transform="translate(224 442) rotate(4)"><use href="#dash"/></g>
+    <g transform="translate(316 436) rotate(-1)"><use href="#dash"/></g>
+  </g>
+
+  <!-- funil / passagem -->
+  <path d="M430 150 C 520 220, 540 280, 600 300 L 600 340 C 540 360, 520 420, 430 490 Z" fill="#006AFF" opacity=".07"/>
+  <path d="M430 150 C 520 220, 540 280, 600 300" fill="none" stroke="#006AFF" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M430 490 C 520 420, 540 360, 600 340" fill="none" stroke="#006AFF" stroke-opacity=".5" stroke-width="2"/>
+
+  <!-- fluxo contínuo -->
+  <rect x="560" y="302" width="640" height="36" fill="url(#stream)" opacity=".35"/>
+  <path d="M560 320 H1200" stroke="url(#stream)" stroke-width="3"/>
+  <path d="M560 286 H1200 M560 354 H1200" stroke="#006AFF" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="6 10"/>
+
+  <g transform="translate(640 287)" opacity=".75"><use href="#dashOn"/></g>
+  <g transform="translate(790 287)" opacity=".9"><use href="#dashOn"/></g>
+  <g transform="translate(940 287)"><use href="#dashOn"/></g>
+  <g transform="translate(1090 287)"><use href="#dashOn"/></g>
+
+  <!-- pontos de destaque -->
+  <circle cx="1040" cy="200" r="3" fill="#94FF96"/>
+  <circle cx="880" cy="440" r="2.5" fill="#94FF96" opacity=".8"/>
+  <circle cx="720" cy="190" r="2" fill="#7FB0FF"/>
+  <circle cx="1130" cy="470" r="2" fill="#7FB0FF"/>
+  <rect x="0" y="624" width="1200" height="4" fill="#006AFF"/>
+</svg>
+</body></html>
