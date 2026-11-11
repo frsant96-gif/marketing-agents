@@ -1,0 +1,80 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;background:transparent;}
+  svg{display:block}
+</style></head>
+<body>
+<!-- 1400x560 = 2x de 700x280 no slide -->
+<svg width="1400" height="560" viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#090736" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- 3 sociedades (planilhas) -->
+  <g filter="url(#sh)">
+    <g transform="translate(10,22)">
+      <rect width="170" height="62" rx="14" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="16" y="16" width="30" height="30" rx="8" fill="#ffffff"/>
+      <rect x="23" y="24" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="30" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="36" width="10" height="3" rx="1.5" fill="#006aff"/>
+      <rect x="58" y="20" width="92" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.9"/>
+      <rect x="58" y="34" width="64" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.5"/>
+    </g>
+    <g transform="translate(10,109)">
+      <rect width="170" height="62" rx="14" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="16" y="16" width="30" height="30" rx="8" fill="#ffffff"/>
+      <rect x="23" y="24" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="30" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="36" width="10" height="3" rx="1.5" fill="#006aff"/>
+      <rect x="58" y="20" width="80" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.9"/>
+      <rect x="58" y="34" width="56" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.5"/>
+    </g>
+    <g transform="translate(10,196)">
+      <rect width="170" height="62" rx="14" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.55" stroke-width="2"/>
+      <rect x="16" y="16" width="30" height="30" rx="8" fill="#ffffff"/>
+      <rect x="23" y="24" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="30" width="16" height="3" rx="1.5" fill="#006aff"/><rect x="23" y="36" width="10" height="3" rx="1.5" fill="#006aff"/>
+      <rect x="58" y="20" width="100" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.9"/>
+      <rect x="58" y="34" width="70" height="7" rx="3.5" fill="#ffffff" fill-opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- conectores convergindo -->
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9" opacity="0.9">
+    <path d="M186 53 C 250 53, 250 140, 318 140"/>
+    <path d="M186 140 L 318 140"/>
+    <path d="M186 227 C 250 227, 250 140, 318 140"/>
+  </g>
+  <circle cx="318" cy="140" r="7" fill="#94ff96"/>
+
+  <!-- consolidado (dashboard) -->
+  <g filter="url(#sh)" transform="translate(340,18)">
+    <rect width="350" height="244" rx="22" fill="#ffffff"/>
+    <!-- header -->
+    <rect x="22" y="22" width="120" height="10" rx="5" fill="#090736"/>
+    <rect x="22" y="40" width="78" height="8" rx="4" fill="#090736" fill-opacity="0.25"/>
+    <!-- check badge -->
+    <circle cx="306" cy="40" r="20" fill="#94ff96"/>
+    <path d="M296 40 l7 7 l13 -14" fill="none" stroke="#090736" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- bars -->
+    <g fill="#006aff">
+      <rect x="30"  y="160" width="34" height="56" rx="7" fill-opacity="0.35"/>
+      <rect x="80"  y="138" width="34" height="78" rx="7" fill-opacity="0.55"/>
+      <rect x="130" y="118" width="34" height="98" rx="7" fill-opacity="0.75"/>
+      <rect x="180" y="96"  width="34" height="120" rx="7"/>
+    </g>
+    <!-- trend line -->
+    <path d="M47 150 L97 128 L147 106 L197 82 L262 70" fill="none" stroke="#090736" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="262" cy="70" r="6" fill="#090736"/>
+    <!-- side kpis -->
+    <rect x="236" y="112" width="92" height="40" rx="10" fill="#006aff" fill-opacity="0.1"/>
+    <rect x="248" y="124" width="52" height="7" rx="3.5" fill="#006aff"/>
+    <rect x="248" y="137" width="34" height="6" rx="3" fill="#006aff" fill-opacity="0.4"/>
+    <rect x="236" y="164" width="92" height="52" rx="10" fill="#006aff" fill-opacity="0.1"/>
+    <rect x="248" y="176" width="60" height="7" rx="3.5" fill="#006aff"/>
+    <rect x="248" y="189" width="40" height="6" rx="3" fill="#006aff" fill-opacity="0.4"/>
+    <rect x="248" y="201" width="26" height="6" rx="3" fill="#006aff" fill-opacity="0.4"/>
+    <!-- baseline -->
+    <rect x="22" y="222" width="196" height="3" rx="1.5" fill="#090736" fill-opacity="0.15"/>
+  </g>
+</svg>
+</body></html>
