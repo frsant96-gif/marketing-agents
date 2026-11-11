@@ -85,6 +85,7 @@ SAP Datasphere, SAP Analytics Cloud, SAP BTP, SAP S/4HANA, Power BI, aceleradore
 |-------|-----------|
 | `/plano-marketing` | Perguntas estratégicas + funil → plano anual com calendário, budget e KPIs — salva em `marketing/planos/` |
 | `/pesquisa-mercado` | Pesquisa de mercado estruturada — concorrentes, segmentos, tendências SAP/analytics na América Latina — com fontes verificadas e relatório executivo |
+| `/conselho-marketing` | Conselho de 6 especialistas B2B (posicionamento, Challenger, MEDDICC, ABM, demanda 95-5, business case) — responde por especialista ou em mesa redonda com plano de ação |
 | `/persona` | Cria, atualiza e consulta personas com Jobs to be Done, jornada do comprador e objeções — salvas em `_contexto/personas/` e usadas em campanhas, conteúdo e ABM |
 
 ### Branding
