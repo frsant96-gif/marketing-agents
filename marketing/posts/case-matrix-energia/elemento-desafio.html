@@ -1,0 +1,91 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;padding:0;background:transparent;}svg{display:block}</style></head>
+<body>
+<!-- 1400x640 = 2x de 700x320 no slide (card branco) -->
+<svg width="1400" height="640" viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#090736" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1 L8 5 L1 9" fill="none" stroke="#006aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Plano de contas A (estrutura 1) -->
+  <g filter="url(#sh)" transform="translate(8,20)">
+    <rect width="190" height="128" rx="16" fill="#ffffff" stroke="#d2e0fe" stroke-width="2"/>
+    <rect x="16" y="16" width="70" height="9" rx="4.5" fill="#090736"/>
+    <circle cx="22" cy="46" r="5" fill="#006aff"/><rect x="34" y="42" width="120" height="8" rx="4" fill="#006aff" fill-opacity="0.35"/>
+    <circle cx="38" cy="68" r="4" fill="#006aff" fill-opacity="0.6"/><rect x="48" y="64" width="96" height="8" rx="4" fill="#006aff" fill-opacity="0.2"/>
+    <circle cx="38" cy="90" r="4" fill="#006aff" fill-opacity="0.6"/><rect x="48" y="86" width="110" height="8" rx="4" fill="#006aff" fill-opacity="0.2"/>
+    <circle cx="22" cy="112" r="5" fill="#006aff"/><rect x="34" y="108" width="84" height="8" rx="4" fill="#006aff" fill-opacity="0.35"/>
+  </g>
+
+  <!-- Plano de contas B (estrutura diferente) -->
+  <g filter="url(#sh)" transform="translate(8,172)">
+    <rect width="190" height="128" rx="16" fill="#ffffff" stroke="#d2e0fe" stroke-width="2"/>
+    <rect x="16" y="16" width="56" height="9" rx="4.5" fill="#090736"/>
+    <rect x="16" y="40" width="10" height="10" rx="2" fill="#090736" fill-opacity="0.75"/><rect x="34" y="41" width="96" height="8" rx="4" fill="#090736" fill-opacity="0.25"/>
+    <rect x="16" y="62" width="10" height="10" rx="2" fill="#090736" fill-opacity="0.75"/><rect x="34" y="63" width="130" height="8" rx="4" fill="#090736" fill-opacity="0.25"/>
+    <rect x="30" y="84" width="8" height="8" rx="2" fill="#090736" fill-opacity="0.45"/><rect x="46" y="84" width="72" height="8" rx="4" fill="#090736" fill-opacity="0.15"/>
+    <rect x="16" y="104" width="10" height="10" rx="2" fill="#090736" fill-opacity="0.75"/><rect x="34" y="105" width="104" height="8" rx="4" fill="#090736" fill-opacity="0.25"/>
+  </g>
+
+  <!-- conectores para as regras -->
+  <g fill="none" stroke="#006aff" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9">
+    <path d="M204 84 C 245 84, 245 160, 276 160"/>
+    <path d="M204 236 C 245 236, 245 160, 276 160"/>
+  </g>
+
+  <!-- bloco de regras sob medida -->
+  <g filter="url(#sh)" transform="translate(282,112)">
+    <rect width="96" height="96" rx="22" fill="#090736"/>
+    <!-- engrenagem -->
+    <g transform="translate(48,40)" fill="#94ff96">
+      <circle r="15"/>
+      <g>
+        <rect x="-4" y="-22" width="8" height="10" rx="2"/>
+        <rect x="-4" y="12" width="8" height="10" rx="2"/>
+        <rect x="-22" y="-4" width="10" height="8" rx="2"/>
+        <rect x="12" y="-4" width="10" height="8" rx="2"/>
+        <g transform="rotate(45)">
+          <rect x="-4" y="-22" width="8" height="10" rx="2"/>
+          <rect x="-4" y="12" width="8" height="10" rx="2"/>
+          <rect x="-22" y="-4" width="10" height="8" rx="2"/>
+          <rect x="12" y="-4" width="10" height="8" rx="2"/>
+        </g>
+      </g>
+      <circle r="6" fill="#090736"/>
+    </g>
+    <!-- </> -->
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M34 72 l-7 6 l7 6"/>
+      <path d="M62 72 l7 6 l-7 6"/>
+      <path d="M52 70 l-8 16"/>
+    </g>
+  </g>
+
+  <!-- seta para o resultado -->
+  <path d="M386 160 L 438 160" fill="none" stroke="#006aff" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)"/>
+
+  <!-- estrutura unificada -->
+  <g filter="url(#sh)" transform="translate(452,40)">
+    <rect width="240" height="240" rx="22" fill="#006aff"/>
+    <rect x="22" y="24" width="96" height="10" rx="5" fill="#ffffff"/>
+    <rect x="22" y="42" width="62" height="8" rx="4" fill="#ffffff" fill-opacity="0.5"/>
+    <circle cx="206" cy="38" r="18" fill="#94ff96"/>
+    <path d="M197 38 l6 6 l12 -12" fill="none" stroke="#090736" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- arvore unica -->
+    <g fill="#ffffff">
+      <circle cx="30" cy="84" r="6"/><rect x="44" y="79" width="140" height="10" rx="5" fill-opacity="0.95"/>
+      <circle cx="48" cy="112" r="5" fill-opacity="0.8"/><rect x="60" y="108" width="110" height="9" rx="4.5" fill-opacity="0.55"/>
+      <circle cx="48" cy="138" r="5" fill-opacity="0.8"/><rect x="60" y="134" width="124" height="9" rx="4.5" fill-opacity="0.55"/>
+      <circle cx="30" cy="168" r="6"/><rect x="44" y="163" width="120" height="10" rx="5" fill-opacity="0.95"/>
+      <circle cx="48" cy="196" r="5" fill-opacity="0.8"/><rect x="60" y="192" width="96" height="9" rx="4.5" fill-opacity="0.55"/>
+    </g>
+    <path d="M30 90 V 138 M30 138 H 42 M30 112 H 42 M30 174 V 196 H 42" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+  </g>
+</svg>
+</body></html>
