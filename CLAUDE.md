@@ -139,6 +139,8 @@ Usar essas informações como base pra qualquer resposta ou decisão. Ao sugerir
 
 Para qualquer tarefa visual (carrossel, proposta, slide, landing page), consultar `marca/design-guide.md` como referência de estilo.
 
+Peças visuais são feitas no Canva, sempre a partir dos templates listados em `marca/canva-templates.md` (MCP do Canva). Se nenhum template servir, criar um modelo novo no Canva com o Brand Kit da Solveplan e registrar nesse arquivo.
+
 Não é necessário listar o que foi lido nem confirmar a leitura. Apenas usar o contexto naturalmente.
 
 ---
