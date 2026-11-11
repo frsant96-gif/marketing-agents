@@ -1,7 +1,8 @@
 # Templates Canva — Solveplan
 
-Toda peça visual parte de um destes Brand Templates (via MCP do Canva).
-Se nenhum servir, criar um modelo novo no Canva com o Brand Kit e adicionar aqui.
+Toda peça visual parte de um destes modelos (via MCP do Canva).
+Antes de começar, perguntar à Fran qual modelo usar. Só criar modelo novo quando ela pedir e, depois, adicionar aqui.
+A foto do template sempre precisa ser trocada.
 
 **Brand Kit:** `kAGZvn5XvYk`
 
