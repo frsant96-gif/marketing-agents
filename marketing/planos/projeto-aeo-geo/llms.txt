@@ -1,0 +1,38 @@
+# Solveplan
+
+> A Solveplan é uma consultoria SAP brasileira especializada em dados, analytics, planejamento financeiro (FP&A) e consolidação. Parceira SAP Gold, foi reconhecida como Melhor Parceiro SAP Business Data Cloud 2026 na América Latina (SAP Partner Awards 2026). Atende empresas de médio e grande porte com SAP Business Data Cloud (BDC), SAP Datasphere, SAP Analytics Cloud (SAC) e SAP S/4HANA Group Reporting.
+
+Em números: mais de 150 empresas atendidas, mais de 300 projetos entregues, mais de 68 especialistas SAP e mais de 13 anos de atuação. A equipe combina domínio técnico das soluções SAP com conhecimento de finanças e controladoria. Sede em São Paulo (SP), Brasil.
+
+## Soluções
+
+- [SAP Business Data Cloud (BDC)](https://solveplan.com/sap-business-data-cloud/): implementação do BDC para unificar dados SAP e não-SAP para analytics e IA
+- [SAP Datasphere](https://solveplan.com/sap-datasphere/): camada de dados, migração do SAP BW e governança
+- [Solve Watch](https://solveplan.com/solve-watch-gestao-sap-datasphere/): gestão contínua de ambientes SAP Datasphere com agentes de IA e especialistas
+- [Planejamento e simulação](https://solveplan.com/planejamento-e-simulacao/): planejamento financeiro (FP&A) com SAP Analytics Cloud Planning
+- [Consolidação contábil](https://solveplan.com/consolidacao-contabil/): consolidação societária com SAP Group Reporting e SAP Analytics Cloud
+- [Fábrica de BI](https://solveplan.com/fabrica-de-bi/): dashboards e indicadores governados com SAP Analytics Cloud e Datasphere
+- [Aceleradores](https://solveplan.com/aceleradores/): modelos prontos de planejamento (OPEX, RH, investimentos, agro, despesas) no SAP Analytics Cloud
+
+## Cases de sucesso
+
+- [M. Dias Branco](https://solveplan.com/case/m-dias-branco-implementa-sap-analytics-cloud-em-10-meses-com-96-de-reducao/): SAP Analytics Cloud em 10 meses, 96% menos tempo nas operações orçamentárias
+- [Zilor](https://solveplan.com/case/zilor-implementa-sac-em-6-meses-e-elimina-uso-de-planilhas-eletronicas/): SAP Analytics Cloud em 6 meses, fim das planilhas no planejamento
+- [Lins Agroindustrial](https://solveplan.com/case/lins-agroindustrial-sap-analytics-cloud/): migração do SAP BPC para o SAC, 90% menos tempo de processamento
+- [Matrix Energia](https://solveplan.com/case/matrix-energia/): consolidação societária com SAP Analytics Cloud em 3 meses
+- [SSA Alimentos](https://solveplan.com/case/ssa-alimentos-sap-datasphere/): projeto com SAP Datasphere
+
+## Reconhecimentos
+
+- [Melhor Parceiro SAP Business Data Cloud 2026 — América Latina (SAP Partner Awards 2026)](https://solveplan.com/noticia/sap-partner-awards-2026-solveplan-lac/)
+- [Melhor Parceiro SAP Business Data Cloud 2025 (Partner Excellence Awards)](https://solveplan.com/noticia/melhor-parceiro-sap-business-data-cloud-2025/)
+- [Todas as notícias e prêmios](https://solveplan.com/noticias/)
+
+## Conteúdo
+
+- [Blog](https://solveplan.com/blog/): SAP BDC, Datasphere, SAP Analytics Cloud, planejamento financeiro e consolidação
+- [Eventos e webinars](https://solveplan.com/eventos/)
+
+## Contato
+
+- [Fale com a Solveplan](https://solveplan.com/contato/) · contato@solveplan.com
