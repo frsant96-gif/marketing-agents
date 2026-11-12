@@ -1,0 +1,111 @@
+00:01.60 [Música]
+00:10.80 a Matrix é uma empresa com 10 anos a
+00:13.92 Matrix atua como uma plataforma
+00:17.27 integrada de soluções energéticas tudo
+00:19.72 aquilo que envolve energia desde gestão
+00:22.11 de energia desde gerenciamento de
+00:24.80 energia fonte de energia armazenamento
+00:27.11 de energia então tudo aquilo que envolve
+00:28.96 o mercado energético é onde a Matrix
+00:31.56 atua aí junto com seus clientes a Matrix
+00:34.20 hoje ela consegue alcançar e atender aí
+00:36.71 clientes em todo o território nacional é
+00:39.20 uma empresa que cresceu bastante dos
+00:40.96 últimos anos para cá está com mais de
+00:43.03 400 colaboradores e numa taxa de
+00:45.60 crescimento aí elevada né de de ano para
+00:49.19 ano a parte de de consolidação dos
+00:51.55 números da empresa é onde apresentava
+00:54.39 bastante dificuldade principalmente em
+00:56.03 relação ao prazo de fechamento então é
+00:58.28 aí que nos entrou que queem as
+01:00.19 ferramentas do SAP que nos ajudou a
+01:01.64 encurtar esse prazo de fechamento um
+01:03.44 processo de implementação foram em três
+01:05.96 meses o que foi um sucesso aqui pra
+01:07.52 gente o processo apresentou assim alguns
+01:09.79 desafios primeiro plano de contas a
+01:11.92 Matrix tem vários empresas CNPJ eram na
+01:15.96 época da implementação mais de 70 CNPJ
+01:18.92 conseguimos criar eh cada código para
+01:21.43 cada plano de contas superando né esse
+01:23.47 desafio outro Desafio Foi as regras de
+01:26.32 eliminação intercompany não utilizávamos
+01:28.92 sociedade parceira então tivemos que
+01:31.32 criar também regras mais detalhadas para
+01:33.68 cada intercompany também foi superado
+01:35.79 esse desafio E no meio de toda essa esse
+01:39.39 processo aqui na Matrix estamos passando
+01:41.92 por um processo de migração de bases
+01:43.92 pelo Business One por isso né
+01:46.11 conseguimos aí fazer em TRS meses esse
+01:48.20 go Live quando a a Sol pensou nessa
+01:51.00 solução ela tinha o objetivo de atender
+01:52.60 duas dores o processo de consolidação e
+01:55.07 a publicação de resultados e e as dores
+01:57.64 a Matrix elas vinham en contra com essas
+02:00.43 dores que a solução tinha para o
+02:01.68 objetivo de resolver era resolver o
+02:04.07 processo de consolidação e publicação
+02:06.15 para clientes da sa que não tem o módulo
+02:08.72 do grupo reporting né ou que ainda estão
+02:10.36 no EC ou que usam Business One ou que
+02:14.12 tem o w for hanana mas não tem o
+02:16.68 licenciamento do grupo reporting então
+02:18.51 casou as dores com o propósito da
+02:20.92 solução e o projeto deu super certo a
+02:23.36 gente acha que chegou aí nos objetivos
+02:25.16 que a Matrix buscava e estamos muito
+02:27.59 feliz aí com o resultado do projeto
+02:29.92 seria que a sou Plan foi muito boa assim
+02:31.76 digo assim que foi excelente tanto desde
+02:33.95 a construção da do cronograma foi bem
+02:36.51 detalhado o cronograma tínhamos reuniões
+02:38.68 eh mensais que contribuiu para não ter
+02:41.80 nenhum tipo de atraso o o especialista
+02:44.12 né que ficou aqui comigo que fui a R da
+02:47.20 da implantação ele era muito acido muito
+02:50.23 pontual ele tinha muito conhecimento né
+02:53.64 já parecia ser muito experiente Além
+02:55.84 disso ele é contador então que facilitou
+02:58.48 muito ali nas normas Contábeis de me
+03:00.28 entender ali nas dores então uma
+03:02.64 parceria assim do começo ao fim eh não
+03:05.51 tenho assim nada para dizer foi
+03:07.04 realmente um casamento e que deu muito
+03:08.59 certo os benefícios que as ferramentas e
+03:11.76 do SAP nos trouxeram o primeiro é a
+03:14.48 questão da confiança antes todo o
+03:16.79 processo de consolidação ele era feito
+03:18.56 em Excel e como a gente diz no mercado
+03:20.76 Excel aceita qualquer coisa né inclusive
+03:23.44 erros né e o segundo ponto é em relação
+03:25.92 à agilidade a elaboração do número era
+03:29.04 um prazo muito M extenso e hoje a gente
+03:31.08 consegue fazer isso de maneira muito
+03:32.36 mais ágil e eficiente eh do que fazíamos
+03:35.36 antes a consolidação agora é em poucos
+03:38.04 minutos você já tem ali eh temos seis
+03:41.56 consolidações intermediárias então o
+03:43.95 processo tá muito mais rápido temos
+03:46.08 também o orçado realizado né que é o
+03:48.72 outro fechamento que a gente tem aqui na
+03:50.12 Matrix então o SAC está ajudando também
+03:53.15 nesse processo de fechamento com com o
+03:55.92 orçamento da empresa nós fechá até um
+03:59.00 ano atrás o os números da companhia no
+04:00.95 22º dia útil né Hoje nós estamos
+04:04.23 fechando com segurança no 11º dia útil
+04:07.04 então a gente tá falando que com a
+04:08.56 implementação aí da ferramenta nós
+04:09.95 tiramos 10 dias úteis de fechamento no
+04:12.31 closing da companhia então acho que são
+04:15.04 três grandes benefícios aí que a gente
+04:17.40 conseguiu conquistar o SAP analist Cloud
+04:20.07 que é o SAC ele nos permitiu ah ter
+04:23.04 confiança no número que a gente tá
+04:24.72 fazendo segurança no número que tá
+04:27.04 fazendo então as coisas TM
+04:28.72 rastreabilidade eh e agilidade e a gente
+04:31.36 consegue isso com essa ferramenta
+04:34.36 [Música]

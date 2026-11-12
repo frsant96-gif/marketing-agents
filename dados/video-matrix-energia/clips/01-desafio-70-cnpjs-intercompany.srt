@@ -1,0 +1,87 @@
+1
+00:00:00,340 --> 00:00:03,190
+A parte de consolidação dos números da empresa
+
+2
+00:00:03,220 --> 00:00:05,870
+é onde apresentava bastante dificuldade,
+
+3
+00:00:05,900 --> 00:00:08,350
+principalmente em relação ao prazo de fechamento.
+
+4
+00:00:08,380 --> 00:00:11,510
+É aí que entraram as ferramentas da SAP,
+
+5
+00:00:11,540 --> 00:00:13,630
+que nos ajudaram a encurtar esse prazo de fechamento.
+
+6
+00:00:13,660 --> 00:00:16,710
+O processo de implementação foi em três meses,
+
+7
+00:00:16,740 --> 00:00:18,590
+o que foi um sucesso aqui pra gente.
+
+8
+00:00:18,620 --> 00:00:21,110
+O processo apresentou alguns desafios.
+
+9
+00:00:21,140 --> 00:00:22,110
+Primeiro, o plano de contas.
+
+10
+00:00:22,140 --> 00:00:25,630
+A Matrix tem várias empresas, vários CNPJs.
+
+11
+00:00:25,660 --> 00:00:29,390
+Na época da implementação, eram mais de 70 CNPJs.
+
+12
+00:00:29,420 --> 00:00:32,830
+Conseguimos criar um código para cada plano de contas,
+
+13
+00:00:32,860 --> 00:00:34,830
+superando esse desafio.
+
+14
+00:00:34,860 --> 00:00:38,110
+Outro desafio foram as regras de eliminação intercompany.
+
+15
+00:00:38,140 --> 00:00:40,830
+Não utilizávamos sociedade parceira,
+
+16
+00:00:40,860 --> 00:00:43,910
+então tivemos que criar regras mais detalhadas
+
+17
+00:00:43,940 --> 00:00:45,110
+para cada intercompany.
+
+18
+00:00:45,140 --> 00:00:47,470
+Esse desafio também foi superado.
+
+19
+00:00:47,500 --> 00:00:51,830
+E no meio de todo esse processo, aqui na Matrix,
+
+20
+00:00:51,860 --> 00:00:54,390
+estamos passando por uma migração de bases
+
+21
+00:00:54,420 --> 00:00:55,830
+pelo Business One.
+
+22
+00:00:55,860 --> 00:00:59,400
+E conseguimos fazer esse go-live em três meses.

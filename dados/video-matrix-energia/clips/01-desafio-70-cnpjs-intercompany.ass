@@ -1,0 +1,35 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.34,0:00:03.19,Tarja,,0,0,0,,A parte de consolidação dos números da empresa
+Dialogue: 0,0:00:03.22,0:00:05.87,Tarja,,0,0,0,,é onde apresentava bastante dificuldade,
+Dialogue: 0,0:00:05.90,0:00:08.35,Tarja,,0,0,0,,principalmente em relação ao prazo de fechamento.
+Dialogue: 0,0:00:08.38,0:00:11.51,Tarja,,0,0,0,,É aí que entraram as ferramentas da SAP,
+Dialogue: 0,0:00:11.54,0:00:13.63,Tarja,,0,0,0,,que nos ajudaram a encurtar esse prazo de fechamento.
+Dialogue: 0,0:00:13.66,0:00:16.71,Tarja,,0,0,0,,O processo de implementação foi em três meses,
+Dialogue: 0,0:00:16.74,0:00:18.59,Tarja,,0,0,0,,o que foi um sucesso aqui pra gente.
+Dialogue: 0,0:00:18.62,0:00:21.11,Tarja,,0,0,0,,O processo apresentou alguns desafios.
+Dialogue: 0,0:00:21.14,0:00:22.11,Tarja,,0,0,0,,Primeiro, o plano de contas.
+Dialogue: 0,0:00:22.14,0:00:25.63,Tarja,,0,0,0,,A Matrix tem várias empresas, vários CNPJs.
+Dialogue: 0,0:00:25.66,0:00:29.39,Tarja,,0,0,0,,Na época da implementação, eram mais de 70 CNPJs.
+Dialogue: 0,0:00:29.42,0:00:32.83,Tarja,,0,0,0,,Conseguimos criar um código para cada plano de contas,
+Dialogue: 0,0:00:32.86,0:00:34.83,Tarja,,0,0,0,,superando esse desafio.
+Dialogue: 0,0:00:34.86,0:00:38.11,Tarja,,0,0,0,,Outro desafio foram as regras de eliminação intercompany.
+Dialogue: 0,0:00:38.14,0:00:40.83,Tarja,,0,0,0,,Não utilizávamos sociedade parceira,
+Dialogue: 0,0:00:40.86,0:00:43.91,Tarja,,0,0,0,,então tivemos que criar regras mais detalhadas
+Dialogue: 0,0:00:43.94,0:00:45.11,Tarja,,0,0,0,,para cada intercompany.
+Dialogue: 0,0:00:45.14,0:00:47.47,Tarja,,0,0,0,,Esse desafio também foi superado.
+Dialogue: 0,0:00:47.50,0:00:51.83,Tarja,,0,0,0,,E no meio de todo esse processo, aqui na Matrix,
+Dialogue: 0,0:00:51.86,0:00:54.39,Tarja,,0,0,0,,estamos passando por uma migração de bases
+Dialogue: 0,0:00:54.42,0:00:55.83,Tarja,,0,0,0,,pelo Business One.
+Dialogue: 0,0:00:55.86,0:00:59.40,Tarja,,0,0,0,,E conseguimos fazer esse go-live em três meses.

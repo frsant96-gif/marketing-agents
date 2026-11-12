@@ -1,0 +1,35 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Tarja,Segoe UI Semibold,58,&H00FFFFFF,&H00FFFFFF,&H40000000,&H40000000,0,0,0,0,100,100,0,0,3,16,0,2,60,60,62,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.16,0:00:04.61,Tarja,,0,0,0,,Os benefícios que as ferramentas da SAP nos trouxeram:
+Dialogue: 0,0:00:04.64,0:00:07.05,Tarja,,0,0,0,,o primeiro é a questão da confiança.
+Dialogue: 0,0:00:07.08,0:00:10.41,Tarja,,0,0,0,,Antes, toda a consolidação era feita em Excel.
+Dialogue: 0,0:00:10.44,0:00:11.73,Tarja,,0,0,0,,E como a gente diz no mercado,
+Dialogue: 0,0:00:11.76,0:00:15.21,Tarja,,0,0,0,,Excel aceita qualquer coisa, inclusive erros.
+Dialogue: 0,0:00:15.24,0:00:18.05,Tarja,,0,0,0,,O segundo ponto é a agilidade.
+Dialogue: 0,0:00:18.08,0:00:21.45,Tarja,,0,0,0,,A elaboração do número levava um prazo muito extenso.
+Dialogue: 0,0:00:21.48,0:00:22.73,Tarja,,0,0,0,,Hoje a gente consegue fazer isso
+Dialogue: 0,0:00:22.76,0:00:25.53,Tarja,,0,0,0,,de maneira muito mais ágil e eficiente
+Dialogue: 0,0:00:25.56,0:00:27.01,Tarja,,0,0,0,,do que fazíamos antes.
+Dialogue: 0,0:00:27.04,0:00:31.53,Tarja,,0,0,0,,A consolidação agora é em poucos minutos.
+Dialogue: 0,0:00:31.56,0:00:34.09,Tarja,,0,0,0,,Temos seis consolidações intermediárias,
+Dialogue: 0,0:00:34.12,0:00:36.77,Tarja,,0,0,0,,então o processo está muito mais rápido.
+Dialogue: 0,0:00:36.80,0:00:39.17,Tarja,,0,0,0,,Temos também o orçado x realizado,
+Dialogue: 0,0:00:39.20,0:00:41.61,Tarja,,0,0,0,,o outro fechamento que a gente tem aqui na Matrix.
+Dialogue: 0,0:00:41.64,0:00:45.21,Tarja,,0,0,0,,O SAC está ajudando também nesse processo
+Dialogue: 0,0:00:45.24,0:00:48.41,Tarja,,0,0,0,,de fechamento com o orçamento da empresa.
+Dialogue: 0,0:00:48.44,0:00:51.17,Tarja,,0,0,0,,Até um ano atrás, fechávamos os números
+Dialogue: 0,0:00:51.20,0:00:54.17,Tarja,,0,0,0,,da companhia no 22º dia útil.
+Dialogue: 0,0:00:54.20,0:00:58.01,Tarja,,0,0,0,,Hoje estamos fechando com segurança no 11º dia útil.
+Dialogue: 0,0:00:58.04,0:01:00.77,Tarja,,0,0,0,,Com a implementação da ferramenta,
+Dialogue: 0,0:01:00.80,0:01:04.50,Tarja,,0,0,0,,tiramos 10 dias úteis do closing da companhia.

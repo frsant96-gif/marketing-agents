@@ -1,0 +1,87 @@
+1
+00:00:00,160 --> 00:00:04,610
+Os benefícios que as ferramentas da SAP nos trouxeram:
+
+2
+00:00:04,640 --> 00:00:07,050
+o primeiro é a questão da confiança.
+
+3
+00:00:07,080 --> 00:00:10,410
+Antes, toda a consolidação era feita em Excel.
+
+4
+00:00:10,440 --> 00:00:11,730
+E como a gente diz no mercado,
+
+5
+00:00:11,760 --> 00:00:15,210
+Excel aceita qualquer coisa, inclusive erros.
+
+6
+00:00:15,240 --> 00:00:18,050
+O segundo ponto é a agilidade.
+
+7
+00:00:18,080 --> 00:00:21,450
+A elaboração do número levava um prazo muito extenso.
+
+8
+00:00:21,480 --> 00:00:22,730
+Hoje a gente consegue fazer isso
+
+9
+00:00:22,760 --> 00:00:25,530
+de maneira muito mais ágil e eficiente
+
+10
+00:00:25,560 --> 00:00:27,010
+do que fazíamos antes.
+
+11
+00:00:27,040 --> 00:00:31,530
+A consolidação agora é em poucos minutos.
+
+12
+00:00:31,560 --> 00:00:34,090
+Temos seis consolidações intermediárias,
+
+13
+00:00:34,120 --> 00:00:36,770
+então o processo está muito mais rápido.
+
+14
+00:00:36,800 --> 00:00:39,170
+Temos também o orçado x realizado,
+
+15
+00:00:39,200 --> 00:00:41,610
+o outro fechamento que a gente tem aqui na Matrix.
+
+16
+00:00:41,640 --> 00:00:45,210
+O SAC está ajudando também nesse processo
+
+17
+00:00:45,240 --> 00:00:48,410
+de fechamento com o orçamento da empresa.
+
+18
+00:00:48,440 --> 00:00:51,170
+Até um ano atrás, fechávamos os números
+
+19
+00:00:51,200 --> 00:00:54,170
+da companhia no 22º dia útil.
+
+20
+00:00:54,200 --> 00:00:58,010
+Hoje estamos fechando com segurança no 11º dia útil.
+
+21
+00:00:58,040 --> 00:01:00,770
+Com a implementação da ferramenta,
+
+22
+00:01:00,800 --> 00:01:04,500
+tiramos 10 dias úteis do closing da companhia.
